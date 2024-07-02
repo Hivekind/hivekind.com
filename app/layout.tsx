@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,96 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="w-mod-js w-mod-ix wf-lato-n4-active wf-lato-n7-active wf-merriweather-n4-active wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-i4-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-merriweather-n3-active wf-merriweather-i3-active wf-merriweather-i4-active wf-merriweather-n7-active wf-merriweather-i7-active wf-merriweather-n9-active wf-merriweather-i9-active wf-active"
+    >
+      <link
+        href="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/css/hivekinds-site.webflow.d09bcdea0.min.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <link href="https://fonts.googleapis.com" rel="preconnect" />
+      <link href="https://fonts.gstatic.com" rel="preconnect" />
+      <Script
+        src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+        type="text/javascript"
+      ></Script>
+      <script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `
+            WebFont.load({
+              google: {
+                families: [
+                  "Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic",
+                  "Merriweather:300,300italic,400,400italic,700,700italic,900,900italic",
+                ],
+              },
+            });`,
+        }}
+      ></script>
+      <link
+        href="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/638d78d32e5f78049870b13d_favicon.png"
+        rel="shortcut icon"
+        type="image/x-icon"
+      />
+      <link
+        href="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6387e8003a75077830ecb173_webclip.png"
+        rel="apple-touch-icon"
+      />
+      <link href="https://hivekind.com/" rel="canonical" />
+
       <body className={inter.className}>{children}</body>
+
+      <Script
+        src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6347cb105849aecae0fd4ed8"
+        type="text/javascript"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      ></Script>
+      <Script
+        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/js/webflow.7076b6f0f.js"
+        type="text/javascript"
+      ></Script>
+      <script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function (w, d) {
+              var loader = function () {
+                var s = d.createElement("script"),
+                  tag = d.getElementsByTagName("script")[0];
+                s.src = "https://cdn.iubenda.com/iubenda.js";
+                tag.parentNode.insertBefore(s, tag);
+              };
+              if (w.addEventListener) {
+                w.addEventListener("load", loader, false);
+              } else if (w.attachEvent) {
+                w.attachEvent("onload", loader);
+              } else {
+                w.onload = loader;
+              }
+            })(window, document);`,
+        }}
+      ></script>
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></Script>
+
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            var typed = new Typed(".values", {
+              strings: ["scalable", "scalable", "flexible", "reliable", "stable"],
+              typeSpeed: 75,
+              backSpeed: 50,
+              backDelay: 1200,
+              startDelay: 0,
+              loop: true,
+              showCursor: false,
+              cursorChar: "|",
+              attr: null,
+            });`,
+        }}
+      ></script>
     </html>
   );
 }
