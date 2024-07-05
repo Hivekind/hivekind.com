@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/styles/globals.css";
+import "@/styles/site.css";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -17,11 +18,6 @@ export default function RootLayout({
       lang="en"
       className="w-mod-js w-mod-ix wf-lato-n4-active wf-lato-n7-active wf-merriweather-n4-active wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-i4-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-merriweather-n3-active wf-merriweather-i3-active wf-merriweather-i4-active wf-merriweather-n7-active wf-merriweather-i7-active wf-merriweather-n9-active wf-merriweather-i9-active wf-active"
     >
-      <link
-        href="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/css/hivekinds-site.webflow.d09bcdea0.min.css"
-        rel="stylesheet"
-        type="text/css"
-      />
       <link href="https://fonts.googleapis.com" rel="preconnect" />
       <link href="https://fonts.gstatic.com" rel="preconnect" />
       <Script
