@@ -8,7 +8,7 @@ export default function ContactPage() {
               <div className="margin-bottom margin-large">
                 <div className="max-width-large">
                   <div className="margin-bottom margin-small">
-                    <h1>Let&#x27;s work together</h1>
+                    <h1>Let's work together</h1>
                   </div>
                   <p className="text-size-medium">
                     Want to talk about your project? Send us your details and we
@@ -24,12 +24,10 @@ export default function ContactPage() {
                     data-name="Email Form"
                     method="get"
                     className="contact_form"
-                    data-wf-page-id="65f9e7b6dba0edd25ddf420b"
-                    data-wf-element-id="6bc5f0f6-1235-8366-dddb-c5892c94d787"
                   >
                     <div className="form-field-wrapper">
                       <label htmlFor="name" className="field-label">
-                        What&#x27;s your name?
+                        What's your name?
                       </label>
                       <input
                         className="form-input w-input"
@@ -59,7 +57,7 @@ export default function ContactPage() {
                     </div>
                     <div className="form-field-wrapper">
                       <label htmlFor="company" className="field-label">
-                        What&#x27;s your company?
+                        What's your company?
                       </label>
                       <input
                         className="form-input w-input"
@@ -91,18 +89,13 @@ export default function ContactPage() {
                         id="Contact-11-Checkbox"
                         className="w-checkbox form-checkbox"
                       >
-                        <div className="w-checkbox-input w-checkbox-input--inputType-custom form-checkbox-icon"></div>
                         <input
                           id="privacy_acceptance"
                           type="checkbox"
                           name="privacy_acceptance"
                           data-name="privacy_acceptance"
+                          className="form-checkbox-icon accent-black"
                           required
-                          style={{
-                            opacity: 0,
-                            position: "absolute",
-                            zIndex: -1,
-                          }}
                         />
                         <span className="form-checkbox-label text-size-small w-form-label">
                           By ticking this box I agree that I have read the
