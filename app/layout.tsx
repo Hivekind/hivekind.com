@@ -339,56 +339,57 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+
+        <Script
+          src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6347cb105849aecae0fd4ed8"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="scripts/webflow.js"
+          strategy="afterInteractive"
+        />
+
+        {/* <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function (w, d) {
+                var loader = function () {
+                  var s = d.createElement("script"),
+                    tag = d.getElementsByTagName("script")[0];
+                  s.src = "https://cdn.iubenda.com/iubenda.js";
+                  tag.parentNode.insertBefore(s, tag);
+                };
+                if (w.addEventListener) {
+                  w.addEventListener("load", loader, false);
+                } else if (w.attachEvent) {
+                  w.attachEvent("onload", loader);
+                } else {
+                  w.onload = loader;
+                }
+              })(window, document);`,
+          }}
+        ></script>
+
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></Script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              var typed = new Typed(".values", {
+                strings: ["scalable", "scalable", "flexible", "reliable", "stable"],
+                typeSpeed: 75,
+                backSpeed: 50,
+                backDelay: 1200,
+                startDelay: 0,
+                loop: true,
+                showCursor: false,
+                cursorChar: "|",
+                attr: null,
+              });`,
+          }}
+        ></script> */}
+
       </body>
-
-      <Script
-        src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6347cb105849aecae0fd4ed8"
-        type="text/javascript"
-      ></Script>
-
-      <Script
-        src="scripts/webflow.js"
-        type="text/javascript"
-      ></Script>
-      
-      <script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function (w, d) {
-              var loader = function () {
-                var s = d.createElement("script"),
-                  tag = d.getElementsByTagName("script")[0];
-                s.src = "https://cdn.iubenda.com/iubenda.js";
-                tag.parentNode.insertBefore(s, tag);
-              };
-              if (w.addEventListener) {
-                w.addEventListener("load", loader, false);
-              } else if (w.attachEvent) {
-                w.attachEvent("onload", loader);
-              } else {
-                w.onload = loader;
-              }
-            })(window, document);`,
-        }}
-      ></script>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></Script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            var typed = new Typed(".values", {
-              strings: ["scalable", "scalable", "flexible", "reliable", "stable"],
-              typeSpeed: 75,
-              backSpeed: 50,
-              backDelay: 1200,
-              startDelay: 0,
-              loop: true,
-              showCursor: false,
-              cursorChar: "|",
-              attr: null,
-            });`,
-        }}
-      ></script>
     </html>
   );
 }
