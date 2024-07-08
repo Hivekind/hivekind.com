@@ -1,4 +1,51 @@
+"use client";
+
+import { useState } from "react";
+
 export default function ContactPage() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [company, setCompany] = useState('');
+
+  function clearForm() {
+    setName('');
+    setEmail('');
+    setCompany('');
+    setMessage('');
+  }
+
+  async function handleSubmit(event: any) {
+    event.preventDefault();
+
+    const data = {
+      subject: `${name} from ${company} wants to connect`,
+      message: `
+        Hello,
+
+        We have a contact form submission from ${name}<${email}> with the following message:
+
+        ${message}
+      `,
+    };
+
+    const response = await fetch("/api/email", {
+      method: "POST",
+      headers: {
+        "Contect-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if(response.ok) {
+      clearForm();
+      alert("Message sent successfully");
+    } else {
+      alert("Message sending failed");
+    }
+
+  }
+
   return (
     <main className="main-wrapper">
       <section className="contact-section">
@@ -24,6 +71,7 @@ export default function ContactPage() {
                     data-name="Email Form"
                     method="get"
                     className="contact_form"
+                    onSubmit={handleSubmit}
                   >
                     <div className="form-field-wrapper">
                       <label htmlFor="name" className="field-label">
@@ -37,6 +85,8 @@ export default function ContactPage() {
                         placeholder=""
                         type="text"
                         id="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         required
                       />
                     </div>
@@ -52,6 +102,8 @@ export default function ContactPage() {
                         placeholder=""
                         type="email"
                         id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                       />
                     </div>
@@ -67,6 +119,8 @@ export default function ContactPage() {
                         placeholder=""
                         type="text"
                         id="company"
+                        value={company}
+                        onChange={(e) => setCompany(e.target.value)}
                         required
                       />
                     </div>
@@ -82,7 +136,9 @@ export default function ContactPage() {
                         placeholder="Type your message..."
                         required
                         className="form-input is-text-area w-input"
-                      ></textarea>
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        ></textarea>
                     </div>
                     <div className="margin-bottom margin-xsmall">
                       <label
@@ -94,7 +150,7 @@ export default function ContactPage() {
                           type="checkbox"
                           name="privacy_acceptance"
                           data-name="privacy_acceptance"
-                          className="form-checkbox-icon accent-black"
+                          className="form-checkbox-icon"
                           required
                         />
                         <span className="form-checkbox-label text-size-small w-form-label">

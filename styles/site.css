@@ -2109,6 +2109,7 @@ figcaption {
 .form-checkbox-icon {
   cursor: pointer;
   border: 1px solid #000;
+  accent-color: black;
   border-radius: 5px;
   width: 1.125rem;
   min-width: 1.125rem;
