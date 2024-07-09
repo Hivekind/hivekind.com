@@ -2,11 +2,41 @@
 
 import { useState } from "react";
 
+const styles: { [index: string]: React.CSSProperties } = {
+  modal: {
+    display: "block",
+    position: "fixed",
+    zIndex: 1,
+    left: 0,
+    top: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
+  },
+  successModalBody: {
+    display: "block",
+    left: "25%",
+    top: "15%",
+    width: "50%",
+    height: "50%",
+    position: "fixed",
+  },
+  failureModalBody: {
+    display: "block",
+    left: "25%",
+    top: "15%",
+    width: "50%",
+    height: "auto",
+    position: "fixed",
+  },
+};
+
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [company, setCompany] = useState("");
+  const [formSubmission, setFormSubmission] = useState("");
 
   function clearForm() {
     setName("");
@@ -39,9 +69,9 @@ export default function ContactPage() {
 
     if (response.ok) {
       clearForm();
-      alert("Message sent successfully");
+      setFormSubmission("succeeded");
     } else {
-      alert("Message sending failed");
+      setFormSubmission("failed");
     }
   }
 
@@ -174,19 +204,39 @@ export default function ContactPage() {
                       value="Submit"
                     />
                   </form>
-                  <div className="success-message w-form-done">
-                    <div className="success-message_wrapper">
-                      <div className="success-text">
-                        Thank you for contacting us! We will get back to you as
-                        soon as possible.
+                  {formSubmission === "succeeded" && (
+                    <div
+                      style={styles.modal}
+                      onClick={() => setFormSubmission("")}
+                    >
+                      <div
+                        className="success-message w-form-done"
+                        style={styles.successModalBody}
+                      >
+                        <div className="success-message_wrapper">
+                          <div className="success-text">
+                            Thank you for contacting us! We will get back to you
+                            as soon as possible.
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="error-message w-form-fail">
-                    <div className="error-text">
-                      Oops! Something went wrong while submitting the form.
+                  )}
+                  {formSubmission === "failed" && (
+                    <div
+                      style={styles.modal}
+                      onClick={() => setFormSubmission("")}
+                    >
+                      <div
+                        className="error-message w-form-fail"
+                        style={styles.failureModalBody}
+                      >
+                        <div className="error-text">
+                          Oops! Something went wrong while submitting the form.
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
                 <div className="contact_content">
                   <div className="w-layout-grid contact_contact-list">
