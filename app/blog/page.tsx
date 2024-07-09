@@ -1,8 +1,5 @@
-import Link from "next/link";
-import { marked } from "marked";
-
 import { getAllPosts } from "@/lib/contentfulApi";
-import Image from "next/image";
+import BlogCard from "@/components/blog-card"; // Import the BlogCardProps type
 
 export default async function BlogPage() {
   const { posts } = await getAllPosts({ contentType: "blogPosts" });
@@ -87,7 +84,7 @@ export default async function BlogPage() {
                                     <path
                                       d="M6 3L11 8L6 13"
                                       stroke="CurrentColor"
-                                      stroke-width="1.5"
+                                      strokeWidth="1.5" // Fix the attribute name
                                     />
                                   </svg>
                                 </div>
@@ -104,63 +101,14 @@ export default async function BlogPage() {
                   <div role="list" className="collection-list-2 w-dyn-items">
                     {posts.map(({ fields }: { fields: any }) => {
                       return (
-                        <div
-                          role="listitem"
-                          className="w-dyn-item"
-                          key={`${fields.slug}`}
-                        >
-                          <Link
-                            href={`/blog/${fields.slug}`}
-                            className="blog_item-link w-inline-block"
-                          >
-                            <div className="blog_image-wrapper">
-                              <Image
-                                src={fields.mainImage.fields.file.url}
-                                alt={`${fields.mainImageAltText}`}
-                                width={800}
-                                height={333}
-                                className="blog_image"
-                                loading="lazy"
-                              />
-                            </div>
-                            <div className="blog_item-content background-color-white">
-                              <div className="blog_item-content-top">
-                                <div className="blog_topic-wrapper">
-                                  <div className="blog_topic">
-                                    <div className="text-size-small text-weight-semibold">
-                                      {`${fields.topic}`}
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="blog_title-wrapper">
-                                  <h2 className="heading-style-h5">
-                                    {`${fields.name}`}
-                                  </h2>
-                                </div>
-                              </div>
-                              <div className="blog_button-wrapper">
-                                <div className="button is-link is-icon">
-                                  <div>Read more</div>
-                                  <div className="icon-embed-xxsmall w-embed">
-                                    <svg
-                                      width="16"
-                                      height="16"
-                                      viewBox="0 0 16 16"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M6 3L11 8L6 13"
-                                        stroke="CurrentColor"
-                                        stroke-width="1.5"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </Link>
-                        </div>
+                        <BlogCard
+                          key={fields.slug}
+                          slug={fields.slug}
+                          mainImageUrl={fields.mainImage.fields.file.url}
+                          mainImageAltText={fields.mainImageAltText}
+                          topic={fields.topic}
+                          name={fields.name}
+                        />
                       );
                     })}
                   </div>
