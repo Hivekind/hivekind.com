@@ -102,7 +102,7 @@ export default async function BlogPage() {
 
                 <div className="w-dyn-list">
                   <div role="list" className="collection-list-2 w-dyn-items">
-                    {posts.map(({ fields }) => {
+                    {posts.map(({ fields }: { fields: any }) => {
                       return (
                         <div
                           role="listitem"
@@ -115,7 +115,7 @@ export default async function BlogPage() {
                           >
                             <div className="blog_image-wrapper">
                               <Image
-                                src={fields.mainImage?.fields.file.url}
+                                src={fields.mainImage.fields.file.url}
                                 alt={`${fields.mainImageAltText}`}
                                 width={800}
                                 height={333}

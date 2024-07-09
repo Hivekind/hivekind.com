@@ -16,11 +16,11 @@ export default async function BlogIndexPage({
 }: {
   params: { slug: string; postSummary: string };
 }) {
-  const { post } = await getPost({
+  const { post }: { post: any } = await getPost({
     contentType: "blogPosts",
     slug: params.slug ?? "",
   });
-  console.log(post);
+
   return (
     <main className="main-wrapper">
       <div className="section-blog background-color-white">
