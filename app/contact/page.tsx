@@ -3,16 +3,16 @@
 import { useState } from "react";
 
 export default function ContactPage() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [company, setCompany] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [company, setCompany] = useState("");
 
   function clearForm() {
-    setName('');
-    setEmail('');
-    setCompany('');
-    setMessage('');
+    setName("");
+    setEmail("");
+    setCompany("");
+    setMessage("");
   }
 
   async function handleSubmit(event: any) {
@@ -37,13 +37,12 @@ export default function ContactPage() {
       body: JSON.stringify(data),
     });
 
-    if(response.ok) {
+    if (response.ok) {
       clearForm();
       alert("Message sent successfully");
     } else {
       alert("Message sending failed");
     }
-
   }
 
   return (
@@ -55,7 +54,7 @@ export default function ContactPage() {
               <div className="margin-bottom margin-large">
                 <div className="max-width-large">
                   <div className="margin-bottom margin-small">
-                    <h1>Let's work together</h1>
+                    <h1>Let&#x27;s work together</h1>
                   </div>
                   <p className="text-size-medium">
                     Want to talk about your project? Send us your details and we
@@ -75,7 +74,7 @@ export default function ContactPage() {
                   >
                     <div className="form-field-wrapper">
                       <label htmlFor="name" className="field-label">
-                        What's your name?
+                        What&#x27;s your name?
                       </label>
                       <input
                         className="form-input w-input"
@@ -109,7 +108,7 @@ export default function ContactPage() {
                     </div>
                     <div className="form-field-wrapper">
                       <label htmlFor="company" className="field-label">
-                        What's your company?
+                        What&#x27;s your company?
                       </label>
                       <input
                         className="form-input w-input"
@@ -138,7 +137,7 @@ export default function ContactPage() {
                         className="form-input is-text-area w-input"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        ></textarea>
+                      ></textarea>
                     </div>
                     <div className="margin-bottom margin-xsmall">
                       <label
