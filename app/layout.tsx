@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import "@/styles/globals.css";
-import "@/styles/site.css";
-import Script from "next/script";
-import NavMenu from '../components/NavMenu';
-import Footer from '../components/Footer';
+import type { Metadata } from 'next';
+import '@/styles/globals.css';
+import '@/styles/site.css';
+import Script from 'next/script';
+import NavMenu from '@/components/nav-menu';
+import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
   title: "Create Next App",
