@@ -1,74 +1,43 @@
+import React from 'react';
+import Stats from './stats';
+import Header from '@/components/header';
+
 export default function AboutPage() {
+  const title = "Your software development partner.";
+  const description = "We are on a mission to help companies build great products that customers love.";
+
   return (
     <main className="main-wrapper">
-      <header className="header-section">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="padding-section-large">
-              <div className="header_component">
-                <div className="margin-bottom margin-xxlarge">
-                  <div className="text-align-center">
-                    <div className="max-width-large">
-                      <div className="margin-bottom margin-small">
-                        <h1>Your software development partner.</h1>
-                      </div>
-                      <p className="text-size-medium">
-                        We are on a mission to help companies build great
-                        products that customers love.  
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="image-wrapper">
-                  <img
-                    src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner.jpg"
-                    loading="eager"
-                    sizes="(max-width: 479px) 100vw, 90vw"
-                    srcSet="
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-500.jpg   500w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-800.jpg   800w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-1080.jpg 1080w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-1600.jpg 1600w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-2000.jpg 2000w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner.jpg        3000w
-                  "
-                    alt="Software development partner"
-                    className="about_image"
-                  />
-                </div>
-                <div className="container-small">
-                  <div className="w-layout-grid hivekind-stats">
-                    <div className="hivekind-stats-wrapper">
-                      <div className="margin-bottom margin-xxsmall">
-                        <div className="text-align-center">
-                          <div className="heading-style-h2">2015</div>
-                        </div>
-                      </div>
-                      <div className="text-align-center">Founded</div>
-                    </div>
-                    <div className="hivekind-stats-wrapper">
-                      <div className="margin-bottom margin-xxsmall">
-                        <div className="text-align-center">
-                          <div className="heading-style-h2">100%</div>
-                        </div>
-                      </div>
-                      <div className="text-align-center">Remote</div>
-                    </div>
-                    <div className="hivekind-stats-wrapper">
-                      <div className="margin-bottom margin-xxsmall">
-                        <div className="text-align-center">
-                          <div className="heading-style-h2">29</div>
-                        </div>
-                      </div>
-                      <div className="text-align-center">Hivekinders</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <Header
+        title={title}
+        description={description}
+      >
+        <div className="image-wrapper">
+          <img
+            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner.jpg"
+            loading="eager"
+            sizes="(max-width: 479px) 100vw, 90vw"
+            srcSet="
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-500.jpg   500w,
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-800.jpg   800w,
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-1080.jpg 1080w,
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-1600.jpg 1600w,
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-2000.jpg 2000w,
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner.jpg        3000w
+          "
+            alt="Software development partner"
+            className="about_image"
+          />
+        </div>
+        <div className="container-small">
+          <div className="w-layout-grid hivekind-stats">
+            <Stats value="2015" description="Founded" />
+            <Stats value="100%" description="Remote" />
+            <Stats value="30" description="Hivekinders" />
           </div>
         </div>
-      </header>
+      </Header>
+
       <section className="team-section">
         <div className="padding-global">
           <div className="container-large">

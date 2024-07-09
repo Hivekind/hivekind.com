@@ -1,59 +1,41 @@
-import Image from "next/image";
+import ContactUsSection from "@/components/contact-us-section";
+import Header from "@/components/header";
+import FeatureTable from "./feature-table";
+import ListItem from "@/components/list-item";
 
 export default function Home() {
+  const title = "The transparent software development company.";
+  const description =
+    "Build meaningful products with a software development company that's committed to transparency; clear objectives, regular updates, frequent releases, and a fixed monthly cost.";
+
   return (
     <>
       <main className="main-wrapper">
-        <header className="header-section">
-          <div className="padding-global">
-            <div className="container-large">
-              <div className="padding-section-medium">
-                <div className="header_component">
-                  <div className="margin-bottom margin-xxlarge">
-                    <div className="text-align-center">
-                      <div className="max-width-large">
-                        <div className="margin-bottom margin-small">
-                          <h1>The transparent software development company.</h1>
-                        </div>
-                        <p className="text-size-medium">
-                          Build meaningful products with a software development
-                          company that&#x27;s committed to transparency; clear
-                          objectives, regular updates, frequent releases, and a
-                          fixed monthly cost.
-                        </p>
-                        <div className="margin-top margin-medium">
-                          <div className="button-group is-center">
-                            <a href="/contact" className="button w-button">
-                              Schedule a call
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="header_image-wrapper">
-                    <img
-                      src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg"
-                      loading="eager"
-                      sizes="90vw"
-                      srcSet="
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-500.jpeg   500w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-800.jpeg   800w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-1080.jpeg 1080w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-1600.jpeg 1600w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-2000.jpeg 2000w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-2600.jpeg 2600w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg        3600w
-                        "
-                      alt="Software development company photomontage"
-                      className="header_image"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+        <Header
+          title={title}
+          description={description}
+          paddingStyle="padding-section-medium"
+        >
+          <div className="header_image-wrapper">
+            <img
+              src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg"
+              loading="eager"
+              sizes="90vw"
+              srcSet="
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-500.jpeg   500w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-800.jpeg   800w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-1080.jpeg 1080w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-1600.jpeg 1600w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-2000.jpeg 2000w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-2600.jpeg 2600w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg        3600w
+                "
+              alt="Software development company photomontage"
+              className="header_image"
+            />
           </div>
-        </header>
+        </Header>
+
         <section className="testimonial-section">
           <div className="padding-global">
             <div className="container-large">
@@ -85,6 +67,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section className="value-props-section">
           <div className="padding-global">
             <div className="container-large">
@@ -99,460 +82,13 @@ export default function Home() {
               </div>
               <div className="padding-section-medium overflow-auto">
                 <div className="container-medium">
-                  <table className="features-comparison_component">
-                    <thead className="features-table_header">
-                      <tr className="features-table_row row-bottom-border">
-                        <th className="features-table_cell is-title background-color-gray"></th>
-                        <th className="features-table_cell">
-                          <div className="features-table_header_wrapper">
-                            <div className="features-table_header_content">
-                              <div className="features-table_icon-wrapper">
-                                <div className="text-size-regular text-style-allcaps">
-                                  Hivekind
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </th>
-                        <th className="features-table_cell is-table-heading">
-                          <div className="features-table_header_wrapper">
-                            <div className="features-table_header_content">
-                              <div className="features-table_icon-wrapper">
-                                <div className="text-size-regular text-style-allcaps">
-                                  Others
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="features-table_body">
-                      <tr className="features-table_row is-transparent">
-                        <td className="features-table_cell is-title background-color-gray">
-                          <h3 className="text-size-regular text-weight-semibold text-wrap">
-                            Developers
-                          </h3>
-                        </td>
-                        <td valign="top" className="features-table_cell">
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <rect
-                                    x="2"
-                                    y="2"
-                                    width="20"
-                                    height="20"
-                                    rx="10"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M10.7067 13.293L8.41016 11L7 12.4141L10.7109 16.1211L17.418 9.41016L16.0039 8L10.7067 13.293Z"
-                                    fill="white"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Vetted through a 5-step process
-                            </div>
-                          </div>
-                        </td>
-                        <td
-                          valign="top"
-                          className="features-table_cell background-color-gray"
-                        >
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <rect
-                                    x="2"
-                                    y="2"
-                                    width="20"
-                                    height="20"
-                                    rx="10"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M10.7067 13.293L8.41016 11L7 12.4141L10.7109 16.1211L17.418 9.41016L16.0039 8L10.7067 13.293Z"
-                                    fill="white"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Adequately vetted
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="features-table_row">
-                        <td className="features-table_cell is-title is-even">
-                          <h3 className="text-size-regular text-weight-semibold text-wrap">
-                            Focus and Commitment
-                          </h3>
-                        </td>
-                        <td
-                          valign="top"
-                          className="features-table_cell is-even background-color-white"
-                        >
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <rect
-                                    x="2"
-                                    y="2"
-                                    width="20"
-                                    height="20"
-                                    rx="10"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M10.7067 13.293L8.41016 11L7 12.4141L10.7109 16.1211L17.418 9.41016L16.0039 8L10.7067 13.293Z"
-                                    fill="white"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Team members are fully committed to one project at
-                              a time
-                            </div>
-                          </div>
-                        </td>
-                        <td
-                          valign="top"
-                          className="features-table_cell background-color-white round-corner-right"
-                        >
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M9.172 16.2421L12 13.4141L14.828 16.2421L16.242 14.8281L13.414 12.0001L16.242 9.17206L14.828 7.75806L12 10.5861L9.172 7.75806L7.758 9.17206L10.586 12.0001L7.758 14.8281L9.172 16.2421Z"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22ZM12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4Z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Team members may work on multiple  projects
-                              simultaneously
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="features-table_row is-transparent">
-                        <td className="features-table_cell is-title is-odd">
-                          <h3 className="text-size-regular text-weight-semibold text-wrap">
-                            Communication
-                          </h3>
-                        </td>
-                        <td valign="top" className="features-table_cell">
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <rect
-                                    x="2"
-                                    y="2"
-                                    width="20"
-                                    height="20"
-                                    rx="10"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M10.7067 13.293L8.41016 11L7 12.4141L10.7109 16.1211L17.418 9.41016L16.0039 8L10.7067 13.293Z"
-                                    fill="white"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Regular updates and feedback
-                            </div>
-                          </div>
-                        </td>
-                        <td valign="top" className="features-table_cell">
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M9.172 16.2421L12 13.4141L14.828 16.2421L16.242 14.8281L13.414 12.0001L16.242 9.17206L14.828 7.75806L12 10.5861L9.172 7.75806L7.758 9.17206L10.586 12.0001L7.758 14.8281L9.172 16.2421Z"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22ZM12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4Z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Infrequent or poor communication
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="features-table_row">
-                        <td className="features-table_cell is-title is-even">
-                          <h3 className="text-size-regular text-weight-semibold text-wrap">
-                            Project management
-                          </h3>
-                        </td>
-                        <td
-                          valign="top"
-                          className="features-table_cell background-color-white"
-                        >
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <rect
-                                    x="2"
-                                    y="2"
-                                    width="20"
-                                    height="20"
-                                    rx="10"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M10.7067 13.293L8.41016 11L7 12.4141L10.7109 16.1211L17.418 9.41016L16.0039 8L10.7067 13.293Z"
-                                    fill="white"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Clearly defined tasks and roadmap. Good
-                              documentation
-                            </div>
-                          </div>
-                        </td>
-                        <td
-                          valign="top"
-                          className="features-table_cell background-color-white round-corner-right"
-                        >
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M9.172 16.2421L12 13.4141L14.828 16.2421L16.242 14.8281L13.414 12.0001L16.242 9.17206L14.828 7.75806L12 10.5861L9.172 7.75806L7.758 9.17206L10.586 12.0001L7.758 14.8281L9.172 16.2421Z"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22ZM12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4Z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Reactive planning. Very little or no documentation
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="features-table_row is-transparent">
-                        <td className="features-table_cell is-title is-odd">
-                          <h3 className="text-size-regular text-weight-semibold text-wrap">
-                            Work transparency
-                          </h3>
-                        </td>
-                        <td valign="top" className="features-table_cell">
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <rect
-                                    x="2"
-                                    y="2"
-                                    width="20"
-                                    height="20"
-                                    rx="10"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M10.7067 13.293L8.41016 11L7 12.4141L10.7109 16.1211L17.418 9.41016L16.0039 8L10.7067 13.293Z"
-                                    fill="white"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Complete transparency
-                            </div>
-                          </div>
-                        </td>
-                        <td valign="top" className="features-table_cell">
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M9.172 16.2421L12 13.4141L14.828 16.2421L16.242 14.8281L13.414 12.0001L16.242 9.17206L14.828 7.75806L12 10.5861L9.172 7.75806L7.758 9.17206L10.586 12.0001L7.758 14.8281L9.172 16.2421Z"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22ZM12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4Z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Limited transparency
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="features-table_row">
-                        <td className="features-table_cell is-title is-even">
-                          <h3 className="text-size-regular text-weight-semibold text-wrap">
-                            Code and assets
-                          </h3>
-                        </td>
-                        <td
-                          valign="top"
-                          className="features-table_cell background-color-white"
-                        >
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <rect
-                                    x="2"
-                                    y="2"
-                                    width="20"
-                                    height="20"
-                                    rx="10"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M10.7067 13.293L8.41016 11L7 12.4141L10.7109 16.1211L17.418 9.41016L16.0039 8L10.7067 13.293Z"
-                                    fill="white"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              You have full ownership and control
-                            </div>
-                          </div>
-                        </td>
-                        <td
-                          valign="top"
-                          className="features-table_cell background-color-white round-corner-right"
-                        >
-                          <div className="features-table-cell_content">
-                            <div>
-                              <div className="icon-1x1-xxsmall w-embed">
-                                <svg
-                                  width="100%"
-                                  height="100%"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M9.172 16.2421L12 13.4141L14.828 16.2421L16.242 14.8281L13.414 12.0001L16.242 9.17206L14.828 7.75806L12 10.5861L9.172 7.75806L7.758 9.17206L10.586 12.0001L7.758 14.8281L9.172 16.2421Z"
-                                    fill="currentColor"
-                                  />
-                                  <path
-                                    d="M12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22ZM12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4Z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <div className="text-size-regular">
-                              Limited access
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <FeatureTable />
                 </div>
               </div>
             </div>
           </div>
         </section>
+
         <section className="features-section">
           <div className="padding-global">
             <div className="container-large">
@@ -724,137 +260,33 @@ export default function Home() {
                 <div className="container-medium">
                   <div className="w-dyn-list">
                     <div role="list" className="collection-list-3 w-dyn-items">
-                      <div role="listitem" className="w-dyn-item">
-                        <div className="featured-work_item">
-                          <a
-                            href="/work/nolo-willmaker-online-the-expansion-of-an-iconic-desktop-product-to-the-web"
-                            className="featured-work_item-link w-inline-block"
-                          >
-                            <div className="featured-work_image-wrapper round-corner-top">
-                              <img
-                                alt=""
-                                loading="lazy"
-                                src="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker.png"
-                                sizes="100vw"
-                                srcSet="
-                                    https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-500.png   500w,
-                                    https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-800.png   800w,
-                                    https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-1080.png 1080w,
-                                    https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker.png        1440w
-                                  "
-                                className="featured-work_image"
-                              />
-                            </div>
-                            <div className="featured-work_item-content background-color-white round-corner-bottom">
-                              <div className="featued-work_item-content-top">
-                                <div className="featured-work_meta-wrapper">
-                                  <div className="work_client">
-                                    <div className="text-size-small text-weight-semibold">
-                                      Nolo
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="featured-work_title-wrapper">
-                                  <h3 className="heading-style-h5">
-                                    Nolo WillMaker Online: Expansion of an
-                                    Iconic Desktop Product to the Web
-                                  </h3>
-                                </div>
-                                <div className="text-size-regular">
-                                  We helped Nolo increase conversion by 70% for
-                                  their WillMaker product.
-                                </div>
-                              </div>
-                              <div className="featured-work_button-wrapper">
-                                <div className="button is-link is-icon">
-                                  <div>Read more</div>
-                                  <div className="icon-embed-xxsmall w-embed">
-                                    <svg
-                                      width="16"
-                                      height="16"
-                                      viewBox="0 0 16 16"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M6 3L11 8L6 13"
-                                        stroke="CurrentColor"
-                                        strokeWidth="1.5"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div role="listitem" className="w-dyn-item">
-                        <div className="featured-work_item">
-                          <a
-                            href="/work/essayjack-journey-from-prototype-to-acquisition"
-                            className="featured-work_item-link w-inline-block"
-                          >
-                            <div className="featured-work_image-wrapper round-corner-top">
-                              <img
-                                alt=""
-                                loading="lazy"
-                                src="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png"
-                                sizes="100vw"
-                                srcSet="
-                                    https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-500.png   500w,
-                                    https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-800.png   800w,
-                                    https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-1080.png 1080w,
-                                    https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png        1440w
-                                  "
-                                className="featured-work_image"
-                              />
-                            </div>
-                            <div className="featured-work_item-content background-color-white round-corner-bottom">
-                              <div className="featued-work_item-content-top">
-                                <div className="featured-work_meta-wrapper">
-                                  <div className="work_client">
-                                    <div className="text-size-small text-weight-semibold">
-                                      EssayJack
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="featured-work_title-wrapper">
-                                  <h3 className="heading-style-h5">
-                                    EssayJack: Journey from Prototype to
-                                    Acquisition
-                                  </h3>
-                                </div>
-                                <div className="text-size-regular">
-                                  Hivekind provided product management,
-                                  development and devops services to EssayJack
-                                  until its eventual acquisition.
-                                </div>
-                              </div>
-                              <div className="featured-work_button-wrapper">
-                                <div className="button is-link is-icon">
-                                  <div>Read more</div>
-                                  <div className="icon-embed-xxsmall w-embed">
-                                    <svg
-                                      width="16"
-                                      height="16"
-                                      viewBox="0 0 16 16"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M6 3L11 8L6 13"
-                                        stroke="CurrentColor"
-                                        strokeWidth="1.5"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
+                      <ListItem
+                        url="/work/nolo-willmaker-online-the-expansion-of-an-iconic-desktop-product-to-the-web"
+                        imgSrc="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker.png"
+                        imgSrcSet="
+                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-500.png   500w,
+                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-800.png   800w,
+                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-1080.png 1080w,
+                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker.png        1440w
+                        "
+                        client="Nolo"
+                        title="Nolo WillMaker Online: Expansion of an Iconic Desktop Product to the Web"
+                        description="We helped Nolo increase conversion by 70% for their WillMaker product."
+                      />
+
+                      <ListItem
+                        url="/work/essayjack-journey-from-prototype-to-acquisition"
+                        imgSrc="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png"
+                        imgSrcSet="
+                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-500.png   500w,
+                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-800.png   800w,
+                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-1080.png 1080w,
+                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png        1440w
+                        "
+                        client="EssayJack"
+                        title="EssayJack: Journey from Prototype to Acquisition"
+                        description="Hivekind provided product management, development and devops services to EssayJack until its eventual acquisition."
+                      />
                     </div>
                   </div>
                 </div>
@@ -900,53 +332,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="cta_section">
-          <div className="padding-global background-color-white">
-            <div className="container-medium">
-              <div className="padding-section-large">
-                <div className="w-layout-grid cta_component">
-                  <div className="cta_content">
-                    <div className="margin-bottom margin-small">
-                      <h2>
-                        Your vision deserves a dedicated software development
-                        team.
-                      </h2>
-                    </div>
-                    <div className="margin-bottom margin-small">
-                      <p className="text-size-medium">
-                        We&#x27;re not about tech jargon or over-promising.
-                        Instead, we focus on clear communication, transparency
-                        in our process, and delivering results that speak for
-                        themselves.
-                      </p>
-                    </div>
-                    <div className="margin-top margin-medium">
-                      <div className="button-group">
-                        <a href="/contact" className="button w-button">
-                          Schedule a call
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="cta_image-wrapper">
-                    <img
-                      src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards.png"
-                      loading="lazy"
-                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, 41vw"
-                      srcSet="
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards-p-500.png  500w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards-p-800.png  800w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards.png       1530w
-                        "
-                      alt="Top software development company Malaysia awards"
-                      className="awards_image"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
+        <ContactUsSection />
       </main>
     </>
   );
