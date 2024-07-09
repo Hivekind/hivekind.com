@@ -1,59 +1,37 @@
-import Image from "next/image";
+import Header from '@/components/header';
 
 export default function Home() {
+  const title = "The transparent software development company.";
+  const description = "Build meaningful products with a software development company that's committed to transparency; clear objectives, regular updates, frequent releases, and a fixed monthly cost.";
+
   return (
     <>
       <main className="main-wrapper">
-        <header className="header-section">
-          <div className="padding-global">
-            <div className="container-large">
-              <div className="padding-section-medium">
-                <div className="header_component">
-                  <div className="margin-bottom margin-xxlarge">
-                    <div className="text-align-center">
-                      <div className="max-width-large">
-                        <div className="margin-bottom margin-small">
-                          <h1>The transparent software development company.</h1>
-                        </div>
-                        <p className="text-size-medium">
-                          Build meaningful products with a software development
-                          company that&#x27;s committed to transparency; clear
-                          objectives, regular updates, frequent releases, and a
-                          fixed monthly cost.
-                        </p>
-                        <div className="margin-top margin-medium">
-                          <div className="button-group is-center">
-                            <a href="/contact" className="button w-button">
-                              Schedule a call
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="header_image-wrapper">
-                    <img
-                      src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg"
-                      loading="eager"
-                      sizes="90vw"
-                      srcSet="
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-500.jpeg   500w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-800.jpeg   800w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-1080.jpeg 1080w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-1600.jpeg 1600w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-2000.jpeg 2000w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-2600.jpeg 2600w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg        3600w
-                        "
-                      alt="Software development company photomontage"
-                      className="header_image"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+        <Header
+          title={title}
+          description={description}
+          paddingStyle="padding-section-medium"
+        >
+          <div className="header_image-wrapper">
+            <img
+              src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg"
+              loading="eager"
+              sizes="90vw"
+              srcSet="
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-500.jpeg   500w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-800.jpeg   800w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-1080.jpeg 1080w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-1600.jpeg 1600w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-2000.jpeg 2000w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-2600.jpeg 2600w,
+                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg        3600w
+                "
+              alt="Software development company photomontage"
+              className="header_image"
+            />
           </div>
-        </header>
+        </Header>
+
         <section className="testimonial-section">
           <div className="padding-global">
             <div className="container-large">

@@ -1,50 +1,36 @@
+import React from 'react';
+import Header from '@/components/header';
+
 export default function CareersPage() {
+  const title = "Help us build amazing products.";
+  const description = "Hivekind is an engineering company at heart. Founded by software engineers with a strong focus on getting things done, the emphasis on delivery and technical excellence runs strong and has been there from day one, guiding everything else. We take great pride on the quality of our work.";
+
   return (
     <main className="main-wrapper">
-      <header className="header-section">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="padding-section-large">
-              <div className="header_component">
-                <div className="margin-bottom margin-xxlarge">
-                  <div className="text-align-center">
-                    <div className="max-width-large">
-                      <div className="margin-bottom margin-small">
-                        <h1>Help us build amazing products.</h1>
-                      </div>
-                      <p className="text-size-medium">
-                        Hivekind is an engineering company at heart. Founded by
-                        software engineers with a strong focus on getting things
-                        done, the emphasis on delivery and technical excellence
-                        runs strong and has been there from day one, guiding
-                        everything else. We take great pride on the quality of
-                        our work.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="header_image-wrapper">
-                  <img
-                    src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office.jpg"
-                    loading="eager"
-                    sizes="90vw"
-                    srcSet="
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-500.jpg   500w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-800.jpg   800w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-1080.jpg 1080w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-1600.jpg 1600w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-2000.jpg 2000w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office.jpg        3000w
-                  "
-                    alt="Hivekind team at the office"
-                    className="about_image"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+      <Header
+        title={title}
+        description={description}
+        showContactButton={false}
+      >
+        <div className="header_image-wrapper">
+          <img
+            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office.jpg"
+            loading="eager"
+            sizes="90vw"
+            srcSet="
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-500.jpg   500w,
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-800.jpg   800w,
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-1080.jpg 1080w,
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-1600.jpg 1600w,
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-2000.jpg 2000w,
+            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office.jpg        3000w
+          "
+            alt="Hivekind team at the office"
+            className="about_image"
+          />
         </div>
-      </header>
+      </Header>
+
       <section className="about-section">
         <div className="padding-global">
           <div className="container-large">
