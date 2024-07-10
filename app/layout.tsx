@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
-import '@/styles/globals.css';
-import '@/styles/site.css';
-import Script from 'next/script';
-import NavMenu from '@/components/nav-menu';
-import Footer from '@/components/footer';
+import type { Metadata } from "next";
+import "@/styles/globals.css";
+import "@/styles/site.css";
+import Script from "next/script";
+import NavMenu from "@/components/nav-menu";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -49,10 +49,7 @@ export default function RootLayout({
           src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6347cb105849aecae0fd4ed8"
           strategy="beforeInteractive"
         />
-        <Script
-          src="scripts/webflow.js"
-          strategy="afterInteractive"
-        />
+        <Script src="scripts/webflow.js" strategy="afterInteractive" />
 
         {/* <script
           type="text/javascript"
@@ -93,7 +90,6 @@ export default function RootLayout({
               });`,
           }}
         ></script> */}
-
       </body>
     </html>
   );

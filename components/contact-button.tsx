@@ -1,9 +1,15 @@
 import React from 'react';
 
-const ContactButton = () => {
+interface ContactButtonProps {
+  isCenter?: boolean;
+}
+
+const ContactButton = ({ isCenter = true }: ContactButtonProps) => {
+  const centerStyle = isCenter ? 'is-center' : '';
+
   return (
     <div className="margin-top margin-medium">
-      <div className="button-group is-center">
+      <div className={`button-group ${centerStyle}`}>
         <a href="/contact" className="button w-button">
           Schedule a call
         </a>
