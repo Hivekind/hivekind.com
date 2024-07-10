@@ -1,8 +1,11 @@
 import { getAllPosts } from "@/lib/contentfulApi";
 import BlogCard from "@/components/blog-card"; // Import the BlogCardProps type
+import BlogCardFeatured from "@/components/blog-card-featured";
 
 export default async function BlogPage() {
-  const { posts } = await getAllPosts({ contentType: "blogPosts" });
+  const { posts } = await getAllPosts({
+    contentType: "blogPosts",
+  });
 
   return (
     <main className="main-wrapper">
@@ -26,92 +29,32 @@ export default async function BlogPage() {
               <div className="blog_component">
                 <div className="w-dyn-list">
                   <div role="list" className="w-dyn-items">
-                    <div role="listitem" className="collection-item w-dyn-item">
-                      <a
-                        href="/blog/test-coverage-with-istanbul-nyc-for-typescript-projects"
-                        className="blog_item-link w-inline-block"
-                      >
-                        <div className="blog_featured-item-wrapper">
-                          <div className="blog_featured-image-wrapper">
-                            <img
-                              alt=""
-                              loading="lazy"
-                              src="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a82d088a0253966a7cb24_test-coverage-with-istanbul-nyc-for-typescript-projects.jpg"
-                              sizes="(max-width: 767px) 90vw, 45vw"
-                              srcSet="
-                                  https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a82d088a0253966a7cb24_test-coverage-with-istanbul-nyc-for-typescript-projects-p-500.jpg   500w,
-                                  https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a82d088a0253966a7cb24_test-coverage-with-istanbul-nyc-for-typescript-projects-p-800.jpg   800w,
-                                  https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a82d088a0253966a7cb24_test-coverage-with-istanbul-nyc-for-typescript-projects-p-1080.jpg 1080w,
-                                  https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a82d088a0253966a7cb24_test-coverage-with-istanbul-nyc-for-typescript-projects-p-1600.jpg 1600w,
-                                  https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a82d088a0253966a7cb24_test-coverage-with-istanbul-nyc-for-typescript-projects-p-2000.jpg 2000w,
-                                  https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a82d088a0253966a7cb24_test-coverage-with-istanbul-nyc-for-typescript-projects.jpg        2400w
-                                "
-                              className="blog_featured-image"
-                            />
-                          </div>
-                          <div className="blog_featured-item-content background-color-white">
-                            <div className="blog_item-content-top">
-                              <div className="blog_topic-wrapper">
-                                <div className="blog_topic">
-                                  <div className="text-size-small text-weight-semibold">
-                                    Engineering
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="blog_title-wrapper featured-article">
-                                <h2 className="heading-style-h4">
-                                  Test Coverage with Istanbul (NYC) for
-                                  TypeScript Projects
-                                </h2>
-                              </div>
-                              <div className="text-size-regular">
-                                Learn how you can integrate Mocha with NYC to
-                                generate comprehensive test coverage reports for
-                                your TypeScript project.
-                              </div>
-                            </div>
-                            <div className="blog_button-wrapper">
-                              <div className="button is-link is-icon">
-                                <div>Read more</div>
-                                <div className="icon-embed-xxsmall w-embed">
-                                  <svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M6 3L11 8L6 13"
-                                      stroke="CurrentColor"
-                                      strokeWidth="1.5" // Fix the attribute name
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
+                    <BlogCardFeatured
+                      key={posts[0].fields.slug}
+                      slug={posts[0].fields.slug}
+                      mainImageUrl={posts[0].fields.mainImage.fields.file.url}
+                      mainImageAltText={posts[0].fields.mainImageAltText}
+                      topic={posts[0].fields.topic}
+                      name={posts[0].fields.name}
+                      summary={posts[0].fields.summary}
+                    />
                   </div>
                 </div>
-
-                <div className="w-dyn-list">
-                  <div role="list" className="collection-list-2 w-dyn-items">
-                    {posts.map(({ fields }: { fields: any }) => {
-                      return (
-                        <BlogCard
-                          key={fields.slug}
-                          slug={fields.slug}
-                          mainImageUrl={fields.mainImage.fields.file.url}
-                          mainImageAltText={fields.mainImageAltText}
-                          topic={fields.topic}
-                          name={fields.name}
-                        />
-                      );
-                    })}
-                  </div>
+              </div>
+              <div className="w-dyn-list">
+                <div role="list" className="collection-list-2 w-dyn-items">
+                  {posts.slice(1).map(({ fields }) => {
+                    return (
+                      <BlogCard
+                        key={fields.slug}
+                        slug={fields.slug}
+                        mainImageUrl={fields.mainImage.fields.file.url}
+                        mainImageAltText={fields.mainImageAltText}
+                        topic={fields.topic}
+                        name={fields.name}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             </div>

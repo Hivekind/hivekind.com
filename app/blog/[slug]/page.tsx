@@ -16,7 +16,7 @@ export default async function BlogIndexPage({
 }: {
   params: { slug: string; postSummary: string };
 }) {
-  const { post }: { post: any } = await getPost({
+  const { post } = await getPost({
     contentType: "blogPosts",
     slug: params.slug ?? "",
   });

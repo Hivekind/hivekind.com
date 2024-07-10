@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type BlogCardProps = {
+export type BlogCardProps = {
   slug: string;
   mainImageUrl: string;
   mainImageAltText: string;
   topic: string;
   name: string;
+  summary?: string;
 };
 
 export default function BlogCard({
@@ -15,7 +16,7 @@ export default function BlogCard({
   mainImageAltText,
   topic,
   name,
-}: BlogCardProps): any {
+}: BlogCardProps): JSX.Element {
   return (
     <div role="listitem" className="w-dyn-item">
       <Link href={`/blog/${slug}`} className="blog_item-link w-inline-block">

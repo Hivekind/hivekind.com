@@ -1,16 +1,43 @@
 import * as contentful from "contentful";
 
+export type fieldsType = {
+  slug: string;
+  mainImage: { fields: { file: { url: string } } };
+  mainImageAltText: string;
+  topic: string;
+  name: string;
+  summary: string;
+  author: string;
+  postBody: string;
+};
+
+export type postsType = {
+  posts: Array<{ fields: Partial<fieldsType> }>;
+};
+
+export type postType = { post: { fields: Partial<fieldsType> } };
+
 const contentfulClient = contentful.createClient({
   space: process.env.CONTENTFUL_SPACE_ID ?? "",
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN ?? "",
 });
 
-export async function getAllPosts({ contentType }: { contentType: string }) {
+export async function getAllPosts({
+  contentType,
+}: {
+  contentType: string;
+}): Promise<postsType> {
   const response = await contentfulClient.getEntries({
     content_type: contentType,
   });
 
-  return { posts: response.items };
+  const posts = response.items.map((item) => {
+    return {
+      fields: item.fields as fieldsType,
+    };
+  });
+
+  return { posts };
 }
 
 export async function getPost({
@@ -19,7 +46,7 @@ export async function getPost({
 }: {
   contentType: string;
   slug: string;
-}) {
+}): Promise<postType> {
   const response = await contentfulClient.getEntries({
     content_type: contentType,
     "fields.slug[in]": slug,

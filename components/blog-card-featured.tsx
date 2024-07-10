@@ -9,7 +9,7 @@ export default function BlogCardFeatured({
   topic,
   name,
   summary,
-}: BlogCardProps): any {
+}: BlogCardProps): JSX.Element {
   return (
     <div role="listitem" className="collection-item w-dyn-item">
       <Link href={`/blog/${slug}`} className="blog_item-link w-inline-block">
