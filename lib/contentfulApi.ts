@@ -33,7 +33,7 @@ export async function getAllPosts({
 
   const posts = response.items.map((item) => {
     return {
-      fields: item.fields as fieldsType,
+      fields: item.fields,
     };
   });
 

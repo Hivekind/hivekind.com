@@ -31,11 +31,11 @@ export default async function BlogPage() {
                   <div role="list" className="w-dyn-items">
                     <BlogCardFeatured
                       key={posts[0].fields.slug}
-                      slug={posts[0].fields.slug}
-                      mainImageUrl={posts[0].fields.mainImage.fields.file.url}
-                      mainImageAltText={posts[0].fields.mainImageAltText}
-                      topic={posts[0].fields.topic}
-                      name={posts[0].fields.name}
+                      slug={`${posts[0].fields.slug}`}
+                      mainImageUrl={`${posts[0].fields.mainImage?.fields.file.url}`}
+                      mainImageAltText={`${posts[0].fields.mainImageAltText}`}
+                      topic={`${posts[0].fields.topic}`}
+                      name={`${posts[0].fields.name}`}
                       summary={posts[0].fields.summary}
                     />
                   </div>
@@ -47,11 +47,11 @@ export default async function BlogPage() {
                     return (
                       <BlogCard
                         key={fields.slug}
-                        slug={fields.slug}
-                        mainImageUrl={fields.mainImage.fields.file.url}
-                        mainImageAltText={fields.mainImageAltText}
-                        topic={fields.topic}
-                        name={fields.name}
+                        slug={`${fields.slug}`}
+                        mainImageUrl={`${fields.mainImage?.fields.file.url}`}
+                        mainImageAltText={`${fields.mainImageAltText}`}
+                        topic={`${fields.topic}`}
+                        name={`${fields.name}`}
                       />
                     );
                   })}
