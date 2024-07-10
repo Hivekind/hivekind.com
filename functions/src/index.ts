@@ -1,19 +1,32 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * import {onCall} from "firebase-functions/v2/https";
- * import {onDocumentWritten} from "firebase-functions/v2/firestore";
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+import * as functions from "firebase-functions";
+import * as admin from "firebase-admin";
+import * as postmark from "postmark";
+import * as express from "express";
+import * as cors from "cors";
 
-import {onRequest} from "firebase-functions/v2/https";
-import * as logger from "firebase-functions/logger";
+const app = express();
+app.use(cors({ origin: true }));
 
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
+admin.initializeApp();
 
-// export const helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+const postmarkClient = new postmark.ServerClient(
+  "732a3ccc-ce12-47b6-845a-7469ea8d7b04"
+);
+
+export const sendEmail = functions.https.onCall(async (data) => {
+  const { subject, message } = data;
+
+  try {
+    const result = await postmarkClient.sendEmail({
+      From: "haritha@hivekind.com",
+      To: "haritha@hivekind.com",
+      Subject: subject,
+      HtmlBody: message,
+    });
+
+    return { success: true, result };
+  } catch (error) {
+    console.error("Error sending email:", error);
+    return { success: false, error };
+  }
+});

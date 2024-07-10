@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { functions } from "@/firebase";
+import { httpsCallable } from "firebase/functions";
 
 const styles: { [index: string]: React.CSSProperties } = {
   blackCheckbox: {
@@ -62,15 +64,10 @@ export default function ContactPage() {
       `,
     };
 
-    const response = await fetch("/api/email", {
-      method: "POST",
-      headers: {
-        "Contect-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    const sendEmail = httpsCallable(functions, "sendEmail");
+    const response: any = await sendEmail(data);
 
-    if (response.ok) {
+    if (response.data.success) {
       clearForm();
       setFormSubmission("succeeded");
     } else {
