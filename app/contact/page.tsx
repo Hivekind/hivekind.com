@@ -1,3 +1,9 @@
+const styles: { [index: string]: React.CSSProperties } = {
+  blackCheckbox: {
+    accentColor: "#000",
+  },
+};
+
 export default function ContactPage() {
   return (
     <main className="main-wrapper">
@@ -91,18 +97,14 @@ export default function ContactPage() {
                         id="Contact-11-Checkbox"
                         className="w-checkbox form-checkbox"
                       >
-                        <div className="w-checkbox-input w-checkbox-input--inputType-custom form-checkbox-icon"></div>
                         <input
                           id="privacy_acceptance"
                           type="checkbox"
                           name="privacy_acceptance"
                           data-name="privacy_acceptance"
                           required
-                          style={{
-                            opacity: 0,
-                            position: "absolute",
-                            zIndex: -1,
-                          }}
+                          className="form-checkbox-icon"
+                          style={styles.blackCheckbox}
                         />
                         <span className="form-checkbox-label text-size-small w-form-label">
                           By ticking this box I agree that I have read the
