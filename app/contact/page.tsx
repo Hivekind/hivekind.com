@@ -3,6 +3,9 @@
 import { useState } from "react";
 
 const styles: { [index: string]: React.CSSProperties } = {
+  blackCheckbox: {
+    accentColor: "#000",
+  },
   modal: {
     display: "block",
     position: "fixed",
@@ -180,6 +183,7 @@ export default function ContactPage() {
                           name="privacy_acceptance"
                           data-name="privacy_acceptance"
                           className="form-checkbox-icon"
+                          style={styles.blackCheckbox}
                           required
                         />
                         <span className="form-checkbox-label text-size-small w-form-label">
