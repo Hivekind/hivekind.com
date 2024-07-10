@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ContactButtonProps {
-  isCenter: boolean;
+  isCenter?: boolean;
 }
 
 const ContactButton = ({ isCenter = true }: ContactButtonProps) => {
