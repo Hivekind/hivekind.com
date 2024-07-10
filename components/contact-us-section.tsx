@@ -16,7 +16,7 @@ const ContactUsSection = () => {
                 </div>
                 <div className="margin-bottom margin-small">
                   <p className="text-size-medium">
-                    We're not about tech jargon or over-promising. Instead, we
+                    We&#x27;re not about tech jargon or over-promising. Instead, we
                     focus on clear communication, transparency in our process,
                     and delivering results that speak for themselves.
                   </p>

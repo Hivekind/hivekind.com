@@ -4,7 +4,7 @@ import ContactUsSection from '@/components/contact-us-section';
 
 export default function ServicesPage() {
   const title = "Build software with confidence.";
-  const description = "Build meaningful products with a software development company that's committed to transparency; clear objectives, regular updates, frequent releases, and a fixed monthly cost."
+  const description = "Whether you're a startup or an established enterprise, Hivekind is here to help you through the tricky parts of making software. We turn problems into opportunities and your ideas into market-ready products."
 
   return (
     <main className="main-wrapper">
