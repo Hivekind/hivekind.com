@@ -5,11 +5,11 @@ interface PeopleProps {
   position: string;
   imgFileName: string;
   imgFileType?: string;
-  linkedin?: string;
-  x?: string;
-  instagram?: string;
-  facebook?: string;
-  github?: string;
+  linkedin?: string | undefined;
+  x?: string | undefined;
+  instagram?: string | undefined;
+  facebook?: string | undefined;
+  github?: string | undefined;
 }
 
 const getLinkedinSvg = () => (
@@ -93,28 +93,22 @@ const getGithubSvg = () => (
   </svg>
 );
 
-const renderSocialLink = (url: string, getSvg: () => JSX.Element) => (
-  <a
-    href={url || "#"}
-    target={url ? "_blank" : undefined}
-    className={`social-link w-inline-block ${
-      url ? "" : "w-condition-invisible"
-    }`}
-  >
-    <div className="social-icon w-embed">{getSvg()}</div>
-  </a>
-);
+const renderSocialLink = (url: string | undefined, getSvg: () => JSX.Element) =>
+  url && (
+    <a href={url} target={"_blank"} className={`social-link w-inline-block`}>
+      <div className="social-icon w-embed">{getSvg()}</div>
+    </a>
+  );
 
 const People = ({
   name,
   position,
   imgFileName,
-  imgFileType = "jpg",
-  linkedin = "",
-  x = "",
-  instagram = "",
-  facebook = "",
-  github = "",
+  linkedin,
+  x,
+  instagram,
+  facebook,
+  github,
 }: PeopleProps) => {
   return (
     <div role="listitem" className="w-dyn-item">
@@ -122,14 +116,10 @@ const People = ({
         <div className="margin-bottom margin-small">
           <div className="team_image-wrapper">
             <img
-              alt=""
+              alt={name}
               loading="lazy"
-              src={`https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/${imgFileName}.${imgFileType}`}
+              src={imgFileName}
               sizes="(max-width: 991px) 300px, 280px"
-              srcSet={`
-                https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/${imgFileName}-p-500.${imgFileType} 500w,
-                https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/${imgFileName}.${imgFileType}       820w
-              `}
               className="team_image"
             />
           </div>
@@ -138,7 +128,7 @@ const People = ({
           <div className="text-size-large text-weight-semibold text-align-center">
             {name}
           </div>
-          <div className="text-size-medium">{position}</div>
+          <div className="text-size-medium text-align-center">{position}</div>
           <div className="w-layout-grid team_social">
             {renderSocialLink(linkedin, getLinkedinSvg)}
             {renderSocialLink(x, getXSvg)}

@@ -2,16 +2,31 @@ import * as contentful from "contentful";
 
 export type fieldsType = {
   slug: string;
+
   mainImage: { fields: { file: { url: string } } };
+  profilePicture: { fields: { file: { url: string } } };
+
   mainImageAltText: string;
+
   topic: string;
   client: string;
+
   name: string;
+
   summary: string;
   caseSummary: string;
+
   author: string;
+
   postBody: string;
   caseBody: string;
+
+  jobTitle: string;
+  linkedInLink: string;
+  twitterLink: string;
+  instagramLink: string | undefined;
+  facebookLink: string;
+  githubLink: string;
 };
 
 export type postsType = {
