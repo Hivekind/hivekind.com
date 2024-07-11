@@ -1,9 +1,12 @@
+import Link from "next/link";
+
 export default function ShareWrapper({ url }: { url: string }) {
   return (
     <div className="blog-post_share-wrapper">
       <h3 className="text-size-medium">Share this article</h3>
       <div className="w-layout-grid post-share-options">
-        <a
+        <Link
+          target="_blank"
           href={`https://www.linkedin.com/sharing/share-offsite/?url=${url}`}
           className="post-share_social-link w-inline-block"
         >
@@ -23,8 +26,9 @@ export default function ShareWrapper({ url }: { url: string }) {
               />
             </svg>
           </div>
-        </a>
-        <a
+        </Link>
+        <Link
+          target="_blank"
           href={`https://twitter.com/intent/tweet?url=${url}`}
           className="post-share_social-link w-inline-block"
         >
@@ -42,8 +46,9 @@ export default function ShareWrapper({ url }: { url: string }) {
               />
             </svg>
           </div>
-        </a>
-        <a
+        </Link>
+        <Link
+          target="_blank"
           href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
           className="post-share_social-link w-inline-block"
         >
@@ -61,8 +66,9 @@ export default function ShareWrapper({ url }: { url: string }) {
               />
             </svg>
           </div>
-        </a>
-        <a
+        </Link>
+        <Link
+          target="_blank"
           href={`https://wa.me/?text=${url}`}
           className="post-share_social-link w-inline-block"
         >
@@ -84,7 +90,7 @@ export default function ShareWrapper({ url }: { url: string }) {
               />
             </svg>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

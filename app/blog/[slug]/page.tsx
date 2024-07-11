@@ -1,9 +1,10 @@
 import ContactUsSection from "@/components/contact-us-section";
 import ShareWrapper from "@/components/share-wrapper";
-import { getAllPosts, getByName, getBySlug } from "@/lib/contentfulApi";
-import { marked } from "marked";
+import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
 import Image from "next/image";
 import Link from "next/link";
+import { markdownParser, generateToc } from "@/lib/markdownParser";
+import { TocLinkWrapper } from "@/components/toc-link-wrapper";
 
 export async function generateStaticParams() {
   const { posts } = await getAllPosts({ contentType: "blogPosts" });
@@ -24,7 +25,8 @@ export default async function BlogIndexPage({
     slug: params.slug ?? "",
   });
 
-  const postBody = marked.parse(`${post.fields.postBody}`);
+  const postBody = markdownParser(`${post.fields.postBody}`);
+  const toc = generateToc(`${post.fields.postBody}`);
 
   return (
     <main className="main-wrapper">
@@ -47,8 +49,8 @@ export default async function BlogIndexPage({
                 </div>
               </div>
               <div className="blog-author">
-                <a
-                  href="https://www.linkedin.com/in/shuwn-yuan-tee"
+                <Link
+                  href={`${post.fields.author?.fields.linkedInLink}`}
                   target="_blank"
                   className="blog_author-image-wrapper w-inline-block"
                 >
@@ -59,7 +61,7 @@ export default async function BlogIndexPage({
                     height={320}
                     className="blog_author-image"
                   />
-                </a>
+                </Link>
                 <Link
                   href={`${post.fields.author?.fields.linkedInLink}`}
                   target="_blank"
@@ -87,22 +89,13 @@ export default async function BlogIndexPage({
                     <div className="fs-toc_sidebar">
                       <h2 className="text-size-medium">Table of Contents</h2>
                       <div className="fs-toc_link-content">
-                        <div
-                          id="w-node-ee22510b-9577-8420-d248-36433a1028e6-3a1028df"
-                          className="fs-toc_link-wrapper"
-                        >
-                          <a href="#" className="fs-toc_link w-inline-block">
-                            <div
-                              fs-toc-element="link"
-                              className="text-size-tiny"
-                            ></div>
-                          </a>
-                          <div
-                            fs-toc-element="ix-trigger"
-                            id="w-node-ee22510b-9577-8420-d248-36433a1028ea-3a1028df"
-                            className="fs-toc_h-trigger"
-                          ></div>
-                        </div>
+                        {toc.map(({ text, anchor }) => (
+                          <TocLinkWrapper
+                            text={text}
+                            anchor={anchor}
+                            key={text}
+                          />
+                        ))}
                       </div>
                       <div className="separator"></div>
                       <ShareWrapper
