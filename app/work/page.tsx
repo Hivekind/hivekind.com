@@ -33,7 +33,7 @@ export default async function WorkPage() {
                       return (
                         <ListItem
                           key={fields.slug}
-                          url={`${fields.slug}`}
+                          url={`/work/${fields.slug}`}
                           imgSrc={`${fields.mainImage?.fields.file.url}`}
                           client={`${fields.client}`}
                           title={`${fields.name}`}
