@@ -56,11 +56,13 @@ export default function ContactPage() {
     const data = {
       subject: `${name} from ${company} wants to connect`,
       message: `
-        Hello,
-
-        We have a contact form submission from ${name}<${email}> with the following message:
-
-        ${message}
+        <html>
+          <body>
+            Hello,<br /><br />
+            We have a contact form submission from ${name}<${email}> with the following message: <br /><br/>
+            ${message}
+          </body>
+        </html>
       `,
     };
 

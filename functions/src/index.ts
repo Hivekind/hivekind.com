@@ -9,18 +9,20 @@ app.use(cors({ origin: true }));
 
 admin.initializeApp();
 
-const postmarkClient = new postmark.ServerClient(
-  "732a3ccc-ce12-47b6-845a-7469ea8d7b04"
-);
-
-export const sendEmail = functions.https.onCall(
-  async (data: { [index: string]: string }) => {
+exports.sendEmail = functions
+  .runWith({
+    secrets: ["POSTMARK_SERVER_TOKEN", "CONTACT_FORM_RECEIVING_EMAIL"],
+  })
+  .https.onCall(async (data: { [index: string]: string }) => {
     const { subject, message } = data;
+    const postmarkClient = new postmark.ServerClient(
+      process.env.POSTMARK_SERVER_TOKEN
+    );
 
     try {
       const result = await postmarkClient.sendEmail({
-        From: "haritha@hivekind.com",
-        To: "haritha@hivekind.com",
+        From: process.env.CONTACT_FORM_RECEIVING_EMAIL,
+        To: process.env.CONTACT_FORM_RECEIVING_EMAIL,
         Subject: subject,
         HtmlBody: message,
       });
@@ -30,5 +32,4 @@ export const sendEmail = functions.https.onCall(
       console.error("Error sending email:", error);
       return { success: false, error };
     }
-  }
-);
+  });
