@@ -27,8 +27,8 @@ const renderer = {
               </g>
             </svg>
           </span>
-        </a> </h${depth}
-      >
+        </a>
+      </h${depth}>
     `;
   },
 } as unknown as RendererObject;
