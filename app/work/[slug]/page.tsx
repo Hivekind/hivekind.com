@@ -1,6 +1,6 @@
 import ContactUsSection from "@/components/contact-us-section";
 import ShareWrapper from "@/components/share-wrapper";
-import { getAllPosts, getPost } from "@/lib/contentfulApi";
+import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
 import { marked } from "marked";
 import Image from "next/image";
 
@@ -18,7 +18,7 @@ export default async function BlogIndexPage({
 }: {
   params: { slug: string; postSummary: string };
 }) {
-  const { post } = await getPost({
+  const { post } = await getBySlug({
     contentType: "work",
     slug: params.slug ?? "",
   });

@@ -1,8 +1,9 @@
 import ContactUsSection from "@/components/contact-us-section";
 import ShareWrapper from "@/components/share-wrapper";
-import { getAllPosts, getPost } from "@/lib/contentfulApi";
+import { getAllPosts, getByName, getBySlug } from "@/lib/contentfulApi";
 import { marked } from "marked";
 import Image from "next/image";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const { posts } = await getAllPosts({ contentType: "blogPosts" });
@@ -18,10 +19,12 @@ export default async function BlogIndexPage({
 }: {
   params: { slug: string; postSummary: string };
 }) {
-  const { post } = await getPost({
+  const { post } = await getBySlug({
     contentType: "blogPosts",
     slug: params.slug ?? "",
   });
+
+  const postBody = marked.parse(`${post.fields.postBody}`);
 
   return (
     <main className="main-wrapper">
@@ -49,25 +52,23 @@ export default async function BlogIndexPage({
                   target="_blank"
                   className="blog_author-image-wrapper w-inline-block"
                 >
-                  <img
-                    loading="lazy"
-                    src="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/637ecf255b9b5e7883b67dc6_shuwn.jpg"
-                    alt=""
-                    sizes="32px"
-                    srcSet="
-              https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/637ecf255b9b5e7883b67dc6_shuwn-p-500.jpg 500w,
-              https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/637ecf255b9b5e7883b67dc6_shuwn.jpg       820w
-            "
+                  <Image
+                    src={`${post.fields.author?.fields.profilePicture?.fields.file.url}`}
+                    alt={`${post.fields.author?.fields.name}`}
+                    width={500}
+                    height={320}
                     className="blog_author-image"
                   />
                 </a>
-                <a
-                  href="https://www.linkedin.com/in/shuwn-yuan-tee"
+                <Link
+                  href={`${post.fields.author?.fields.linkedInLink}`}
                   target="_blank"
                   className="blog_author-info w-inline-block"
                 >
-                  <p className="text-weight-semibold">{post.fields.author}</p>
-                </a>
+                  <p className="text-weight-semibold">
+                    {post.fields.author?.fields.name}
+                  </p>
+                </Link>
               </div>
               <div className="blog-image padding-vertical padding-large">
                 <Image
@@ -115,7 +116,7 @@ export default async function BlogIndexPage({
                       >
                         <div
                           dangerouslySetInnerHTML={{
-                            __html: marked.parse(`${post.fields.postBody}`),
+                            __html: postBody,
                           }}
                         ></div>
                       </div>
