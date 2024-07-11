@@ -1,10 +1,12 @@
 import React from "react";
 import ContactButton from "./contact-button";
 
-const ContactUsSection = () => {
+const ContactUsSection = ({ className }: { className?: string }) => {
   return (
-    <section className="cta_section">
-      <div className="padding-global background-color-white">
+    <section className={`cta_section ${className}`}>
+      <div
+        className={`padding-global ${className || "background-color-white"}`}
+      >
         <div className="container-medium">
           <div className="padding-section-large">
             <div className="w-layout-grid cta_component">
@@ -16,14 +18,13 @@ const ContactUsSection = () => {
                 </div>
                 <div className="margin-bottom margin-small">
                   <p className="text-size-medium">
-                    We&#x27;re not about tech jargon or over-promising. Instead, we
-                    focus on clear communication, transparency in our process,
-                    and delivering results that speak for themselves.
+                    We&#x27;re not about tech jargon or over-promising. Instead,
+                    we focus on clear communication, transparency in our
+                    process, and delivering results that speak for themselves.
                   </p>
                 </div>
 
                 <ContactButton isCenter={false} />
-
               </div>
               <div className="cta_image-wrapper">
                 <img
