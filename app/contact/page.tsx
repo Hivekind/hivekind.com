@@ -59,7 +59,7 @@ export default function ContactPage() {
         <html>
           <body>
             Hello,<br /><br />
-            We have a contact form submission from ${name}<${email}> with the following message: <br /><br/>
+            <strong>${name} (${email})</strong> from <strong>${company}</strong> has sent the following message through contact form: <br /><br/>
             ${message}
           </body>
         </html>
