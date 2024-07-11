@@ -5,10 +5,13 @@ export type fieldsType = {
   mainImage: { fields: { file: { url: string } } };
   mainImageAltText: string;
   topic: string;
+  client: string;
   name: string;
   summary: string;
+  caseSummary: string;
   author: string;
   postBody: string;
+  caseBody: string;
 };
 
 export type postsType = {
