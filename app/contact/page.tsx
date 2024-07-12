@@ -54,13 +54,16 @@ export default function ContactPage() {
     event.preventDefault();
 
     const data = {
-      subject: `${name} from ${company} wants to connect`,
+      subject: `New form submission on Hivekind website`,
       message: `
         <html>
           <body>
-            Hello,<br /><br />
-            <strong>${name} (${email})</strong> from <strong>${company}</strong> has sent the following message through contact form: <br /><br/>
-            ${message}
+            You just got a form submission!<br /><br />
+            <strong>Submitted content</strong><br />
+            Name: ${name}<br />
+            Email: ${email}<br />
+            Company: ${company}<br />
+            Message: ${message}<br />
           </body>
         </html>
       `,
