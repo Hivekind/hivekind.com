@@ -28,7 +28,7 @@ exports.sendEmail = functions
 
     try {
       const emailData = {
-        from: process.env.CONTACT_FORM_RECEIVING_EMAIL,
+        from: `Hivekind Website <${process.env.CONTACT_FORM_RECEIVING_EMAIL}>`,
         to: process.env.CONTACT_FORM_RECEIVING_EMAIL,
         subject: subject,
         html: message,
