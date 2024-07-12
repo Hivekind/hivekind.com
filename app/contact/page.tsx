@@ -34,6 +34,11 @@ const styles: { [index: string]: React.CSSProperties } = {
     height: "auto",
     position: "fixed",
   },
+  disableButton: {
+    cursor: "not-allowed",
+    backgroundColor: "lightgrey",
+    border: "lightgrey",
+  },
 };
 
 export default function ContactPage() {
@@ -43,6 +48,7 @@ export default function ContactPage() {
   const [company, setCompany] = useState("");
   const [privacyAcceptance, setPrivacyAcceptance] = useState(false);
   const [formSubmission, setFormSubmission] = useState("");
+  const [disableSubmitButton, setDisableSubmitButton] = useState(false);
 
   function clearForm() {
     setName("");
@@ -50,10 +56,12 @@ export default function ContactPage() {
     setCompany("");
     setMessage("");
     setPrivacyAcceptance(false);
+    setDisableSubmitButton(false);
   }
 
   async function handleSubmit(event: any) {
     event.preventDefault();
+    setDisableSubmitButton(true);
 
     const data = {
       subject: `New form submission on Hivekind website`,
@@ -74,6 +82,7 @@ export default function ContactPage() {
 
     const sendEmail = httpsCallable(functions, "sendEmail");
     const response: any = await sendEmail(data);
+    setDisableSubmitButton(false);
 
     if (response.data.success) {
       clearForm();
@@ -215,6 +224,8 @@ export default function ContactPage() {
                       id="w-node-_6bc5f0f6-1235-8366-dddb-c5892c94d79b-5ddf420b"
                       className="button w-button"
                       value="Submit"
+                      style={disableSubmitButton ? styles.disableButton : {}}
+                      disabled={disableSubmitButton}
                     />
                   </form>
                   {formSubmission === "succeeded" && (
