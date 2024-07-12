@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function TocLinkWrapper({
   text,
   anchor,
@@ -7,16 +9,11 @@ export function TocLinkWrapper({
 }) {
   return (
     <div className="fs-toc_link-wrapper">
-      <a
-        href={`${anchor}`}
-        className="fs-toc_link w-inline-block"
-        data-cmp-ab="2"
-      >
+      <Link href={`${anchor}`} className="fs-toc_link w-inline-block">
         <div fs-toc-element="link" className="text-size-tiny">
           {text}
         </div>
-      </a>
-      <div fs-toc-element="ix-trigger" className="fs-toc_h-trigger"></div>
+      </Link>
     </div>
   );
 }

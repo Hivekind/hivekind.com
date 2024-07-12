@@ -1,4 +1,5 @@
 import { RendererObject, marked } from "marked";
+import type { Tokens } from "marked";
 
 export const parameterize = (text: string) =>
   text.toLowerCase().replace(/[^\w]+/g, "-");
@@ -38,23 +39,18 @@ export const markdownParser = (markdown: string) => {
   return marked(markdown);
 };
 
-export const generateToc = (markdown: string) => {
-  const toc: { text: string; depth: any; anchor: string }[] = [];
+export const generateToc = (
+  markdown: string
+): Array<{ depth: number; text: string; anchor: string }> => {
+  const tokens = marked
+    .lexer(markdown)
+    .filter((token) => token.type === "heading") as Tokens.Heading[];
 
-  const renderer = {
-    heading(text: string, depth: any) {
-      toc.push({
-        text,
-        depth,
-        anchor: `#${parameterize(text)}`,
-      });
-
-      return false;
-    },
-  } as unknown as RendererObject;
-
-  marked.use({ renderer });
-  marked.parse(markdown);
+  const toc = tokens.map(({ depth, text }) => ({
+    depth,
+    text,
+    anchor: `#${parameterize(text)}`,
+  }));
 
   return toc;
 };

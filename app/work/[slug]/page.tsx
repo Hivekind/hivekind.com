@@ -65,13 +65,21 @@ export default async function BlogIndexPage({
                     <div className="fs-toc_sidebar">
                       <h2 className="text-size-medium">Table of Contents</h2>
                       <div className="fs-toc_link-content">
-                        {toc.map(({ text, anchor }) => (
-                          <TocLinkWrapper
-                            text={text}
-                            anchor={anchor}
-                            key={text}
-                          />
-                        ))}
+                        {toc.map(
+                          ({
+                            text,
+                            anchor,
+                          }: {
+                            text: string;
+                            anchor: string;
+                          }) => (
+                            <TocLinkWrapper
+                              text={text}
+                              anchor={anchor}
+                              key={text}
+                            />
+                          )
+                        )}
                       </div>
                       <div className="separator"></div>
                       <ShareWrapper
