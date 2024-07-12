@@ -18,26 +18,14 @@ const styles: { [index: string]: React.CSSProperties } = {
     height: "100%",
     backgroundColor: "rgba(0, 0, 0, 0.4)",
   },
-  successModalBody: {
-    display: "block",
-    left: "25%",
-    top: "15%",
-    width: "50%",
-    height: "50%",
-    position: "fixed",
+  acknowledgementBlock: {
+    height: "100%",
   },
-  failureModalBody: {
+  show: {
     display: "block",
-    left: "25%",
-    top: "15%",
-    width: "50%",
-    height: "auto",
-    position: "fixed",
   },
   disableButton: {
     cursor: "not-allowed",
-    backgroundColor: "lightgrey",
-    border: "lightgrey",
   },
 };
 
@@ -47,7 +35,7 @@ export default function ContactPage() {
   const [message, setMessage] = useState("");
   const [company, setCompany] = useState("");
   const [privacyAcceptance, setPrivacyAcceptance] = useState(false);
-  const [formSubmission, setFormSubmission] = useState("");
+  const [formSubmission, setFormSubmission] = useState("ongoing");
   const [disableSubmitButton, setDisableSubmitButton] = useState(false);
 
   function clearForm() {
@@ -111,153 +99,151 @@ export default function ContactPage() {
               </div>
               <div className="w-layout-grid contact_component">
                 <div className="contact_form-block">
-                  <form
-                    id="wf-form-Email-Form-2"
-                    name="wf-form-Email-Form-2"
-                    data-name="Email Form"
-                    className="contact_form"
-                    onSubmit={handleSubmit}
-                  >
-                    <div className="form-field-wrapper">
-                      <label htmlFor="name" className="field-label">
-                        What&#x27;s your name?
-                      </label>
-                      <input
-                        className="form-input w-input"
-                        maxLength={256}
-                        name="Name"
-                        data-name="Name"
-                        placeholder=""
-                        type="text"
-                        id="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                      />
-                    </div>
-                    <div className="form-field-wrapper">
-                      <label htmlFor="email" className="field-label">
-                        How about your email address?
-                      </label>
-                      <input
-                        className="form-input w-input"
-                        maxLength={256}
-                        name="Email"
-                        data-name="Email"
-                        placeholder=""
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                      />
-                    </div>
-                    <div className="form-field-wrapper">
-                      <label htmlFor="company" className="field-label">
-                        What&#x27;s your company?
-                      </label>
-                      <input
-                        className="form-input w-input"
-                        maxLength={256}
-                        name="Company"
-                        data-name="Company"
-                        placeholder=""
-                        type="text"
-                        id="company"
-                        value={company}
-                        onChange={(e) => setCompany(e.target.value)}
-                        required
-                      />
-                    </div>
-                    <div className="form-field-wrapper">
-                      <label htmlFor="message" className="field-label">
-                        How can we help you?
-                      </label>
-                      <textarea
-                        id="message"
-                        name="Message"
-                        maxLength={5000}
-                        data-name="Message"
-                        placeholder="Type your message..."
-                        required
-                        className="form-input is-text-area w-input"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                      ></textarea>
-                    </div>
-                    <div className="margin-bottom margin-xsmall">
-                      <label
-                        id="Contact-11-Checkbox"
-                        className="w-checkbox form-checkbox"
-                      >
+                  {formSubmission === "ongoing" ? (
+                    <form
+                      id="wf-form-Email-Form-2"
+                      name="wf-form-Email-Form-2"
+                      data-name="Email Form"
+                      method="get"
+                      className="contact_form"
+                      onSubmit={handleSubmit}
+                    >
+                      <div className="form-field-wrapper">
+                        <label htmlFor="name" className="field-label">
+                          What&#x27;s your name?
+                        </label>
                         <input
-                          id="privacy_acceptance"
-                          type="checkbox"
-                          name="privacy_acceptance"
-                          data-name="privacy_acceptance"
-                          className="form-checkbox-icon"
-                          style={styles.blackCheckbox}
-                          checked={privacyAcceptance}
-                          onChange={(e) =>
-                            setPrivacyAcceptance(e.target.checked)
-                          }
+                          className="form-input w-input"
+                          maxLength={256}
+                          name="Name"
+                          data-name="Name"
+                          placeholder=""
+                          type="text"
+                          id="name"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
                           required
                         />
-                        <span className="form-checkbox-label text-size-small w-form-label">
-                          By ticking this box I agree that I have read the
-                          <a
-                            href="https://www.iubenda.com/privacy-policy/25742500"
-                            target="_blank"
-                            className="iubenda-nostyle iubenda-noframe iubenda-embed"
-                          >
-                            Privacy Policy
-                          </a>
-                          and consent to the given information being used by
-                          Hivekind to contact me about my project.
-                        </span>
-                      </label>
-                    </div>
-                    <input
-                      type="submit"
-                      data-wait="Please wait..."
-                      id="w-node-_6bc5f0f6-1235-8366-dddb-c5892c94d79b-5ddf420b"
-                      className="button w-button"
-                      value="Submit"
-                      style={disableSubmitButton ? styles.disableButton : {}}
-                      disabled={disableSubmitButton}
-                    />
-                  </form>
-                  {formSubmission === "succeeded" && (
-                    <div
-                      style={styles.modal}
-                      onClick={() => setFormSubmission("")}
-                    >
-                      <div
-                        className="success-message w-form-done"
-                        style={styles.successModalBody}
-                      >
-                        <div className="success-message_wrapper">
-                          <div className="success-text">
-                            Thank you for contacting us! We will get back to you
-                            as soon as possible.
+                      </div>
+                      <div className="form-field-wrapper">
+                        <label htmlFor="email" className="field-label">
+                          How about your email address?
+                        </label>
+                        <input
+                          className="form-input w-input"
+                          maxLength={256}
+                          name="Email"
+                          data-name="Email"
+                          placeholder=""
+                          type="email"
+                          id="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                        />
+                      </div>
+                      <div className="form-field-wrapper">
+                        <label htmlFor="company" className="field-label">
+                          What&#x27;s your company?
+                        </label>
+                        <input
+                          className="form-input w-input"
+                          maxLength={256}
+                          name="Company"
+                          data-name="Company"
+                          placeholder=""
+                          type="text"
+                          id="company"
+                          value={company}
+                          onChange={(e) => setCompany(e.target.value)}
+                          required
+                        />
+                      </div>
+                      <div className="form-field-wrapper">
+                        <label htmlFor="message" className="field-label">
+                          How can we help you?
+                        </label>
+                        <textarea
+                          id="message"
+                          name="Message"
+                          maxLength={5000}
+                          data-name="Message"
+                          placeholder="Type your message..."
+                          required
+                          className="form-input is-text-area w-input"
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                        ></textarea>
+                      </div>
+                      <div className="margin-bottom margin-xsmall">
+                        <label
+                          id="Contact-11-Checkbox"
+                          className="w-checkbox form-checkbox"
+                        >
+                          <input
+                            id="privacy_acceptance"
+                            type="checkbox"
+                            name="privacy_acceptance"
+                            data-name="privacy_acceptance"
+                            className="form-checkbox-icon"
+                            style={styles.blackCheckbox}
+                            checked={privacyAcceptance}
+                            onChange={(e) =>
+                              setPrivacyAcceptance(e.target.checked)
+                            }
+                            required
+                          />
+                          <span className="form-checkbox-label text-size-small w-form-label">
+                            By ticking this box I agree that I have read the
+                            <a
+                              href="https://www.iubenda.com/privacy-policy/25742500"
+                              target="_blank"
+                              className="iubenda-nostyle iubenda-noframe iubenda-embed"
+                            >
+                              Privacy Policy
+                            </a>
+                            and consent to the given information being used by
+                            Hivekind to contact me about my project.
+                          </span>
+                        </label>
+                      </div>
+                      <input
+                        type="submit"
+                        id="w-node-_6bc5f0f6-1235-8366-dddb-c5892c94d79b-5ddf420b"
+                        className="button w-button"
+                        value={
+                          disableSubmitButton ? "Please wait..." : "Submit"
+                        }
+                        style={disableSubmitButton ? styles.disableButton : {}}
+                        disabled={disableSubmitButton}
+                      />
+                    </form>
+                  ) : (
+                    <div style={styles.acknowledgementBlock}>
+                      {formSubmission === "succeeded" && (
+                        <div
+                          className="success-message w-form-done"
+                          style={styles.show}
+                        >
+                          <div className="success-message_wrapper">
+                            <div className="success-text">
+                              Thank you for contacting us! We will get back to
+                              you as soon as possible.
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  )}
-                  {formSubmission === "failed" && (
-                    <div
-                      style={styles.modal}
-                      onClick={() => setFormSubmission("")}
-                    >
-                      <div
-                        className="error-message w-form-fail"
-                        style={styles.failureModalBody}
-                      >
-                        <div className="error-text">
-                          Oops! Something went wrong while submitting the form.
+                      )}
+                      {formSubmission === "failed" && (
+                        <div
+                          className="error-message w-form-fail"
+                          style={styles.show}
+                        >
+                          <div className="error-text">
+                            Oops! Something went wrong while submitting the
+                            form.
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                   )}
                 </div>
