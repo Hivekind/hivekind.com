@@ -110,12 +110,11 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="w-layout-grid contact_component">
-                <div className="contact_form-block w-form">
+                <div className="contact_form-block">
                   <form
                     id="wf-form-Email-Form-2"
                     name="wf-form-Email-Form-2"
                     data-name="Email Form"
-                    method="get"
                     className="contact_form"
                     onSubmit={handleSubmit}
                   >
