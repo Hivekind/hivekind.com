@@ -41,6 +41,7 @@ export default function ContactPage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [company, setCompany] = useState("");
+  const [privacyAcceptance, setPrivacyAcceptance] = useState(false);
   const [formSubmission, setFormSubmission] = useState("");
 
   function clearForm() {
@@ -48,6 +49,7 @@ export default function ContactPage() {
     setEmail("");
     setCompany("");
     setMessage("");
+    setPrivacyAcceptance(false);
   }
 
   async function handleSubmit(event: any) {
@@ -64,6 +66,7 @@ export default function ContactPage() {
             Email: ${email}<br />
             Company: ${company}<br />
             Message: ${message}<br />
+            privacy_acceptance: ${privacyAcceptance}<br />
           </body>
         </html>
       `,
@@ -186,6 +189,10 @@ export default function ContactPage() {
                           data-name="privacy_acceptance"
                           className="form-checkbox-icon"
                           style={styles.blackCheckbox}
+                          checked={privacyAcceptance}
+                          onChange={(e) =>
+                            setPrivacyAcceptance(e.target.checked)
+                          }
                           required
                         />
                         <span className="form-checkbox-label text-size-small w-form-label">
