@@ -22,20 +22,20 @@ export default function RootLayout({
     >
       <head>
         {/* Iubenda scripts */}
-        <Script id="iubenda-init-script" strategy="beforeInteractive">
+        {/* <Script id="iubenda-init-script" strategy="beforeInteractive">
           {`
               var _iub = _iub || {};
               _iub.cons_instructions = _iub.cons_instructions || [];
               _iub.cons_instructions.push(["init", {api_key: "gJPUMsanPG2EyTmoWOJ0BWn7J6MdgVLw"}]);
           `}
-        </Script>
+        </Script> */}
 
         <Script id="iubenda-config-script" strategy="beforeInteractive">
           {`
               var _iub = _iub || [];
               _iub.csConfiguration = {
-                "askConsentAtCookiePolicyUpdate":true,"
-                enableFadp":true,
+                "askConsentAtCookiePolicyUpdate":true,
+                "enableFadp":true,
                 "enableLgpd":true,
                 "enableUspr":true,
                 "fadpApplies":true,
@@ -63,7 +63,7 @@ export default function RootLayout({
         </Script>
 
         <Script src="https://cdn.iubenda.com/iubenda.js"></Script>
-        <Script src="https://cdn.iubenda.com/cons/iubenda_cons.js"></Script>
+        {/* <Script src="https://cdn.iubenda.com/cons/iubenda_cons.js"></Script> */}
 
         <Script src="https://cs.iubenda.com/autoblocking/3702386.js"></Script>
         <Script src="//cdn.iubenda.com/cs/gpp/stub.js"></Script>
