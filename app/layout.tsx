@@ -22,59 +22,52 @@ export default function RootLayout({
     >
       <head>
         {/* Iubenda scripts */}
-        <Script id="iubenda-init-script" strategy="beforeInteractive">
+        {/* <Script id="iubenda-init-script" strategy="beforeInteractive">
           {`
               var _iub = _iub || {};
               _iub.cons_instructions = _iub.cons_instructions || [];
               _iub.cons_instructions.push(["init", {api_key: "gJPUMsanPG2EyTmoWOJ0BWn7J6MdgVLw"}]);
           `}
-        </Script>
+        </Script> */}
 
         <Script id="iubenda-config-script" strategy="beforeInteractive">
           {`
-              var _iub = _iub || {};
+              var _iub = _iub || [];
               _iub.csConfiguration = {
-                "askConsentAtCookiePolicyUpdate":true,
-                "enableFadp":true,
+                "askConsentAtCookiePolicyUpdate":true,"
+                enableFadp":true,
                 "enableLgpd":true,
+                "enableUspr":true,
                 "fadpApplies":true,
                 "floatingPreferencesButtonDisplay":"bottom-right",
                 "lang":"en",
                 "perPurposeConsent":true,
-                "siteId":3286427,
+                "siteId":3702386,
+                "usprApplies":true,
                 "whitelabel":false,
-                "cookiePolicyId":25742500,
+                "cookiePolicyId":16752037, 
                 "banner": {
-                  "acceptButtonCaptionColor":"#FFFFFF",
-                  "acceptButtonColor":"#E50044",
                   "acceptButtonDisplay":true,
-                  "backgroundColor":"#FFFFFF",
-                  "backgroundOverlay":true,
                   "closeButtonDisplay":false,
-                  "customizeButtonColor":"#212121",
                   "customizeButtonDisplay":true,
                   "explicitWithdrawal":true,
                   "listPurposes":true,
-                  "logo":null,
-                  "linksColor":"#000000",
-                  "position":"float-center",
-                  "rejectButtonColor":"#E50044",
+                  "ownerName":"iubenda-cookie.hivekind-com.pages.dev/",
+                  "position":"float-top-center",
                   "rejectButtonDisplay":true,
-                  "showPurposesToggles":true,
-                  "textColor":"#000000",
-                  "acceptButtonCaption":"Accept all",
-                  "content": 'When you click "Accept all", you consent to Hivekind Sdn Bhd placing cookies on your device. These are necessary to enhance site navigation, analyze site usage, and assist us in our marketing efforts. Learn more by clicking "Cookie Settings".',
-                  "customizeButtonCaption":"Cookie Settings",
-                  "rejectButtonCaption":"Reject all"
-                }
+                  "showTitle":false,
+                  "showTotalNumberOfProviders":true 
+                },
               };
           `}
         </Script>
 
-        <Script src="https://cdn.iubenda.com/iubenda.js" ></Script>
-        <Script src="https://cdn.iubenda.com/cons/iubenda_cons.js"></Script>
-        <Script src="https://cs.iubenda.com/autoblocking/3286427.js"></Script>
-        <Script src="//cdn.iubenda.com/cs/iubenda_cs.js" ></Script>
+        <Script src="https://cdn.iubenda.com/iubenda.js"></Script>
+        {/* <Script src="https://cdn.iubenda.com/cons/iubenda_cons.js"></Script> */}
+
+        <Script src="https://cs.iubenda.com/autoblocking/3702386.js"></Script>
+        <Script src="//cdn.iubenda.com/cs/gpp/stub.js"></Script>
+        <Script src="//cdn.iubenda.com/cs/iubenda_cs.js"></Script>
 
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" />
