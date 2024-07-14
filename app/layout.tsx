@@ -32,7 +32,7 @@ export default function RootLayout({
 
         <Script id="iubenda-config-script" strategy="beforeInteractive">
           {`
-              var _iub = _iub || [];
+              var _iub = _iub || {};
               _iub.csConfiguration = {
                 "askConsentAtCookiePolicyUpdate":true,"
                 enableFadp":true,
