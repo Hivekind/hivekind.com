@@ -34,6 +34,7 @@ export default function RootLayout({
           {`
               var _iub = _iub || [];
               _iub.csConfiguration = {
+                logLevel: "info",
                 "askConsentAtCookiePolicyUpdate":true,
                 "enableFadp":true,
                 "enableLgpd":true,
