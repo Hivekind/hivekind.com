@@ -35,7 +35,7 @@ export default function RootLayout({
               var _iub = _iub || [];
               _iub.csConfiguration = {
                 logLevel: "debug",
-                localConsentDomain: "iubenda-cookie.hivekind-com.pages.dev",
+                localConsentDomain: "hivekind-com.pages.dev",
                 "askConsentAtCookiePolicyUpdate":true,
                 "enableFadp":true,
                 "enableLgpd":true,
