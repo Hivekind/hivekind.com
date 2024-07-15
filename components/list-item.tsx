@@ -3,13 +3,20 @@ import React from "react";
 interface ListItemProps {
   url: string;
   imgSrc: string;
-  imgSrcSet: string;
+  imgSrcSet?: string;
   client: string;
   title: string;
   description: string;
 }
 
-const ListItem = ({ url, imgSrc, imgSrcSet, client, title, description }: ListItemProps) => {
+const ListItem = ({
+  url,
+  imgSrc,
+  imgSrcSet,
+  client,
+  title,
+  description,
+}: ListItemProps) => {
   return (
     <div role="listitem" className="w-dyn-item">
       <div className="featured-work_item">

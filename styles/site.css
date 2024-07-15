@@ -2,6 +2,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -209,6 +210,14 @@ th {
 html {
   height: 100%;
 }
+
+.header-link {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  opacity: 0.1;
+}
+
 body {
   color: #333;
   background-color: #fff;

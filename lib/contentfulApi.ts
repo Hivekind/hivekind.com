@@ -1,0 +1,97 @@
+import * as contentful from "contentful";
+
+export type fieldsType = {
+  slug: string;
+
+  mainImage: { fields: { file: { url: string } } };
+  profilePicture: { fields: { file: { url: string } } };
+
+  mainImageAltText: string;
+
+  topic: string;
+  client: string;
+
+  name: string;
+
+  summary: string;
+  caseSummary: string;
+
+  author: {
+    fields: {
+      name: string;
+      slug: string;
+      profilePicture: { fields: { file: { url: string } } };
+      linkedInLink?: string;
+      githubLink?: string;
+    };
+  };
+
+  postBody: string;
+  caseBody: string;
+
+  jobTitle: string;
+  linkedInLink: string;
+  twitterLink: string;
+  instagramLink: string | undefined;
+  facebookLink: string;
+  githubLink: string;
+};
+
+export type postsType = {
+  posts: Array<{ fields: Partial<fieldsType> }>;
+};
+
+export type postType = { post: { fields: Partial<fieldsType> } };
+
+const contentfulClient = contentful.createClient({
+  space: process.env.CONTENTFUL_SPACE_ID ?? "",
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN ?? "",
+});
+
+export async function getAllPosts({
+  contentType,
+}: {
+  contentType: string;
+}): Promise<postsType> {
+  const response = await contentfulClient.getEntries({
+    content_type: contentType,
+  });
+
+  const posts = response.items.map((item) => {
+    return {
+      fields: item.fields,
+    };
+  });
+
+  return { posts };
+}
+
+export async function getBySlug({
+  contentType,
+  slug,
+}: {
+  contentType: string;
+  slug: string;
+}): Promise<postType> {
+  const response = await contentfulClient.getEntries({
+    content_type: contentType,
+    "fields.slug[in]": slug,
+  });
+
+  return { post: response.items[0] };
+}
+
+export async function getByName({
+  contentType,
+  name,
+}: {
+  contentType: string;
+  name: string;
+}): Promise<postType> {
+  const response = await contentfulClient.getEntries({
+    content_type: contentType,
+    "fields.name[in]": name,
+  });
+
+  return { post: response.items[0] };
+}
