@@ -4,6 +4,7 @@ import type { Tokens } from "marked";
 export const parameterize = (text: string) =>
   text.toLowerCase().replace(/[^\w]+/g, "-");
 
+// adds anchor links to headings
 const renderer = {
   heading(text: string, depth: any) {
     const escapedText = parameterize(text);
@@ -39,6 +40,7 @@ export const markdownParser = (markdown: string) => {
   return marked(markdown);
 };
 
+// generates a table of contents from markdown headings
 export const generateToc = (
   markdown: string
 ): Array<{ depth: number; text: string; anchor: string }> => {
