@@ -119,7 +119,6 @@ const People = ({
               alt={name}
               loading="lazy"
               src={imgFileName}
-              sizes="(max-width: 991px) 300px, 280px"
               className="team_image"
             />
           </div>
