@@ -110,23 +110,6 @@ export default function RootLayout({
         />
         <Script src="scripts/webflow.js" strategy="afterInteractive" />
 
-        {/* <Script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></Script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              var typed = new Typed(".values", {
-                strings: ["scalable", "scalable", "flexible", "reliable", "stable"],
-                typeSpeed: 75,
-                backSpeed: 50,
-                backDelay: 1200,
-                startDelay: 0,
-                loop: true,
-                showCursor: false,
-                cursorChar: "|",
-                attr: null,
-              });`,
-          }}
-        ></script> */}
       </body>
     </html>
   );
