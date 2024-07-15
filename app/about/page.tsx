@@ -36,7 +36,7 @@ export default async function AboutPage() {
           <div className="w-layout-grid hivekind-stats">
             <Stats value="2015" description="Founded" />
             <Stats value="100%" description="Remote" />
-            <Stats value="30" description="Hivekinders" />
+            <Stats value={posts.length.toString()} description="Hivekinders" />
           </div>
         </div>
       </Header>
