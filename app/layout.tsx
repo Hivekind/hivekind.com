@@ -21,6 +21,14 @@ export default function RootLayout({
       className="w-mod-js w-mod-ix wf-lato-n4-active wf-lato-n7-active wf-merriweather-n4-active wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-i4-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-merriweather-n3-active wf-merriweather-i3-active wf-merriweather-i4-active wf-merriweather-n7-active wf-merriweather-i7-active wf-merriweather-n9-active wf-merriweather-i9-active wf-active"
     >
       <head>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
+
+        <link
+          href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic|Merriweather:300,300italic,400,400italic,700,700italic,900,900italic&display=swap"
+          rel="stylesheet"
+        />
+
         {/* Iubenda scripts */}
         <Script id="iubenda-init-script" strategy="beforeInteractive">
           {`
@@ -73,17 +81,23 @@ export default function RootLayout({
           `}
         </Script>
 
-        <Script src="https://cdn.iubenda.com/iubenda.js" ></Script>
-        <Script src="https://cdn.iubenda.com/cons/iubenda_cons.js"></Script>
-        <Script src="https://cs.iubenda.com/autoblocking/3286427.js"></Script>
-        <Script src="//cdn.iubenda.com/cs/iubenda_cs.js" ></Script>
-
-        <link href="https://fonts.googleapis.com" rel="preconnect" />
-        <link href="https://fonts.gstatic.com" rel="preconnect" />
         <Script
-          src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
-          type="text/javascript"
+          src="https://cdn.iubenda.com/iubenda.js"
+          strategy="afterInteractive"
         ></Script>
+        <Script
+          src="https://cdn.iubenda.com/cons/iubenda_cons.js"
+          strategy="afterInteractive"
+        ></Script>
+        <Script
+          src="https://cs.iubenda.com/autoblocking/3286427.js"
+          strategy="afterInteractive"
+        ></Script>
+        <Script
+          src="//cdn.iubenda.com/cs/iubenda_cs.js"
+          strategy="afterInteractive"
+        ></Script>
+
         <link
           href="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/638d78d32e5f78049870b13d_favicon.png"
           rel="shortcut icon"
@@ -109,7 +123,6 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
         <Script src="scripts/webflow.js" strategy="afterInteractive" />
-
       </body>
     </html>
   );
