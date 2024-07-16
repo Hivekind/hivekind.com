@@ -25,7 +25,11 @@ const styles: { [index: string]: React.CSSProperties } = {
     display: "block",
   },
   disableButton: {
+    justifySelf: "start",
     cursor: "not-allowed",
+  },
+  submitButton: {
+    justifySelf: "start",
   },
 };
 
@@ -45,6 +49,40 @@ export default function ContactPage() {
     setMessage("");
     setPrivacyAcceptance(false);
     setDisableSubmitButton(false);
+  }
+
+  function sendToConsentSolution() {
+    if (
+      typeof window !== "undefined" &&
+      window._iub &&
+      window._iub.cons_instructions
+    ) {
+      window._iub.cons_instructions.push([
+        "submit",
+        {
+          submitElement: document.getElementById("submit_button"),
+          form: {
+            selector: document.getElementById("email-form"),
+            map: {
+              subject: {
+                full_name: "name",
+                email: "email",
+              },
+              preferences: {
+                privacy_acceptance: "privacy_acceptance",
+              },
+            },
+          },
+          consent: {
+            legal_notices: [
+              {
+                identifier: "privacy_policy",
+              },
+            ],
+          },
+        },
+      ]);
+    }
   }
 
   async function handleSubmit(event: any) {
@@ -73,6 +111,7 @@ export default function ContactPage() {
     setDisableSubmitButton(false);
 
     if (response.data.success) {
+      sendToConsentSolution();
       clearForm();
       setFormSubmission("succeeded");
     } else {
@@ -101,8 +140,8 @@ export default function ContactPage() {
                 <div className="contact_form-block">
                   {formSubmission === "ongoing" ? (
                     <form
-                      id="wf-form-Email-Form-2"
-                      name="wf-form-Email-Form-2"
+                      id="email-form"
+                      name="email-form"
                       data-name="Email Form"
                       method="get"
                       className="contact_form"
@@ -115,8 +154,8 @@ export default function ContactPage() {
                         <input
                           className="form-input w-input"
                           maxLength={256}
-                          name="Name"
-                          data-name="Name"
+                          name="name"
+                          data-name="name"
                           placeholder=""
                           type="text"
                           id="name"
@@ -132,8 +171,8 @@ export default function ContactPage() {
                         <input
                           className="form-input w-input"
                           maxLength={256}
-                          name="Email"
-                          data-name="Email"
+                          name="email"
+                          data-name="email"
                           placeholder=""
                           type="email"
                           id="email"
@@ -209,12 +248,16 @@ export default function ContactPage() {
                       </div>
                       <input
                         type="submit"
-                        id="w-node-_6bc5f0f6-1235-8366-dddb-c5892c94d79b-5ddf420b"
+                        id="submit_button"
                         className="button w-button"
                         value={
                           disableSubmitButton ? "Please wait..." : "Submit"
                         }
-                        style={disableSubmitButton ? styles.disableButton : {}}
+                        style={
+                          disableSubmitButton
+                            ? styles.disableButton
+                            : styles.submitButton
+                        }
                         disabled={disableSubmitButton}
                       />
                     </form>
