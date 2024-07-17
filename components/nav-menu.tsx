@@ -1,23 +1,98 @@
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavMenu = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCollapsing, setIsCollapsing] = useState(false);
+
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const isMenuOpenRef = useRef(isMenuOpen);
+  const pathname = usePathname();
+
+  const toggleMenu = () => {
+    if (overlayRef.current) {
+      if (isMenuOpen) {
+        // Close Mobile Menu
+        setIsCollapsing(true);
+
+        overlayRef.current.style.display = "block";
+        overlayRef.current.style.height = `${window.innerHeight}px`;
+
+        setTimeout(() => {
+          if (overlayRef.current) {
+            overlayRef.current.style.height = "0";
+          }
+        }, 0);
+
+        setTimeout(() => {
+          if (overlayRef.current) {
+            overlayRef.current.style.display = "none";
+            setIsCollapsing(false);
+          }
+        }, 400); // duration of the closing animation in CSS: transition: height 0.4s ease-out;
+      } else {
+        // Open Mobile Menu
+        overlayRef.current.style.display = "block";
+        overlayRef.current.style.height = "0";
+
+        setTimeout(() => {
+          if (overlayRef.current) {
+            overlayRef.current.style.height = `${window.innerHeight}px`;
+          }
+        }, 0);
+      }
+
+      setIsMenuOpen(!isMenuOpen);
+    }
+  };
+
+  const closeOverlay = () => {
+    if (overlayRef.current) {
+      overlayRef.current.style.height = "0";
+      overlayRef.current.style.display = "none";
+    }
+    setIsMenuOpen(false);
+  };
+
+  const handleResize = () => {
+    if (window.innerWidth > 991 && isMenuOpenRef.current) {
+      closeOverlay();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Update the ref value whenever isMenuOpen changes
+    isMenuOpenRef.current = isMenuOpen;
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    // Close mobile menu when pathname changes
+    closeOverlay();
+  }, [pathname]);
+
+  const isCurrent = (path: string) => {
+    return pathname === path ? "w--current" : "";
+  };
+
   return (
-    <div
-      data-animation="default"
-      className="navbar_component w-nav"
-      data-easing2="ease"
-      fs-scrolldisable-element="smart-nav"
-      data-easing="ease"
-      data-collapse="medium"
-      data-w-id="bd7d495b-092f-7876-cf7f-842930cf6650"
-      role="banner"
-      data-duration="400"
-    >
+    <div className="navbar_component w-nav">
       <div className="navbar_container">
-        <a
+        <Link
           href="/"
-          aria-current="page"
-          className="navbar_logo-link w-nav-brand w--current"
+          aria-label="home"
+          className={`navbar_logo-link w-nav-brand ${isCurrent("/")}`}
         >
           <img
             src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6389296caf38d7a00b252585_hk-logo.png"
@@ -25,48 +100,127 @@ const NavMenu = () => {
             alt="Hivekind text logo"
             className="navbar_logo"
           />
-        </a>
+        </Link>
+
+        {!isMenuOpen && (
+          <nav
+            role="navigation"
+            className="navbar_menu is-page-height-tablet w-nav-menu self-center"
+          >
+            <Link
+              href="/work"
+              className={`navbar_link w-nav-link ${isCurrent("/work")}`}
+            >
+              Work
+            </Link>
+            <Link
+              href="/services"
+              className={`navbar_link w-nav-link ${isCurrent("/services")}`}
+            >
+              Services
+            </Link>
+            <Link
+              href="/about"
+              className={`navbar_link w-nav-link ${isCurrent("/about")}`}
+            >
+              About
+            </Link>
+            <Link
+              href="/blog"
+              className={`navbar_link w-nav-link ${isCurrent("/blog")}`}
+            >
+              Blog
+            </Link>
+          </nav>
+        )}
+
+        <div className="navbar_button-wrapper self-end">
+          <Link href="/contact" className="button is-navbar-button w-button">
+            Let&#x27;s talk
+          </Link>
+
+          <div
+            className={`navbar_menu-button w-nav-button ${
+              isMenuOpen ? "w--open" : ""
+            }`}
+            aria-label="menu"
+            onClick={toggleMenu}
+            aria-controls="w-nav-overlay-0"
+            aria-haspopup="menu"
+            aria-expanded={isMenuOpen}
+          >
+            <div className="menu-icon2">
+              <div
+                className={`menuIcon2Line menu-icon2_line-top ${
+                  isMenuOpen ? "open" : ""
+                }`}
+              ></div>
+              <div
+                className={`menuIcon2Line menu-icon2_line-middle ${
+                  isMenuOpen ? "open" : ""
+                }`}
+              >
+                <div className="menu-icon_line-middle-inner"></div>
+              </div>
+              <div
+                className={`menuIcon2Line menu-icon2_line-bottom ${
+                  isMenuOpen ? "open" : ""
+                }`}
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`w-nav-overlay ${isCollapsing ? "collapsing" : ""}`}
+        ref={overlayRef}
+      >
         <nav
           role="navigation"
-          id="w-node-bd7d495b-092f-7876-cf7f-842930cf6654-30cf6650"
-          className="navbar_menu is-page-height-tablet w-nav-menu"
+          className="navbar_menu is-page-height-tablet w-nav-menu overlay-content"
+          style={{ display: "block" }}
         >
-          <a href="/work" className="navbar_link w-nav-link">
+          <Link
+            href="/work"
+            className={`navbar_link w-nav-link w--nav-link-open ${isCurrent(
+              "/work"
+            )}`}
+          >
             Work
-          </a>
-          <a href="/services" className="navbar_link w-nav-link">
+          </Link>
+          <Link
+            href="/services"
+            className={`navbar_link w-nav-link w--nav-link-open ${isCurrent(
+              "/services"
+            )}`}
+          >
             Services
-          </a>
-          <a href="/about" className="navbar_link w-nav-link">
+          </Link>
+          <Link
+            href="/about"
+            className={`navbar_link w-nav-link w--nav-link-open ${isCurrent(
+              "/about"
+            )}`}
+          >
             About
-          </a>
-          <a href="/blog" className="navbar_link w-nav-link">
+          </Link>
+          <Link
+            href="/blog"
+            className={`navbar_link w-nav-link w--nav-link-open ${isCurrent(
+              "/blog"
+            )}`}
+          >
             Blog
-          </a>
-          <a
+          </Link>
+
+          <Link
             href="/contact"
             className="button is-navbar-button is-in-menu w-button"
           >
             Let&#x27;s talk
-          </a>
+          </Link>
         </nav>
-        <div
-          id="w-node-bd7d495b-092f-7876-cf7f-842930cf665d-30cf6650"
-          className="navbar_button-wrapper"
-        >
-          <a href="/contact" className="button is-navbar-button w-button">
-            Let&#x27;s talk
-          </a>
-          <div className="navbar_menu-button w-nav-button">
-            <div className="menu-icon2">
-              <div className="menu-icon2_line-top"></div>
-              <div className="menu-icon2_line-middle">
-                <div className="menu-icon_line-middle-inner"></div>
-              </div>
-              <div className="menu-icon2_line-bottom"></div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

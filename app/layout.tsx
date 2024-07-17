@@ -122,7 +122,6 @@ export default function RootLayout({
           src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6347cb105849aecae0fd4ed8"
           strategy="beforeInteractive"
         />
-        <Script src="scripts/webflow.js" strategy="afterInteractive" />
       </body>
     </html>
   );
