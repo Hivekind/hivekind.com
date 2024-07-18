@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import "@/styles/site.css";
 import Script from "next/script";
-import NavMenu from "@/components/nav-menu";
+import NavBar from "@/components/nav-bar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -112,7 +112,7 @@ export default function RootLayout({
 
       <body>
         <div className="page-wrapper">
-          <NavMenu />
+          <NavBar />
           {children}
         </div>
 
