@@ -39,7 +39,7 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-export default async function BlogIndexPage({
+export default async function WorkIndexPage({
   params,
 }: {
   params: { slug: string; postSummary: string };
