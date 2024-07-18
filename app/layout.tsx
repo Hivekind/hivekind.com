@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 
 import { getPathnameFromState } from "@/lib/utils";
 import type { Metadata, ResolvingMetadata } from "next";
-import { getByField, imageFieldType } from "@/lib/contentfulApi";
+import { fieldsType, getByField } from "@/lib/contentfulApi";
 
 type Props = {
   params: { id: string };
@@ -17,24 +17,25 @@ type Props = {
 // there un order to force this function to be different per page
 export async function generateMetadata(
   { params, searchParams }: Props,
-  state: ResolvingMetadata
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const pathname = getPathnameFromState(state);
+  const pathname = getPathnameFromState(parent);
   const meta = await getByField({
     contentType: "staticPages",
     fields: { "fields.path[in]": pathname },
   });
 
-  const { seoTitle, seoDescription, ogImage } = meta?.fields || {};
-  const images = [(ogImage as imageFieldType)?.fields?.file?.url];
+  const { seoTitle, seoDescription, ogImage } =
+    (meta?.fields as Partial<fieldsType>) || {};
+  const images = [ogImage?.fields.file.url].filter(Boolean) as string[];
 
   return {
     metadataBase: new URL("https://hivekind.com"),
-    title: seoTitle?.toString(),
-    description: seoDescription?.toString(),
+    title: seoTitle,
+    description: seoDescription,
     openGraph: {
       images,
-      url: `https://hivekind.com${pathname}`,
+      url: pathname,
     },
   };
 }
