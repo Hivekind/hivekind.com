@@ -31,6 +31,10 @@ const styles: { [index: string]: React.CSSProperties } = {
   submitButton: {
     justifySelf: "start",
   },
+  horizontalMargin: {
+    marginLeft: "3px",
+    marginRight: "3px",
+  },
 };
 
 export default function ContactPage() {
@@ -238,6 +242,7 @@ export default function ContactPage() {
                               href="https://www.iubenda.com/privacy-policy/25742500"
                               target="_blank"
                               className="iubenda-nostyle iubenda-noframe iubenda-embed"
+                              style={styles.horizontalMargin}
                             >
                               Privacy Policy
                             </a>
