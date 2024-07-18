@@ -27,7 +27,9 @@ export async function generateMetadata(
 
   const { seoTitle, seoDescription, ogImage } =
     (meta?.fields as Partial<fieldsType>) || {};
-  const images = [ogImage?.fields.file.url].filter(Boolean) as string[];
+  const images = ([ogImage?.fields.file.url].filter(Boolean) as string[]).map(
+    (image) => new URL(`https://${image}`).toString()
+  );
 
   return {
     metadataBase: new URL("https://hivekind.com"),
