@@ -6,6 +6,8 @@ import Image from "next/image";
 import "@/styles/globals.css";
 import "@/styles/site.css";
 
+import notFoundImage from "../public/bee.jpg";
+
 export const metadata: Metadata = {
   title: "Page Not Found",
   description: "Page Not Found",
@@ -37,7 +39,7 @@ function NotFound() {
                 </div>
                 <div className="bee_image-wrapper">
                   <Image
-                    src="/bee.jpg"
+                    src={notFoundImage}
                     width="500"
                     height="800"
                     loading="eager"
