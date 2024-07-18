@@ -26,13 +26,13 @@ function NotFound() {
                     <h1 className="sans-serif-font">Lost?</h1>
                   </div>
                   <p className="text-size-medium">
-                    Don't worry, it's just the internet playing hide and seek
-                    with you!
+                    Don&apos;t worry, it&apos;s just the internet playing hide
+                    and seek with you!
                   </p>
                   <div className="margin-top margin-medium">
                     <div className="button-group">
                       <Link href="/" className="button w-button">
-                        Let's go home
+                        Let&apos;s go home
                       </Link>
                     </div>
                   </div>
