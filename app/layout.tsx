@@ -14,7 +14,7 @@ type Props = {
 };
 
 // note: params and searchParams are unused; however they need to be
-// there un order to force this function to be different per page
+// there in order to force this function to be different per page
 export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata

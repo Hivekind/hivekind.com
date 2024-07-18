@@ -6,7 +6,7 @@ export function getPathnameFromState(state: ResolvingMetadata): string {
     .find((state) => state?.hasOwnProperty?.("urlPathname"));
 
   const url = new URL(
-    (kResourceStore as any)?.urlPathname ?? "",
+    (kResourceStore as unknown as { urlPathname: string })?.urlPathname ?? "",
     "http://localhost"
   );
 
