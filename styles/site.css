@@ -7,36 +7,15 @@ html {
 body {
   margin: 0;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
+
 footer,
 header,
-hgroup,
 main,
-menu,
 nav,
-section,
-summary {
+section {
   display: block;
 }
-audio,
-canvas,
-progress,
-video {
-  vertical-align: baseline;
-  display: inline-block;
-}
-audio:not([controls]) {
-  height: 0;
-  display: none;
-}
-[hidden],
-template {
-  display: none;
-}
+
 a {
   background-color: transparent;
 }
@@ -44,39 +23,13 @@ a:active,
 a:hover {
   outline: 0;
 }
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-b,
+
 strong {
   font-weight: 700;
-}
-dfn {
-  font-style: italic;
 }
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
-}
-mark {
-  color: #000;
-  background: #ff0;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  vertical-align: baseline;
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
 }
 img {
   border: 0;
@@ -84,24 +37,9 @@ img {
 svg:not(:root) {
   overflow: hidden;
 }
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
-pre {
-  overflow: auto;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace;
-  font-size: 1em;
-}
+
 button,
 input,
-optgroup,
-select,
 textarea {
   color: inherit;
   font: inherit;
@@ -132,31 +70,12 @@ input::-moz-focus-inner {
 input {
   line-height: normal;
 }
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"] {
   box-sizing: border-box;
-  padding: 0;
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-input[type="search"] {
-  -webkit-appearance: none;
-}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-legend {
-  border: 0;
   padding: 0;
 }
 textarea {
   overflow: auto;
-}
-optgroup {
-  font-weight: 700;
 }
 table {
   border-collapse: collapse;
@@ -238,31 +157,9 @@ h3 {
   font-size: 24px;
   line-height: 30px;
 }
-h4 {
-  margin-top: 10px;
-  font-size: 18px;
-  line-height: 24px;
-}
-h5 {
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 20px;
-}
-h6 {
-  margin-top: 10px;
-  font-size: 12px;
-  line-height: 18px;
-}
 p {
   margin-top: 0;
   margin-bottom: 10px;
-}
-blockquote {
-  border-left: 5px solid #e2e2e2;
-  margin: 0 0 10px;
-  padding: 10px 20px;
-  font-size: 18px;
-  line-height: 22px;
 }
 figure {
   margin: 0 0 10px;
@@ -502,14 +399,14 @@ textarea.w-input {
 body {
   color: #231c0c;
   background-color: #f5f4ef;
-  font-family: Lato, sans-serif;
+  font-family: var(--font-lato), sans-serif;
   font-size: 1.125rem;
   line-height: 1.525;
 }
 h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Merriweather, serif;
+  font-family: var(--font-merriweather), serif;
   font-size: 3.5rem;
   font-weight: 400;
   line-height: 1.2;
@@ -528,27 +425,6 @@ h3 {
   font-weight: 700;
   line-height: 1.3;
 }
-h4 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-h5 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.4;
-}
-h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.4;
-}
 p {
   margin-bottom: 0;
 }
@@ -562,11 +438,6 @@ ul {
   margin-bottom: 1rem;
   padding-left: 1.25rem;
 }
-ol {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-}
 li {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
@@ -579,17 +450,6 @@ img {
 strong {
   color: #000;
   font-weight: 700;
-}
-blockquote {
-  border-left: 0.1875rem solid #000;
-  margin-bottom: 0;
-  padding: 0.75rem 1.25rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-figcaption {
-  text-align: center;
-  margin-top: 5px;
 }
 .text-style-allcaps {
   text-transform: uppercase;
@@ -658,13 +518,7 @@ figcaption {
 .margin-xxlarge {
   margin: 5rem;
 }
-.text-rich-text figcaption {
-  text-align: left;
-  border-left: 2px solid #000;
-  margin-top: 0.5rem;
-  padding-left: 0.5rem;
-  font-size: 0.875rem;
-}
+
 .text-rich-text h1 {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -682,10 +536,6 @@ figcaption {
 }
 .text-rich-text p {
   margin-bottom: 1rem;
-}
-.text-rich-text blockquote {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .margin-vertical,
@@ -1034,9 +884,6 @@ figcaption {
 }
 .form-checkbox-label {
   margin-bottom: 0;
-}
-.text-weight-light {
-  font-weight: 300;
 }
 .form-checkbox {
   align-items: flex-start;
@@ -2091,16 +1938,6 @@ figcaption {
   grid-template-rows: auto;
   grid-template-columns: 0.75fr 1fr;
   align-items: start;
-}
-.event4_tag-item {
-  background-color: var(--\<unknown\|relume-variable-color-neutral-3\>);
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-.event4_tag-item.w--current {
-  border-bottom: 2px solid var(--\<unknown\|relume-variable-color-neutral-1\>);
 }
 .event_date-wrapper {
   align-items: center;

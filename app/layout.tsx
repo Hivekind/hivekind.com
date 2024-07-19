@@ -3,6 +3,7 @@ import "@/styles/site.css";
 import Script from "next/script";
 import NavBar from "@/components/nav-bar";
 import Footer from "@/components/footer";
+import { lato, merriweather } from "@/fonts";
 
 import { getPathnameFromState } from "@/lib/utils";
 import type { Metadata, ResolvingMetadata } from "next";
@@ -48,23 +49,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className="w-mod-js w-mod-ix wf-lato-n4-active wf-lato-n7-active wf-merriweather-n4-active wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-i4-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-merriweather-n3-active wf-merriweather-i3-active wf-merriweather-i4-active wf-merriweather-n7-active wf-merriweather-i7-active wf-merriweather-n9-active wf-merriweather-i9-active wf-active"
-    >
+    <html lang="en" className={`${lato.variable} ${merriweather.variable}`}>
       <head>
-        <link href="https://fonts.googleapis.com" rel="preconnect" />
-        <link
-          href="https://fonts.gstatic.com"
-          rel="preconnect"
-          crossOrigin="anonymous"
-        />
-
-        <link
-          href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic|Merriweather:300,300italic,400,400italic,700,700italic,900,900italic&display=swap"
-          rel="stylesheet"
-        />
-
         {/* Iubenda scripts */}
         <Script id="iubenda-init-script" strategy="beforeInteractive">
           {`
