@@ -61,26 +61,6 @@ input[type="file"]:focus-visible {
   margin-left: auto !important;
 }
 
-/*
-Make the following elements inherit typography styles from the parent and not have hardcoded values.
-Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
-Uncomment this CSS to use it in the project. Leave this message for future hand-off.
-*/
-/*
-a,
-.w-input,
-.w-select,
-.w-tab-link,
-.w-nav-link,
-.w-dropdown-btn,
-.w-dropdown-toggle,
-.w-dropdown-link {
-  color: inherit;
-  text-decoration: inherit;
-  font-size: inherit;
-}
-*/
-
 /* Apply "..." after 3 lines of text */
 .text-style-3lines {
   display: -webkit-box;
@@ -103,40 +83,6 @@ a,
 }
 
 /* These classes are never overwritten */
-.hide {
-  display: none !important;
-}
-
-@media screen and (max-width: 991px) {
-  .hide,
-  .hide-tablet {
-    display: none !important;
-  }
-}
-@media screen and (max-width: 767px) {
-  .hide-mobile-landscape {
-    display: none !important;
-  }
-}
-@media screen and (max-width: 479px) {
-  .hide-mobile {
-    display: none !important;
-  }
-}
-
-.margin-0 {
-  margin: 0rem !important;
-}
-
-.padding-0 {
-  padding: 0rem !important;
-}
-
-.spacing-clean {
-  padding: 0rem !important;
-  margin: 0rem !important;
-}
-
 .margin-top {
   margin-right: 0rem !important;
   margin-bottom: 0rem !important;
@@ -147,12 +93,6 @@ a,
   padding-right: 0rem !important;
   padding-bottom: 0rem !important;
   padding-left: 0rem !important;
-}
-
-.margin-right {
-  margin-top: 0rem !important;
-  margin-bottom: 0rem !important;
-  margin-left: 0rem !important;
 }
 
 .padding-right {
@@ -171,23 +111,6 @@ a,
   padding-top: 0rem !important;
   padding-right: 0rem !important;
   padding-left: 0rem !important;
-}
-
-.margin-left {
-  margin-top: 0rem !important;
-  margin-right: 0rem !important;
-  margin-bottom: 0rem !important;
-}
-
-.padding-left {
-  padding-top: 0rem !important;
-  padding-right: 0rem !important;
-  padding-bottom: 0rem !important;
-}
-
-.margin-horizontal {
-  margin-top: 0rem !important;
-  margin-bottom: 0rem !important;
 }
 
 .padding-horizontal {

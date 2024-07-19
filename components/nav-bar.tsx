@@ -3,8 +3,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import "@/styles/nav-bar.css";
 
-const NavMenu = () => {
+const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCollapsing, setIsCollapsing] = useState(false);
 
@@ -226,4 +227,4 @@ const NavMenu = () => {
   );
 };
 
-export default NavMenu;
+export default NavBar;
