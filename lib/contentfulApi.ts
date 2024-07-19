@@ -44,6 +44,12 @@ export type fieldsType = {
   seoTitle: string;
   seoDescription: string;
   ogImage: imageFieldType;
+
+  title: string;
+  experienceLevel: string;
+  publish: boolean;
+  jobLocation: string;
+  jobDescription: string;
 };
 
 export type postsType = {
