@@ -1,6 +1,6 @@
 import ContactUsSection from "@/components/contact-us-section";
 
-export default function CustomSoftwareDevekionetPage() {
+export default function CustomSoftwareDevelopmentPage() {
   return (
     <main className="main-wrapper">
       <header className="header-section">

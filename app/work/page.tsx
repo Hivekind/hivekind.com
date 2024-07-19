@@ -2,7 +2,7 @@ import ListItem from "@/components/list-item";
 import ContactUsSection from "@/components/contact-us-section";
 import { getAllPosts } from "@/lib/contentfulApi";
 
-export default async function WorkPage() {
+export default async function WorkIndexPage() {
   const { posts } = await getAllPosts({
     contentType: "work",
   });

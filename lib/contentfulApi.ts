@@ -1,10 +1,14 @@
 import * as contentful from "contentful";
 
+export type imageFieldType = {
+  fields: { file: { url: string } };
+};
+
 export type fieldsType = {
   slug: string;
 
-  mainImage: { fields: { file: { url: string } } };
-  profilePicture: { fields: { file: { url: string } } };
+  mainImage: imageFieldType;
+  profilePicture: imageFieldType;
 
   mainImageAltText: string;
 
@@ -20,7 +24,7 @@ export type fieldsType = {
     fields: {
       name: string;
       slug: string;
-      profilePicture: { fields: { file: { url: string } } };
+      profilePicture: imageFieldType;
       linkedInLink?: string;
       githubLink?: string;
     };
@@ -30,11 +34,16 @@ export type fieldsType = {
   caseBody: string;
 
   jobTitle: string;
-  linkedInLink: string;
-  twitterLink: string;
-  instagramLink: string | undefined;
-  facebookLink: string;
-  githubLink: string;
+  linkedInLink?: string;
+  twitterLink?: string;
+  instagramLink?: string;
+  facebookLink?: string;
+  githubLink?: string;
+
+  path: string;
+  seoTitle: string;
+  seoDescription: string;
+  ogImage: imageFieldType;
 };
 
 export type postsType = {
@@ -73,12 +82,12 @@ export async function getBySlug({
   contentType: string;
   slug: string;
 }): Promise<postType> {
-  const response = await contentfulClient.getEntries({
-    content_type: contentType,
-    "fields.slug[in]": slug,
+  const response = await getByField({
+    contentType,
+    fields: { "fields.slug[in]": slug },
   });
 
-  return { post: response.items[0] };
+  return { post: response };
 }
 
 export async function getByName({
@@ -88,10 +97,25 @@ export async function getByName({
   contentType: string;
   name: string;
 }): Promise<postType> {
-  const response = await contentfulClient.getEntries({
-    content_type: contentType,
-    "fields.name[in]": name,
+  const response = await getByField({
+    contentType,
+    fields: { "fields.name[in]": name },
   });
 
-  return { post: response.items[0] };
+  return { post: response };
+}
+
+export async function getByField({
+  contentType,
+  fields,
+}: {
+  contentType: string;
+  fields: { [key: string]: string };
+}) {
+  const response = await contentfulClient.getEntries({
+    content_type: contentType,
+    ...fields,
+  });
+
+  return response.items[0];
 }
