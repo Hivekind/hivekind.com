@@ -44,7 +44,6 @@ export default function EventsPage() {
                               <div className="heading-style-h5">
                                 Ruby Tuesdays #107
                               </div>
-                              <div className="event4_tag-item"></div>
                             </div>
                             <div className="event_date-wrapper">
                               <div className="text-size-small">7 May 2024</div>
@@ -126,7 +125,6 @@ export default function EventsPage() {
                               <div className="heading-style-h5">
                                 Ruby Tuesdays #105
                               </div>
-                              <div className="event4_tag-item"></div>
                             </div>
                             <div className="event_date-wrapper">
                               <div className="text-size-small">
@@ -206,7 +204,6 @@ export default function EventsPage() {
                               <div className="heading-style-h5">
                                 Ruby Tuesdays #103
                               </div>
-                              <div className="event4_tag-item"></div>
                             </div>
                             <div className="event_date-wrapper">
                               <div className="text-size-small">
@@ -279,7 +276,6 @@ export default function EventsPage() {
                               <div className="heading-style-h5">
                                 Ruby Tuesdays #101
                               </div>
-                              <div className="event4_tag-item"></div>
                             </div>
                             <div className="event_date-wrapper">
                               <div className="text-size-small">
