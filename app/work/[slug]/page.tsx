@@ -5,6 +5,31 @@ import { markdownParser, generateToc } from "@/lib/markdownParser";
 import Image from "next/image";
 import { TocLinkWrapper } from "@/components/toc-link-wrapper";
 
+import { Metadata } from "next";
+
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { post } = await getBySlug({
+    contentType: "work",
+    slug: params.slug ?? "",
+  });
+
+  const { seoTitle, seoDescription, ogImage } = post.fields;
+  const images = [ogImage?.fields.file.url].filter(Boolean) as string[];
+
+  return {
+    title: seoTitle,
+    description: seoDescription,
+    openGraph: {
+      images,
+      url: `/work/${params.slug}`,
+    },
+  };
+}
+
 export async function generateStaticParams() {
   const { posts } = await getAllPosts({ contentType: "work" });
   const slugs = posts.map(({ fields }) => ({
@@ -14,7 +39,7 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-export default async function BlogIndexPage({
+export default async function WorkPage({
   params,
 }: {
   params: { slug: string; postSummary: string };

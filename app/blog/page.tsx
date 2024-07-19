@@ -2,7 +2,7 @@ import { getAllPosts } from "@/lib/contentfulApi";
 import BlogCard from "@/components/blog-card"; // Import the BlogCardProps type
 import BlogCardFeatured from "@/components/blog-card-featured";
 
-export default async function BlogPage() {
+export default async function BlogIndexPage() {
   const { posts } = await getAllPosts({
     contentType: "blogPosts",
   });
