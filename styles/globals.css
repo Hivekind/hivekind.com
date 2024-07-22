@@ -144,3 +144,16 @@ input[type="file"]:focus-visible {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.job-desc-page-rich-text {
+  margin-bottom: 48px;
+}
+
+.job-desc-page-rich-text > div > h3 {
+  margin-top: 67px;
+}
+
+.job-desc-page-rich-text > div > h1 {
+  margin-bottom: 48px;
+}
+
