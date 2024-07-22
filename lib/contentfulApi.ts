@@ -44,13 +44,20 @@ export type fieldsType = {
   seoTitle: string;
   seoDescription: string;
   ogImage: imageFieldType;
+
+  publishedAt: string;
 };
 
 export type postsType = {
   posts: Array<{ fields: Partial<fieldsType> }>;
 };
 
-export type postType = { post: { fields: Partial<fieldsType> } };
+export type postType = {
+  post: {
+    sys: { createdAt: string; updatedAt: string };
+    fields: Partial<fieldsType>;
+  };
+};
 
 const contentfulClient = contentful.createClient({
   space: process.env.CONTENTFUL_SPACE_ID ?? "",
