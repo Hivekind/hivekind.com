@@ -46,6 +46,7 @@ export type fieldsType = {
   ogImage: imageFieldType;
 
   publishedAt: string;
+  jsonLd: object;
 };
 
 export type postsType = {

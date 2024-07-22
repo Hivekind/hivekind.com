@@ -5,9 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { markdownParser, generateToc } from "@/lib/markdownParser";
 import { TocLinkWrapper } from "@/components/toc-link-wrapper";
-import { WithContext, BlogPosting } from "schema-dts";
 import Mustache from "mustache";
-
 import { Metadata } from "next";
 
 type Props = {
@@ -71,33 +69,7 @@ export default async function BlogPage({
     updatedAt: post.sys.updatedAt,
   };
 
-  const jsonLdTemplate = `
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "{{{ currentUrl }}}"
-    },
-    "headline": "{{{ seoTitle }}}",
-    "description": "{{{ seoDescription }}}",
-    "image": "{{{ ogImage }}}",
-    "author": {
-      "@type": "Person",
-      "name": "{{{ authorName }}}",
-      "url": "{{{ linkedInLink }}}"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Hivekind",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6389296caf38d7a00b252585_hk-logo.png"
-      }
-    },
-    "datePublished": "{{{ publishedAt }}}",
-    "dateModified": "{{{ updatedAt }}}"
-  }`;
+  const jsonLdTemplate = JSON.stringify(post.fields.jsonLd);
 
   return (
     <main className="main-wrapper">
