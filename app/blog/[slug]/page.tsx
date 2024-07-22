@@ -6,6 +6,7 @@ import Link from "next/link";
 import { markdownParser, generateToc } from "@/lib/markdownParser";
 import { TocLinkWrapper } from "@/components/toc-link-wrapper";
 import { WithContext, BlogPosting } from "schema-dts";
+import Mustache from "mustache";
 
 import { Metadata } from "next";
 
@@ -56,43 +57,56 @@ export default async function BlogPage({
   const postBody = markdownParser(`${post.fields.postBody}`);
   const toc = generateToc(`${post.fields.postBody}`);
 
-  // todo: replace with local logo when #12 is done
-  const hkLogoUrl =
-    "https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6389296caf38d7a00b252585_hk-logo.png";
+  const jsonLdData = {
+    currentUrl: new URL(
+      `/blog/${params.slug}`,
+      "https://hivekind.com"
+    ).toString(),
+    seoTitle: post.fields.seoTitle,
+    seoDescription: post.fields.seoDescription,
+    ogImage: post.fields.ogImage?.fields.file.url,
+    authorName: post.fields.author?.fields.name,
+    linkedInLink: post.fields.author?.fields.linkedInLink,
+    publishedAt: post.fields.publishedAt,
+    updatedAt: post.sys.updatedAt,
+  };
 
-  const jsonLd: WithContext<BlogPosting> = {
+  const jsonLdTemplate = `
+  {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    mainEntityOfPage: {
+    "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": new URL(`/blog/${params.slug}`, "https://hivekind.com").toString(),
+      "@id": "{{{ currentUrl }}}"
     },
-    headline: post.fields.seoTitle,
-    description: post.fields.seoDescription,
-    image: post.fields.ogImage?.fields.file.url,
-    author: {
+    "headline": "{{{ seoTitle }}}",
+    "description": "{{{ seoDescription }}}",
+    "image": "{{{ ogImage }}}",
+    "author": {
       "@type": "Person",
-      name: post.fields.author?.fields.name,
-      url: post.fields.author?.fields.linkedInLink,
+      "name": "{{{ authorName }}}",
+      "url": "{{{ linkedInLink }}}"
     },
-    publisher: {
+    "publisher": {
       "@type": "Organization",
-      name: "Hivekind",
-      logo: {
+      "name": "Hivekind",
+      "logo": {
         "@type": "ImageObject",
-        url: hkLogoUrl,
-      },
+        "url": "https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6389296caf38d7a00b252585_hk-logo.png"
+      }
     },
-    datePublished: post.fields.publishedAt || post.sys.createdAt,
-    dateModified: post.sys.updatedAt,
-  };
+    "datePublished": "{{{ publishedAt }}}",
+    "dateModified": "{{{ updatedAt }}}"
+  }`;
 
   return (
     <main className="main-wrapper">
       <section>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: Mustache.render(jsonLdTemplate, jsonLdData),
+          }}
         />
       </section>
       <div className="section-blog background-color-white">

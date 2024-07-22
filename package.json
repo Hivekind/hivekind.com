@@ -12,14 +12,16 @@
     "@contentful/rich-text-html-renderer": "^16.6.1",
     "contentful": "^10.12.6",
     "date-fns": "^3.6.0",
-    "marked": "^13.0.1",
     "firebase": "^10.12.3",
+    "marked": "^13.0.1",
+    "mustache": "^4.2.0",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
     "schema-dts": "^1.1.2"
   },
   "devDependencies": {
+    "@types/mustache": "^4.2.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
