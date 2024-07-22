@@ -5,8 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { markdownParser, generateToc } from "@/lib/markdownParser";
 import { TocLinkWrapper } from "@/components/toc-link-wrapper";
-
+import Mustache from "mustache";
 import { Metadata } from "next";
+import "@/styles/blog.css";
 
 type Props = {
   params: { slug: string };
@@ -32,10 +33,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const { posts } = await getAllPosts({ contentType: "blogPosts" });
-  const slugs = posts.map(({ fields }) => ({
-    slug: fields.slug,
-  }));
+  const { posts } = await getAllPosts({
+    contentType: "blogPosts",
+    order: ["-fields.publishedAt"],
+  });
+  const slugs = posts
+    .map(({ fields }) => ({
+      slug: fields.slug,
+    }))
+    .filter(Boolean);
 
   return slugs;
 }
@@ -43,18 +49,42 @@ export async function generateStaticParams() {
 export default async function BlogPage({
   params,
 }: {
-  params: { slug: string; postSummary: string };
+  params: { slug: string };
 }) {
   const { post } = await getBySlug({
     contentType: "blogPosts",
-    slug: params.slug ?? "",
+    slug: params.slug,
   });
 
   const postBody = markdownParser(`${post.fields.postBody}`);
   const toc = generateToc(`${post.fields.postBody}`);
 
+  const jsonLdData = {
+    currentUrl: new URL(
+      `/blog/${params.slug}`,
+      "https://hivekind.com"
+    ).toString(),
+    seoTitle: post.fields.seoTitle,
+    seoDescription: post.fields.seoDescription,
+    ogImage: post.fields.ogImage?.fields.file.url,
+    authorName: post.fields.author?.fields.name,
+    linkedInLink: post.fields.author?.fields.linkedInLink,
+    publishedAt: post.fields.publishedAt,
+    updatedAt: post.sys.updatedAt,
+  };
+
+  const jsonLdTemplate = JSON.stringify(post.fields.jsonLd);
+
   return (
     <main className="main-wrapper">
+      <section>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: Mustache.render(jsonLdTemplate || "", jsonLdData),
+          }}
+        />
+      </section>
       <div className="section-blog background-color-white">
         <div className="padding-global">
           <div className="container-large">

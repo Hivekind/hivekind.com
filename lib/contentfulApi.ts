@@ -44,13 +44,21 @@ export type fieldsType = {
   seoTitle: string;
   seoDescription: string;
   ogImage: imageFieldType;
+
+  publishedAt: string;
+  jsonLd: object;
 };
 
 export type postsType = {
   posts: Array<{ fields: Partial<fieldsType> }>;
 };
 
-export type postType = { post: { fields: Partial<fieldsType> } };
+export type postType = {
+  post: {
+    sys: { createdAt: string; updatedAt: string };
+    fields: Partial<fieldsType>;
+  };
+};
 
 const contentfulClient = contentful.createClient({
   space: process.env.CONTENTFUL_SPACE_ID ?? "",
@@ -59,11 +67,25 @@ const contentfulClient = contentful.createClient({
 
 export async function getAllPosts({
   contentType,
+  order = ["-sys.createdAt"],
 }: {
   contentType: string;
+  order?: Array<
+    | "sys.createdAt"
+    | "-sys.createdAt"
+    | "sys.updatedAt"
+    | "-sys.updatedAt"
+    | "sys.contentType.sys.id"
+    | "-sys.contentType.sys.id"
+    | `fields.${string}`
+    | `-fields.${string}`
+    | `fields.${string}.sys.id`
+    | `-fields.${string}.sys.id`
+  >;
 }): Promise<postsType> {
   const response = await contentfulClient.getEntries({
     content_type: contentType,
+    order,
   });
 
   const posts = response.items.map((item) => {
