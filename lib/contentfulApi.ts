@@ -72,6 +72,7 @@ export async function getAllPosts({
 }): Promise<postsType> {
   const response = await contentfulClient.getEntries({
     content_type: contentType,
+    order: ["-fields.publishedAt"],
   });
 
   const posts = response.items.map((item) => {

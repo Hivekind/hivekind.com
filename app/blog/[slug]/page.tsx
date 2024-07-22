@@ -7,6 +7,7 @@ import { markdownParser, generateToc } from "@/lib/markdownParser";
 import { TocLinkWrapper } from "@/components/toc-link-wrapper";
 import Mustache from "mustache";
 import { Metadata } from "next";
+import "@/styles/blog.css";
 
 type Props = {
   params: { slug: string };

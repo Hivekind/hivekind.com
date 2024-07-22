@@ -1,5 +1,8 @@
 import { RendererObject, marked } from "marked";
 import type { Tokens } from "marked";
+import { markedHighlight } from "marked-highlight";
+import hljs from "highlight.js";
+import "highlight.js/styles/github.css";
 
 export const parameterize = (text: string) =>
   text.toLowerCase().replace(/[^\w]+/g, "-");
@@ -36,7 +39,17 @@ const renderer = {
 } as unknown as RendererObject;
 
 export const markdownParser = (markdown: string) => {
-  marked.use({ renderer });
+  marked.setOptions(marked.getDefaults());
+  marked.use(
+    { renderer },
+    markedHighlight({
+      langPrefix: "hljs language-",
+      highlight(code, lang) {
+        const language = hljs.getLanguage(lang) ? lang : "plaintext";
+        return hljs.highlight(code, { language }).value;
+      },
+    })
+  );
   return marked(markdown);
 };
 
