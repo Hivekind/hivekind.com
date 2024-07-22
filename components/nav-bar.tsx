@@ -22,11 +22,11 @@ const NavBar = () => {
         overlayRef.current.style.display = "block";
         overlayRef.current.style.height = `${window.innerHeight}px`;
 
-        setTimeout(() => {
+        requestAnimationFrame(() => {
           if (overlayRef.current) {
             overlayRef.current.style.height = "0";
           }
-        }, 0);
+        });
 
         setTimeout(() => {
           if (overlayRef.current) {
@@ -39,11 +39,11 @@ const NavBar = () => {
         overlayRef.current.style.display = "block";
         overlayRef.current.style.height = "0";
 
-        setTimeout(() => {
+        requestAnimationFrame(() => {
           if (overlayRef.current) {
             overlayRef.current.style.height = `${window.innerHeight}px`;
           }
-        }, 0);
+        });
       }
 
       setIsMenuOpen(!isMenuOpen);
