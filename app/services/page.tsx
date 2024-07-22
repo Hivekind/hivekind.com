@@ -229,7 +229,6 @@ export default function ServicesPage() {
                     </a>
                   </div>
                   <div
-                    id="w-node-_753ef2b8-c3c2-c4c4-8d88-238354199446-5ddf4216"
                     className="dev_item"
                   >
                     <div className="margin-bottom margin-medium">
@@ -377,14 +376,12 @@ export default function ServicesPage() {
                 </div>
                 <div className="process_content-right">
                   <div
-                    data-w-id="14869bbe-675d-b4d7-05f2-d234d9edd9fc"
                     className="process_stages-wrapper"
                   >
                     <div className="process_progress-bar-wrapper">
                       <div className="process_progress-bar"></div>
                     </div>
                     <div
-                      data-w-id="14869bbe-675d-b4d7-05f2-d234d9edd9ff"
                       className="w-layout-grid process_timeline-step"
                     >
                       <div className="process_timeline-left">
@@ -427,7 +424,6 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div
-                      data-w-id="14869bbe-675d-b4d7-05f2-d234d9edda0a"
                       className="w-layout-grid process_timeline-step"
                     >
                       <div className="process_timeline-left">
@@ -467,7 +463,6 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div
-                      data-w-id="14869bbe-675d-b4d7-05f2-d234d9edda15"
                       className="w-layout-grid process_timeline-step"
                     >
                       <div className="process_timeline-left">
@@ -509,7 +504,6 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div
-                      data-w-id="14869bbe-675d-b4d7-05f2-d234d9edda20"
                       className="w-layout-grid process_timeline-step"
                     >
                       <div className="process_timeline-left">

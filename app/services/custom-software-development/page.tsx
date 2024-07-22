@@ -71,7 +71,6 @@ export default function CustomSoftwareDevelopmentPage() {
                   <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="c89f2773-f4a5-d785-b99a-99f838d911c1"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -108,7 +107,6 @@ export default function CustomSoftwareDevelopmentPage() {
                   <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="cd88069f-2b71-1eed-9d40-1f5eb3df2b5c"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -145,12 +143,10 @@ export default function CustomSoftwareDevelopmentPage() {
                     </p>
                   </div>
                   <div
-                    id="w-node-_93a85a0f-83a4-c187-c40a-e9d8506cdc01-150df769"
                     className="discovery_item"
                   >
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="93a85a0f-83a4-c187-c40a-e9d8506cdc03"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -179,12 +175,10 @@ export default function CustomSoftwareDevelopmentPage() {
                     </p>
                   </div>
                   <div
-                    id="w-node-_32763b1e-f46a-9263-c610-3541b471ce3a-150df769"
                     className="discovery_item"
                   >
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="32763b1e-f46a-9263-c610-3541b471ce3c"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -215,12 +209,10 @@ export default function CustomSoftwareDevelopmentPage() {
                     </p>
                   </div>
                   <div
-                    id="w-node-_061e7fb3-e5e6-fe73-7386-cf4c5d5b2c24-150df769"
                     className="discovery_item"
                   >
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="061e7fb3-e5e6-fe73-7386-cf4c5d5b2c26"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -260,7 +252,6 @@ export default function CustomSoftwareDevelopmentPage() {
                   >
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="d8204302-b3bf-7925-fc93-60ad7b36d947"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -390,7 +381,6 @@ export default function CustomSoftwareDevelopmentPage() {
                   <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="569c4c46-9c32-5d10-bfef-d7726c339876"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -419,7 +409,6 @@ export default function CustomSoftwareDevelopmentPage() {
                   <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="569c4c46-9c32-5d10-bfef-d7726c33987e"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -446,12 +435,10 @@ export default function CustomSoftwareDevelopmentPage() {
                     </p>
                   </div>
                   <div
-                    id="w-node-_569c4c46-9c32-5d10-bfef-d7726c339884-150df769"
                     className="discovery_item"
                   >
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="569c4c46-9c32-5d10-bfef-d7726c339886"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -484,12 +471,10 @@ export default function CustomSoftwareDevelopmentPage() {
                     </p>
                   </div>
                   <div
-                    id="w-node-_569c4c46-9c32-5d10-bfef-d7726c33988c-150df769"
                     className="discovery_item"
                   >
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="569c4c46-9c32-5d10-bfef-d7726c33988e"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -517,12 +502,10 @@ export default function CustomSoftwareDevelopmentPage() {
                     </p>
                   </div>
                   <div
-                    id="w-node-_569c4c46-9c32-5d10-bfef-d7726c339894-150df769"
                     className="discovery_item"
                   >
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="569c4c46-9c32-5d10-bfef-d7726c339896"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
@@ -551,12 +534,10 @@ export default function CustomSoftwareDevelopmentPage() {
                     </p>
                   </div>
                   <div
-                    id="w-node-_569c4c46-9c32-5d10-bfef-d7726c33989c-150df769"
                     className="discovery_item"
                   >
                     <div className="margin-bottom margin-medium">
                       <div
-                        data-w-id="569c4c46-9c32-5d10-bfef-d7726c33989e"
                         className="icon-embed-medium hk-orange w-embed"
                       >
                         <svg
