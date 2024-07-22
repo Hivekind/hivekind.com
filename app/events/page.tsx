@@ -105,7 +105,6 @@ export default function EventsPage() {
                       </div>
                     </div>
                     <div
-                      id="w-node-_6b2cde9d-0aa4-f225-5c2f-e741fc272cea-84e57cca"
                       className="event_item"
                     >
                       <div className="event_image-wrapper">
@@ -256,7 +255,6 @@ export default function EventsPage() {
                       </div>
                     </div>
                     <div
-                      id="w-node-_5cc3c841-be1e-e0da-73bc-a51bbe06274d-84e57cca"
                       className="event_item"
                     >
                       <div className="event_image-wrapper">
