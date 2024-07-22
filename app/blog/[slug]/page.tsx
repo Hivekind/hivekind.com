@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { markdownParser, generateToc } from "@/lib/markdownParser";
 import { TocLinkWrapper } from "@/components/toc-link-wrapper";
+import { WithContext, BlogPosting } from "schema-dts";
 
 import { Metadata } from "next";
 
@@ -33,9 +34,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   const { posts } = await getAllPosts({ contentType: "blogPosts" });
-  const slugs = posts.map(({ fields }) => ({
-    slug: fields.slug,
-  }));
+  const slugs = posts
+    .map(({ fields }) => ({
+      slug: fields.slug,
+    }))
+    .filter(Boolean);
 
   return slugs;
 }
@@ -43,18 +46,55 @@ export async function generateStaticParams() {
 export default async function BlogPage({
   params,
 }: {
-  params: { slug: string; postSummary: string };
+  params: { slug: string };
 }) {
   const { post } = await getBySlug({
     contentType: "blogPosts",
-    slug: params.slug ?? "",
+    slug: params.slug,
   });
 
   const postBody = markdownParser(`${post.fields.postBody}`);
   const toc = generateToc(`${post.fields.postBody}`);
 
+  // todo: replace with local logo when #12 is done
+  const hkLogoUrl =
+    "https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6389296caf38d7a00b252585_hk-logo.png";
+
+  const jsonLd: WithContext<BlogPosting> = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": new URL(`/blog/${params.slug}`, "https://hivekind.com").toString(),
+    },
+    headline: post.fields.seoTitle,
+    description: post.fields.seoDescription,
+    image: post.fields.ogImage?.fields.file.url,
+    author: {
+      "@type": "Person",
+      name: post.fields.author?.fields.name,
+      url: post.fields.author?.fields.linkedInLink,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Hivekind",
+      logo: {
+        "@type": "ImageObject",
+        url: hkLogoUrl,
+      },
+    },
+    datePublished: post.fields.publishedAt || post.sys.createdAt,
+    dateModified: post.sys.updatedAt,
+  };
+
   return (
     <main className="main-wrapper">
+      <section>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </section>
       <div className="section-blog background-color-white">
         <div className="padding-global">
           <div className="container-large">
