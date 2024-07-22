@@ -6,6 +6,7 @@ import Image from "next/image";
 import { TocLinkWrapper } from "@/components/toc-link-wrapper";
 
 import { Metadata } from "next";
+import { BlogPosting, JobPosting, WithContext } from "schema-dts";
 
 type Props = {
   params: { slug: string };
@@ -52,8 +53,39 @@ export default async function WorkPage({
   const caseBody = markdownParser(`${post.fields.caseBody}`);
   const toc = generateToc(`${post.fields.caseBody}`);
 
+  // todo: replace with local logo when #12 is done
+  const hkLogoUrl =
+    "https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6389296caf38d7a00b252585_hk-logo.png";
+
+  const jsonLd: WithContext<JobPosting> = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: post.fields.seoTitle,
+    description: post.fields.seoDescription,
+    hiringOrganization: {
+      "@type": "Organization",
+      name: "Hivekind",
+      sameAs: "https://hivekind.com",
+      logo: hkLogoUrl,
+    },
+    employmentType: "FULL_TIME",
+    datePosted: post.sys.updatedAt,
+    validThrough: post.sys.updatedAt,
+    applicantLocationRequirements: {
+      "@type": "Country",
+      name: "MY",
+    },
+    jobLocationType: "TELECOMMUTE",
+  };
+
   return (
     <main className="main-wrapper">
+      <section>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </section>
       <div className="section-blog background-color-white">
         <div className="padding-global">
           <div className="container-large">
