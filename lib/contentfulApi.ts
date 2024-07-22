@@ -67,12 +67,25 @@ const contentfulClient = contentful.createClient({
 
 export async function getAllPosts({
   contentType,
+  order = ["-sys.createdAt"],
 }: {
   contentType: string;
+  order?: Array<
+    | "sys.createdAt"
+    | "-sys.createdAt"
+    | "sys.updatedAt"
+    | "-sys.updatedAt"
+    | "sys.contentType.sys.id"
+    | "-sys.contentType.sys.id"
+    | `fields.${string}`
+    | `-fields.${string}`
+    | `fields.${string}.sys.id`
+    | `-fields.${string}.sys.id`
+  >;
 }): Promise<postsType> {
   const response = await contentfulClient.getEntries({
     content_type: contentType,
-    order: ["-fields.publishedAt"],
+    order,
   });
 
   const posts = response.items.map((item) => {

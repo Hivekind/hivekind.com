@@ -33,7 +33,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const { posts } = await getAllPosts({ contentType: "blogPosts" });
+  const { posts } = await getAllPosts({
+    contentType: "blogPosts",
+    order: ["-fields.publishedAt"],
+  });
   const slugs = posts
     .map(({ fields }) => ({
       slug: fields.slug,

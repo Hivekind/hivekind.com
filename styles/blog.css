@@ -5,4 +5,5 @@ code {
 pre code.hljs {
   background: #f3f3f3;
   font-weight: normal;
+  font-size: small;
 }
