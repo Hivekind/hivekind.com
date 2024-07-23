@@ -7,3 +7,26 @@ pre code.hljs {
   font-weight: normal;
   font-size: small;
 }
+
+.main-wrapper.blogpost img {
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.main-wrapper.blogpost img.blog_author-image {
+  width: 2rem;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  border-left: 0.1875rem solid #000;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.text-rich-text blockquote > p {
+  margin-bottom: 0;
+}

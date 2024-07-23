@@ -76,7 +76,7 @@ export default async function BlogPage({
   const jsonLdTemplate = JSON.stringify(post.fields.jsonLd);
 
   return (
-    <main className="main-wrapper">
+    <main className="main-wrapper blogpost">
       <section>
         <script
           type="application/ld+json"
