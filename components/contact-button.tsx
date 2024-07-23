@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 interface ContactButtonProps {
   isCenter?: boolean;
 }
 
 const ContactButton = ({ isCenter = true }: ContactButtonProps) => {
-  const centerStyle = isCenter ? 'is-center' : '';
+  const centerStyle = isCenter ? "is-center" : "";
 
   return (
     <div className="margin-top margin-medium">
@@ -15,7 +15,7 @@ const ContactButton = ({ isCenter = true }: ContactButtonProps) => {
         </a>
       </div>
     </div>
-  )
+  );
 };
 
 export default ContactButton;
