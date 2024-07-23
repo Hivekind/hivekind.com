@@ -1329,6 +1329,7 @@ strong {
 }
 .features_item {
   display: flex;
+  align-self: start;
 }
 .features_item-icon-wrapper {
   flex: none;
@@ -2777,11 +2778,7 @@ strong {
     grid-template-columns: 1fr;
   }
 }
-#w-node-a8fbd1ac-62bd-a83e-b405-708a05ee78f9-5ddf41fa,
-#w-node-a8fbd1ac-62bd-a83e-b405-708a05ee790b-5ddf41fa,
-#w-node-a8fbd1ac-62bd-a83e-b405-708a05ee7902-5ddf41fa {
-  align-self: start;
-}
+
 #w-node-_228e1b52-617f-6ebf-dfc2-4cccd6aae9dc-5ddf420a {
   grid-area: 1/1/2/2;
 }
