@@ -8,6 +8,7 @@ import { lato, merriweather } from "@/fonts";
 import { getPathnameFromState } from "@/lib/utils";
 import type { Metadata, ResolvingMetadata } from "next";
 import { fieldsType, getByField } from "@/lib/contentfulApi";
+import { GoogleTagManager } from '@next/third-parties/google';
 
 type Props = {
   params: { id: string };
@@ -131,6 +132,8 @@ export default function RootLayout({
           rel="apple-touch-icon"
         />
         <link href="https://hivekind.com/" rel="canonical" />
+
+        <GoogleTagManager gtmId="GTM-PRQSWTL" />
       </head>
 
       <body>
