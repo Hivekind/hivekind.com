@@ -5,6 +5,7 @@ import BlogCardFeatured from "@/components/blog-card-featured";
 export default async function BlogIndexPage() {
   const { posts } = await getAllPosts({
     contentType: "blogPosts",
+    order: ["-fields.publishedAt"],
   });
 
   return (
@@ -36,7 +37,7 @@ export default async function BlogIndexPage() {
                       mainImageAltText={`${posts[0].fields.mainImageAltText}`}
                       topic={`${posts[0].fields.topic}`}
                       name={`${posts[0].fields.name}`}
-                      summary={posts[0].fields.summary}
+                      summary={posts[0].fields.postSummary}
                     />
                   </div>
                 </div>

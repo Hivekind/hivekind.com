@@ -17,7 +17,7 @@ export type fieldsType = {
 
   name: string;
 
-  summary: string;
+  postSummary: string;
   caseSummary: string;
 
   author: {
