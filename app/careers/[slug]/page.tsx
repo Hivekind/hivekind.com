@@ -1,5 +1,5 @@
 import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
-import { markdownParser, generateToc } from "@/lib/markdownParser";
+import { markdownParser } from "@/lib/markdownParser";
 
 export async function generateStaticParams() {
   const { posts } = await getAllPosts({ contentType: "job" });
@@ -62,7 +62,7 @@ export default async function ProductManagerPage({
                     </div>
                     <div className="w-layout-grid post-share-options content-top">
                       <a
-                        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhivekind.com%2Fcareers%2F${params.slug}`}
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -84,7 +84,7 @@ export default async function ProductManagerPage({
                         </div>
                       </a>
                       <a
-                        href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
+                        href={`https://twitter.com/intent/tweet?url=https%3A%2F%2Fhivekind.com%2Fcareers%2F${params.slug}`}
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -104,7 +104,7 @@ export default async function ProductManagerPage({
                         </div>
                       </a>
                       <a
-                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
+                        href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhivekind.com%2Fcareers%2F${params.slug}`}
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -124,7 +124,7 @@ export default async function ProductManagerPage({
                         </div>
                       </a>
                       <a
-                        href="https://wa.me/?text=%20https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
+                        href={`https://wa.me/?text=%20https%3A%2F%2Fhivekind.com%2Fcareers%2F${params.slug}`}
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -165,7 +165,7 @@ export default async function ProductManagerPage({
                     </div>
                     <div className="w-layout-grid post-share-options">
                       <a
-                        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhivekind.com%2Fcareers%2F${params.slug}`}
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -187,7 +187,7 @@ export default async function ProductManagerPage({
                         </div>
                       </a>
                       <a
-                        href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
+                        href={`https://twitter.com/intent/tweet?url=https%3A%2F%2Fhivekind.com%2Fcareers%2F${params.slug}`}
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -207,7 +207,7 @@ export default async function ProductManagerPage({
                         </div>
                       </a>
                       <a
-                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
+                        href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhivekind.com%2Fcareers%2F${params.slug}`}
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -227,7 +227,7 @@ export default async function ProductManagerPage({
                         </div>
                       </a>
                       <a
-                        href="https://wa.me/?text=%20https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
+                        href={`https://wa.me/?text=%20https%3A%2F%2Fhivekind.com%2Fcareers%2F${params.slug}`}
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
