@@ -1,4 +1,26 @@
-export default function SoftwareEngineerPage() {
+import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
+import { markdownParser, generateToc } from "@/lib/markdownParser";
+
+export async function generateStaticParams() {
+  const { posts } = await getAllPosts({ contentType: "job" });
+  const slugs = posts.map(({ fields }) => ({
+    slug: fields.slug,
+  }));
+
+  return slugs;
+}
+
+export default async function ProductManagerPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { post } = await getBySlug({
+    contentType: "job",
+    slug: params.slug ?? "",
+  });
+
+  const caseBody = markdownParser(`${post.fields.caseBody}`);
   return (
     <main className="main-wrapper">
       <div className="section-job">
@@ -39,7 +61,7 @@ export default function SoftwareEngineerPage() {
                     </div>
                     <div className="w-layout-grid post-share-options content-top">
                       <a
-                        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fsoftware-engineer"
+                        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -61,7 +83,7 @@ export default function SoftwareEngineerPage() {
                         </div>
                       </a>
                       <a
-                        href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fsoftware-engineer"
+                        href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -81,7 +103,7 @@ export default function SoftwareEngineerPage() {
                         </div>
                       </a>
                       <a
-                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhivekind.com%2Fcareers%2Fsoftware-engineer"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -101,7 +123,7 @@ export default function SoftwareEngineerPage() {
                         </div>
                       </a>
                       <a
-                        href="https://wa.me/?text=%20https%3A%2F%2Fwww.hivekind.com%2Fcareers%2Fsoftware-engineer"
+                        href="https://wa.me/?text=%20https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -127,129 +149,150 @@ export default function SoftwareEngineerPage() {
                     </div>
                   </div>
                   <div className="margin-bottom margin-large">
-                    <h1>Software Engineer</h1>
+                    <h1>Product Manager</h1>
                   </div>
                   <div className="blog_content">
                     <div className="text-rich-text w-richtext">
                       <p>
-                        Hivekind offers a variety of web application development
-                        services. We follow industry best practices when writing
-                        software, utilizing techniques such as pair-programming,
-                        code review, and automated code quality evaluation. We
-                        love agile development and prefer to use Scrum in our
-                        projects. We are currently seeking skilled Software
-                        Engineers to join our team.
+                        At Hivekind, we assist our clients in growing their
+                        software-based products. We achieve this by helping them
+                        determine how to evolve their products over time and by
+                        implementing the necessary changes. We are strong
+                        advocates of agile development and prioritize the use of
+                        Scrum in our teams. Currently, we are actively seeking
+                        skilled Product Managers to join our team.
                       </p>
-                      <p>‍</p>
-                      <h3>Seniority and Salary</h3>
+                      <p>
+                        ‍<strong>‍</strong>
+                      </p>
+                      <h3>
+                        <strong>Seniority and Salary</strong>
+                        <br />
+                      </h3>
                       <ul role="list">
                         <li>
-                          We are hiring candidates at both mid and senior
-                          levels.
+                          This position is open to both junior and mid-level
+                          candidates.
                         </li>
                         <li>
                           Salaries will be offered according to ability and
-                          experience and can range from MYR 108,000 to MYR
-                          233,400 annually.
+                          experience and can range from MYR 86,400 to MYR
+                          140,400 annually.
                         </li>
                       </ul>
-                      <p>‍</p>
-                      <h3>About the Role</h3>
+                      <p>
+                        <br />
+                      </p>
+                      <h3>
+                        <strong>About the Role</strong>
+                      </h3>
                       <ul role="list">
                         <li>
-                          You’ll be a member of a small team of developers that
-                          deliver product increments in an agile setting.
+                          You&#x27;ll be the main point of contact between our
+                          client and our development team for one or a few
+                          ongoing Hivekind projects.
                         </li>
                         <li>
-                          You’ll help your team by producing quality work
-                          through planning sessions, pair programming, code
-                          review, and the use of code quality metrics.
+                          You&#x27;ll work with clients to figure out what they
+                          need done in order to consider our work a success for
+                          them.
                         </li>
                         <li>
-                          You’ll help improve technical processes so that the
-                          whole team stays productive.
+                          You&#x27;ll gather input from stakeholders in our
+                          client&#x27;s organization, the development team, the
+                          market, and users of the product, and turn it into a
+                          coherent and prioritized product backlog.
                         </li>
                         <li>
-                          You’ll look for and take opportunities to help the
-                          team become stronger and more experienced.
+                          You&#x27;ll provide context about the product and
+                          project, to both clients and Hivekind team members.
                         </li>
                         <li>
-                          You’ll be comfortable talking extemporaneously about
-                          team status and progress with a variety of
-                          stakeholders when needed.
+                          You&#x27;ll work within your team to get clarity on
+                          technical details, effort, and estimates.
+                        </li>
+                        <li>
+                          You&#x27;ll ensure there is full transparency to
+                          clients related to the current state of development,
+                          challenges, risks, estimation, and blockers.
                         </li>
                       </ul>
-                      <p>‍</p>
-                      <h3>About You</h3>
+                      <p>
+                        <br />
+                      </p>
+                      <h3>
+                        <strong>About You</strong>
+                      </h3>
                       <ul role="list">
                         <li>
-                          Above all else, you’re a developer. You love code and
-                          coding.
+                          You&#x27;re the type of person who loves building
+                          products.
                         </li>
                         <li>
-                          You love to talk about the nuances and trade-offs of
-                          implementation approaches.
+                          You understand the conventions of good web application
+                          design.
                         </li>
                         <li>
-                          You dabble in the cutting-edge and debate with others
-                          in technical communities without losing sight of the
-                          value of stable and proven technologies.
+                          Although you may not have significant graphical design
+                          skills, you&#x27;re handy with mock-up tools and the
+                          basics of UX design.
                         </li>
                         <li>
-                          You take pride in providing a quality solution,
-                          whether it be in coding style, test coverage, or the
-                          correctness of the product.
+                          You like to think like a user and find ways to get in
+                          their head.
                         </li>
                         <li>
-                          You like to get to know about peripheral disciplines
-                          which help you achieve quality, like QA,
-                          Project/Product Management, UI/UX Design.
+                          You prefer learning what users want through
+                          data-driven approaches like surveys and usability
+                          testing, but you&#x27;re not afraid to go with your
+                          gut when it feels right.
                         </li>
                         <li>
-                          You derive satisfaction from assisting others around
-                          you. Your team members hold great respect for your
-                          work and your conduct. Additionally, others in the
-                          organization perceive you as a helpful resource and a
-                          problem solver.
-                        </li>
-                        <li>
-                          You don’t mind speaking out when you believe there are
-                          better options to follow, but you are open to other
-                          points of view and understand making compromises is
-                          part of running a project.
-                        </li>
-                        <li>
-                          You like pushing projects forward and are always on
-                          the lookout for creative ways to do so.
+                          You enjoy interacting with many people and collecting
+                          and refining their feedback into actionable work.
                         </li>
                       </ul>
-                      <p>‍</p>
-                      <h3>Skills and Requirements</h3>
+                      <p>
+                        <br />
+                      </p>
+                      <h3>
+                        <strong>Skills and Requirements</strong>
+                      </h3>
                       <ul role="list">
                         <li>
-                          For mid-level positions, candidates should have three
-                          or more years of experience in web application
-                          development, with at least one year working with
-                          Laravel or Ruby on Rails. For senior positions,
-                          candidates should have six or more years of experience
-                          in web application development, with at least three
-                          years working with Laravel or Ruby on Rails.
+                          For junior candidates, one or more years of relevant
+                          experience either as a Product Owner, a Web Designer,
+                          or a Technical Project Manager of software projects.
+                          Three or more years for mid-level candidates.
+                        </li>
+                        <li>
+                          Proficiency in Scrum and an understanding of other
+                          agile methodologies, such as Kanban.
+                        </li>
+                        <li>
+                          Demonstrable understanding of web design concepts and
+                          conventions.
+                        </li>
+                        <li>
+                          A propensity to look for understanding through data
+                          rather than by making personal judgment calls.
                         </li>
                         <li>
                           Excellent written and verbal communication skills in
                           English.
                         </li>
                         <li>
-                          Good temperament, a genuine enjoyment of working as a
-                          team, and of helping others grow.
+                          Strong attention to detail, follow-through, and
+                          organizational skills.
                         </li>
                         <li>
-                          Relevant technical experience with some or all of the
-                          following: JavaScript ecosystem, React.js, PostgreSQL,
-                          Redis.
+                          Excellent interpersonal skills and enthusiasm to work
+                          with diverse personality types.
                         </li>
                       </ul>
-                      <p>‍</p>
+                      <p>
+                        <br />
+                      </p>
                       <h3>
                         <strong>Perks and Benefits</strong>
                       </h3>
@@ -308,7 +351,7 @@ export default function SoftwareEngineerPage() {
                     </div>
                     <div className="w-layout-grid post-share-options">
                       <a
-                        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fsoftware-engineer"
+                        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -330,7 +373,7 @@ export default function SoftwareEngineerPage() {
                         </div>
                       </a>
                       <a
-                        href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fsoftware-engineer"
+                        href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -350,7 +393,7 @@ export default function SoftwareEngineerPage() {
                         </div>
                       </a>
                       <a
-                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhivekind.com%2Fcareers%2Fsoftware-engineer"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >
@@ -370,7 +413,7 @@ export default function SoftwareEngineerPage() {
                         </div>
                       </a>
                       <a
-                        href="https://wa.me/?text=%20https%3A%2F%2Fwww.hivekind.com%2Fcareers%2Fsoftware-engineer"
+                        href="https://wa.me/?text=%20https%3A%2F%2Fhivekind.com%2Fcareers%2Fproduct-manager"
                         target="_blank"
                         className="job-post-content_social-link w-inline-block"
                       >

@@ -2,11 +2,15 @@ import React from "react";
 import Header from "@/components/header";
 import AboutSection from "./about-section";
 import CustomImage from "@/components/custom-image";
+import { getAllPosts } from "@/lib/contentfulApi";
 
-export default function CareersPage() {
+export default async function CareersPage() {
   const title = "Help us build amazing products.";
   const description =
     "Hivekind is an engineering company at heart. Founded by software engineers with a strong focus on getting things done, the emphasis on delivery and technical excellence runs strong and has been there from day one, guiding everything else. We take great pride on the quality of our work.";
+  const { posts } = await getAllPosts({
+    contentType: "job",
+  });
 
   return (
     <main className="main-wrapper">
@@ -386,94 +390,60 @@ export default function CareersPage() {
               </div>
               <div className="w-dyn-list">
                 <div role="list" className="w-dyn-items">
-                  <div role="listitem" className="w-dyn-item">
-                    <a
-                      href="/careers/product-manager"
-                      className="job-list_item w-inline-block"
-                    >
+                  {posts.map(({ fields }) => {
+                    return (
                       <div
-                        id="w-node-_5e1c5846-d26a-9164-4a58-b667264beb4e-5ddf420a"
-                        className="max-width-large"
+                        key={fields.slug}
+                        role="listitem"
+                        className="w-dyn-item"
                       >
-                        <div className="text-size-large text-weight-bold">
-                          Product Manager
-                        </div>
-                        <div className="text-size-medium">Junior-Mid Level</div>
-                      </div>
-                      <div className="job-list_content-right">
-                        <div className="job-list_department-wrapper">
+                        <a
+                          href={`/careers/${fields.slug}`}
+                          className="job-list_item w-inline-block"
+                        >
                           <div
-                            fs-cmssort-field="IDENTIFIER"
-                            className="text-size-small"
+                            id="w-node-_5e1c5846-d26a-9164-4a58-b667264beb4e-5ddf420a"
+                            className="max-width-large"
                           >
-                            On-site or Remote
+                            <div className="text-size-large text-weight-bold">
+                              {fields.title}
+                            </div>
+                            <div className="text-size-medium">
+                              {fields.experienceLevel}
+                            </div>
                           </div>
-                        </div>
-                        <div className="button-2 is-tertiary is-small is-icon-only">
-                          <div className="icon-embed-xsmall w-embed">
-                            <svg
-                              width=" 100%"
-                              height=" 100%"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M14.9603 11.1423C15.18 11.362 15.18 11.7181 14.9603 11.9377L9.22541 17.6726C9.00573 17.8923 8.64963 17.8923 8.42996 17.6726L8.16476 17.4074C7.94508 17.1878 7.94508 16.8316 8.16476 16.6119L13.2367 11.54L8.16476 6.46806C7.94508 6.24838 7.94508 5.89228 8.16476 5.67261L8.42996 5.40741C8.64963 5.18773 9.00573 5.18773 9.22541 5.40741L14.9603 11.1423Z"
-                                fill="currentColor"
-                              />
-                            </svg>
+                          <div className="job-list_content-right">
+                            <div className="job-list_department-wrapper">
+                              <div
+                                fs-cmssort-field="IDENTIFIER"
+                                className="text-size-small"
+                              >
+                                On-site or Remote
+                              </div>
+                            </div>
+                            <div className="button-2 is-tertiary is-small is-icon-only">
+                              <div className="icon-embed-xsmall w-embed">
+                                <svg
+                                  width=" 100%"
+                                  height=" 100%"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M14.9603 11.1423C15.18 11.362 15.18 11.7181 14.9603 11.9377L9.22541 17.6726C9.00573 17.8923 8.64963 17.8923 8.42996 17.6726L8.16476 17.4074C7.94508 17.1878 7.94508 16.8316 8.16476 16.6119L13.2367 11.54L8.16476 6.46806C7.94508 6.24838 7.94508 5.89228 8.16476 5.67261L8.42996 5.40741C8.64963 5.18773 9.00573 5.18773 9.22541 5.40741L14.9603 11.1423Z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
                           </div>
-                        </div>
+                        </a>
                       </div>
-                    </a>
-                  </div>
-                  <div role="listitem" className="w-dyn-item">
-                    <a
-                      href="/careers/software-engineer"
-                      className="job-list_item w-inline-block"
-                    >
-                      <div
-                        id="w-node-_5e1c5846-d26a-9164-4a58-b667264beb4e-5ddf420a"
-                        className="max-width-large"
-                      >
-                        <div className="text-size-large text-weight-bold">
-                          Software Engineer
-                        </div>
-                        <div className="text-size-medium">Mid-Senior Level</div>
-                      </div>
-                      <div className="job-list_content-right">
-                        <div className="job-list_department-wrapper">
-                          <div
-                            fs-cmssort-field="IDENTIFIER"
-                            className="text-size-small"
-                          >
-                            On-site or Remote
-                          </div>
-                        </div>
-                        <div className="button-2 is-tertiary is-small is-icon-only">
-                          <div className="icon-embed-xsmall w-embed">
-                            <svg
-                              width=" 100%"
-                              height=" 100%"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M14.9603 11.1423C15.18 11.362 15.18 11.7181 14.9603 11.9377L9.22541 17.6726C9.00573 17.8923 8.64963 17.8923 8.42996 17.6726L8.16476 17.4074C7.94508 17.1878 7.94508 16.8316 8.16476 16.6119L13.2367 11.54L8.16476 6.46806C7.94508 6.24838 7.94508 5.89228 8.16476 5.67261L8.42996 5.40741C8.64963 5.18773 9.00573 5.18773 9.22541 5.40741L14.9603 11.1423Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
