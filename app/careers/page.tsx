@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "@/components/header";
+import AboutSection from "./about-section";
 
 export default function CareersPage() {
   const title = "Help us build amazing products.";
@@ -28,120 +29,8 @@ export default function CareersPage() {
         </div>
       </Header>
 
-      <section className="about-section">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="padding-section-large">
-              <div
-                data-duration-in="400"
-                data-duration-out="200"
-                data-current="Tab 2"
-                data-easing="ease"
-                className="about_component w-tabs"
-              >
-                <div
-                  id="w-node-_228e1b52-617f-6ebf-dfc2-4cccd6aae9dc-5ddf420a"
-                  className="about_tabs-menu w-tab-menu"
-                >
-                  <a
-                    data-w-tab="Tab 1"
-                    className="about_tabs-link w-inline-block w-tab-link"
-                  >
-                    <div className="margin-bottom margin-xsmall">
-                      <h2 className="heading-style-h4">
-                        Improve and grow with us.
-                      </h2>
-                    </div>
-                    <p>
-                      In our constantly evolving industry, it&#x27;s crucial to
-                      continually develop our skills and knowledge.
-                    </p>
-                  </a>
-                  <a
-                    data-w-tab="Tab 2"
-                    className="about_tabs-link w-inline-block w-tab-link w--current"
-                  >
-                    <div className="margin-bottom margin-xsmall">
-                      <h2 className="heading-style-h4">We get things done.</h2>
-                    </div>
-                    <p>
-                      We have a propensity to ship and are continually focused
-                      on delivering results for our clients.
-                    </p>
-                  </a>
-                  <a
-                    data-w-tab="Tab 3"
-                    className="about_tabs-link w-inline-block w-tab-link"
-                  >
-                    <div className="margin-bottom margin-xsmall">
-                      <h2 className="heading-style-h4">
-                        Be part of a remote culture.
-                      </h2>
-                    </div>
-                    <p>
-                      We&#x27;re a remote-first team who work with clients
-                      spread across the globe.
-                    </p>
-                  </a>
-                </div>
-                <div className="w-tab-content">
-                  <div data-w-tab="Tab 1" className="w-tab-pane">
-                    <div className="tab_image-wrapper">
-                      <img
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0323e154a5879f063af_scrum-training.jpg"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                        srcSet="
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0323e154a5879f063af_scrum-training-p-500.jpg   500w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0323e154a5879f063af_scrum-training-p-800.jpg   800w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0323e154a5879f063af_scrum-training-p-1080.jpg 1080w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0323e154a5879f063af_scrum-training.jpg        1410w
-                      "
-                        alt="Scrum training"
-                        className="tab_image"
-                      />
-                    </div>
-                  </div>
-                  <div data-w-tab="Tab 2" className="w-tab-pane w--tab-active">
-                    <div className="tab_image-wrapper">
-                      <img
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567df7d1353f6b3fba806c0_hiveklimb.jpg"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                        srcSet="
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567df7d1353f6b3fba806c0_hiveklimb-p-500.jpg   500w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567df7d1353f6b3fba806c0_hiveklimb-p-800.jpg   800w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567df7d1353f6b3fba806c0_hiveklimb-p-1080.jpg 1080w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567df7d1353f6b3fba806c0_hiveklimb.jpg        1533w
-                      "
-                        alt="A Hivekind employee wall climbing"
-                        className="tab_image"
-                      />
-                    </div>
-                  </div>
-                  <div data-w-tab="Tab 3" className="w-tab-pane">
-                    <div className="tab_image-wrapper">
-                      <img
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0336b4770d3746350f5_remote-team.jpg"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                        srcSet="
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0336b4770d3746350f5_remote-team-p-500.jpg   500w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0336b4770d3746350f5_remote-team-p-800.jpg   800w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0336b4770d3746350f5_remote-team-p-1080.jpg 1080w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0336b4770d3746350f5_remote-team.jpg        1500w
-                      "
-                        alt="Remote team"
-                        className="tab_image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AboutSection />
+
       <section className="values-section">
         <div className="padding-global">
           <div className="container-large">

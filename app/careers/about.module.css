@@ -1,0 +1,53 @@
+.about_tab_link {
+  background-color: transparent;
+  border-left: 2px solid transparent;
+  padding: 0 0 0 2rem;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+  color: #222;
+  text-decoration: none;
+  position: relative;
+  max-width: 100%;
+}
+
+.about_tab_link:focus {
+  outline: 0;
+}
+
+.tab_image {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.w_tabs {
+  position: relative;
+}
+.w_tabs:before,
+.w_tabs:after {
+  content: " ";
+  grid-area: 1/1/2/2;
+  display: table;
+}
+.w_tabs:after {
+  clear: both;
+}
+
+.w_tab_menu {
+  position: relative;
+  grid-area: 1/1/2/2;
+}
+
+.w_tab_content {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.w_tab_pane {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 400ms ease, visibility 400ms ease;
+}
