@@ -20,7 +20,8 @@ export default async function ProductManagerPage({
     slug: params.slug ?? "",
   });
 
-  const caseBody = markdownParser(`${post.fields.caseBody}`);
+  const jobDescription = markdownParser(`${post.fields.jobDescription}`);
+
   return (
     <main className="main-wrapper">
       <div className="section-job">
@@ -148,202 +149,15 @@ export default async function ProductManagerPage({
                       </a>
                     </div>
                   </div>
-                  <div className="margin-bottom margin-large">
-                    <h1>Product Manager</h1>
-                  </div>
-                  <div className="blog_content">
-                    <div className="text-rich-text w-richtext">
-                      <p>
-                        At Hivekind, we assist our clients in growing their
-                        software-based products. We achieve this by helping them
-                        determine how to evolve their products over time and by
-                        implementing the necessary changes. We are strong
-                        advocates of agile development and prioritize the use of
-                        Scrum in our teams. Currently, we are actively seeking
-                        skilled Product Managers to join our team.
-                      </p>
-                      <p>
-                        ‍<strong>‍</strong>
-                      </p>
-                      <h3>
-                        <strong>Seniority and Salary</strong>
-                        <br />
-                      </h3>
-                      <ul role="list">
-                        <li>
-                          This position is open to both junior and mid-level
-                          candidates.
-                        </li>
-                        <li>
-                          Salaries will be offered according to ability and
-                          experience and can range from MYR 86,400 to MYR
-                          140,400 annually.
-                        </li>
-                      </ul>
-                      <p>
-                        <br />
-                      </p>
-                      <h3>
-                        <strong>About the Role</strong>
-                      </h3>
-                      <ul role="list">
-                        <li>
-                          You&#x27;ll be the main point of contact between our
-                          client and our development team for one or a few
-                          ongoing Hivekind projects.
-                        </li>
-                        <li>
-                          You&#x27;ll work with clients to figure out what they
-                          need done in order to consider our work a success for
-                          them.
-                        </li>
-                        <li>
-                          You&#x27;ll gather input from stakeholders in our
-                          client&#x27;s organization, the development team, the
-                          market, and users of the product, and turn it into a
-                          coherent and prioritized product backlog.
-                        </li>
-                        <li>
-                          You&#x27;ll provide context about the product and
-                          project, to both clients and Hivekind team members.
-                        </li>
-                        <li>
-                          You&#x27;ll work within your team to get clarity on
-                          technical details, effort, and estimates.
-                        </li>
-                        <li>
-                          You&#x27;ll ensure there is full transparency to
-                          clients related to the current state of development,
-                          challenges, risks, estimation, and blockers.
-                        </li>
-                      </ul>
-                      <p>
-                        <br />
-                      </p>
-                      <h3>
-                        <strong>About You</strong>
-                      </h3>
-                      <ul role="list">
-                        <li>
-                          You&#x27;re the type of person who loves building
-                          products.
-                        </li>
-                        <li>
-                          You understand the conventions of good web application
-                          design.
-                        </li>
-                        <li>
-                          Although you may not have significant graphical design
-                          skills, you&#x27;re handy with mock-up tools and the
-                          basics of UX design.
-                        </li>
-                        <li>
-                          You like to think like a user and find ways to get in
-                          their head.
-                        </li>
-                        <li>
-                          You prefer learning what users want through
-                          data-driven approaches like surveys and usability
-                          testing, but you&#x27;re not afraid to go with your
-                          gut when it feels right.
-                        </li>
-                        <li>
-                          You enjoy interacting with many people and collecting
-                          and refining their feedback into actionable work.
-                        </li>
-                      </ul>
-                      <p>
-                        <br />
-                      </p>
-                      <h3>
-                        <strong>Skills and Requirements</strong>
-                      </h3>
-                      <ul role="list">
-                        <li>
-                          For junior candidates, one or more years of relevant
-                          experience either as a Product Owner, a Web Designer,
-                          or a Technical Project Manager of software projects.
-                          Three or more years for mid-level candidates.
-                        </li>
-                        <li>
-                          Proficiency in Scrum and an understanding of other
-                          agile methodologies, such as Kanban.
-                        </li>
-                        <li>
-                          Demonstrable understanding of web design concepts and
-                          conventions.
-                        </li>
-                        <li>
-                          A propensity to look for understanding through data
-                          rather than by making personal judgment calls.
-                        </li>
-                        <li>
-                          Excellent written and verbal communication skills in
-                          English.
-                        </li>
-                        <li>
-                          Strong attention to detail, follow-through, and
-                          organizational skills.
-                        </li>
-                        <li>
-                          Excellent interpersonal skills and enthusiasm to work
-                          with diverse personality types.
-                        </li>
-                      </ul>
-                      <p>
-                        <br />
-                      </p>
-                      <h3>
-                        <strong>Perks and Benefits</strong>
-                      </h3>
-                      <ul role="list">
-                        <li>
-                          Remote-first culture. We practice remote-first, which
-                          means flexible working hours, freedom to manage your
-                          schedule, and a home-office support budget.
-                        </li>
-                        <li>
-                          If you prefer an office environment, we offer office
-                          space for you to work in. This is especially useful if
-                          you don&#x27;t want to work from home or if you prefer
-                          the routine of an office setting. Additionally, we
-                          provide free lunch every day for all individuals who
-                          come in.
-                        </li>
-                        <li>
-                          Supportive colleagues and guidance on career growth
-                          paths and professional development.
-                        </li>
-                        <li>
-                          Education and wellness. An allocated amount to spend
-                          each month on educational material and wellness
-                          services.
-                        </li>
-                        <li>
-                          Comprehensive medical insurance and a dental/optical
-                          allowance.
-                        </li>
-                        <li>
-                          A laptop (16-inch MacBook Pro or equivalent) will be
-                          supplied for carrying out your work.
-                        </li>
-                        <li>
-                          Employment Passes can be obtained for non-Malaysians
-                          wishing to work with us in Malaysia.
-                        </li>
-                      </ul>
-                      <p>‍</p>
-                      <h3>How to Apply</h3>
-                      <p>
-                        If you would like to apply for this position, please
-                        send an email introducing yourself and attaching your
-                        resume to:
-                        <a href="mailto:careers@hivekind.com">
-                          <strong>careers@hivekind.com</strong>
-                        </a>
-                        .
-                      </p>
-                    </div>
+                  <div
+                    fs-toc-element="contents"
+                    className="job-desc-page-rich-text text-rich-text w-richtext"
+                  >
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: jobDescription,
+                      }}
+                    ></div>
                   </div>
                   <div className="job-post-content_share-wrapper">
                     <div className="text-size-medium text-weight-semibold">
