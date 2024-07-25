@@ -16,8 +16,9 @@ interface ItemProps {
 }
 
 const AboutSection = () => {
-  const [activeTab, setActiveTab] = useState<number>(0);
-  const [prevTab, setPrevTab] = useState<number>(0);
+  // initial state when page is loaded, default to the second tab (index starts from 0)
+  const [activeTab, setActiveTab] = useState<number>(1);
+  const [prevTab, setPrevTab] = useState<number>(1);
 
   const imgRefs = [
     useRef<HTMLDivElement>(null),
@@ -29,7 +30,7 @@ const AboutSection = () => {
     const prevImgRef = imgRefs[prevTab].current;
     const activeImgRef = imgRefs[activeTab].current;
 
-    // initial state when page is loaded, activeTab and prevTab = 0, simply display the first image
+    // initial state when page is loaded, activeTab = prevTab = 1, simply display the second image
     if (activeImgRef != null && prevImgRef === activeImgRef) {
       activeImgRef.style.position = "relative";
       activeImgRef.style.visibility = "visible";
