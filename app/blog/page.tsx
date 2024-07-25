@@ -5,6 +5,7 @@ import BlogCardFeatured from "@/components/blog-card-featured";
 export default async function BlogIndexPage() {
   const { posts } = await getAllPosts({
     contentType: "blogPosts",
+    order: ["-fields.publishedAt"],
   });
 
   return (
@@ -34,9 +35,9 @@ export default async function BlogIndexPage() {
                       slug={`${posts[0].fields.slug}`}
                       mainImageUrl={`${posts[0].fields.mainImage?.fields.file.url}`}
                       mainImageAltText={`${posts[0].fields.mainImageAltText}`}
-                      topic={`${posts[0].fields.topic}`}
+                      topic={`${posts[0].fields.blogPostTopic?.fields.name}`}
                       name={`${posts[0].fields.name}`}
-                      summary={posts[0].fields.summary}
+                      summary={posts[0].fields.postSummary}
                     />
                   </div>
                 </div>
@@ -50,7 +51,7 @@ export default async function BlogIndexPage() {
                         slug={`${fields.slug}`}
                         mainImageUrl={`${fields.mainImage?.fields.file.url}`}
                         mainImageAltText={`${fields.mainImageAltText}`}
-                        topic={`${fields.topic}`}
+                        topic={`${fields.blogPostTopic?.fields.name}`}
                         name={`${fields.name}`}
                       />
                     );

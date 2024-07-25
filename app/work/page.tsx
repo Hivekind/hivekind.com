@@ -5,6 +5,7 @@ import { getAllPosts } from "@/lib/contentfulApi";
 export default async function WorkIndexPage() {
   const { posts } = await getAllPosts({
     contentType: "work",
+    order: ["fields.order"],
   });
 
   return (

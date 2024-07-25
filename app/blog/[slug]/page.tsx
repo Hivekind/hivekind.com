@@ -76,7 +76,7 @@ export default async function BlogPage({
   const jsonLdTemplate = JSON.stringify(post.fields.jsonLd);
 
   return (
-    <main className="main-wrapper">
+    <main className="main-wrapper blogpost">
       <section>
         <script
           type="application/ld+json"
@@ -92,7 +92,7 @@ export default async function BlogPage({
               <div className="blog-topic-wrapper">
                 <div className="blog_topic">
                   <div className="text-size-small text-weight-semibold">
-                    {post.fields.topic}
+                    {post.fields.blogPostTopic?.fields.name}
                   </div>
                 </div>
               </div>
