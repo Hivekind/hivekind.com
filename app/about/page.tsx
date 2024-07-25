@@ -6,6 +6,7 @@ import { getAllPosts } from "@/lib/contentfulApi";
 export default async function AboutPage() {
   const { posts } = await getAllPosts({
     contentType: "teamMembers",
+    order: ["fields.order"],
   });
 
   const title = "Your software development partner.";
