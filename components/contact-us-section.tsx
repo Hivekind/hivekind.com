@@ -29,7 +29,7 @@ const ContactUsSection = ({ className }: { className?: string }) => {
               </div>
               <div className="cta_image-wrapper">
                 <CustomImage
-                  src="images/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards.png"
+                  src="/images/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards.png"
                   loading="lazy"
                   sizes="(max-width: 479px) 100vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, 41vw"
                   width={1530}

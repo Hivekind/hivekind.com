@@ -13,7 +13,7 @@ export default function ServicesPage() {
       <Header title={title} description={description}>
         <div className="header_image-wrapper">
           <CustomImage
-            src="images/6567d78bbc987eac4020f6ab_dedicated-team-planning.jpg"
+            src="/images/6567d78bbc987eac4020f6ab_dedicated-team-planning.jpg"
             loading="eager"
             sizes="90vw"
             width={3000}
@@ -49,7 +49,7 @@ export default function ServicesPage() {
                     <div className="margin-bottom margin-medium">
                       <div className="discovery_image-wrapper">
                         <CustomImage
-                          src="images/661fd621c45e71b3c6834c85_hivekind-product-discovery.png"
+                          src="/images/661fd621c45e71b3c6834c85_hivekind-product-discovery.png"
                           loading="lazy"
                           sizes="(max-width: 767px) 90vw, 43vw"
                           width={1264}
@@ -74,7 +74,7 @@ export default function ServicesPage() {
                     <div className="margin-bottom margin-medium">
                       <div className="discovery_image-wrapper">
                         <CustomImage
-                          src="images/661fd622c2728c160e62ec57_hivekind-technical-discovery.png"
+                          src="/images/661fd622c2728c160e62ec57_hivekind-technical-discovery.png"
                           loading="lazy"
                           sizes="(max-width: 767px) 90vw, 43vw"
                           width={1264}
@@ -128,7 +128,7 @@ export default function ServicesPage() {
                     <div className="margin-bottom margin-medium">
                       <div className="dev_image-wrapper">
                         <CustomImage
-                          src="images/661fd622c2728c160e62ec57_hivekind-technical-discovery.png"
+                          src="/images/661fd622c2728c160e62ec57_hivekind-technical-discovery.png"
                           loading="lazy"
                           sizes="(max-width: 767px) 90vw, 43vw"
                           width={1264}
@@ -154,7 +154,7 @@ export default function ServicesPage() {
                     <div className="margin-bottom margin-medium">
                       <div className="dev_image-wrapper">
                         <CustomImage
-                          src="images/661fd621b9151dcffb448c0f_hivekind-product-market-fit.png"
+                          src="/images/661fd621b9151dcffb448c0f_hivekind-product-market-fit.png"
                           loading="lazy"
                           sizes="(max-width: 767px) 90vw, 43vw"
                           width={1264}
@@ -182,7 +182,7 @@ export default function ServicesPage() {
                       <div className="margin-bottom margin-medium">
                         <div className="dev_image-wrapper">
                           <CustomImage
-                            src="images/661fd6217ffea762061cc753_hivekind-custom-software-development.png"
+                            src="/images/661fd6217ffea762061cc753_hivekind-custom-software-development.png"
                             loading="lazy"
                             sizes="(max-width: 767px) 90vw, 43vw"
                             width={1264}
@@ -209,7 +209,7 @@ export default function ServicesPage() {
                     <div className="margin-bottom margin-medium">
                       <div className="dev_image-wrapper">
                         <CustomImage
-                          src="images/661fd621b171031f482e01dd_hivekind-product-scaling.png"
+                          src="/images/661fd621b171031f482e01dd_hivekind-product-scaling.png"
                           loading="lazy"
                           sizes="(max-width: 767px) 90vw, 43vw"
                           width={1264}
@@ -284,7 +284,7 @@ export default function ServicesPage() {
                     className="support_image-wrapper"
                   >
                     <CustomImage
-                      src="images/661fd62111e212b2ee43064c_hivekind-technical-support.png"
+                      src="/images/661fd62111e212b2ee43064c_hivekind-technical-support.png"
                       loading="lazy"
                       sizes="(max-width: 767px) 90vw, 43vw"
                       width={1264}
@@ -541,7 +541,7 @@ export default function ServicesPage() {
                       </div>
                       <div className="testimonial_client-image-wrapper">
                         <CustomImage
-                          src="images/655ab8fe6c7b81432adaa633_jayasimhan-masilamani.jpg"
+                          src="/images/655ab8fe6c7b81432adaa633_jayasimhan-masilamani.jpg"
                           loading="lazy"
                           sizes="(max-width: 767px) 90vw, 43vw"
                           width={320}

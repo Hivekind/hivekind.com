@@ -13,7 +13,7 @@ export default function CareersPage() {
       <Header title={title} description={description} showContactButton={false}>
         <div className="header_image-wrapper">
           <CustomImage
-            src="images/6567ed56ca4e490a1f742ccf_team-at-office.jpg"
+            src="/images/6567ed56ca4e490a1f742ccf_team-at-office.jpg"
             loading="eager"
             sizes="90vw"
             width={72}
@@ -139,7 +139,7 @@ export default function CareersPage() {
                   <div className="testimonial_staff">
                     <div className="staff-testimonial_image-wrapper">
                       <CustomImage
-                        src="images/6567e5e82bea986af7044910_yana-radenska.jpg"
+                        src="/images/6567e5e82bea986af7044910_yana-radenska.jpg"
                         loading="lazy"
                         sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
                         width={320}
@@ -169,7 +169,7 @@ export default function CareersPage() {
                   <div className="testimonial_staff">
                     <div className="staff-testimonial_image-wrapper">
                       <CustomImage
-                        src="images/6567e5e837fbb382020c4777_tamanna-patel.jpg"
+                        src="/images/6567e5e837fbb382020c4777_tamanna-patel.jpg"
                         loading="lazy"
                         sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
                         width={320}
@@ -363,7 +363,7 @@ export default function CareersPage() {
                 </div>
                 <div className="header_image-wrapper">
                   <CustomImage
-                    src="images/6567e8b0bb0c2dd09bb37b2e_team-dinner.jpg"
+                    src="/images/6567e8b0bb0c2dd09bb37b2e_team-dinner.jpg"
                     loading="eager"
                     sizes="90vw"
                     width={3072}

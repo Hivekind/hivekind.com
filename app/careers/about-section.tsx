@@ -133,7 +133,7 @@ const AboutSection = () => {
                   myRef={imgRefs[0]}
                   img={
                     <CustomImage
-                      src="images/6567e0323e154a5879f063af_scrum-training.jpg"
+                      src="/images/6567e0323e154a5879f063af_scrum-training.jpg"
                       loading="lazy"
                       sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
                       width={1410}
@@ -148,7 +148,7 @@ const AboutSection = () => {
                   myRef={imgRefs[1]}
                   img={
                     <CustomImage
-                      src="images/6567df7d1353f6b3fba806c0_hiveklimb.jpg"
+                      src="/images/6567df7d1353f6b3fba806c0_hiveklimb.jpg"
                       loading="lazy"
                       sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
                       width={1533}
@@ -163,7 +163,7 @@ const AboutSection = () => {
                   myRef={imgRefs[2]}
                   img={
                     <CustomImage
-                      src="images/6567e0336b4770d3746350f5_remote-team.jpg"
+                      src="/images/6567e0336b4770d3746350f5_remote-team.jpg"
                       loading="lazy"
                       sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
                       width={1500}

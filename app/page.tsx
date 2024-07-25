@@ -20,7 +20,7 @@ export default function Home() {
         >
           <div className="header_image-wrapper">
             <CustomImage
-              src="images/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg"
+              src="/images/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg"
               loading="eager"
               sizes="(max-width: 1137px) 90vw, 1024px"
               width={3600}
@@ -48,7 +48,7 @@ export default function Home() {
                     </div>
                     <div className="testimonial_client-image-wrapper">
                       <CustomImage
-                        src="images/655abbaccce334dacf855c7f_lindy-ledohowski.jpg"
+                        src="/images/655abbaccce334dacf855c7f_lindy-ledohowski.jpg"
                         sizes="(max-width: 1137px) 90vw, 1024px"
                         width={320}
                         height={320}
@@ -128,7 +128,7 @@ export default function Home() {
                         </div>
                         <div className="testimonial_client-image-wrapper">
                           <CustomImage
-                            src="images/655ab8fe7dbc4d7805694576_mitch-gelber.jpg"
+                            src="/images/655ab8fe7dbc4d7805694576_mitch-gelber.jpg"
                             sizes="(max-width: 1137px) 90vw, 1024px"
                             width={320}
                             height={320}

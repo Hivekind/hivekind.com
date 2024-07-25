@@ -32,7 +32,7 @@ export default function EventsPage() {
                       <div className="event_image-wrapper">
                         <div className="ruby-tuesdays">
                           <CustomImage
-                            src="images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
+                            src="/images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
                             loading="lazy"
                             sizes="90vw"
                             width={96}
@@ -113,7 +113,7 @@ export default function EventsPage() {
                       <div className="event_image-wrapper">
                         <div className="ruby-tuesdays">
                           <CustomImage
-                            src="images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
+                            src="/images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
                             loading="lazy"
                             sizes="90vw"
                             width={96}
@@ -195,7 +195,7 @@ export default function EventsPage() {
                       <div className="event_image-wrapper">
                         <div className="ruby-tuesdays">
                           <CustomImage
-                            src="images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
+                            src="/images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
                             loading="lazy"
                             sizes="90vw"
                             width={96}
@@ -267,7 +267,7 @@ export default function EventsPage() {
                       <div className="event_image-wrapper">
                         <div className="ruby-tuesdays">
                           <CustomImage
-                            src="images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
+                            src="/images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
                             loading="lazy"
                             sizes="90vw"
                             width={96}

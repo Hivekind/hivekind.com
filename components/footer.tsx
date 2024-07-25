@@ -13,7 +13,7 @@ const Footer = () => {
                   <div className="margin-bottom margin-small">
                     <a href="#" className="footer1_logo-link w-nav-brand">
                       <CustomImage
-                        src="images/6542de116bc3db8aa568cd97_hk-white-logo.png"
+                        src="/images/6542de116bc3db8aa568cd97_hk-white-logo.png"
                         loading="lazy"
                         sizes="(max-width: 479px) 100vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, 41vw"
                         width={44}
