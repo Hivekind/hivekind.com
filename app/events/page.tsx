@@ -1,3 +1,5 @@
+import CustomImage from "@/components/custom-image";
+
 export default function EventsPage() {
   return (
     <main className="main-wrapper">
@@ -29,9 +31,12 @@ export default function EventsPage() {
                     >
                       <div className="event_image-wrapper">
                         <div className="ruby-tuesdays">
-                          <img
-                            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
+                          <CustomImage
+                            src="images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
                             loading="lazy"
+                            sizes="90vw"
+                            width={96}
+                            height={117}
                             alt="Ruby KL logo"
                             className="ruby_tuesdays-image"
                           />
@@ -104,14 +109,15 @@ export default function EventsPage() {
                         </a>
                       </div>
                     </div>
-                    <div
-                      className="event_item"
-                    >
+                    <div className="event_item">
                       <div className="event_image-wrapper">
                         <div className="ruby-tuesdays">
-                          <img
-                            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
+                          <CustomImage
+                            src="images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
                             loading="lazy"
+                            sizes="90vw"
+                            width={96}
+                            height={117}
                             alt="Ruby KL logo"
                             className="ruby_tuesdays-image"
                           />
@@ -188,9 +194,12 @@ export default function EventsPage() {
                     >
                       <div className="event_image-wrapper">
                         <div className="ruby-tuesdays">
-                          <img
-                            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
+                          <CustomImage
+                            src="images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
                             loading="lazy"
+                            sizes="90vw"
+                            width={96}
+                            height={117}
                             alt="Ruby KL logo"
                             className="ruby_tuesdays-image"
                           />
@@ -254,14 +263,15 @@ export default function EventsPage() {
                         </a>
                       </div>
                     </div>
-                    <div
-                      className="event_item"
-                    >
+                    <div className="event_item">
                       <div className="event_image-wrapper">
                         <div className="ruby-tuesdays">
-                          <img
-                            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
+                          <CustomImage
+                            src="images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
                             loading="lazy"
+                            sizes="90vw"
+                            width={96}
+                            height={117}
                             alt="Ruby KL logo"
                             className="ruby_tuesdays-image"
                           />

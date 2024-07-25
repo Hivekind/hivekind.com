@@ -1,30 +1,23 @@
-import React from 'react';
-import Header from '@/components/header';
-import ContactUsSection from '@/components/contact-us-section';
+import React from "react";
+import Header from "@/components/header";
+import ContactUsSection from "@/components/contact-us-section";
+import CustomImage from "@/components/custom-image";
 
 export default function ServicesPage() {
   const title = "Build software with confidence.";
-  const description = "Whether you're a startup or an established enterprise, Hivekind is here to help you through the tricky parts of making software. We turn problems into opportunities and your ideas into market-ready products."
+  const description =
+    "Whether you're a startup or an established enterprise, Hivekind is here to help you through the tricky parts of making software. We turn problems into opportunities and your ideas into market-ready products.";
 
   return (
     <main className="main-wrapper">
-      <Header
-        title={title}
-        description={description}
-      >
+      <Header title={title} description={description}>
         <div className="header_image-wrapper">
-          <img
-            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567d78bbc987eac4020f6ab_dedicated-team-planning.jpg"
+          <CustomImage
+            src="images/6567d78bbc987eac4020f6ab_dedicated-team-planning.jpg"
             loading="eager"
             sizes="90vw"
-            srcSet="
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567d78bbc987eac4020f6ab_dedicated-team-planning-p-500.jpg   500w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567d78bbc987eac4020f6ab_dedicated-team-planning-p-800.jpg   800w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567d78bbc987eac4020f6ab_dedicated-team-planning-p-1080.jpg 1080w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567d78bbc987eac4020f6ab_dedicated-team-planning-p-1600.jpg 1600w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567d78bbc987eac4020f6ab_dedicated-team-planning-p-2000.jpg 2000w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567d78bbc987eac4020f6ab_dedicated-team-planning.jpg        3000w
-          "
+            width={3000}
+            height={2250}
             alt="Dedicated team working"
             className="about_image"
           />
@@ -55,16 +48,12 @@ export default function ServicesPage() {
                   <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
                       <div className="discovery_image-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd621c45e71b3c6834c85_hivekind-product-discovery.png"
+                        <CustomImage
+                          src="images/661fd621c45e71b3c6834c85_hivekind-product-discovery.png"
                           loading="lazy"
                           sizes="(max-width: 767px) 90vw, 43vw"
-                          srcSet="
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd621c45e71b3c6834c85_hivekind-product-discovery-p-500.png   500w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd621c45e71b3c6834c85_hivekind-product-discovery-p-800.png   800w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd621c45e71b3c6834c85_hivekind-product-discovery-p-1080.png 1080w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd621c45e71b3c6834c85_hivekind-product-discovery.png        1264w
-                        "
+                          width={1264}
+                          height={800}
                           alt="Hivekind Product Discovery"
                           className="service_image"
                         />
@@ -84,16 +73,12 @@ export default function ServicesPage() {
                   <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
                       <div className="discovery_image-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd622c2728c160e62ec57_hivekind-technical-discovery.png"
+                        <CustomImage
+                          src="images/661fd622c2728c160e62ec57_hivekind-technical-discovery.png"
                           loading="lazy"
                           sizes="(max-width: 767px) 90vw, 43vw"
-                          srcSet="
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd622c2728c160e62ec57_hivekind-technical-discovery-p-500.png   500w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd622c2728c160e62ec57_hivekind-technical-discovery-p-800.png   800w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd622c2728c160e62ec57_hivekind-technical-discovery-p-1080.png 1080w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd622c2728c160e62ec57_hivekind-technical-discovery.png        1264w
-                        "
+                          width={1264}
+                          height={800}
                           alt="Hivekind Technical Discovery"
                           className="service_image"
                         />
@@ -142,14 +127,12 @@ export default function ServicesPage() {
                   <div className="dev_item">
                     <div className="margin-bottom margin-medium">
                       <div className="dev_image-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6216e651d7d652f611a_hivekind-minimum-viable-product.png"
+                        <CustomImage
+                          src="images/661fd622c2728c160e62ec57_hivekind-technical-discovery.png"
                           loading="lazy"
                           sizes="(max-width: 767px) 90vw, 43vw"
-                          srcSet="
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6216e651d7d652f611a_hivekind-minimum-viable-product-p-500.png  500w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6216e651d7d652f611a_hivekind-minimum-viable-product.png       1264w
-                        "
+                          width={1264}
+                          height={800}
                           alt="Minimum Viable Product"
                           className="service_image"
                         />
@@ -170,14 +153,12 @@ export default function ServicesPage() {
                   <div className="dev_item">
                     <div className="margin-bottom margin-medium">
                       <div className="dev_image-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd621b9151dcffb448c0f_hivekind-product-market-fit.png"
+                        <CustomImage
+                          src="images/661fd621b9151dcffb448c0f_hivekind-product-market-fit.png"
                           loading="lazy"
                           sizes="(max-width: 767px) 90vw, 43vw"
-                          srcSet="
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd621b9151dcffb448c0f_hivekind-product-market-fit-p-500.png  500w,
-                          https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd621b9151dcffb448c0f_hivekind-product-market-fit.png       1264w
-                        "
+                          width={1264}
+                          height={800}
                           alt="Product-Market Fit"
                           className="layout251_image"
                         />
@@ -200,16 +181,12 @@ export default function ServicesPage() {
                     >
                       <div className="margin-bottom margin-medium">
                         <div className="dev_image-wrapper">
-                          <img
-                            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6217ffea762061cc753_hivekind-custom-software-development.png"
+                          <CustomImage
+                            src="images/661fd6217ffea762061cc753_hivekind-custom-software-development.png"
                             loading="lazy"
                             sizes="(max-width: 767px) 90vw, 43vw"
-                            srcSet="
-                            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6217ffea762061cc753_hivekind-custom-software-development-p-500.png   500w,
-                            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6217ffea762061cc753_hivekind-custom-software-development-p-800.png   800w,
-                            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6217ffea762061cc753_hivekind-custom-software-development-p-1080.png 1080w,
-                            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6217ffea762061cc753_hivekind-custom-software-development.png        1264w
-                          "
+                            width={1264}
+                            height={800}
                             alt="Custom Software Development"
                             className="layout251_image"
                           />
@@ -228,14 +205,15 @@ export default function ServicesPage() {
                       </p>
                     </a>
                   </div>
-                  <div
-                    className="dev_item"
-                  >
+                  <div className="dev_item">
                     <div className="margin-bottom margin-medium">
                       <div className="dev_image-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd621b171031f482e01dd_hivekind-product-scaling.png"
+                        <CustomImage
+                          src="images/661fd621b171031f482e01dd_hivekind-product-scaling.png"
                           loading="lazy"
+                          sizes="(max-width: 767px) 90vw, 43vw"
+                          width={1264}
+                          height={800}
                           alt="Product Scaling"
                           className="layout251_image"
                         />
@@ -305,16 +283,12 @@ export default function ServicesPage() {
                     id="w-node-c7b0cea7-a1a2-3d66-3e4b-b08b274498d6-5ddf4216"
                     className="support_image-wrapper"
                   >
-                    <img
-                      src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd62111e212b2ee43064c_hivekind-technical-support.png"
+                    <CustomImage
+                      src="images/661fd62111e212b2ee43064c_hivekind-technical-support.png"
                       loading="lazy"
                       sizes="(max-width: 767px) 90vw, 43vw"
-                      srcSet="
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd62111e212b2ee43064c_hivekind-technical-support-p-500.png   500w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd62111e212b2ee43064c_hivekind-technical-support-p-800.png   800w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd62111e212b2ee43064c_hivekind-technical-support-p-1080.png 1080w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd62111e212b2ee43064c_hivekind-technical-support.png        1264w
-                    "
+                      width={1264}
+                      height={1086}
                       alt="Hivekind technical support"
                       className="service_image"
                     />
@@ -375,15 +349,11 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 <div className="process_content-right">
-                  <div
-                    className="process_stages-wrapper"
-                  >
+                  <div className="process_stages-wrapper">
                     <div className="process_progress-bar-wrapper">
                       <div className="process_progress-bar"></div>
                     </div>
-                    <div
-                      className="w-layout-grid process_timeline-step"
-                    >
+                    <div className="w-layout-grid process_timeline-step">
                       <div className="process_timeline-left">
                         <div className="process_timeline-icon-wrapper">
                           <div className="product-stage">
@@ -423,9 +393,7 @@ export default function ServicesPage() {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="w-layout-grid process_timeline-step"
-                    >
+                    <div className="w-layout-grid process_timeline-step">
                       <div className="process_timeline-left">
                         <div className="process_timeline-icon-wrapper">
                           <div className="product-stage">
@@ -462,9 +430,7 @@ export default function ServicesPage() {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="w-layout-grid process_timeline-step"
-                    >
+                    <div className="w-layout-grid process_timeline-step">
                       <div className="process_timeline-left">
                         <div className="process_timeline-icon-wrapper">
                           <div className="product-stage">
@@ -503,9 +469,7 @@ export default function ServicesPage() {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="w-layout-grid process_timeline-step"
-                    >
+                    <div className="w-layout-grid process_timeline-step">
                       <div className="process_timeline-left">
                         <div className="process_timeline-icon-wrapper">
                           <div className="product-stage">
@@ -576,9 +540,12 @@ export default function ServicesPage() {
                         </div>
                       </div>
                       <div className="testimonial_client-image-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/655ab8fe6c7b81432adaa633_jayasimhan-masilamani.jpg"
+                        <CustomImage
+                          src="images/655ab8fe6c7b81432adaa633_jayasimhan-masilamani.jpg"
                           loading="lazy"
+                          sizes="(max-width: 767px) 90vw, 43vw"
+                          width={320}
+                          height={320}
                           alt="Jayasimhan Masilamani"
                           className="testimonial_client-image"
                         />

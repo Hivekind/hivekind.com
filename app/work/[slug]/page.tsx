@@ -6,6 +6,7 @@ import Image from "next/image";
 import { TocLinkWrapper } from "@/components/toc-link-wrapper";
 
 import { Metadata } from "next";
+import CustomImage from "@/components/custom-image";
 
 type Props = {
   params: { slug: string };
@@ -74,7 +75,7 @@ export default async function WorkPage({
                 </div>
               </div>
               <div className="blog-image padding-vertical padding-large">
-                <Image
+                <CustomImage
                   src={`${post.fields.mainImage?.fields.file.url}`}
                   alt={`${post.fields.mainImageAltText || post.fields.name}`}
                   width={1600}

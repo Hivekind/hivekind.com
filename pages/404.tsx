@@ -8,7 +8,7 @@ import "@/styles/globals.css";
 import "@/styles/site.css";
 import "@/styles/not-found.css";
 
-import notFoundImage from "../public/bee.jpg";
+import CustomImage from "@/components/custom-image";
 
 export const metadata: Metadata = {
   title: "Page Not Found",
@@ -40,10 +40,10 @@ function NotFound() {
                   </div>
                 </div>
                 <div>
-                  <Image
-                    src={notFoundImage}
-                    width="500"
-                    height="800"
+                  <CustomImage
+                    src="/images/656811487b378607980ebdc8_404-bee.jpg"
+                    width={1024}
+                    height={1024}
                     loading="eager"
                     sizes="(max-width: 1137px) 90vw, 1024px"
                     alt="404 bee"

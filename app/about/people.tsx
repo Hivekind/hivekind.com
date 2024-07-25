@@ -1,3 +1,4 @@
+import CustomImage from "@/components/custom-image";
 import React from "react";
 
 interface PeopleProps {
@@ -115,10 +116,13 @@ const People = ({
       <div className="team_item">
         <div className="margin-bottom margin-small">
           <div className="team_image-wrapper">
-            <img
-              alt={name}
-              loading="lazy"
+            <CustomImage
               src={imgFileName}
+              loading="lazy"
+              sizes="(max-width: 479px) 100vw, 90vw"
+              width={300}
+              height={300}
+              alt={name}
               className="team_image"
             />
           </div>

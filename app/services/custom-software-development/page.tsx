@@ -1,4 +1,5 @@
 import ContactUsSection from "@/components/contact-us-section";
+import CustomImage from "@/components/custom-image";
 
 export default function CustomSoftwareDevelopmentPage() {
   return (
@@ -26,16 +27,12 @@ export default function CustomSoftwareDevelopmentPage() {
                   </div>
                 </div>
                 <div className="header_image-wrapper">
-                  <img
-                    src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6217ffea762061cc753_hivekind-custom-software-development.png"
+                  <CustomImage
+                    src="/images/661fd6217ffea762061cc753_hivekind-custom-software-development.png"
                     loading="eager"
                     sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 42vw"
-                    srcSet="
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6217ffea762061cc753_hivekind-custom-software-development-p-500.png   500w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6217ffea762061cc753_hivekind-custom-software-development-p-800.png   800w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6217ffea762061cc753_hivekind-custom-software-development-p-1080.png 1080w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/661fd6217ffea762061cc753_hivekind-custom-software-development.png        1264w
-                  "
+                    width={1264}
+                    height={800}
                     alt="Custom Software Development"
                     className="header-image"
                   />
@@ -70,9 +67,7 @@ export default function CustomSoftwareDevelopmentPage() {
                 <div className="w-layout-grid discovery_list">
                   <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="100%"
@@ -106,9 +101,7 @@ export default function CustomSoftwareDevelopmentPage() {
                   </div>
                   <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="100%"
@@ -142,13 +135,9 @@ export default function CustomSoftwareDevelopmentPage() {
                       communication, and well-defined processes.
                     </p>
                   </div>
-                  <div
-                    className="discovery_item"
-                  >
+                  <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           width="100%"
                           height="100%"
@@ -174,13 +163,9 @@ export default function CustomSoftwareDevelopmentPage() {
                       you their undivided attention.
                     </p>
                   </div>
-                  <div
-                    className="discovery_item"
-                  >
+                  <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           width="100%"
                           height="100%"
@@ -208,13 +193,9 @@ export default function CustomSoftwareDevelopmentPage() {
                       responses to any questions you may have.
                     </p>
                   </div>
-                  <div
-                    className="discovery_item"
-                  >
+                  <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           width="100%"
                           height="100%"
@@ -251,9 +232,7 @@ export default function CustomSoftwareDevelopmentPage() {
                     className="discovery_item"
                   >
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           width="100%"
                           height="100%"
@@ -315,9 +294,11 @@ export default function CustomSoftwareDevelopmentPage() {
                   </div>
                   <div className="testimonial_staff">
                     <div className="staff-testimonial_image-wrapper">
-                      <img
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66384f15562959792abf9a4f_tony-jones.jpeg"
+                      <CustomImage
+                        src="/images/66384f15562959792abf9a4f_tony-jones.jpeg"
                         loading="lazy"
+                        width={402}
+                        height={402}
                         alt="Tony Jones"
                         className="testimonial_staff-image"
                       />
@@ -340,9 +321,11 @@ export default function CustomSoftwareDevelopmentPage() {
                   </div>
                   <div className="testimonial_staff">
                     <div className="staff-testimonial_image-wrapper">
-                      <img
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/655ab8fe6c7b81432adaa633_jayasimhan-masilamani.jpg"
+                      <CustomImage
+                        src="/images/655ab8fe6c7b81432adaa633_jayasimhan-masilamani.jpg"
                         loading="lazy"
+                        width={320}
+                        height={320}
                         alt="Jayasimhan Masilamani"
                         className="testimonial_staff-image"
                       />
@@ -380,9 +363,7 @@ export default function CustomSoftwareDevelopmentPage() {
                 <div className="w-layout-grid discovery_list">
                   <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           width="100%"
                           height="100%"
@@ -408,9 +389,7 @@ export default function CustomSoftwareDevelopmentPage() {
                   </div>
                   <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           width="100%"
                           height="10%0"
@@ -434,13 +413,9 @@ export default function CustomSoftwareDevelopmentPage() {
                       demands without compromising performance or efficiency.
                     </p>
                   </div>
-                  <div
-                    className="discovery_item"
-                  >
+                  <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           width="100%"
                           height="100%"
@@ -470,13 +445,9 @@ export default function CustomSoftwareDevelopmentPage() {
                       stable and responsive user interfaces.
                     </p>
                   </div>
-                  <div
-                    className="discovery_item"
-                  >
+                  <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           width="100%"
                           height="100%"
@@ -501,13 +472,9 @@ export default function CustomSoftwareDevelopmentPage() {
                       efficiently.
                     </p>
                   </div>
-                  <div
-                    className="discovery_item"
-                  >
+                  <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           width="100%"
                           height="100%"
@@ -533,13 +500,9 @@ export default function CustomSoftwareDevelopmentPage() {
                       technologies for renewed efficiency.
                     </p>
                   </div>
-                  <div
-                    className="discovery_item"
-                  >
+                  <div className="discovery_item">
                     <div className="margin-bottom margin-medium">
-                      <div
-                        className="icon-embed-medium hk-orange w-embed"
-                      >
+                      <div className="icon-embed-medium hk-orange w-embed">
                         <svg
                           width="100%"
                           height="100%"
@@ -598,17 +561,13 @@ export default function CustomSoftwareDevelopmentPage() {
                             className="featured-work_item-link w-inline-block"
                           >
                             <div className="featured-work_image-wrapper round-corner-top">
-                              <img
-                                alt=""
+                              <CustomImage
+                                src="/images/63c8123ab9aab99e9f2a2c3f_willmaker.png"
                                 loading="lazy"
-                                src="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker.png"
                                 sizes="(max-width: 767px) 90vw, 43vw"
-                                srcSet="
-                                https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-500.png   500w,
-                                https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-800.png   800w,
-                                https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-1080.png 1080w,
-                                https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker.png        1440w
-                              "
+                                width={616}
+                                height={438}
+                                alt=""
                                 className="featured-work_image"
                               />
                             </div>
@@ -663,17 +622,13 @@ export default function CustomSoftwareDevelopmentPage() {
                             className="featured-work_item-link w-inline-block"
                           >
                             <div className="featured-work_image-wrapper round-corner-top">
-                              <img
-                                alt=""
+                              <CustomImage
+                                src="/images/6388acbd65306f4c13b60071_essayjack.png"
                                 loading="lazy"
-                                src="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png"
                                 sizes="(max-width: 767px) 90vw, 43vw"
-                                srcSet="
-                                https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-500.png   500w,
-                                https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-800.png   800w,
-                                https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-1080.png 1080w,
-                                https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png        1440w
-                              "
+                                width={616}
+                                height={438}
+                                alt=""
                                 className="featured-work_image"
                               />
                             </div>

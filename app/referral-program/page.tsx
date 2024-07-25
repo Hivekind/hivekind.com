@@ -1,3 +1,4 @@
+import CustomImage from "@/components/custom-image";
 import FaqSection from "./faq-section";
 
 export default function ReferralProgramPage() {
@@ -32,17 +33,12 @@ export default function ReferralProgramPage() {
                   </div>
                 </div>
                 <div className="header_image-wrapper">
-                  <img
-                    src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6657ffeeb0ed2035fbfc99ff_software-development-referral-program.jpg"
+                  <CustomImage
+                    src="images/6657ffeeb0ed2035fbfc99ff_software-development-referral-program.jpg"
                     loading="eager"
                     sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 41vw"
-                    srcSet="
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6657ffeeb0ed2035fbfc99ff_software-development-referral-program-p-500.jpg   500w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6657ffeeb0ed2035fbfc99ff_software-development-referral-program-p-800.jpg   800w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6657ffeeb0ed2035fbfc99ff_software-development-referral-program-p-1080.jpg 1080w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6657ffeeb0ed2035fbfc99ff_software-development-referral-program-p-1600.jpg 1600w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6657ffeeb0ed2035fbfc99ff_software-development-referral-program.jpg        1893w
-                  "
+                    width={1893}
+                    height={1737}
                     alt="A woman holding an iPad"
                     className="header-image referral"
                   />

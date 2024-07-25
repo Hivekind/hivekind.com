@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "@/components/header";
 import AboutSection from "./about-section";
+import CustomImage from "@/components/custom-image";
 
 export default function CareersPage() {
   const title = "Help us build amazing products.";
@@ -11,18 +12,12 @@ export default function CareersPage() {
     <main className="main-wrapper">
       <Header title={title} description={description} showContactButton={false}>
         <div className="header_image-wrapper">
-          <img
-            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office.jpg"
+          <CustomImage
+            src="images/6567ed56ca4e490a1f742ccf_team-at-office.jpg"
             loading="eager"
             sizes="90vw"
-            srcSet="
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-500.jpg   500w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-800.jpg   800w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-1080.jpg 1080w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-1600.jpg 1600w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office-p-2000.jpg 2000w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567ed56ca4e490a1f742ccf_team-at-office.jpg        3000w
-          "
+            width={72}
+            height={72}
             alt="Hivekind team at the office"
             className="about_image"
           />
@@ -143,9 +138,12 @@ export default function CareersPage() {
                   </div>
                   <div className="testimonial_staff">
                     <div className="staff-testimonial_image-wrapper">
-                      <img
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e5e82bea986af7044910_yana-radenska.jpg"
+                      <CustomImage
+                        src="images/6567e5e82bea986af7044910_yana-radenska.jpg"
                         loading="lazy"
+                        sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
+                        width={320}
+                        height={320}
                         alt="Yana Radenska"
                         className="testimonial_staff-image"
                       />
@@ -170,9 +168,12 @@ export default function CareersPage() {
                   </div>
                   <div className="testimonial_staff">
                     <div className="staff-testimonial_image-wrapper">
-                      <img
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e5e837fbb382020c4777_tamanna-patel.jpg"
+                      <CustomImage
+                        src="images/6567e5e837fbb382020c4777_tamanna-patel.jpg"
                         loading="lazy"
+                        sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
+                        width={320}
+                        height={320}
                         alt="Tamanna Patel"
                         className="testimonial_staff-image"
                       />
@@ -361,18 +362,12 @@ export default function CareersPage() {
                   </div>
                 </div>
                 <div className="header_image-wrapper">
-                  <img
-                    src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e8b0bb0c2dd09bb37b2e_team-dinner.jpg"
+                  <CustomImage
+                    src="images/6567e8b0bb0c2dd09bb37b2e_team-dinner.jpg"
                     loading="eager"
                     sizes="90vw"
-                    srcSet="
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e8b0bb0c2dd09bb37b2e_team-dinner-p-500.jpg   500w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e8b0bb0c2dd09bb37b2e_team-dinner-p-800.jpg   800w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e8b0bb0c2dd09bb37b2e_team-dinner-p-1080.jpg 1080w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e8b0bb0c2dd09bb37b2e_team-dinner-p-1600.jpg 1600w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e8b0bb0c2dd09bb37b2e_team-dinner-p-2000.jpg 2000w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e8b0bb0c2dd09bb37b2e_team-dinner.jpg        3072w
-                  "
+                    width={3072}
+                    height={3072}
                     alt="Hivekind team dinner"
                     className="team-dinner_image"
                   />

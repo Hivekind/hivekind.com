@@ -1,5 +1,6 @@
 import React from "react";
 import ContactButton from "./contact-button";
+import CustomImage from "./custom-image";
 
 const ContactUsSection = ({ className }: { className?: string }) => {
   return (
@@ -27,15 +28,12 @@ const ContactUsSection = ({ className }: { className?: string }) => {
                 <ContactButton isCenter={false} />
               </div>
               <div className="cta_image-wrapper">
-                <img
-                  src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards.png"
+                <CustomImage
+                  src="images/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards.png"
                   loading="lazy"
                   sizes="(max-width: 479px) 100vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, 41vw"
-                  srcSet="
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards-p-500.png  500w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards-p-800.png  800w,
-                    https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards.png       1530w
-                  "
+                  width={1530}
+                  height={1314}
                   alt="Top software development company Malaysia awards"
                   className="awards_image"
                 />
