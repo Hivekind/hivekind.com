@@ -1,7 +1,6 @@
 import type { ReactElement } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { lato } from "@/fonts";
 
 import "@/styles/globals.css";
