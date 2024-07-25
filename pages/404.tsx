@@ -2,9 +2,11 @@ import type { ReactElement } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { lato } from "@/fonts";
 
 import "@/styles/globals.css";
 import "@/styles/site.css";
+import "@/styles/not-found.css";
 
 import notFoundImage from "../public/bee.jpg";
 
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
 
 function NotFound() {
   return (
-    <main className="main-wrapper">
+    <main className={lato.className}>
       <header className="header-section">
         <div className="padding-global">
           <div className="container-medium">
@@ -37,7 +39,7 @@ function NotFound() {
                     </div>
                   </div>
                 </div>
-                <div className="bee_image-wrapper">
+                <div>
                   <Image
                     src={notFoundImage}
                     width="500"
