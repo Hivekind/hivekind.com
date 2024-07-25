@@ -92,7 +92,7 @@ export default async function BlogPage({
               <div className="blog-topic-wrapper">
                 <div className="blog_topic">
                   <div className="text-size-small text-weight-semibold">
-                    {post.fields.topic}
+                    {post.fields.blogPostTopic?.fields.name}
                   </div>
                 </div>
               </div>

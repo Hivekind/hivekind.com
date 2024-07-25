@@ -12,7 +12,8 @@ export type fieldsType = {
 
   mainImageAltText: string;
 
-  topic: string;
+  blogPostTopic: { fields: { name: string } };
+
   client: string;
 
   name: string;
