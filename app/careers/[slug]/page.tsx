@@ -1,6 +1,7 @@
 import ShareWrapper from "@/components/share-wrapper";
 import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
 import { markdownParser } from "@/lib/markdownParser";
+import "@/styles/careers.css";
 
 export async function generateStaticParams() {
   const { posts } = await getAllPosts({ contentType: "job" });
