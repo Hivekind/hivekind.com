@@ -1,7 +1,7 @@
 {
   "functions": [
     {
-      "source": "functions",
+      "source": "cloud-functions",
       "codebase": "default",
       "ignore": [
         "node_modules",
@@ -10,7 +10,7 @@
         "firebase-debug.*.log",
         "*.local"
       ],
-      "predeploy": "npm --prefix functions run build"
+      "predeploy": "npm --prefix cloud-functions run build"
     }
   ]
 }
