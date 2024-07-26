@@ -1,24 +1,28 @@
 import ListItem from "@/components/list-item";
+import { getAllPosts } from "@/lib/contentfulApi";
 
-export default function FeaturedWork() {
+export default async function FeaturedWork() {
+  const featured = await getAllPosts({
+    contentType: "work",
+    order: ["-fields.order"],
+    fields: { "fields.featured": true },
+  });
+
   return (
     <div className="w-dyn-list">
       <div role="list" className="collection-list-3 w-dyn-items">
-        <ListItem
-          url="/work/nolo-willmaker-online-the-expansion-of-an-iconic-desktop-product-to-the-web"
-          imgSrc="/images/63c8123ab9aab99e9f2a2c3f_willmaker.png"
-          client="Nolo"
-          title="Nolo WillMaker Online: Expansion of an Iconic Desktop Product to the Web"
-          description="We helped Nolo increase conversion by 70% for their WillMaker product."
-        />
-
-        <ListItem
-          url="/work/essayjack-journey-from-prototype-to-acquisition"
-          imgSrc="/images/6388acbd65306f4c13b60071_essayjack.png"
-          client="EssayJack"
-          title="EssayJack: Journey from Prototype to Acquisition"
-          description="Hivekind provided product management, development and devops services to EssayJack until its eventual acquisition."
-        />
+        {featured.posts.map(({ fields }) => {
+          return (
+            <ListItem
+              key={fields.slug}
+              url={`/work/${fields.slug}`}
+              imgSrc={`${fields.mainImage?.fields.file.url}`}
+              client={`${fields.client}`}
+              title={`${fields.name}`}
+              description={`${fields.caseSummary}`}
+            />
+          );
+        })}
       </div>
     </div>
   );
