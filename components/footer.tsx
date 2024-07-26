@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import CustomImage from "./custom-image";
 
 const Footer = () => {
   return (
@@ -11,9 +12,12 @@ const Footer = () => {
                 <div className="foot_left-wrapper">
                   <div className="margin-bottom margin-small">
                     <a href="#" className="footer1_logo-link w-nav-brand">
-                      <img
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6542de116bc3db8aa568cd97_hk-white-logo.png"
+                      <CustomImage
+                        src="/images/6542de116bc3db8aa568cd97_hk-white-logo.png"
                         loading="lazy"
+                        sizes="(max-width: 479px) 100vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, 41vw"
+                        width={44}
+                        height={50}
                         alt="Hivekind white logo"
                         className="footer_logo"
                       />
@@ -30,8 +34,7 @@ const Footer = () => {
                         <div className="text-size-small">
                           Unit 25-02 Tower A, The Vertical Business Suites
                           <br />
-                          No. 8 Jalan Kerinchi, 59200, Kuala Lumpur,
-                          Malaysia
+                          No. 8 Jalan Kerinchi, 59200, Kuala Lumpur, Malaysia
                         </div>
                       </div>
                       <div className="margin-bottom margin-tiny">
@@ -40,10 +43,7 @@ const Footer = () => {
                         </div>
                       </div>
                       <div className="text-size-small">
-                        <a
-                          href="tel:+60322423731"
-                          className="text-color-white"
-                        >
+                        <a href="tel:+60322423731" className="text-color-white">
                           +603 2242 3731
                           <br />
                         </a>

@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./about.module.css";
+import CustomImage from "@/components/custom-image";
 
 interface ImageItemProps {
   img: React.ReactNode;
@@ -131,16 +132,12 @@ const AboutSection = () => {
                   index={0}
                   myRef={imgRefs[0]}
                   img={
-                    <img
-                      src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0323e154a5879f063af_scrum-training.jpg"
+                    <CustomImage
+                      src="/images/6567e0323e154a5879f063af_scrum-training.jpg"
                       loading="lazy"
                       sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                      srcSet="
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0323e154a5879f063af_scrum-training-p-500.jpg   500w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0323e154a5879f063af_scrum-training-p-800.jpg   800w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0323e154a5879f063af_scrum-training-p-1080.jpg 1080w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0323e154a5879f063af_scrum-training.jpg        1410w
-                    "
+                      width={1410}
+                      height={1410}
                       alt="Scrum training"
                       className={styles.tab_image}
                     />
@@ -150,16 +147,12 @@ const AboutSection = () => {
                   index={1}
                   myRef={imgRefs[1]}
                   img={
-                    <img
-                      src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567df7d1353f6b3fba806c0_hiveklimb.jpg"
+                    <CustomImage
+                      src="/images/6567df7d1353f6b3fba806c0_hiveklimb.jpg"
                       loading="lazy"
                       sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                      srcSet="
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567df7d1353f6b3fba806c0_hiveklimb-p-500.jpg   500w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567df7d1353f6b3fba806c0_hiveklimb-p-800.jpg   800w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567df7d1353f6b3fba806c0_hiveklimb-p-1080.jpg 1080w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567df7d1353f6b3fba806c0_hiveklimb.jpg        1533w
-                    "
+                      width={1533}
+                      height={1533}
                       alt="A Hivekind employee wall climbing"
                       className={styles.tab_image}
                     />
@@ -169,16 +162,12 @@ const AboutSection = () => {
                   index={2}
                   myRef={imgRefs[2]}
                   img={
-                    <img
-                      src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0336b4770d3746350f5_remote-team.jpg"
+                    <CustomImage
+                      src="/images/6567e0336b4770d3746350f5_remote-team.jpg"
                       loading="lazy"
                       sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                      srcSet="
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0336b4770d3746350f5_remote-team-p-500.jpg   500w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0336b4770d3746350f5_remote-team-p-800.jpg   800w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0336b4770d3746350f5_remote-team-p-1080.jpg 1080w,
-                      https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567e0336b4770d3746350f5_remote-team.jpg        1500w
-                    "
+                      width={1500}
+                      height={1500}
                       alt="Remote team"
                       className={styles.tab_image}
                     />

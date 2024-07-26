@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import FeatureComparisonSection from "./feature-comparison-section";
 import FeatureSection from "./feature-section";
 import ListItem from "@/components/list-item";
+import CustomImage from "@/components/custom-image";
 
 export default function Home() {
   const title = "The transparent software development company.";
@@ -18,19 +19,12 @@ export default function Home() {
           paddingStyle="padding-section-medium"
         >
           <div className="header_image-wrapper">
-            <img
-              src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg"
+            <CustomImage
+              src="/images/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg"
               loading="eager"
-              sizes="90vw"
-              srcSet="
-                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-500.jpeg   500w,
-                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-800.jpeg   800w,
-                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-1080.jpeg 1080w,
-                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-1600.jpeg 1600w,
-                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-2000.jpeg 2000w,
-                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage-p-2600.jpeg 2600w,
-                  https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg        3600w
-                "
+              sizes="(max-width: 1137px) 90vw, 1024px"
+              width={3600}
+              height={1800}
               alt="Software development company photomontage"
               className="header_image"
             />
@@ -53,8 +47,11 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="testimonial_client-image-wrapper">
-                      <img
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/655abbaccce334dacf855c7f_lindy-ledohowski.jpg"
+                      <CustomImage
+                        src="/images/655abbaccce334dacf855c7f_lindy-ledohowski.jpg"
+                        sizes="(max-width: 1137px) 90vw, 1024px"
+                        width={320}
+                        height={320}
                         loading="lazy"
                         alt="Dr Lindy Ledohowski"
                         className="testimonial_client-image"
@@ -92,13 +89,7 @@ export default function Home() {
                     <div role="list" className="collection-list-3 w-dyn-items">
                       <ListItem
                         url="/work/nolo-willmaker-online-the-expansion-of-an-iconic-desktop-product-to-the-web"
-                        imgSrc="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker.png"
-                        imgSrcSet="
-                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-500.png   500w,
-                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-800.png   800w,
-                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker-p-1080.png 1080w,
-                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/63c8123ab9aab99e9f2a2c3f_willmaker.png        1440w
-                        "
+                        imgSrc="/images/63c8123ab9aab99e9f2a2c3f_willmaker.png"
                         client="Nolo"
                         title="Nolo WillMaker Online: Expansion of an Iconic Desktop Product to the Web"
                         description="We helped Nolo increase conversion by 70% for their WillMaker product."
@@ -106,13 +97,7 @@ export default function Home() {
 
                       <ListItem
                         url="/work/essayjack-journey-from-prototype-to-acquisition"
-                        imgSrc="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png"
-                        imgSrcSet="
-                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-500.png   500w,
-                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-800.png   800w,
-                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-1080.png 1080w,
-                          https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png        1440w
-                        "
+                        imgSrc="/images/6388acbd65306f4c13b60071_essayjack.png"
                         client="EssayJack"
                         title="EssayJack: Journey from Prototype to Acquisition"
                         description="Hivekind provided product management, development and devops services to EssayJack until its eventual acquisition."
@@ -142,8 +127,11 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="testimonial_client-image-wrapper">
-                          <img
-                            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/655ab8fe7dbc4d7805694576_mitch-gelber.jpg"
+                          <CustomImage
+                            src="/images/655ab8fe7dbc4d7805694576_mitch-gelber.jpg"
+                            sizes="(max-width: 1137px) 90vw, 1024px"
+                            width={320}
+                            height={320}
                             loading="lazy"
                             alt="Mitch Gelber"
                             className="testimonial_client-image"

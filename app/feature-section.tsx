@@ -1,4 +1,5 @@
 import React from "react";
+import CustomImage from "@/components/custom-image";
 
 interface FeatureItemProps {
   title: string;
@@ -115,16 +116,12 @@ const FeatureSection = () => {
                   </div>
                 </div>
                 <div className="features_image-wrapper">
-                  <img
-                    src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6356ad0005fe31123d2701b0_hero.jpg"
+                  <CustomImage
+                    src="/images/6356ad0005fe31123d2701b0_hero (1).jpg"
                     loading="lazy"
                     sizes="(max-width: 479px) 91vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, 41vw"
-                    srcSet="
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6356ad0005fe31123d2701b0_hero-p-500.jpg   500w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6356ad0005fe31123d2701b0_hero-p-800.jpg   800w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6356ad0005fe31123d2701b0_hero-p-1080.jpg 1080w,
-                        https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6356ad0005fe31123d2701b0_hero.jpg        1146w
-                      "
+                    width={1146}
+                    height={1170}
                     alt="Dev team planning"
                     className="features_image"
                   />

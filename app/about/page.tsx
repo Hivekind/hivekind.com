@@ -2,6 +2,7 @@ import Stats from "./stats";
 import People from "./people";
 import Header from "@/components/header";
 import { getAllPosts } from "@/lib/contentfulApi";
+import CustomImage from "@/components/custom-image";
 
 export default async function AboutPage() {
   const { posts } = await getAllPosts({
@@ -17,18 +18,12 @@ export default async function AboutPage() {
     <main className="main-wrapper">
       <Header title={title} description={description}>
         <div className="image-wrapper">
-          <img
-            src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner.jpg"
+          <CustomImage
+            src="/images/6567dc044a628e5f71c19a57_software-development-partner.jpg"
             loading="eager"
             sizes="(max-width: 479px) 100vw, 90vw"
-            srcSet="
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-500.jpg   500w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-800.jpg   800w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-1080.jpg 1080w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-1600.jpg 1600w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner-p-2000.jpg 2000w,
-            https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/6567dc044a628e5f71c19a57_software-development-partner.jpg        3000w
-          "
+            width={72}
+            height={72}
             alt="Software development partner"
             className="about_image"
           />

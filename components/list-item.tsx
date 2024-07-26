@@ -1,4 +1,5 @@
 import React from "react";
+import CustomImage from "./custom-image";
 
 interface ListItemProps {
   url: string;
@@ -12,7 +13,6 @@ interface ListItemProps {
 const ListItem = ({
   url,
   imgSrc,
-  imgSrcSet,
   client,
   title,
   description,
@@ -22,12 +22,13 @@ const ListItem = ({
       <div className="featured-work_item">
         <a href={url} className="featured-work_item-link w-inline-block">
           <div className="featured-work_image-wrapper round-corner-top">
-            <img
-              alt=""
-              loading="lazy"
+            <CustomImage
               src={imgSrc}
+              alt=""
               sizes="(max-width: 767px) 90vw, 43vw"
-              srcSet={imgSrcSet}
+              width={488}
+              height={347}
+              loading="lazy"
               className="featured-work_image"
             />
           </div>

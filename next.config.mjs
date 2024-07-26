@@ -2,7 +2,8 @@
 const nextConfig = {
   output: "export",
   images: {
-    unoptimized: true,
+    loader: 'custom',
+    path: '/images/',
     remotePatterns: [
       {
         protocol: "https",
