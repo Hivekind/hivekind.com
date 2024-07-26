@@ -1,5 +1,6 @@
 import React from "react";
 import CustomImage from "./custom-image";
+import "@/styles/work.css";
 
 interface ListItemProps {
   url: string;
@@ -26,8 +27,8 @@ const ListItem = ({
               src={imgSrc}
               alt=""
               sizes="(max-width: 767px) 90vw, 43vw"
-              width={488}
-              height={347}
+              width={616}
+              height={438}
               loading="lazy"
               className="featured-work_image"
             />
