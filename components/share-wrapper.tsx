@@ -1,9 +1,15 @@
 import Link from "next/link";
 
-export default function ShareWrapper({ url }: { url: string }) {
+export default function ShareWrapper({
+  url,
+  shareText,
+}: {
+  url: string;
+  shareText?: string;
+}) {
   return (
     <div className="blog-post_share-wrapper">
-      <h3 className="text-size-medium">Share this article</h3>
+      {shareText && <h3 className="text-size-medium">{shareText}</h3>}
       <div className="w-layout-grid post-share-options">
         <Link
           target="_blank"

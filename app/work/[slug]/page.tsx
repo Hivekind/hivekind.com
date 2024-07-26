@@ -110,6 +110,7 @@ export default async function WorkPage({
                       <div className="separator"></div>
                       <ShareWrapper
                         url={`https://hivekind.com/blog/${post.fields.slug}`}
+                        shareText="Share this article"
                       />
                     </div>
                     <div className="fs-toc_rich-text">

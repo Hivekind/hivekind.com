@@ -401,10 +401,7 @@ export default async function CareersPage() {
                           href={`/careers/${fields.slug}`}
                           className="job-list_item w-inline-block"
                         >
-                          <div
-                            id="w-node-_5e1c5846-d26a-9164-4a58-b667264beb4e-5ddf420a"
-                            className="max-width-large"
-                          >
+                          <div className="max-width-large">
                             <div className="text-size-large text-weight-bold">
                               {fields.title}
                             </div>
