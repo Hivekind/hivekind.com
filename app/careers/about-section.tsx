@@ -68,7 +68,7 @@ const AboutSection = () => {
         });
       }, 400); // match with CSS time: transition: opacity 400ms ease, visibility 400ms ease;
     }
-  }, [activeTab, prevTab]);
+  }, [activeTab, imgRefs, prevTab]);
 
   const handleTabClick = (index: number) => {
     if (index === activeTab) return;

@@ -59,13 +59,13 @@ const NavBar = () => {
     setIsMenuOpen(false);
   };
 
-  const handleResize = () => {
-    if (window.innerWidth > 991 && isMenuOpenRef.current) {
-      closeOverlay();
-    }
-  };
-
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 991 && isMenuOpenRef.current) {
+        closeOverlay();
+      }
+    };
+
     window.addEventListener("resize", handleResize);
 
     // Clean up the event listener on component unmount
