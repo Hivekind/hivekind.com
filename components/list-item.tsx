@@ -1,5 +1,6 @@
 import React from "react";
 import CustomImage from "./custom-image";
+import "@/styles/work.css";
 
 interface ListItemProps {
   url: string;
