@@ -48,6 +48,11 @@ export type fieldsType = {
 
   publishedAt: string;
   jsonLd: object;
+  title: string;
+  experienceLevel: string;
+  publish: boolean;
+  jobLocation: string;
+  jobDescription: string;
 };
 
 export type postsType = {
