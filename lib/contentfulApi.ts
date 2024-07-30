@@ -47,15 +47,12 @@ export type fieldsType = {
   ogImage: imageFieldType;
 
   publishedAt: string;
-
   jsonLd: object;
-
   title: string;
   experienceLevel: string;
+  publish: boolean;
   jobLocation: string;
   jobDescription: string;
-  datePosted: string;
-  validThrough: string;
 };
 
 export type postsType = {

@@ -2,6 +2,7 @@ import ContactUsSection from "@/components/contact-us-section";
 import Header from "@/components/header";
 import FeatureComparisonSection from "./feature-comparison-section";
 import FeatureSection from "./feature-section";
+import ListItem from "@/components/list-item";
 import CustomImage from "@/components/custom-image";
 import FeaturedWork from "./featured-work";
 

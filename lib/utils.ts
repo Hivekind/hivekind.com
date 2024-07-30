@@ -13,7 +13,3 @@ export function getPathnameFromState(state: ResolvingMetadata): string {
 
   return url.pathname;
 }
-
-export function dateInPast(firstDate: Date, secondDate = new Date()) {
-  return firstDate.setHours(0, 0, 0, 0) <= secondDate.setHours(0, 0, 0, 0);
-}
