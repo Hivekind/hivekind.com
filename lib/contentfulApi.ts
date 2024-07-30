@@ -50,7 +50,6 @@ export type fieldsType = {
   jsonLd: object;
   title: string;
   experienceLevel: string;
-  publish: boolean;
   jobLocation: string;
   jobDescription: string;
 };
