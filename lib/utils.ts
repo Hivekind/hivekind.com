@@ -15,5 +15,8 @@ export function getPathnameFromState(state: ResolvingMetadata): string {
 }
 
 export function dateInPast(firstDate: Date, secondDate = new Date()) {
-  return firstDate.setHours(0, 0, 0, 0) <= secondDate.setHours(0, 0, 0, 0);
+  return (
+    new Date(firstDate).setHours(0, 0, 0, 0) <=
+    new Date(secondDate).setHours(0, 0, 0, 0)
+  );
 }
