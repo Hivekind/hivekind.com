@@ -1,6 +1,7 @@
 import ShareWrapper from "@/components/share-wrapper";
 import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
 import { markdownParser } from "@/lib/markdownParser";
+import Mustache from "mustache";
 import "@/styles/careers.css";
 
 export async function generateStaticParams() {
@@ -22,10 +23,32 @@ export default async function ProductManagerPage({
     slug: params.slug ?? "",
   });
 
+  const jsonLdData = {
+    currentUrl: new URL(
+      `/blog/${params.slug}`,
+      "https://hivekind.com"
+    ).toString(),
+    seoTitle: post.fields.seoTitle,
+    seoDescription: post.fields.seoDescription,
+    ogImage: post.fields.ogImage?.fields.file.url,
+    datePosted: post.fields.datePosted,
+    validThrough: post.fields.validThrough,
+  };
+
+  const jsonLdTemplate = JSON.stringify(post.fields.jsonLd);
+
   const jobDescription = markdownParser(`${post.fields.jobDescription}`);
 
   return (
     <main className="main-wrapper">
+      <section>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: Mustache.render(jsonLdTemplate || "", jsonLdData),
+          }}
+        />
+      </section>
       <div className="section-job">
         <div className="padding-global">
           <div className="container-large">
