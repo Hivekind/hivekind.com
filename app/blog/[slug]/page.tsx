@@ -1,7 +1,6 @@
 import ContactUsSection from "@/components/contact-us-section";
 import ShareWrapper from "@/components/share-wrapper";
 import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
-import Image from "next/image";
 import Link from "next/link";
 import { markdownParser, generateToc } from "@/lib/markdownParser";
 import { TocLinkWrapper } from "@/components/toc-link-wrapper";
