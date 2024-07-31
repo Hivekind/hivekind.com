@@ -3,14 +3,16 @@ import Header from "@/components/header";
 import AboutSection from "./about-section";
 import CustomImage from "@/components/custom-image";
 import { getAllPosts } from "@/lib/contentfulApi";
-import PositionsList from "./positions-list";
+import PositionsSection from "./positions-section";
 
 export default async function CareersPage() {
   const title = "Help us build amazing products.";
   const description =
     "Hivekind is an engineering company at heart. Founded by software engineers with a strong focus on getting things done, the emphasis on delivery and technical excellence runs strong and has been there from day one, guiding everything else. We take great pride on the quality of our work.";
+
   const { posts } = await getAllPosts({
     contentType: "job",
+    fields: { "fields.validThrough[gte]": new Date().toISOString() },
   });
 
   return (
@@ -382,18 +384,9 @@ export default async function CareersPage() {
           </div>
         </div>
       </section>
-      <section className="jobs-section">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="padding-section-large">
-              <div className="margin-bottom margin-xxlarge justify-left">
-                <h2 className="text-align-left">Open positions</h2>
-              </div>
-              <PositionsList posts={posts} />
-            </div>
-          </div>
-        </div>
-      </section>
+
+      {posts && posts.length > 0 && <PositionsSection posts={posts} />}
+
       <section className="hiring-section">
         <div className="padding-global">
           <div className="container-large">
