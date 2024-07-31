@@ -3,6 +3,7 @@ import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
 import { markdownParser } from "@/lib/markdownParser";
 import Mustache from "mustache";
 import "@/styles/careers.css";
+import ArrowSvg from "@/components/arrow-svg";
 
 export async function generateStaticParams() {
   const { posts } = await getAllPosts({ contentType: "job" });
@@ -87,19 +88,7 @@ export default async function PositionPage({
                         <div>About</div>
                       </a>
                       <div className="breadcrumb-divider w-embed">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 3L11 8L6 13"
-                            stroke="CurrentColor"
-                            stroke-width="1.5"
-                          />
-                        </svg>
+                        <ArrowSvg />
                       </div>
                       <a
                         href="/careers"

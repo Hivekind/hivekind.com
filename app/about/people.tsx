@@ -13,7 +13,7 @@ interface PeopleProps {
   github?: string | undefined;
 }
 
-const getLinkedinSvg = () => (
+const LinkedinSvg = () => (
   <svg
     width="24"
     height="24"
@@ -30,7 +30,7 @@ const getLinkedinSvg = () => (
   </svg>
 );
 
-const getXSvg = () => (
+const XSvg = () => (
   <svg
     width="100%"
     height="100%"
@@ -45,7 +45,7 @@ const getXSvg = () => (
   </svg>
 );
 
-const getInstagramSvg = () => (
+const InstagramSvg = () => (
   <svg
     width="100%"
     height="100%"
@@ -62,7 +62,7 @@ const getInstagramSvg = () => (
   </svg>
 );
 
-const getFacebookSvg = () => (
+const FacebookSvg = () => (
   <svg
     width="100%"
     height="100%"
@@ -77,7 +77,7 @@ const getFacebookSvg = () => (
   </svg>
 );
 
-const getGithubSvg = () => (
+const GithubSvg = () => (
   <svg
     width="100%"
     height="100%"
@@ -94,12 +94,39 @@ const getGithubSvg = () => (
   </svg>
 );
 
-const renderSocialLink = (url: string | undefined, getSvg: () => JSX.Element) =>
-  url && (
+interface SocialLinkProps {
+  url: string | undefined;
+  type: string;
+}
+
+const SocialLink = ({ url, type }: SocialLinkProps) => {
+  if (!url) {
+    return null;
+  }
+
+  const renderIcon = () => {
+    switch (type) {
+      case "linkedin":
+        return <LinkedinSvg />;
+      case "x":
+        return <XSvg />;
+      case "instagram":
+        return <InstagramSvg />;
+      case "facebook":
+        return <FacebookSvg />;
+      case "github":
+        return <GithubSvg />;
+      default:
+        return null;
+    }
+  };
+
+  return (
     <a href={url} target={"_blank"} className={`social-link w-inline-block`}>
-      <div className="social-icon w-embed">{getSvg()}</div>
+      <div className="social-icon w-embed">{renderIcon()}</div>
     </a>
   );
+};
 
 const People = ({
   name,
@@ -133,11 +160,11 @@ const People = ({
           </div>
           <div className="text-size-medium text-align-center">{position}</div>
           <div className="w-layout-grid team_social">
-            {renderSocialLink(linkedin, getLinkedinSvg)}
-            {renderSocialLink(x, getXSvg)}
-            {renderSocialLink(instagram, getInstagramSvg)}
-            {renderSocialLink(facebook, getFacebookSvg)}
-            {renderSocialLink(github, getGithubSvg)}
+            <SocialLink url={linkedin} type="linkedin" />
+            <SocialLink url={x} type="x" />
+            <SocialLink url={instagram} type="instagram" />
+            <SocialLink url={facebook} type="facebook" />
+            <SocialLink url={github} type="github" />
           </div>
         </div>
       </div>
