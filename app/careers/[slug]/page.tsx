@@ -13,7 +13,7 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-export default async function ProductManagerPage({
+export default async function PositionPage({
   params,
 }: {
   params: { slug: string };
@@ -21,11 +21,34 @@ export default async function ProductManagerPage({
   const { post } = await getBySlug({
     contentType: "job",
     slug: params.slug ?? "",
+    fields: {
+      "fields.validThrough[gte]": new Date().toISOString(),
+    },
   });
+
+  if (!post) {
+    return (
+      <main className="main-wrapper">
+        <div className="section-job">
+          <div className="padding-global">
+            <div className="container-large">
+              <div className="padding-section-large">
+                <div className="padding-global">
+                  <div className="container-small">
+                    <p>There are no open positions available at the moment.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   const jsonLdData = {
     currentUrl: new URL(
-      `/blog/${params.slug}`,
+      `/careers/${params.slug}`,
       "https://hivekind.com"
     ).toString(),
     seoTitle: post.fields.seoTitle,

@@ -112,13 +112,18 @@ export async function getAllPosts({
 export async function getBySlug({
   contentType,
   slug,
+  fields,
 }: {
   contentType: string;
   slug: string;
+  fields?: { [key: string]: string | boolean | number };
 }): Promise<postType> {
   const response = await getByField({
     contentType,
-    fields: { "fields.slug[in]": slug },
+    fields: {
+      "fields.slug[in]": slug,
+      ...fields,
+    },
   });
 
   return { post: response };

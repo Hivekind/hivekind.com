@@ -1,11 +1,11 @@
 import { fieldsType } from "@/lib/contentfulApi";
 import { dateInPast } from "@/lib/utils";
 
-export default function PositionsList({
+const PositionsList = ({
   posts,
 }: {
   posts: Array<{ fields: Partial<fieldsType> }>;
-}) {
+}) => {
   return (
     <div className="w-dyn-list">
       <div role="list" className="w-dyn-items">
@@ -64,4 +64,27 @@ export default function PositionsList({
       </div>
     </div>
   );
-}
+};
+
+const PositionsSection = ({
+  posts,
+}: {
+  posts: Array<{ fields: Partial<fieldsType> }>;
+}) => {
+  return (
+    <section className="jobs-section">
+      <div className="padding-global">
+        <div className="container-large">
+          <div className="padding-section-large">
+            <div className="margin-bottom margin-xxlarge justify-left">
+              <h2 className="text-align-left">Open positions</h2>
+            </div>
+            <PositionsList posts={posts} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default PositionsSection;
