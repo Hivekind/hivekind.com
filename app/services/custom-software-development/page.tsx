@@ -1,6 +1,6 @@
 import ContactUsSection from "@/components/contact-us-section";
 import CustomImage from "@/components/custom-image";
-import CaseStudySection from "./case-study-section";
+import ListItem from "@/components/list-item";
 
 export default function CustomSoftwareDevelopmentPage() {
   return (
@@ -536,7 +536,49 @@ export default function CustomSoftwareDevelopmentPage() {
         </div>
       </section>
 
-      <CaseStudySection />
+      <section className="work-section">
+        <div className="padding-global">
+          <div className="container-large">
+            <div className="padding-section-large">
+              <div className="discovery_component">
+                <div className="margin-bottom margin-xxlarge">
+                  <div className="max-width-large">
+                    <div className="margin-bottom margin-small">
+                      <h2>Case studies</h2>
+                    </div>
+                    <p className="text-size-medium">
+                      Explore our case studies to see how our full-stack
+                      software development solutions have helped businesses in
+                      different industries succeed.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <div className="w-dyn-list">
+                    <div role="list" className="collection-list-3 w-dyn-items">
+                      <ListItem
+                        url="/work/nolo-willmaker-online-the-expansion-of-an-iconic-desktop-product-to-the-web"
+                        imgSrc="/images/63c8123ab9aab99e9f2a2c3f_willmaker.png"
+                        client="Nolo"
+                        title="Nolo WillMaker Online: Expansion of an Iconic Desktop Product to the Web"
+                        description="We helped Nolo increase conversion by 70% for their WillMaker product."
+                      />
+                      <ListItem
+                        url="/work/essayjack-journey-from-prototype-to-acquisition"
+                        imgSrc="/images/6388acbd65306f4c13b60071_essayjack.png"
+                        client="EssayJack"
+                        title="EssayJack: Journey from Prototype to Acquisition"
+                        description="Hivekind provided product management, development and devops services to EssayJack until its eventual acquisition."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <ContactUsSection />
     </main>
   );
