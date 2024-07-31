@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CustomImage from "./custom-image";
+import ArrowSvg from "./arrow-svg";
 
 export type BlogCardProps = {
   slug: string;
@@ -48,19 +49,7 @@ export default function BlogCard({
             <div className="button is-link is-icon">
               <div>Read more</div>
               <div className="icon-embed-xxsmall w-embed">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 3L11 8L6 13"
-                    stroke="CurrentColor"
-                    strokeWidth="1.5"
-                  />
-                </svg>
+                <ArrowSvg />
               </div>
             </div>
           </div>

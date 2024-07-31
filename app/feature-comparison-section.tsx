@@ -9,7 +9,7 @@ interface RowProps {
   col2Text: string;
 }
 
-const getCheckSvg = () => (
+const CheckSvg = () => (
   <svg
     width="100%"
     height="100%"
@@ -25,7 +25,7 @@ const getCheckSvg = () => (
   </svg>
 );
 
-const getUncheckSvg = () => (
+const UncheckSvg = () => (
   <svg
     width="100%"
     height="100%"
@@ -43,6 +43,10 @@ const getUncheckSvg = () => (
     />
   </svg>
 );
+
+const renderCheckIcon = (isCheck: boolean) => {
+  return isCheck ? <CheckSvg /> : <UncheckSvg />;
+};
 
 const Row = ({
   isOdd,
@@ -68,7 +72,7 @@ const Row = ({
         <div className="features-table-cell_content">
           <div>
             <div className="icon-1x1-xxsmall w-embed">
-              {col1Check ? getCheckSvg() : getUncheckSvg()}
+              {renderCheckIcon(col1Check)}
             </div>
           </div>
           <div className="text-size-regular">{col1Text}</div>
@@ -78,7 +82,7 @@ const Row = ({
         <div className="features-table-cell_content">
           <div>
             <div className="icon-1x1-xxsmall w-embed">
-              {col2Check ? getCheckSvg() : getUncheckSvg()}
+              {renderCheckIcon(col2Check)}
             </div>
           </div>
           <div className="text-size-regular">{col2Text}</div>
