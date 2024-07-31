@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { functions } from "@/firebase";
 import { httpsCallable } from "firebase/functions";
-import ArrowSvg from "@/components/arrow-svg";
+import ArrowSvg from "@/components/svgs/arrow-svg";
 
 const styles: { [index: string]: React.CSSProperties } = {
   blackCheckbox: {

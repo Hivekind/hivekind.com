@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CustomImage from "./custom-image";
-import ArrowSvg from "./arrow-svg";
+import ArrowSvg from "@/components/svgs/arrow-svg";
 
 export type BlogCardProps = {
   slug: string;
