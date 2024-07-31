@@ -2,7 +2,7 @@ import Image from "next/image";
 import { BlogCardProps } from "./blog-card";
 import Link from "next/link";
 import CustomImage from "./custom-image";
-import ArrowSvg from "./arrow-svg";
+import ArrowSvg from "@/components/svgs/arrow-svg";
 
 export default function BlogCardFeatured({
   slug,

@@ -1,4 +1,4 @@
-import ArrowSvg from "@/components/arrow-svg";
+import ArrowSvg from "@/components/svgs/arrow-svg";
 import CustomImage from "@/components/custom-image";
 
 interface itemProps {

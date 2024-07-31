@@ -1,7 +1,7 @@
 import React from "react";
 import CustomImage from "./custom-image";
 import "@/styles/work.css";
-import ArrowSvg from "./arrow-svg";
+import ArrowSvg from "@/components/svgs/arrow-svg";
 
 interface ListItemProps {
   url: string;

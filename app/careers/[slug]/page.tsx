@@ -3,7 +3,7 @@ import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
 import { markdownParser } from "@/lib/markdownParser";
 import Mustache from "mustache";
 import "@/styles/careers.css";
-import ArrowSvg from "@/components/arrow-svg";
+import ArrowSvg from "@/components/svgs/arrow-svg";
 
 export async function generateStaticParams() {
   const { posts } = await getAllPosts({ contentType: "job" });
