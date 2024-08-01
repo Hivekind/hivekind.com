@@ -1,5 +1,6 @@
 import ContactUsSection from "@/components/contact-us-section";
 import CustomImage from "@/components/custom-image";
+import ListItem from "@/components/list-item";
 
 export default function CustomSoftwareDevelopmentPage() {
   return (
@@ -534,6 +535,7 @@ export default function CustomSoftwareDevelopmentPage() {
           </div>
         </div>
       </section>
+
       <section className="work-section">
         <div className="padding-global">
           <div className="container-large">
@@ -554,129 +556,20 @@ export default function CustomSoftwareDevelopmentPage() {
                 <div>
                   <div className="w-dyn-list">
                     <div role="list" className="collection-list-3 w-dyn-items">
-                      <div role="listitem" className="w-dyn-item">
-                        <div className="featured-work_item">
-                          <a
-                            href="/work/nolo-willmaker-online-the-expansion-of-an-iconic-desktop-product-to-the-web"
-                            className="featured-work_item-link w-inline-block"
-                          >
-                            <div className="featured-work_image-wrapper round-corner-top">
-                              <CustomImage
-                                src="/images/63c8123ab9aab99e9f2a2c3f_willmaker.png"
-                                loading="lazy"
-                                sizes="(max-width: 767px) 90vw, 43vw"
-                                width={616}
-                                height={438}
-                                alt=""
-                                className="featured-work_image"
-                              />
-                            </div>
-                            <div className="featured-work_item-content background-color-white round-corner-bottom">
-                              <div className="featued-work_item-content-top">
-                                <div className="featured-work_meta-wrapper">
-                                  <div className="work_client">
-                                    <div className="text-size-small text-weight-semibold">
-                                      Nolo
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="featured-work_title-wrapper">
-                                  <h3 className="heading-style-h5">
-                                    Nolo WillMaker Online: Expansion of an
-                                    Iconic Desktop Product to the Web
-                                  </h3>
-                                </div>
-                                <div className="text-size-regular">
-                                  We helped Nolo increase conversion by 70% for
-                                  their WillMaker product.
-                                </div>
-                              </div>
-                              <div className="featured-work_button-wrapper">
-                                <div className="button is-link is-icon">
-                                  <div>Read more</div>
-                                  <div className="icon-embed-xxsmall w-embed">
-                                    <svg
-                                      width="16"
-                                      height="16"
-                                      viewBox="0 0 16 16"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M6 3L11 8L6 13"
-                                        stroke="CurrentColor"
-                                        stroke-width="1.5"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div role="listitem" className="w-dyn-item">
-                        <div className="featured-work_item">
-                          <a
-                            href="/work/essayjack-journey-from-prototype-to-acquisition"
-                            className="featured-work_item-link w-inline-block"
-                          >
-                            <div className="featured-work_image-wrapper round-corner-top">
-                              <CustomImage
-                                src="/images/6388acbd65306f4c13b60071_essayjack.png"
-                                loading="lazy"
-                                sizes="(max-width: 767px) 90vw, 43vw"
-                                width={616}
-                                height={438}
-                                alt=""
-                                className="featured-work_image"
-                              />
-                            </div>
-                            <div className="featured-work_item-content background-color-white round-corner-bottom">
-                              <div className="featued-work_item-content-top">
-                                <div className="featured-work_meta-wrapper">
-                                  <div className="work_client">
-                                    <div className="text-size-small text-weight-semibold">
-                                      EssayJack
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="featured-work_title-wrapper">
-                                  <h3 className="heading-style-h5">
-                                    EssayJack: Journey from Prototype to
-                                    Acquisition
-                                  </h3>
-                                </div>
-                                <div className="text-size-regular">
-                                  Hivekind provided product management,
-                                  development and devops services to EssayJack
-                                  until its eventual acquisition.
-                                </div>
-                              </div>
-                              <div className="featured-work_button-wrapper">
-                                <div className="button is-link is-icon">
-                                  <div>Read more</div>
-                                  <div className="icon-embed-xxsmall w-embed">
-                                    <svg
-                                      width="16"
-                                      height="16"
-                                      viewBox="0 0 16 16"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M6 3L11 8L6 13"
-                                        stroke="CurrentColor"
-                                        stroke-width="1.5"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
+                      <ListItem
+                        url="/work/nolo-willmaker-online-the-expansion-of-an-iconic-desktop-product-to-the-web"
+                        imgSrc="/images/63c8123ab9aab99e9f2a2c3f_willmaker.png"
+                        client="Nolo"
+                        title="Nolo WillMaker Online: Expansion of an Iconic Desktop Product to the Web"
+                        description="We helped Nolo increase conversion by 70% for their WillMaker product."
+                      />
+                      <ListItem
+                        url="/work/essayjack-journey-from-prototype-to-acquisition"
+                        imgSrc="/images/6388acbd65306f4c13b60071_essayjack.png"
+                        client="EssayJack"
+                        title="EssayJack: Journey from Prototype to Acquisition"
+                        description="Hivekind provided product management, development and devops services to EssayJack until its eventual acquisition."
+                      />
                     </div>
                   </div>
                 </div>
@@ -685,6 +578,7 @@ export default function CustomSoftwareDevelopmentPage() {
           </div>
         </div>
       </section>
+
       <ContactUsSection />
     </main>
   );

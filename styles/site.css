@@ -1305,18 +1305,6 @@ strong {
   padding: 1.5rem;
   display: flex;
 }
-.featured-work_meta-wrapper {
-  align-items: center;
-  margin-bottom: 1rem;
-  display: flex;
-}
-.featured-work_title-wrapper {
-  margin-bottom: 0.5rem;
-}
-.featured-work_button-wrapper {
-  margin-top: 1.5rem;
-  display: flex;
-}
 .collection-list-3 {
   grid-column-gap: 3rem;
   grid-row-gap: 4rem;
