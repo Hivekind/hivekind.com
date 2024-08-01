@@ -20,7 +20,7 @@ export default async function AboutPage() {
         <div className="image-wrapper">
           <CustomImage
             src="/images/6567dc044a628e5f71c19a57_software-development-partner.jpg"
-            loading="eager"
+            priority={true}
             sizes="(max-width: 479px) 100vw, 90vw"
             width={72}
             height={72}

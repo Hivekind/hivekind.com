@@ -112,6 +112,7 @@ export default async function BlogPage({
                   <CustomImage
                     src={`${post.fields.author?.fields.profilePicture?.fields.file.url}`}
                     alt={`${post.fields.author?.fields.name}`}
+                    priority={true}
                     width={500}
                     height={320}
                     className="blog_author-image"
@@ -134,7 +135,7 @@ export default async function BlogPage({
                   width={1600}
                   height={667}
                   className="image"
-                  loading="lazy"
+                  priority={true}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
               </div>

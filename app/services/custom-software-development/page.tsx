@@ -30,7 +30,7 @@ export default function CustomSoftwareDevelopmentPage() {
                 <div className="header_image-wrapper">
                   <CustomImage
                     src="/images/661fd6217ffea762061cc753_hivekind-custom-software-development.png"
-                    loading="eager"
+                    priority={true}
                     sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 42vw"
                     width={1264}
                     height={800}

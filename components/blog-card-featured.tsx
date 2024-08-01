@@ -23,7 +23,7 @@ export default function BlogCardFeatured({
               width={800}
               height={333}
               className="blog_image"
-              loading="lazy"
+              priority={true}
             />
           </div>
           <div className="blog_featured-item-content background-color-white">

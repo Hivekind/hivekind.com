@@ -10,6 +10,7 @@ interface ListItemProps {
   client: string;
   title: string;
   description: string;
+  imagePriority?: boolean;
 }
 
 const ListItem = ({
@@ -18,6 +19,7 @@ const ListItem = ({
   client,
   title,
   description,
+  imagePriority = false,
 }: ListItemProps) => {
   return (
     <div role="listitem" className="w-dyn-item">
@@ -30,7 +32,7 @@ const ListItem = ({
               sizes="(max-width: 767px) 90vw, 43vw"
               width={616}
               height={438}
-              loading="lazy"
+              priority={imagePriority}
               className="featured-work_image"
             />
           </div>
