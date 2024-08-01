@@ -67,7 +67,6 @@ export default function RootLayout({
           {`
               var _iub = _iub || {};
               _iub.csConfiguration = {
-                logLevel: "debug",
                 localConsentDomain: "hivekind-com.pages.dev",
                 "enableRemoteConsent":true,
                 "askConsentAtCookiePolicyUpdate":true,
