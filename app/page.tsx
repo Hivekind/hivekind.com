@@ -21,7 +21,7 @@ export default function Home() {
           <div className="header_image-wrapper">
             <CustomImage
               src="/images/66370b18aba36a5a0d9157f6_software-development-company-photomontage.jpeg"
-              loading="eager"
+              priority={true}
               sizes="(max-width: 1137px) 90vw, 1024px"
               width={3600}
               height={1800}

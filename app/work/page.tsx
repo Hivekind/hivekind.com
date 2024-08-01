@@ -30,7 +30,7 @@ export default async function WorkIndexPage() {
               <div className="work_component">
                 <div className="work_list-wrapper w-dyn-list">
                   <div role="list" className="work_list w-dyn-items">
-                    {posts.map(({ fields }) => {
+                    {posts.map(({ fields }, index) => {
                       return (
                         <ListItem
                           key={fields.slug}
@@ -39,6 +39,7 @@ export default async function WorkIndexPage() {
                           client={`${fields.client}`}
                           title={`${fields.name}`}
                           description={`${fields.caseSummary}`}
+                          imagePriority={ index < 2 ? true : false }
                         />
                       );
                     })}

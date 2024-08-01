@@ -21,7 +21,7 @@ export default async function CareersPage() {
         <div className="header_image-wrapper">
           <CustomImage
             src="/images/6567ed56ca4e490a1f742ccf_team-at-office.jpg"
-            loading="eager"
+            priority={true}
             sizes="90vw"
             width={72}
             height={72}

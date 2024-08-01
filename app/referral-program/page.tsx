@@ -35,7 +35,7 @@ export default function ReferralProgramPage() {
                 <div className="header_image-wrapper">
                   <CustomImage
                     src="/images/6657ffeeb0ed2035fbfc99ff_software-development-referral-program.jpg"
-                    loading="eager"
+                    priority={true}
                     sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 41vw"
                     width={1893}
                     height={1737}

@@ -81,7 +81,7 @@ export default async function WorkPage({
                   width={1600}
                   height={667}
                   className="image"
-                  loading="lazy"
+                  priority={true}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
               </div>

@@ -14,7 +14,7 @@ export default function ServicesPage() {
         <div className="header_image-wrapper">
           <CustomImage
             src="/images/6567d78bbc987eac4020f6ab_dedicated-team-planning.jpg"
-            loading="eager"
+            priority={true}
             sizes="90vw"
             width={3000}
             height={2250}

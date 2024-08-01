@@ -117,7 +117,7 @@ const FeatureSection = () => {
                 </div>
                 <div className="features_image-wrapper">
                   <CustomImage
-                    src="/images/6356ad0005fe31123d2701b0_hero (1).jpg"
+                    src="/images/6356ad0005fe31123d2701b0_hero.jpg"
                     loading="lazy"
                     sizes="(max-width: 479px) 91vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, 41vw"
                     width={1146}
