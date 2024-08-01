@@ -1,5 +1,4 @@
 import { fieldsType } from "@/lib/contentfulApi";
-import { dateInPast } from "@/lib/utils";
 
 const PositionsList = ({
   posts,
@@ -11,9 +10,6 @@ const PositionsList = ({
       <div role="list" className="w-dyn-items">
         {posts
           .map(({ fields }) => {
-            if (dateInPast(new Date(fields.validThrough ?? new Date()))) {
-              return;
-            }
             return (
               <div key={fields.slug} role="listitem" className="w-dyn-item">
                 <a
