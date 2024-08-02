@@ -1,6 +1,9 @@
 import React from "react";
 import ContactButton from "./contact-button";
-import CustomImage from "./custom-image";
+import StaticImage from "@/components/static-image";
+
+import topSoftwareDevelopmentCompanyMalaysiaAwards from "@/public/images/top-software-development-company-malaysia-awards.webp";
+import topSoftwareDevelopmentCompanyMalaysiaAwardsFallback from "@/public/images/top-software-development-company-malaysia-awards.png";
 
 const ContactUsSection = ({ className }: { className?: string }) => {
   return (
@@ -28,12 +31,12 @@ const ContactUsSection = ({ className }: { className?: string }) => {
                 <ContactButton isCenter={false} />
               </div>
               <div className="cta_image-wrapper">
-                <CustomImage
-                  src="/images/6639dc18c475875bf5b9c68f_top-software-development-company-malaysia-awards.png"
-                  loading="lazy"
+                <StaticImage
+                  src={topSoftwareDevelopmentCompanyMalaysiaAwards}
+                  srcfallback={
+                    topSoftwareDevelopmentCompanyMalaysiaAwardsFallback
+                  }
                   sizes="(max-width: 479px) 100vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, 41vw"
-                  width={1530}
-                  height={1314}
                   alt="Top software development company Malaysia awards"
                   className="awards_image"
                 />
