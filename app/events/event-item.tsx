@@ -1,4 +1,7 @@
-import CustomImage from "@/components/custom-image";
+import StaticImage from "@/components/static-image";
+
+import rubyKlLogo from "@/public/images/ruby-kl-logo.webp";
+import rubyKlLogoFallback from "@/public/images/ruby-kl-logo.jpg";
 
 interface AgendaProps {
   time: string;
@@ -30,13 +33,13 @@ const EventItem = ({ title, date, recordingUrl, agendas }: EventItemProps) => {
     <div className="event_item">
       <div className="event_image-wrapper">
         <div className="ruby-tuesdays">
-          <CustomImage
-            src="/images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
+          <StaticImage
+            src={rubyKlLogo}
+            srcfallback={rubyKlLogoFallback}
             priority={true}
             sizes="90vw"
-            width={96}
-            height={117}
             alt="Ruby KL logo"
+            style={{ height: "auto" }}
             className="ruby_tuesdays-image"
           />
         </div>
