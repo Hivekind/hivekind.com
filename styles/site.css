@@ -1701,10 +1701,6 @@ strong {
   justify-items: start;
   display: grid;
 }
-.service_image {
-  width: 100%;
-  height: 100%;
-}
 .discovery_component {
   flex-direction: column;
   align-items: flex-start;
