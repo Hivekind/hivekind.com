@@ -44,7 +44,6 @@ function NotFound() {
                   <StaticImage
                     src={bee}
                     srcfallback={beeFallback}
-                    loading="eager"
                     priority
                     sizes="(max-width: 1137px) 90vw, 1024px"
                     alt="404 bee"
