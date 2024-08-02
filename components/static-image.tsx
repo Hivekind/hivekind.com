@@ -10,7 +10,7 @@ interface StaticImageProps {
   [key: string]: any; // For other props that might be passed
 }
 
-export default function CustomImage(props: StaticImageProps) {
+export default function StaticImage(props: StaticImageProps) {
   const width =
     typeof props.src === "object" && "width" in props.src
       ? props.src.width
