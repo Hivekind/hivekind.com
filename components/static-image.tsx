@@ -24,6 +24,7 @@ export default function StaticImage(props: StaticImageProps) {
 
   return (
     <Image
+      placeholder="blur"
       {...props}
       loading={props.priority ? undefined : "lazy"}
       loader={({ src }) => `${src}?width=${width}`}
