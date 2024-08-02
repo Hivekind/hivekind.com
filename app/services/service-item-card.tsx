@@ -1,19 +1,17 @@
 import StaticImage from "@/components/static-image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Link from "next/link";
 
-export default function ServiceItemCard({
-  image,
-  imageFallback,
-  alt,
-  heading,
-  body,
-}: {
+type CardProps = {
   image: string | StaticImport;
   imageFallback: string | StaticImport;
   alt: string;
   heading: string;
   body: string;
-}) {
+  link?: string;
+};
+
+function Card({ image, imageFallback, alt, heading, body }: CardProps) {
   return (
     <div>
       <div className="margin-bottom margin-medium">
@@ -32,5 +30,15 @@ export default function ServiceItemCard({
       </div>
       <p>{body}</p>
     </div>
+  );
+}
+
+export default function ServiceItemCard(props: CardProps) {
+  return props.link ? (
+    <Link href={props.link} className="service-link w-inline-block">
+      <Card {...props} />
+    </Link>
+  ) : (
+    <Card {...props} />
   );
 }

@@ -139,6 +139,7 @@ export default function ServicesPage() {
                     alt="Custom Software Development"
                     heading="Custom Software Development"
                     body="We specialize in developing custom solutions tailored to meet your unique business requirements and goals. We achieve this by using trusted and tested technologies that will help you scale with your business."
+                    link="/services/custom-software-development"
                   />
                   <ServiceItemCard
                     image={hivekindProductScaling}
