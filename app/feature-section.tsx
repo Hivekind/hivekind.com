@@ -1,5 +1,8 @@
 import React from "react";
-import CustomImage from "@/components/custom-image";
+import StaticImage from "@/components/static-image";
+
+import hero from "@/public/images/hero.webp";
+import heroFallback from "@/public/images/hero.jpg";
 
 interface FeatureItemProps {
   title: string;
@@ -116,12 +119,10 @@ const FeatureSection = () => {
                   </div>
                 </div>
                 <div className="features_image-wrapper">
-                  <CustomImage
-                    src="/images/6356ad0005fe31123d2701b0_hero.jpg"
-                    loading="lazy"
+                  <StaticImage
+                    src={hero}
+                    srcfallback={heroFallback}
                     sizes="(max-width: 479px) 91vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, 41vw"
-                    width={1146}
-                    height={1170}
                     alt="Dev team planning"
                     className="features_image"
                   />
