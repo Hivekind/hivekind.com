@@ -74,3 +74,17 @@ To change the secrets in production:
 ```bash
 firebase functions:secrets:set SECRET_NAME
 ```
+
+## Publish a job entry from contentful
+
+- Login to contentful
+- Add an entry for content under 'Job' content type
+- Once the changes are done, click 'publish'
+- After publishing the content, deploy the app
+
+## Unpublish a job entry
+
+- Login to contentful
+- Open the content you want to unpublish
+- Click 'unpublish' from the dropdown under general tab
+- After unpublishing the content, deploy the app
