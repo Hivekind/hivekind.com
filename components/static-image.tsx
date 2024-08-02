@@ -25,6 +25,7 @@ export default function CustomImage(props: StaticImageProps) {
   return (
     <Image
       {...props}
+      loading={props.priority ? undefined : "lazy"}
       loader={({ src }) => `${src}?width=${width}`}
       src={props.src}
       alt={props.alt}
