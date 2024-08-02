@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import CustomImage from "./custom-image";
+import ContentfulImage from "./contentful-image";
 import ArrowSvg from "@/components/svgs/arrow-svg";
 
 export type BlogCardProps = {
@@ -23,7 +22,7 @@ export default function BlogCard({
     <div role="listitem" className="w-dyn-item">
       <Link href={`/blog/${slug}`} className="blog_item-link w-inline-block">
         <div className="blog_image-wrapper">
-          <CustomImage
+          <ContentfulImage
             src={mainImageUrl}
             alt={mainImageAltText}
             width={800}

@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { BlogCardProps } from "./blog-card";
 import Link from "next/link";
-import CustomImage from "./custom-image";
+import ContentfulImage from "./contentful-image";
 import ArrowSvg from "@/components/svgs/arrow-svg";
 
 export default function BlogCardFeatured({
@@ -17,7 +16,7 @@ export default function BlogCardFeatured({
       <Link href={`/blog/${slug}`} className="blog_item-link w-inline-block">
         <div className="blog_featured-item-wrapper">
           <div className="blog_featured-image-wrapper">
-            <CustomImage
+            <ContentfulImage
               src={mainImageUrl}
               alt={mainImageAltText}
               width={800}
