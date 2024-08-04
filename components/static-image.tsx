@@ -24,14 +24,14 @@ export default function StaticImage(props: StaticImageProps) {
 
   return (
     <Image
-      {...props}
       loading={props.priority ? undefined : "lazy"}
-      loader={({ src }) => `${src}?width=${width}`}
+      loader={({ src }: { src: string }) => `${src}?width=${width}`}
+      {...props}
       src={props.src}
       alt={props.alt}
       onError={(event: React.SyntheticEvent<HTMLImageElement>) => {
         const target = event.target as HTMLImageElement;
-        target.id = fallback;
+        target.src = fallback;
         target.srcset = fallback;
       }}
     />
