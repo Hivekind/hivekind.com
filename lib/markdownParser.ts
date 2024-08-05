@@ -9,8 +9,9 @@ export const parameterize = (text: string) =>
 
 // adds anchor links to headings
 const renderer = {
-  heading(text: string, depth: any) {
-    const escapedText = parameterize(text);
+  heading(text: string, depth: any, raw: string) {
+    // Using `parameterize(raw)` fixes the mismatch between the href here and the anchor link in TOC
+    const escapedText = parameterize(raw);
 
     return `
       <h${depth} id="${escapedText}">
@@ -61,11 +62,14 @@ export const generateToc = (
     .lexer(markdown)
     .filter((token) => token.type === "heading") as Tokens.Heading[];
 
-  const toc = tokens.map(({ depth, text }) => ({
-    depth,
-    text,
-    anchor: `#${parameterize(text)}`,
-  }));
+  // only takes up to <h2> as the table of contents
+  const toc = tokens
+    .filter(({ depth }) => depth < 3)
+    .map(({ depth, text }) => ({
+      depth,
+      text,
+      anchor: `#${parameterize(text)}`,
+    }));
 
   return toc;
 };
