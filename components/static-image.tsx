@@ -18,8 +18,8 @@ interface StaticImageProps {
 }
 
 const customLoader = ({ src, width, quality }: ImageLoaderProps) => {
-  // return `${src}?w=${width}&q=${quality || 75}`;
-  return `${src}?w=${width}`;
+  return `${src}?w=${width}&q=${quality || 75}`;
+  // return `${src}?w=${width}`;
 };
 
 export default function StaticImage({
