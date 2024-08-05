@@ -1,11 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
 import {
   StaticImageData,
 } from "next/dist/shared/lib/get-img-props";
 
 import type { ImageLoaderProps } from 'next/image';
+
 
 import Image from "next/image";
 
@@ -22,6 +23,7 @@ const customLoader = ({ src, width, quality }: ImageLoaderProps) => {
   // return `${src}?w=${width}`;
 };
 
+
 export default function StaticImage({
   src,
   srcfallback,
@@ -30,19 +32,30 @@ export default function StaticImage({
   ...props
 }: StaticImageProps) {
 
-  const [error, setError] = useState<boolean | null>(null);
+  // const [error, setError] = useState<boolean>(false);
 
-  useEffect(() => {
-    setError(null)
-  }, [src])
+  // useEffect(() => {
+  //   console.log("useEffect ....");
+  //   setError(false);
+  // }, [src])
+
+  // const handleError = (event: React.SyntheticEvent<HTMLImageElement>) => {
+  //   console.log("onError event: ", event);
+
+  //   if (!error) {
+  //     setError(true);
+  //   }
+  // };
 
   return (
     <Image
       alt={alt}
       priority={priority}
 
-      onError={() => setError(true)}
-      src={error ? srcfallback : src}
+      onError={(e) => console.error(e.target)}
+
+      src={src}
+
       loader={customLoader}
 
       {...props}
