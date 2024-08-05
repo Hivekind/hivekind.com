@@ -1,5 +1,5 @@
 import StaticImage from "@/components/static-image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { StaticImageData } from "next/dist/shared/lib/get-img-props";
 
 export default function TestimonialSection({
   quote,
@@ -11,8 +11,8 @@ export default function TestimonialSection({
   quote: string;
   name: string;
   title: string;
-  image: string | StaticImport;
-  imageFallback: string | StaticImport;
+  image: StaticImageData;
+  imageFallback: StaticImageData;
 }) {
   return (
     <section className="testimonial-section">

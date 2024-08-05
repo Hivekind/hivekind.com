@@ -1,39 +1,51 @@
 "use client";
+import React, { useState, useEffect } from "react";
 
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import {
+  StaticImageData,
+} from "next/dist/shared/lib/get-img-props";
+
+import type { ImageLoaderProps } from 'next/image';
+
 import Image from "next/image";
 
 interface StaticImageProps {
-  src: string | StaticImport;
-  srcfallback: string | StaticImport;
-  width?: number;
+  src: StaticImageData;
+  srcfallback: StaticImageData;
+  priority?: boolean;
+  alt?: string;
   [key: string]: any; // For other props that might be passed
 }
 
-export default function StaticImage(props: StaticImageProps) {
-  const width =
-    typeof props.src === "object" && "width" in props.src
-      ? props.src.width
-      : props.width;
+const customLoader = ({ src, width, quality }: ImageLoaderProps) => {
+  // return `${src}?w=${width}&q=${quality || 75}`;
+  return `${src}?w=${width}`;
+};
 
-  const fallback = (
-    typeof props.srcfallback === "object" && "src" in props.srcfallback
-      ? props.srcfallback.src
-      : props.srcfallback
-  ).toString();
+export default function StaticImage({
+  src,
+  srcfallback,
+  priority = false,
+  alt = "",
+  ...props
+}: StaticImageProps) {
+
+  const [error, setError] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    setError(null)
+  }, [src])
 
   return (
     <Image
-      loading={props.priority ? undefined : "lazy"}
-      loader={({ src }: { src: string }) => `${src}?width=${width}`}
+      alt={alt}
+      priority={priority}
+
+      onError={() => setError(true)}
+      src={error ? srcfallback : src}
+      loader={customLoader}
+
       {...props}
-      src={props.src}
-      alt={props.alt}
-      onError={(event: React.SyntheticEvent<HTMLImageElement>) => {
-        const target = event.target as HTMLImageElement;
-        target.src = fallback;
-        target.srcset = fallback;
-      }}
     />
   );
 }

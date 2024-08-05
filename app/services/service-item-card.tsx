@@ -1,10 +1,10 @@
 import StaticImage from "@/components/static-image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { StaticImageData } from "next/dist/shared/lib/get-img-props";
 import Link from "next/link";
 
 type CardProps = {
-  image: string | StaticImport;
-  imageFallback: string | StaticImport;
+  image: StaticImageData;
+  imageFallback: StaticImageData;
   alt: string;
   heading: string;
   body: string;
