@@ -2,13 +2,12 @@
 
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import { memo, useState } from "react";
+import { ComponentProps, memo, useState } from "react";
 
-interface StaticImageProps {
+type StaticImageProps = {
   src: StaticImport;
   srcfallback: StaticImport;
-  [key: string]: any; // For other props that might be passed
-}
+} & ComponentProps<typeof Image>;
 
 function loader({ src }: { src: string }) {
   return `${src}?width`; // see https://nextjs.org/docs/messages/next-image-missing-loader-width
@@ -16,15 +15,16 @@ function loader({ src }: { src: string }) {
 
 function StaticImage(props: StaticImageProps) {
   const [error, setError] = useState<boolean>(false);
-  const { srcfallback, ...rest } = props; // no need to pass srcfallback to next/image
+  const { priority, alt, src, srcfallback, ...rest } = props;
 
   return (
     <Image
-      loading={props.priority ? undefined : "lazy"}
+      loading={priority ? undefined : "lazy"}
       loader={loader}
       {...rest}
-      src={error ? props.srcfallback : props.src}
-      alt={props.alt}
+      src={error ? srcfallback : src}
+      alt={alt}
+      priority={priority}
       onError={() => setError(true)}
     />
   );
