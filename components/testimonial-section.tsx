@@ -11,8 +11,8 @@ export default function TestimonialSection({
   quote: string;
   name: string;
   title: string;
-  image: string | StaticImport;
-  imageFallback: string | StaticImport;
+  image: StaticImport;
+  imageFallback: StaticImport;
 }) {
   return (
     <section className="testimonial-section">
