@@ -1,42 +1,61 @@
 "use client";
 
+import { ImageLoader } from "next/dist/client/image-component";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
+import { ComponentProps, useState } from "react";
 
-interface ContentfulImageProps {
+type ContentfulImageProps = {
   src: string;
-  width?: number;
-  quality?: number;
   format?: string;
-  [key: string]: any; // For other props that might be passed
-}
+  width: number;
+} & ComponentProps<typeof Image>;
 
-const contentfulLoader = ({
+type ContentfulImageLoaderProps = {
+  src: string;
+  width: number;
+  format?: string;
+  quality?: number | `${number}`;
+};
+
+const loader = ({
   src,
   width,
   quality,
   format,
-}: ContentfulImageProps) => {
-  return `${src}?w=${width}&q=${quality || 75}&fm=${format || "webp"}`;
+}: ContentfulImageLoaderProps) => {
+  return `${src}?w=${width}&q=${quality}&fm=${format}`;
+};
+
+const webploader = ({
+  src,
+  width,
+  quality = 75,
+}: ContentfulImageLoaderProps) => {
+  return loader({ src, width, quality, format: "webp" });
+};
+
+const jpegloader = ({
+  src,
+  width,
+  quality = 75,
+}: ContentfulImageLoaderProps) => {
+  return loader({ src, width, quality, format: "jpg" });
 };
 
 export default function ContentfulImage(props: ContentfulImageProps) {
-  const fallbackImage = contentfulLoader({
-    src: props.src,
-    width: props.width,
-    quality: props.quality,
-    format: "jpg",
-  });
+  const [error, setError] = useState<boolean>(false);
+  const { width, priority, alt, src, ...rest } = props;
 
   return (
     <Image
-      alt={props.alt}
-      loader={contentfulLoader}
-      {...props}
-      onError={(event: React.SyntheticEvent<HTMLImageElement>) => {
-        const target = event.target as HTMLImageElement;
-        target.src = fallbackImage;
-        target.srcset = fallbackImage;
-      }}
+      loading={priority ? undefined : "lazy"}
+      loader={error ? jpegloader : webploader}
+      {...rest}
+      width={width}
+      src={src}
+      alt={alt}
+      onError={() => setError(true)}
     />
   );
 }
