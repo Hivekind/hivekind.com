@@ -13,34 +13,21 @@ type ContentfulImageProps = {
 
 type ContentfulImageLoaderProps = {
   src: string;
-  width: number;
+  width?: number;
   format?: string;
   quality?: number | `${number}`;
 };
 
-const loader = ({
-  src,
-  width,
-  quality,
-  format,
-}: ContentfulImageLoaderProps) => {
-  return `${src}?w=${width}&q=${quality}&fm=${format}`;
+const loader = ({ src, quality, format }: ContentfulImageLoaderProps) => {
+  return `${src}?&q=${quality}&fm=${format}`;
 };
 
-const webploader = ({
-  src,
-  width,
-  quality = 75,
-}: ContentfulImageLoaderProps) => {
-  return loader({ src, width, quality, format: "webp" });
+const webploader = ({ src, quality = 75 }: ContentfulImageLoaderProps) => {
+  return loader({ src, quality, format: "webp" });
 };
 
-const jpegloader = ({
-  src,
-  width,
-  quality = 75,
-}: ContentfulImageLoaderProps) => {
-  return loader({ src, width, quality, format: "jpg" });
+const jpegloader = ({ src, quality = 75 }: ContentfulImageLoaderProps) => {
+  return loader({ src, quality, format: "png&fl=png8" });
 };
 
 export default function ContentfulImage(props: ContentfulImageProps) {
@@ -55,6 +42,7 @@ export default function ContentfulImage(props: ContentfulImageProps) {
       width={width}
       src={src}
       alt={alt}
+      priority={priority}
       onError={() => setError(true)}
     />
   );
