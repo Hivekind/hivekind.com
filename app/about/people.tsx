@@ -1,5 +1,5 @@
 import React from "react";
-import CustomImage from "@/components/custom-image";
+import ContentfulImage from "@/components/contentful-image";
 import LinkedinSvg from "@/components/svgs/linkedin-svg";
 import XSvg from "@/components/svgs/x-svg";
 import InstagramSvg from "@/components/svgs/instagram-svg";
@@ -67,7 +67,7 @@ const People = ({
       <div className="team_item">
         <div className="margin-bottom margin-small">
           <div className="team_image-wrapper">
-            <CustomImage
+            <ContentfulImage
               src={imgFileName}
               loading="lazy"
               sizes="(max-width: 479px) 100vw, 90vw"

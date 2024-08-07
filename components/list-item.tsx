@@ -1,7 +1,7 @@
 import React from "react";
-import CustomImage from "./custom-image";
 import "@/styles/work.css";
 import ArrowSvg from "@/components/svgs/arrow-svg";
+import ContentfulImage from "./contentful-image";
 
 interface ListItemProps {
   url: string;
@@ -26,7 +26,7 @@ const ListItem = ({
       <div className="featured-work_item">
         <a href={url} className="featured-work_item-link w-inline-block">
           <div className="featured-work_image-wrapper round-corner-top">
-            <CustomImage
+            <ContentfulImage
               src={imgSrc}
               alt=""
               sizes="(max-width: 767px) 90vw, 43vw"
