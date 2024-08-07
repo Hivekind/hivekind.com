@@ -4,7 +4,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "@/styles/nav-bar.css";
-import CustomImage from "./custom-image";
+import StaticImage from "@/components/static-image";
+
+import hkLogo from "@/public/images/hk-logo.webp";
+import hkLogoFallback from "@/public/images/hk-logo.png";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -96,12 +99,11 @@ const NavBar = () => {
           aria-label="home"
           className={`navbar_logo-link w-nav-brand ${isCurrent("/")}`}
         >
-          <CustomImage
-            src="/images/6389296caf38d7a00b252585_hk-logo.png"
+          <StaticImage
+            src={hkLogo}
+            srcfallback={hkLogoFallback}
             sizes="(max-width: 767px) 90vw, 43vw"
-            width={188}
-            height={40}
-            loading="lazy"
+            style={{ width: 180, height: "auto" }}
             alt="Hivekind text logo"
             className="navbar_logo"
           />

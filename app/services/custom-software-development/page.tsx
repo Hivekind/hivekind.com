@@ -1,6 +1,11 @@
 import ContactUsSection from "@/components/contact-us-section";
-import CustomImage from "@/components/custom-image";
 import ListItem from "@/components/list-item";
+import StaticImage from "@/components/static-image";
+
+import hivekindCustomSoftwareDevelopment from "@/public/images/hivekind-custom-software-development.webp";
+import hivekindCustomSoftwareDevelopmentFallback from "@/public/images/hivekind-custom-software-development.png";
+
+import TestimonialClient from "./testimonial-client";
 
 export default function CustomSoftwareDevelopmentPage() {
   return (
@@ -28,12 +33,11 @@ export default function CustomSoftwareDevelopmentPage() {
                   </div>
                 </div>
                 <div className="header_image-wrapper">
-                  <CustomImage
-                    src="/images/661fd6217ffea762061cc753_hivekind-custom-software-development.png"
+                  <StaticImage
+                    src={hivekindCustomSoftwareDevelopment}
+                    srcfallback={hivekindCustomSoftwareDevelopmentFallback}
                     priority={true}
                     sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 42vw"
-                    width={1264}
-                    height={800}
                     alt="Custom Software Development"
                     className="header-image"
                   />
@@ -285,60 +289,7 @@ export default function CustomSoftwareDevelopmentPage() {
                 </div>
               </div>
               <div className="staff-testimonial_component">
-                <div className="staff-testimonial_content">
-                  <div className="margin-vertical margin-medium">
-                    <div className="heading-style-h6">
-                      &quot;New ad engine was delivered, very fast (10&#x27;s of
-                      ms), functional, extendable, maintainable, and testable.
-                      They have very good, experienced developers.&quot;
-                    </div>
-                  </div>
-                  <div className="testimonial_staff">
-                    <div className="staff-testimonial_image-wrapper">
-                      <CustomImage
-                        src="/images/66384f15562959792abf9a4f_tony-jones.jpeg"
-                        loading="lazy"
-                        width={402}
-                        height={402}
-                        alt="Tony Jones"
-                        className="testimonial_staff-image"
-                      />
-                    </div>
-                    <div className="testimonial_staff-info">
-                      <p className="text-weight-semibold">
-                        <strong>Anthony Jones</strong>
-                      </p>
-                      <p>VP of Engineering, Avvo</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="staff-testimonial_content">
-                  <div className="margin-vertical margin-medium">
-                    <div className="heading-style-h6">
-                      &quot;They bring an ownership mindset to their projects
-                      and take pride in shipping. They follow a very
-                      well-defined development process and stick to it.&quot;
-                    </div>
-                  </div>
-                  <div className="testimonial_staff">
-                    <div className="staff-testimonial_image-wrapper">
-                      <CustomImage
-                        src="/images/655ab8fe6c7b81432adaa633_jayasimhan-masilamani.jpg"
-                        loading="lazy"
-                        width={320}
-                        height={320}
-                        alt="Jayasimhan Masilamani"
-                        className="testimonial_staff-image"
-                      />
-                    </div>
-                    <div className="testimonial_staff-info">
-                      <p className="text-weight-semibold">
-                        <strong>Jayasimhan Masilamani</strong>
-                      </p>
-                      <p>VP of Technology, Nolo</p>
-                    </div>
-                  </div>
-                </div>
+                <TestimonialClient />
               </div>
             </div>
           </div>

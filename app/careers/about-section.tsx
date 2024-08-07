@@ -2,7 +2,17 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./about.module.css";
-import CustomImage from "@/components/custom-image";
+
+import StaticImage from "@/components/static-image";
+
+import scrumTraining from "@/public/images/scrum-training.webp";
+import scrumTrainingFallback from "@/public/images/scrum-training.jpg";
+
+import hiveklimb from "@/public/images/hiveklimb.webp";
+import hiveklimbFallback from "@/public/images/hiveklimb.jpg";
+
+import remoteTeam from "@/public/images/remote-team.webp";
+import remoteTeamFallback from "@/public/images/remote-team.jpg";
 
 interface ImageItemProps {
   img: React.ReactNode;
@@ -132,12 +142,10 @@ const AboutSection = () => {
                   index={0}
                   myRef={imgRefs[0]}
                   img={
-                    <CustomImage
-                      src="/images/6567e0323e154a5879f063af_scrum-training.jpg"
-                      loading="lazy"
+                    <StaticImage
+                      src={scrumTraining}
+                      srcfallback={scrumTrainingFallback}
                       sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                      width={1410}
-                      height={1410}
                       alt="Scrum training"
                       className={styles.tab_image}
                     />
@@ -147,12 +155,10 @@ const AboutSection = () => {
                   index={1}
                   myRef={imgRefs[1]}
                   img={
-                    <CustomImage
-                      src="/images/6567df7d1353f6b3fba806c0_hiveklimb.jpg"
-                      loading="lazy"
+                    <StaticImage
+                      src={hiveklimb}
+                      srcfallback={hiveklimbFallback}
                       sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                      width={1533}
-                      height={1533}
                       alt="A Hivekind employee wall climbing"
                       className={styles.tab_image}
                     />
@@ -162,12 +168,10 @@ const AboutSection = () => {
                   index={2}
                   myRef={imgRefs[2]}
                   img={
-                    <CustomImage
-                      src="/images/6567e0336b4770d3746350f5_remote-team.jpg"
-                      loading="lazy"
+                    <StaticImage
+                      src={remoteTeam}
+                      srcfallback={remoteTeamFallback}
                       sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                      width={1500}
-                      height={1500}
                       alt="Remote team"
                       className={styles.tab_image}
                     />

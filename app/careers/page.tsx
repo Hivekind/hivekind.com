@@ -1,9 +1,17 @@
 import React from "react";
 import Header from "@/components/header";
 import AboutSection from "./about-section";
-import CustomImage from "@/components/custom-image";
+import StaticImage from "@/components/static-image";
 import { getAllPosts } from "@/lib/contentfulApi";
 import PositionsSection from "./positions-section";
+
+import teamAtOffice from "@/public/images/team-at-office.webp";
+import teamAtOfficeFallback from "@/public/images/team-at-office.jpg";
+
+import teamDinner from "@/public/images/team-dinner.webp";
+import teamDinnerFallback from "@/public/images/team-dinner.jpg";
+
+import TestimonialStaff from "./testimonial-staff";
 
 export default async function CareersPage() {
   const title = "Help us build amazing products.";
@@ -19,12 +27,11 @@ export default async function CareersPage() {
     <main className="main-wrapper">
       <Header title={title} description={description} showContactButton={false}>
         <div className="header_image-wrapper">
-          <CustomImage
-            src="/images/6567ed56ca4e490a1f742ccf_team-at-office.jpg"
+          <StaticImage
+            src={teamAtOffice}
+            srcfallback={teamAtOfficeFallback}
             priority={true}
             sizes="90vw"
-            width={72}
-            height={72}
             alt="Hivekind team at the office"
             className="about_image"
           />
@@ -133,66 +140,7 @@ export default async function CareersPage() {
                 </div>
               </div>
               <div className="staff-testimonial_component">
-                <div className="staff-testimonial_content">
-                  <div className="margin-vertical margin-medium">
-                    <div className="heading-style-h6">
-                      &quot;Words cannot describe what a wonderful group of
-                      people you are, and how much I&#x27;ve enjoyed working and
-                      interacting with y&#x27;all, even those folks I&#x27;ve
-                      never met in person. I&#x27;m so honored to have had the
-                      chance to get to know you all.&quot;
-                    </div>
-                  </div>
-                  <div className="testimonial_staff">
-                    <div className="staff-testimonial_image-wrapper">
-                      <CustomImage
-                        src="/images/6567e5e82bea986af7044910_yana-radenska.jpg"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                        width={320}
-                        height={320}
-                        alt="Yana Radenska"
-                        className="testimonial_staff-image"
-                      />
-                    </div>
-                    <div className="testimonial_staff-info">
-                      <p className="text-weight-semibold">
-                        <strong>Yana Radenska</strong>
-                      </p>
-                      <p>Former Software Engineer, Avvo</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="staff-testimonial_content">
-                  <div className="margin-vertical margin-medium">
-                    <div className="heading-style-h6">
-                      &quot;I feel that you have all been such wonderful
-                      colleagues/friends and I&#x27;m just grateful to have met
-                      you all and had lunches, dinners and good laughs. Everyone
-                      at the company is honestly a real gem. Rare to find a
-                      genuinely good group of people such as yourselves.&quot;
-                    </div>
-                  </div>
-                  <div className="testimonial_staff">
-                    <div className="staff-testimonial_image-wrapper">
-                      <CustomImage
-                        src="/images/6567e5e837fbb382020c4777_tamanna-patel.jpg"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 42vw"
-                        width={320}
-                        height={320}
-                        alt="Tamanna Patel"
-                        className="testimonial_staff-image"
-                      />
-                    </div>
-                    <div className="testimonial_staff-info">
-                      <p className="text-weight-semibold">
-                        <strong>Tamanna Patel</strong>
-                      </p>
-                      <p>Former Product Manager, EssayJack</p>
-                    </div>
-                  </div>
-                </div>
+                <TestimonialStaff />
               </div>
             </div>
           </div>
@@ -369,12 +317,10 @@ export default async function CareersPage() {
                   </div>
                 </div>
                 <div className="header_image-wrapper">
-                  <CustomImage
-                    src="/images/6567e8b0bb0c2dd09bb37b2e_team-dinner.jpg"
-                    loading="eager"
+                  <StaticImage
+                    src={teamDinner}
+                    srcfallback={teamDinnerFallback}
                     sizes="90vw"
-                    width={3072}
-                    height={3072}
                     alt="Hivekind team dinner"
                     className="team-dinner_image"
                   />

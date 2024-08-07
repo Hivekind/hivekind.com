@@ -2,7 +2,9 @@ import Stats from "./stats";
 import People from "./people";
 import Header from "@/components/header";
 import { getAllPosts } from "@/lib/contentfulApi";
-import CustomImage from "@/components/custom-image";
+import StaticImage from "@/components/static-image";
+import softwareDevelopmentPartner from "@/public/images/software-development-partner.webp";
+import softwareDevelopmentPartnerFallback from "@/public/images/software-development-partner.jpg";
 
 export default async function AboutPage() {
   const { posts } = await getAllPosts({
@@ -18,12 +20,11 @@ export default async function AboutPage() {
     <main className="main-wrapper">
       <Header title={title} description={description}>
         <div className="image-wrapper">
-          <CustomImage
-            src="/images/6567dc044a628e5f71c19a57_software-development-partner.jpg"
-            priority={true}
+          <StaticImage
+            src={softwareDevelopmentPartner}
+            srcfallback={softwareDevelopmentPartnerFallback}
+            priority
             sizes="(max-width: 479px) 100vw, 90vw"
-            width={72}
-            height={72}
             alt="Software development partner"
             className="about_image"
           />

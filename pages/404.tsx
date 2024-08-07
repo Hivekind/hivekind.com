@@ -7,7 +7,9 @@ import "@/styles/globals.css";
 import "@/styles/site.css";
 import "@/styles/not-found.css";
 
-import CustomImage from "@/components/custom-image";
+import StaticImage from "@/components/static-image";
+import bee from "@/public/images/404-bee.webp";
+import beeFallback from "@/public/images/404-bee.jpg";
 
 export const metadata: Metadata = {
   title: "Page Not Found",
@@ -39,11 +41,10 @@ function NotFound() {
                   </div>
                 </div>
                 <div>
-                  <CustomImage
-                    src="/images/656811487b378607980ebdc8_404-bee.jpg"
-                    width={1024}
-                    height={1024}
-                    loading="eager"
+                  <StaticImage
+                    src={bee}
+                    srcfallback={beeFallback}
+                    priority
                     sizes="(max-width: 1137px) 90vw, 1024px"
                     alt="404 bee"
                     className="bee_image"
