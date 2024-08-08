@@ -1,7 +1,5 @@
 "use client";
 
-import { ImageLoader } from "next/dist/client/image-component";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import { ComponentProps, useState } from "react";
 
@@ -18,16 +16,16 @@ type ContentfulImageLoaderProps = {
   quality?: number | `${number}`;
 };
 
-const loader = ({ src, quality, format }: ContentfulImageLoaderProps) => {
+const webploader = ({
+  src,
+  quality = 75,
+  format = "webp",
+}: ContentfulImageLoaderProps) => {
   return `${src}?&q=${quality}&fm=${format}`;
 };
 
-const webploader = ({ src, quality = 75 }: ContentfulImageLoaderProps) => {
-  return loader({ src, quality, format: "webp" });
-};
-
-const jpegloader = ({ src, quality = 75 }: ContentfulImageLoaderProps) => {
-  return loader({ src, quality, format: "png&fl=png8" });
+const fallbackloader = ({ src, quality = 75 }: ContentfulImageLoaderProps) => {
+  return `${src}?&q=${quality}`;
 };
 
 export default function ContentfulImage(props: ContentfulImageProps) {
@@ -37,7 +35,7 @@ export default function ContentfulImage(props: ContentfulImageProps) {
   return (
     <Image
       loading={priority ? undefined : "lazy"}
-      loader={error ? jpegloader : webploader}
+      loader={error ? fallbackloader : webploader}
       {...rest}
       width={width}
       src={src}
