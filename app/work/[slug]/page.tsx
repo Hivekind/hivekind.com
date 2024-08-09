@@ -2,11 +2,10 @@ import ContactUsSection from "@/components/contact-us-section";
 import ShareWrapper from "@/components/share-wrapper";
 import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
 import { markdownParser, generateToc } from "@/lib/markdownParser";
-import Image from "next/image";
 import { TocLinkWrapper } from "@/components/toc-link-wrapper";
 
 import { Metadata } from "next";
-import CustomImage from "@/components/custom-image";
+import ContentfulImage from "@/components/contentful-image";
 
 type Props = {
   params: { slug: string };
@@ -75,13 +74,13 @@ export default async function WorkPage({
                 </div>
               </div>
               <div className="blog-image padding-vertical padding-large">
-                <CustomImage
+                <ContentfulImage
                   src={`${post.fields.mainImage?.fields.file.url}`}
                   alt={`${post.fields.mainImageAltText || post.fields.name}`}
                   width={1600}
                   height={667}
                   className="image"
-                  loading="lazy"
+                  priority={true}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
               </div>

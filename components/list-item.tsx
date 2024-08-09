@@ -1,7 +1,7 @@
 import React from "react";
-import CustomImage from "./custom-image";
 import "@/styles/work.css";
 import ArrowSvg from "@/components/svgs/arrow-svg";
+import ContentfulImage from "./contentful-image";
 
 interface ListItemProps {
   url: string;
@@ -10,6 +10,7 @@ interface ListItemProps {
   client: string;
   title: string;
   description: string;
+  imagePriority?: boolean;
 }
 
 const ListItem = ({
@@ -18,19 +19,20 @@ const ListItem = ({
   client,
   title,
   description,
+  imagePriority = false,
 }: ListItemProps) => {
   return (
     <div role="listitem" className="w-dyn-item">
       <div className="featured-work_item">
         <a href={url} className="featured-work_item-link w-inline-block">
           <div className="featured-work_image-wrapper round-corner-top">
-            <CustomImage
+            <ContentfulImage
               src={imgSrc}
               alt=""
               sizes="(max-width: 767px) 90vw, 43vw"
               width={616}
               height={438}
-              loading="lazy"
+              priority={imagePriority}
               className="featured-work_image"
             />
           </div>

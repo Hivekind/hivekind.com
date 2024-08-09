@@ -1,7 +1,39 @@
 import React from "react";
 import Header from "@/components/header";
 import ContactUsSection from "@/components/contact-us-section";
-import CustomImage from "@/components/custom-image";
+import ServiceItemCard from "./service-item-card";
+
+import StaticImage from "@/components/static-image";
+import CheckInCircleInvertedSvg from "@/components/svgs/check-in-circle-inverted";
+
+import dedicatedTeamPlanning from "@/public/images/dedicated-team-planning.webp";
+import dedicatedTeamPlanningFallback from "@/public/images/dedicated-team-planning.jpg";
+
+import hivekindProductDiscovery from "@/public/images/hivekind-product-discovery.webp";
+import hivekindProductDiscoveryFallback from "@/public/images/hivekind-product-discovery.png";
+
+import hivekindTechnicalDiscovery from "@/public/images/hivekind-technical-discovery.webp";
+import hivekindTechnicalDiscoveryFallback from "@/public/images/hivekind-technical-discovery.png";
+
+import hivekindMinimumViableProduct from "@/public/images/hivekind-minimum-viable-product.webp";
+import hivekindMinimumViableProductFallback from "@/public/images/hivekind-minimum-viable-product.png";
+
+import hivekindProductMarketFit from "@/public/images/hivekind-product-market-fit.webp";
+import hivekindProductMarketFitFallback from "@/public/images/hivekind-product-market-fit.png";
+
+import hivekindCustomSoftwareDevelopment from "@/public/images/hivekind-custom-software-development.webp";
+import hivekindCustomSoftwareDevelopmentFallback from "@/public/images/hivekind-custom-software-development.png";
+
+import hivekindProductScaling from "@/public/images/hivekind-product-scaling.webp";
+import hivekindProductScalingFallback from "@/public/images/hivekind-product-scaling.png";
+
+import hivekindTechnicalSupport from "@/public/images/hivekind-technical-support.webp";
+import hivekindTechnicalSupportFallback from "@/public/images/hivekind-technical-support.png";
+
+import jayasimhanMasilamani from "@/public/images/jayasimhan-masilamani.webp";
+import jayasimhanMasilamaniFallback from "@/public/images/jayasimhan-masilamani.jpg";
+
+import TestimonialSection from "@/components/testimonial-section";
 
 export default function ServicesPage() {
   const title = "Build software with confidence.";
@@ -12,12 +44,11 @@ export default function ServicesPage() {
     <main className="main-wrapper">
       <Header title={title} description={description}>
         <div className="header_image-wrapper">
-          <CustomImage
-            src="/images/6567d78bbc987eac4020f6ab_dedicated-team-planning.jpg"
-            loading="eager"
+          <StaticImage
+            src={dedicatedTeamPlanning}
+            srcfallback={dedicatedTeamPlanningFallback}
+            priority={true}
             sizes="90vw"
-            width={3000}
-            height={2250}
             alt="Dedicated team working"
             className="about_image"
           />
@@ -45,56 +76,20 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 <div className="w-layout-grid discovery_list">
-                  <div className="discovery_item">
-                    <div className="margin-bottom margin-medium">
-                      <div className="discovery_image-wrapper">
-                        <CustomImage
-                          src="/images/661fd621c45e71b3c6834c85_hivekind-product-discovery.png"
-                          loading="lazy"
-                          sizes="(max-width: 767px) 90vw, 43vw"
-                          width={1264}
-                          height={800}
-                          alt="Hivekind Product Discovery"
-                          className="service_image"
-                        />
-                      </div>
-                    </div>
-                    <div className="margin-bottom margin-small">
-                      <h3 className="heading-style-h4">Product Discovery</h3>
-                    </div>
-                    <p>
-                      Ensure that you’re building the product or features that
-                      your customers truly want. Find out their needs and
-                      preferences. Use this information to empower the team to
-                      come up with technically feasible and innovative
-                      solutions. Make every development count.
-                    </p>
-                  </div>
-                  <div className="discovery_item">
-                    <div className="margin-bottom margin-medium">
-                      <div className="discovery_image-wrapper">
-                        <CustomImage
-                          src="/images/661fd622c2728c160e62ec57_hivekind-technical-discovery.png"
-                          loading="lazy"
-                          sizes="(max-width: 767px) 90vw, 43vw"
-                          width={1264}
-                          height={800}
-                          alt="Hivekind Technical Discovery"
-                          className="service_image"
-                        />
-                      </div>
-                    </div>
-                    <div className="margin-bottom margin-small">
-                      <h3 className="heading-style-h4">Technical Discovery</h3>
-                    </div>
-                    <p>
-                      Eliminate technical uncertainties and identify issues
-                      within your existing systems. We explore your current
-                      technical setup, understand and analyze the challenges and
-                      constraints you face, and then suggest the best way to
-                      reach your desired future state.
-                    </p>
-                  </div>
+                  <ServiceItemCard
+                    image={hivekindProductDiscovery}
+                    imageFallback={hivekindProductDiscoveryFallback}
+                    alt="Hivekind Product Discovery"
+                    heading="Product Discovery"
+                    body="Ensure that you’re building the product or features that your customers truly want. Find out their needs and preferences. Use this information to empower the team to come up with technically feasible and innovative solutions. Make every development count."
+                  />
+                  <ServiceItemCard
+                    image={hivekindTechnicalDiscovery}
+                    imageFallback={hivekindTechnicalDiscoveryFallback}
+                    alt="Hivekind Technical Discovery"
+                    heading="Technical Discovery"
+                    body="Eliminate technical uncertainties and identify issues within your existing systems. We explore your current technical setup, understand and analyze the challenges and constraints you face, and then suggest the best way to reach your desired future state."
+                  />
                 </div>
               </div>
             </div>
@@ -124,111 +119,35 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 <div className="w-layout-grid dev_list">
-                  <div className="dev_item">
-                    <div className="margin-bottom margin-medium">
-                      <div className="dev_image-wrapper">
-                        <CustomImage
-                          src="/images/661fd622c2728c160e62ec57_hivekind-technical-discovery.png"
-                          loading="lazy"
-                          sizes="(max-width: 767px) 90vw, 43vw"
-                          width={1264}
-                          height={800}
-                          alt="Minimum Viable Product"
-                          className="service_image"
-                        />
-                      </div>
-                    </div>
-                    <div className="margin-bottom margin-small">
-                      <h3 className="heading-style-h4">
-                        Minimum Viable Product
-                      </h3>
-                    </div>
-                    <p>
-                      Minimize risks by testing your idea with a Minimum Viable
-                      Product (MVP) application. We can help you quickly launch
-                      a basic version of your product, enabling you to gather
-                      feedback and iterate faster.
-                    </p>
-                  </div>
-                  <div className="dev_item">
-                    <div className="margin-bottom margin-medium">
-                      <div className="dev_image-wrapper">
-                        <CustomImage
-                          src="/images/661fd621b9151dcffb448c0f_hivekind-product-market-fit.png"
-                          loading="lazy"
-                          sizes="(max-width: 767px) 90vw, 43vw"
-                          width={1264}
-                          height={800}
-                          alt="Product-Market Fit"
-                          className="layout251_image"
-                        />
-                      </div>
-                    </div>
-                    <div className="margin-bottom margin-small">
-                      <h3 className="heading-style-h4">Product-Market Fit</h3>
-                    </div>
-                    <p>
-                      Ensure your product fits perfectly with market demands. By
-                      working together to fine-tune your product, we make sure
-                      it meets the needs of your target market, which makes your
-                      customers happier and your product more successful.
-                    </p>
-                  </div>
-                  <div className="dev_item">
-                    <a
-                      href="/services/custom-software-development"
-                      className="service-link w-inline-block"
-                    >
-                      <div className="margin-bottom margin-medium">
-                        <div className="dev_image-wrapper">
-                          <CustomImage
-                            src="/images/661fd6217ffea762061cc753_hivekind-custom-software-development.png"
-                            loading="lazy"
-                            sizes="(max-width: 767px) 90vw, 43vw"
-                            width={1264}
-                            height={800}
-                            alt="Custom Software Development"
-                            className="layout251_image"
-                          />
-                        </div>
-                      </div>
-                      <div className="margin-bottom margin-small">
-                        <h3 className="heading-style-h4">
-                          Custom Software Development
-                        </h3>
-                      </div>
-                      <p>
-                        We specialize in developing custom solutions tailored to
-                        meet your unique business requirements and goals. We
-                        achieve this by using trusted and tested technologies
-                        that will help you scale with your business.
-                      </p>
-                    </a>
-                  </div>
-                  <div className="dev_item">
-                    <div className="margin-bottom margin-medium">
-                      <div className="dev_image-wrapper">
-                        <CustomImage
-                          src="/images/661fd621b171031f482e01dd_hivekind-product-scaling.png"
-                          loading="lazy"
-                          sizes="(max-width: 767px) 90vw, 43vw"
-                          width={1264}
-                          height={800}
-                          alt="Product Scaling"
-                          className="layout251_image"
-                        />
-                      </div>
-                    </div>
-                    <div className="margin-bottom margin-small">
-                      <h3 className="heading-style-h4">Product Scaling</h3>
-                    </div>
-                    <p>
-                      Scale your product along with your business. We provide
-                      expert strategies and dedicated support to help you
-                      efficiently expand your product&#x27;s capabilities and
-                      reach as your business continues to grow.
-                    </p>
-                  </div>
+                  <ServiceItemCard
+                    image={hivekindMinimumViableProduct}
+                    imageFallback={hivekindMinimumViableProductFallback}
+                    alt="Minimum Viable Product"
+                    heading="Minimum Viable Product"
+                    body="Minimize risks by testing your idea with a Minimum Viable Product (MVP) application. We can help you quickly launch a basic version of your product, enabling you to gather feedback and iterate faster."
+                  />
+                  <ServiceItemCard
+                    image={hivekindProductMarketFit}
+                    imageFallback={hivekindProductMarketFitFallback}
+                    alt="Product-Market Fit"
+                    heading="Product-Market Fit"
+                    body="Ensure your product fits perfectly with market demands. By working together to fine-tune your product, we make sure it meets the needs of your target market, which makes your customers happier and your product more successful."
+                  />
+                  <ServiceItemCard
+                    image={hivekindCustomSoftwareDevelopment}
+                    imageFallback={hivekindCustomSoftwareDevelopmentFallback}
+                    alt="Custom Software Development"
+                    heading="Custom Software Development"
+                    body="We specialize in developing custom solutions tailored to meet your unique business requirements and goals. We achieve this by using trusted and tested technologies that will help you scale with your business."
+                    link="/services/custom-software-development"
+                  />
+                  <ServiceItemCard
+                    image={hivekindProductScaling}
+                    imageFallback={hivekindProductScalingFallback}
+                    alt="Product Scaling"
+                    heading="Product Scaling"
+                    body="Scale your product along with your business. We provide expert strategies and dedicated support to help you efficiently expand your product's capabilities and reach as your business continues to grow."
+                  />
                 </div>
               </div>
             </div>
@@ -283,14 +202,12 @@ export default function ServicesPage() {
                     id="w-node-c7b0cea7-a1a2-3d66-3e4b-b08b274498d6-5ddf4216"
                     className="support_image-wrapper"
                   >
-                    <CustomImage
-                      src="/images/661fd62111e212b2ee43064c_hivekind-technical-support.png"
-                      loading="lazy"
+                    <StaticImage
+                      src={hivekindTechnicalSupport}
+                      srcfallback={hivekindTechnicalSupportFallback}
                       sizes="(max-width: 767px) 90vw, 43vw"
-                      width={1264}
-                      height={1086}
                       alt="Hivekind technical support"
-                      className="service_image"
+                      style={{ width: "100%", height: "100%" }}
                     />
                   </div>
                   <div className="w-layout-grid support_right">
@@ -358,21 +275,7 @@ export default function ServicesPage() {
                         <div className="process_timeline-icon-wrapper">
                           <div className="product-stage">
                             <div className="icon-embed-xxsmall w-embed">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="100%"
-                                height="100%"
-                                viewBox="0 0 15 12"
-                                fill="none"
-                                preserveAspectRatio="xMidYMid meet"
-                                aria-hidden="true"
-                                role="img"
-                              >
-                                <path
-                                  d="M4.99997 8.58597L1.70697 5.29297L0.292969 6.70697L4.99997 11.414L14.707 1.70697L13.293 0.292969L4.99997 8.58597Z"
-                                  fill="#FFFFFF"
-                                />
-                              </svg>
+                              <CheckInCircleInvertedSvg />
                             </div>
                           </div>
                         </div>
@@ -398,21 +301,7 @@ export default function ServicesPage() {
                         <div className="process_timeline-icon-wrapper">
                           <div className="product-stage">
                             <div className="icon-embed-xxsmall w-embed">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="100%"
-                                height="100%"
-                                viewBox="0 0 15 12"
-                                fill="none"
-                                preserveAspectRatio="xMidYMid meet"
-                                aria-hidden="true"
-                                role="img"
-                              >
-                                <path
-                                  d="M4.99997 8.58597L1.70697 5.29297L0.292969 6.70697L4.99997 11.414L14.707 1.70697L13.293 0.292969L4.99997 8.58597Z"
-                                  fill="#FFFFFF"
-                                />
-                              </svg>
+                              <CheckInCircleInvertedSvg />
                             </div>
                           </div>
                         </div>
@@ -435,21 +324,7 @@ export default function ServicesPage() {
                         <div className="process_timeline-icon-wrapper">
                           <div className="product-stage">
                             <div className="icon-embed-xxsmall w-embed">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="100%"
-                                height="100%"
-                                viewBox="0 0 15 12"
-                                fill="none"
-                                preserveAspectRatio="xMidYMid meet"
-                                aria-hidden="true"
-                                role="img"
-                              >
-                                <path
-                                  d="M4.99997 8.58597L1.70697 5.29297L0.292969 6.70697L4.99997 11.414L14.707 1.70697L13.293 0.292969L4.99997 8.58597Z"
-                                  fill="#FFFFFF"
-                                />
-                              </svg>
+                              <CheckInCircleInvertedSvg />
                             </div>
                           </div>
                         </div>
@@ -474,21 +349,7 @@ export default function ServicesPage() {
                         <div className="process_timeline-icon-wrapper">
                           <div className="product-stage">
                             <div className="icon-embed-xxsmall w-embed">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="100%"
-                                height="100%"
-                                viewBox="0 0 15 12"
-                                fill="none"
-                                preserveAspectRatio="xMidYMid meet"
-                                aria-hidden="true"
-                                role="img"
-                              >
-                                <path
-                                  d="M4.99997 8.58597L1.70697 5.29297L0.292969 6.70697L4.99997 11.414L14.707 1.70697L13.293 0.292969L4.99997 8.58597Z"
-                                  fill="#FFFFFF"
-                                />
-                              </svg>
+                              <CheckInCircleInvertedSvg />
                             </div>
                           </div>
                         </div>
@@ -517,55 +378,13 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <section className="testimonial-section">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="padding-section-large">
-              <div className="margin-bottom">
-                <div className="margin-medium">
-                  <div className="max-width-large align-center">
-                    <div className="testimonial_component">
-                      <div className="margin-vertical">
-                        <div className="margin-bottom margin-medium">
-                          <div className="heading-style-h5">
-                            &quot;The Hivekind team built the Willmaker Online
-                            product from start to finish. The project had
-                            thousands of screens and on delivery there were no
-                            major issues. The business team was very happy with
-                            the quality at launch. The online version now
-                            enables our business team to apply different
-                            business models and pricing strategies. The
-                            conversion rate is up 70% since the launch.&quot;
-                          </div>
-                        </div>
-                      </div>
-                      <div className="testimonial_client-image-wrapper">
-                        <CustomImage
-                          src="/images/655ab8fe6c7b81432adaa633_jayasimhan-masilamani.jpg"
-                          loading="lazy"
-                          sizes="(max-width: 767px) 90vw, 43vw"
-                          width={320}
-                          height={320}
-                          alt="Jayasimhan Masilamani"
-                          className="testimonial_client-image"
-                        />
-                      </div>
-                      <div className="margin-bottom">
-                        <p className="text-weight-semibold">
-                          Jayasimhan Masilamani
-                          <br />
-                        </p>
-                        <p>VP of Technology, Nolo</p>
-                        <div className="margin-xlarge"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TestimonialSection
+        quote="The Hivekind team built the Willmaker Online product from start to finish. The project had thousands of screens and on delivery there were no major issues. The business team was very happy with the quality at launch. The online version now enables our business team to apply different business models and pricing strategies. The conversion rate is up 70% since the launch."
+        name="Jayasimhan Masilamani"
+        title="VP of Technology, Nolo"
+        image={jayasimhanMasilamani}
+        imageFallback={jayasimhanMasilamaniFallback}
+      />
 
       <ContactUsSection />
     </main>

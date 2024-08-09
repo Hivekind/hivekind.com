@@ -7,7 +7,7 @@ import { TocLinkWrapper } from "@/components/toc-link-wrapper";
 import Mustache from "mustache";
 import { Metadata } from "next";
 import "@/styles/blog.css";
-import CustomImage from "@/components/custom-image";
+import ContentfulImage from "@/components/contentful-image";
 
 type Props = {
   params: { slug: string };
@@ -109,9 +109,10 @@ export default async function BlogPage({
                   target="_blank"
                   className="blog_author-image-wrapper w-inline-block"
                 >
-                  <CustomImage
+                  <ContentfulImage
                     src={`${post.fields.author?.fields.profilePicture?.fields.file.url}`}
                     alt={`${post.fields.author?.fields.name}`}
+                    priority={true}
                     width={500}
                     height={320}
                     className="blog_author-image"
@@ -128,13 +129,13 @@ export default async function BlogPage({
                 </Link>
               </div>
               <div className="blog-image padding-vertical padding-large">
-                <CustomImage
+                <ContentfulImage
                   src={`${post.fields.mainImage?.fields.file.url}`}
                   alt={`${post.fields.mainImageAltText}`}
                   width={1600}
                   height={667}
                   className="image"
-                  loading="lazy"
+                  priority={true}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
               </div>

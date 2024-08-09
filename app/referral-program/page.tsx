@@ -1,5 +1,8 @@
-import CustomImage from "@/components/custom-image";
 import FaqSection from "./faq-section";
+import StaticImage from "@/components/static-image";
+
+import softwareDevelopmentReferralProgram from "@/public/images/software-development-referral-program.webp";
+import softwareDevelopmentReferralProgramFallback from "@/public/images/software-development-referral-program.jpg";
 
 export default function ReferralProgramPage() {
   return (
@@ -33,12 +36,11 @@ export default function ReferralProgramPage() {
                   </div>
                 </div>
                 <div className="header_image-wrapper">
-                  <CustomImage
-                    src="/images/6657ffeeb0ed2035fbfc99ff_software-development-referral-program.jpg"
-                    loading="eager"
+                  <StaticImage
+                    src={softwareDevelopmentReferralProgram}
+                    srcfallback={softwareDevelopmentReferralProgramFallback}
+                    priority={true}
                     sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 41vw"
-                    width={1893}
-                    height={1737}
                     alt="A woman holding an iPad"
                     className="header-image referral"
                   />

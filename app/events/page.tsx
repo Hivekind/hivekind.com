@@ -1,4 +1,4 @@
-import CustomImage from "@/components/custom-image";
+import EventItem from "./event-item";
 
 export default function EventsPage() {
   return (
@@ -25,323 +25,105 @@ export default function EventsPage() {
               <div className="event_component">
                 <div className="event_list-wrapper">
                   <div className="event_list">
-                    <div
-                      id="w-node-bea32745-2804-d33e-6027-f6de12c486fd-84e57cca"
-                      className="event_item"
-                    >
-                      <div className="event_image-wrapper">
-                        <div className="ruby-tuesdays">
-                          <CustomImage
-                            src="/images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
-                            loading="lazy"
-                            sizes="90vw"
-                            width={96}
-                            height={117}
-                            alt="Ruby KL logo"
-                            className="ruby_tuesdays-image"
-                          />
-                        </div>
-                      </div>
-                      <div className="event_item-content">
-                        <div className="event_item-content-left">
-                          <div className="event_item-content-top">
-                            <div className="event_title">
-                              <div className="heading-style-h5">
-                                Ruby Tuesdays #107
-                              </div>
-                            </div>
-                            <div className="event_date-wrapper">
-                              <div className="text-size-small">7 May 2024</div>
-                            </div>
-                          </div>
-                          <div className="event_item-content-details">
-                            <div className="event-agenda">
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>7:30 - 8:00</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>
-                                    Registration &amp; Welcome and intro to Ruby
-                                    Tuesdays
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>8:00 - 8:30</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>
-                                    Anonoz: Introducing OyenCov: and a few of my
-                                    random hacks in developing Rails apps
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>8:30 - 9:00</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>
-                                    Guoy: Instance Variable in an Object Shape
-                                    World
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>9:00 - 9:30</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>Parking Lot / Today I Learned !!!</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <a
-                          href="https://www.youtube.com/watch?v=XuucPsney-g"
-                          target="_blank"
-                          className="button is-event w-button"
-                        >
-                          Watch Recording
-                        </a>
-                      </div>
-                    </div>
-                    <div className="event_item">
-                      <div className="event_image-wrapper">
-                        <div className="ruby-tuesdays">
-                          <CustomImage
-                            src="/images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
-                            loading="lazy"
-                            sizes="90vw"
-                            width={96}
-                            height={117}
-                            alt="Ruby KL logo"
-                            className="ruby_tuesdays-image"
-                          />
-                        </div>
-                      </div>
-                      <div className="event_item-content">
-                        <div className="event_item-content-left">
-                          <div className="event_item-content-top">
-                            <div className="event_title">
-                              <div className="heading-style-h5">
-                                Ruby Tuesdays #105
-                              </div>
-                            </div>
-                            <div className="event_date-wrapper">
-                              <div className="text-size-small">
-                                5 March 2024
-                              </div>
-                            </div>
-                          </div>
-                          <div className="event_item-content-details">
-                            <div className="event-agenda">
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>7:30 - 8:00</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>
-                                    Registration &amp; Welcome and intro to Ruby
-                                    Tuesdays
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>8:00 - 8:30</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>
-                                    Hassanin Ahmed: Your app as a framework
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>8:30 - 9:00</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>Yow Chun: Hotwiring your rails app</div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>9:00 - 9:30</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>Parking Lot / Today I Learned !!!</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <a
-                          href="https://www.youtube.com/watch?v=hORNzvK9y2o"
-                          target="_blank"
-                          className="button is-event w-button"
-                        >
-                          Watch Recording
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      id="w-node-fdc5dae7-9853-1478-4c87-16a1eabfae9c-84e57cca"
-                      className="event_item"
-                    >
-                      <div className="event_image-wrapper">
-                        <div className="ruby-tuesdays">
-                          <CustomImage
-                            src="/images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
-                            loading="lazy"
-                            sizes="90vw"
-                            width={96}
-                            height={117}
-                            alt="Ruby KL logo"
-                            className="ruby_tuesdays-image"
-                          />
-                        </div>
-                      </div>
-                      <div className="event_item-content">
-                        <div className="event_item-content-left">
-                          <div className="event_item-content-top">
-                            <div className="event_title">
-                              <div className="heading-style-h5">
-                                Ruby Tuesdays #103
-                              </div>
-                            </div>
-                            <div className="event_date-wrapper">
-                              <div className="text-size-small">
-                                5 December 2023
-                              </div>
-                            </div>
-                          </div>
-                          <div className="event_item-content-details">
-                            <div className="event-agenda">
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>7:30 - 8:00</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>
-                                    Registration &amp; Welcome and intro to Ruby
-                                    Tuesdays
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>8:00 - 9:00</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>
-                                    2023 retrospective: Amree Zaid, Wan Zul,
-                                    Helio Cola, and Yow Chun
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>9:00 - 9:30</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>Parking Lot / Today I Learned !!!</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <a
-                          href="https://www.youtube.com/watch?v=klJPaXyAShs"
-                          target="_blank"
-                          className="button is-event w-button"
-                        >
-                          Watch Recording
-                        </a>
-                      </div>
-                    </div>
-                    <div className="event_item">
-                      <div className="event_image-wrapper">
-                        <div className="ruby-tuesdays">
-                          <CustomImage
-                            src="/images/6658146b3f1e1abfde477499_ruby-kl-logo.jpg"
-                            loading="lazy"
-                            sizes="90vw"
-                            width={96}
-                            height={117}
-                            alt="Ruby KL logo"
-                            className="ruby_tuesdays-image"
-                          />
-                        </div>
-                      </div>
-                      <div className="event_item-content">
-                        <div className="event_item-content-left">
-                          <div className="event_item-content-top">
-                            <div className="event_title">
-                              <div className="heading-style-h5">
-                                Ruby Tuesdays #101
-                              </div>
-                            </div>
-                            <div className="event_date-wrapper">
-                              <div className="text-size-small">
-                                3 October 2023
-                              </div>
-                            </div>
-                          </div>
-                          <div className="event_item-content-details">
-                            <div className="event-agenda">
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>7:30 - 8:00</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>
-                                    Registration &amp; Welcome and intro to Ruby
-                                    Tuesdays
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>8:00 - 8:30</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>
-                                    Guoy: Looks like a talk, sounds like a talk
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>8:30 - 9:00</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>Helio Cola: app subdomain routing</div>
-                                </div>
-                              </div>
-                              <div className="agenda-item">
-                                <div className="agenda-time">
-                                  <div>9:00 - 9:30</div>
-                                </div>
-                                <div className="agenda-details">
-                                  <div>Parking Lot / Today I Learned !!!</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <a
-                          href="https://www.youtube.com/watch?v=qWs-WE8Sv3Q"
-                          target="_blank"
-                          className="button is-event w-button"
-                        >
-                          Watch Recording
-                        </a>
-                      </div>
-                    </div>
+                    <EventItem
+                      title="Ruby Tuesdays #107"
+                      date="7 May 2024"
+                      agendas={[
+                        {
+                          time: "7:30 - 8:00",
+                          details:
+                            "Registration & Welcome and intro to Ruby Tuesdays",
+                        },
+                        {
+                          time: "8:00 - 8:30",
+                          details:
+                            "Anonoz: Introducing OyenCov: and a few of my random hacks in developing Rails apps",
+                        },
+                        {
+                          time: "8:30 - 9:00",
+                          details:
+                            "Guoy: Instance Variable in an Object Shape World",
+                        },
+                        {
+                          time: "9:00 - 9:30",
+                          details: "Parking Lot / Today I Learned !!!",
+                        },
+                      ]}
+                      recordingUrl="https://www.youtube.com/watch?v=XuucPsney-g"
+                    />
+
+                    <EventItem
+                      title="Ruby Tuesdays #105"
+                      date="5 March 2024"
+                      agendas={[
+                        {
+                          time: "7:30 - 8:00",
+                          details:
+                            "Registration & Welcome and intro to Ruby Tuesdays",
+                        },
+                        {
+                          time: "8:00 - 8:30",
+                          details: "Hassanin Ahmed: Your app as a framework",
+                        },
+                        {
+                          time: "8:30 - 9:00",
+                          details: "Yow Chun: Hotwiring your rails app",
+                        },
+                        {
+                          time: "9:00 - 9:30",
+                          details: "Parking Lot / Today I Learned !!!",
+                        },
+                      ]}
+                      recordingUrl="https://www.youtube.com/watch?v=hORNzvK9y2o"
+                    />
+
+                    <EventItem
+                      title="Ruby Tuesdays #103"
+                      date="5 December 2023"
+                      agendas={[
+                        {
+                          time: "7:30 - 8:00",
+                          details:
+                            "Registration & Welcome and intro to Ruby Tuesdays",
+                        },
+                        {
+                          time: "8:00 - 9:00",
+                          details:
+                            "2023 retrospective: Amree Zaid, Wan Zul, Helio Cola, and Yow Chun",
+                        },
+                        {
+                          time: "9:00 - 9:30",
+                          details: "Parking Lot / Today I Learned !!!",
+                        },
+                      ]}
+                      recordingUrl="https://www.youtube.com/watch?v=klJPaXyAShs"
+                    />
+
+                    <EventItem
+                      title="Ruby Tuesdays #101"
+                      date="3 October 2023"
+                      agendas={[
+                        {
+                          time: "7:30 - 8:00",
+                          details:
+                            "Registration & Welcome and intro to Ruby Tuesdays",
+                        },
+                        {
+                          time: "8:00 - 8:30",
+                          details:
+                            "Guoy: Looks like a talk, sounds like a talk",
+                        },
+                        {
+                          time: "8:30 - 9:00",
+                          details: "Helio Cola: app subdomain routing",
+                        },
+                        {
+                          time: "9:00 - 9:30",
+                          details: "Parking Lot / Today I Learned !!!",
+                        },
+                      ]}
+                      recordingUrl="https://www.youtube.com/watch?v=qWs-WE8Sv3Q"
+                    />
                   </div>
                 </div>
               </div>
