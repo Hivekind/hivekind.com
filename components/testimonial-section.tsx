@@ -23,7 +23,7 @@ export default function TestimonialSection({
               <div className="margin-medium">
                 <div className="max-width-large align-center">
                   <div className="testimonial_component">
-                    <div className="margin-vertical">
+                    <div className="margin-vertical min-testimonial-height">
                       <div className="margin-bottom margin-medium">
                         <div className="heading-style-h5">
                           &quot;{quote}&quot;
