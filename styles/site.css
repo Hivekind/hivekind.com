@@ -2709,3 +2709,8 @@ strong {
     grid-column: span 1 / span 1;
   }
 }
+
+.margin-bottom.margin-xxlarge.align-left {
+  justify-content: flex-start;
+  align-items: center;
+}
