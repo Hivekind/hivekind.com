@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TestimonialSection from "./testimonial-section";
 import "@/styles/testimonial-carousel.css";
 
@@ -74,6 +74,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const carouselRef = React.useRef<HTMLDivElement>(null);
 
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
@@ -87,17 +88,24 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
     );
   };
 
+  useEffect(() => {
+    updateCarousel();
+  }, [activeIndex]);
+
+  const updateCarousel = () => {
+    if (carouselRef.current) {
+      carouselRef.current.style.transform = `translateX(-${
+        activeIndex * 100
+      }%)`;
+    }
+  };
+
   return (
     <div className="testimonial-carousel">
       {/* Testimonials */}
-      <div className="testimonials">
+      <div className="testimonials" ref={carouselRef}>
         {items.map((item, index) => (
-          <div
-            key={index}
-            className={`testimonial-item ${
-              index === activeIndex ? "show-item" : "hide-item"
-            }`}
-          >
+          <div key={index} className="testimonial-item">
             <TestimonialSection
               quote={item.quote}
               name={item.name}

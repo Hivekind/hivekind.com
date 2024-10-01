@@ -2,14 +2,17 @@
     position: relative;
     overflow: hidden;
     margin-top: 2rem;
+    width: 100%;
 }
 
-.show-item {
-    display: block;
+.testimonials {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
-.hide-item {
-    display: none;
+.testimonial-item {
+    min-width: 100%;
 }
 
 .carousel-buttons {
