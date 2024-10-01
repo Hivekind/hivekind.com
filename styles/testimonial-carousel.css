@@ -69,3 +69,11 @@
     height: 1rem;
     display: flex;
 }
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-grey {
+    background-color: #f5f4ee;
+}

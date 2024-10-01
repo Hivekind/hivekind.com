@@ -40,7 +40,29 @@ export default function Home() {
 
         <AnswersSection />
 
-        <TestimonialCarousel />
+        <section className="work-section">
+          <div className="padding-global">
+            <div className="container-large">
+              <div className="margin-top margin-xxlarge">
+                <div className="container-small">
+                  <div className="text-align-center">
+                    <div className="margin-bottom">
+                      <div className="margin-large">
+                        <h2>We deliver results.</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="padding-section-medium">
+                <div className="container-medium">
+                  <FeaturedWork />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <TestimonialCarousel bgColorClass="bg-white" />
 
         <AdvantagesSection />
 

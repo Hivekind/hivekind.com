@@ -15,20 +15,16 @@ import jayasimhanMasilamaniFallback from "@/public/images/jayasimhan-masilamani.
 import tonyJones from "@/public/images/tony-jones.webp";
 import tonyJonesFallback from "@/public/images/tony-jones.jpeg";
 
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import RightArrowSvg from "./svgs/right-arrow-svg";
 import LeftArrowSVG from "./svgs/left-arrow-svg";
 
-interface CarouselItem {
-  id: number;
-  quote: string;
-  name: string;
-  title: string;
-  image: StaticImport;
-  imageFallback: StaticImport;
+interface TestimonialCarouselProps {
+  bgColorClass: string;
 }
 
-const TestimonialCarousel: React.FC = () => {
+const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
+  bgColorClass,
+}) => {
   const items = [
     {
       id: 1,
@@ -108,19 +104,26 @@ const TestimonialCarousel: React.FC = () => {
               title={item.title}
               image={item.image}
               imageFallback={item.imageFallback}
+              bgColorClass={bgColorClass}
             />
           </div>
         ))}
       </div>
       {/* Navigation Controls */}
       <div className="navigation-controls">
-        <button onClick={handlePrev} className="testimonials_arrow">
+        <button
+          onClick={handlePrev}
+          className={`testimonials_arrow ${bgColorClass}`}
+        >
           <div className="testimonials_arrow-icon">
             <LeftArrowSVG />
           </div>
         </button>
 
-        <button onClick={handleNext} className="testimonials_arrow">
+        <button
+          onClick={handleNext}
+          className={`testimonials_arrow ${bgColorClass}`}
+        >
           <div className="testimonials_arrow-icon">
             <RightArrowSvg />
           </div>
