@@ -115,12 +115,6 @@ const NavBar = () => {
             className="navbar_menu is-page-height-tablet w-nav-menu self-center"
           >
             <Link
-              href="/work"
-              className={`navbar_link w-nav-link ${isCurrent("/work")}`}
-            >
-              Work
-            </Link>
-            <Link
               href="/services"
               className={`navbar_link w-nav-link ${isCurrent("/services")}`}
             >
@@ -147,9 +141,8 @@ const NavBar = () => {
           </Link>
 
           <div
-            className={`navbar_menu-button w-nav-button ${
-              isMenuOpen ? "w--open" : ""
-            }`}
+            className={`navbar_menu-button w-nav-button ${isMenuOpen ? "w--open" : ""
+              }`}
             aria-label="menu"
             onClick={toggleMenu}
             aria-controls="w-nav-overlay-0"
@@ -158,21 +151,18 @@ const NavBar = () => {
           >
             <div className="menu-icon2">
               <div
-                className={`menuIcon2Line menu-icon2_line-top ${
-                  isMenuOpen ? "open" : ""
-                }`}
+                className={`menuIcon2Line menu-icon2_line-top ${isMenuOpen ? "open" : ""
+                  }`}
               ></div>
               <div
-                className={`menuIcon2Line menu-icon2_line-middle ${
-                  isMenuOpen ? "open" : ""
-                }`}
+                className={`menuIcon2Line menu-icon2_line-middle ${isMenuOpen ? "open" : ""
+                  }`}
               >
                 <div className="menu-icon_line-middle-inner"></div>
               </div>
               <div
-                className={`menuIcon2Line menu-icon2_line-bottom ${
-                  isMenuOpen ? "open" : ""
-                }`}
+                className={`menuIcon2Line menu-icon2_line-bottom ${isMenuOpen ? "open" : ""
+                  }`}
               ></div>
             </div>
           </div>
@@ -188,14 +178,6 @@ const NavBar = () => {
           className="navbar_menu is-page-height-tablet w-nav-menu overlay-content"
           style={{ display: "block" }}
         >
-          <Link
-            href="/work"
-            className={`navbar_link w-nav-link w--nav-link-open ${isCurrent(
-              "/work"
-            )}`}
-          >
-            Work
-          </Link>
           <Link
             href="/services"
             className={`navbar_link w-nav-link w--nav-link-open ${isCurrent(
