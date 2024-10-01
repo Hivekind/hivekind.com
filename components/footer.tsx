@@ -72,9 +72,6 @@ const Footer = () => {
                     <a href="/services" className="foot_link">
                       Services
                     </a>
-                    <a href="/work" className="foot_link">
-                      Work
-                    </a>
                     <a href="/about" className="foot_link">
                       About
                     </a>
