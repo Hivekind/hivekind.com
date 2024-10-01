@@ -1109,6 +1109,9 @@ strong {
   align-items: center;
   display: flex;
 }
+.min-testimonial-height {
+  min-height: 12.5rem;
+}
 .testimonial_client-image-wrapper {
   margin-bottom: 1rem;
 }
