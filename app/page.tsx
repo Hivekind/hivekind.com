@@ -1,20 +1,19 @@
 import ContactUsSection from "@/components/contact-us-section";
 import Header from "@/components/header";
-import FeatureComparisonSection from "./feature-comparison-section";
-import FeatureSection from "./feature-section";
 import StaticImage from "@/components/static-image";
 import FeaturedWork from "./featured-work";
-import TestimonialSection from "@/components/testimonial-section";
 
 import softwareDevelopmentCompanyPhotomontage from "@/public/images/software-development-company-photomontage.webp";
 import softwareDevelopmentCompanyPhotomontageFallback from "@/public/images/software-development-company-photomontage.jpeg";
 
 import TestimonialCarousel from "@/components/testimonial-carousel";
+import FeatureComparisonSection from "./feature-comparison-section";
+import FeatureSection from "./feature-section";
 
 export default function Home() {
-  const title = "The transparent software development company.";
+  const title = "Malaysia's premier software development company";
   const description =
-    "Build meaningful products with a software development company that's committed to transparency; clear objectives, regular updates, frequent releases, and a fixed monthly cost.";
+    "We handle your software development, allowing you to focus on strategy, sales, and raising funds.";
 
   return (
     <>
@@ -23,6 +22,7 @@ export default function Home() {
           title={title}
           description={description}
           paddingStyle="padding-section-medium"
+          cta="Get in Touch"
         >
           <div className="header_image-wrapper">
             <StaticImage
@@ -63,7 +63,11 @@ export default function Home() {
         </section>
         <TestimonialCarousel />
 
-        <ContactUsSection />
+        <ContactUsSection
+          heading="Need help building your product?"
+          body="Reach out to us by filling out the form on our contact page. If you need an NDA, just let us know, and we’ll gladly provide one!"
+          cta="Take me to the contact page"
+        />
       </main>
     </>
   );

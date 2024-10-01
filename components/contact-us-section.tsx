@@ -5,7 +5,7 @@ import StaticImage from "@/components/static-image";
 import topSoftwareDevelopmentCompanyMalaysiaAwards from "@/public/images/top-software-development-company-malaysia-awards.webp";
 import topSoftwareDevelopmentCompanyMalaysiaAwardsFallback from "@/public/images/top-software-development-company-malaysia-awards.png";
 
-const ContactUsSection = ({ className }: { className?: string }) => {
+const ContactUsSection = ({ className, heading, body, cta }: { className?: string, heading?: string, body?: string, cta?: string }) => {
   return (
     <section className={`cta_section ${className}`}>
       <div
@@ -16,19 +16,19 @@ const ContactUsSection = ({ className }: { className?: string }) => {
             <div className="w-layout-grid cta_component">
               <div className="cta_content">
                 <div className="margin-bottom margin-small">
-                  <h2>
-                    Your vision deserves a dedicated software development team.
+                  <h2 className="heading-style-h2">
+                    {heading ||
+                      "We're not about tech jargon or over-promising."}
                   </h2>
                 </div>
                 <div className="margin-bottom margin-small">
                   <p className="text-size-medium">
-                    We&#x27;re not about tech jargon or over-promising. Instead,
-                    we focus on clear communication, transparency in our
-                    process, and delivering results that speak for themselves.
+                    {body ||
+                      "We're not about tech jargon or over-promising. Instead, we focus on clear communication, transparency in our process, and delivering results that speak for themselves."}
                   </p>
                 </div>
 
-                <ContactButton isCenter={false} />
+                <ContactButton isCenter={false} cta={cta} />
               </div>
               <div className="cta_image-wrapper">
                 <StaticImage
