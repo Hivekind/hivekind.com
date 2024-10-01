@@ -9,11 +9,7 @@ import TestimonialSection from "@/components/testimonial-section";
 import softwareDevelopmentCompanyPhotomontage from "@/public/images/software-development-company-photomontage.webp";
 import softwareDevelopmentCompanyPhotomontageFallback from "@/public/images/software-development-company-photomontage.jpeg";
 
-import mitchGelber from "@/public/images/mitch-gelber.webp";
-import mitchGelberFallback from "@/public/images/mitch-gelber.jpg";
-
-import lindyLedohowski from "@/public/images/lindy-ledohowski.webp";
-import lindyLedohowskiFallback from "@/public/images/lindy-ledohowski.jpg";
+import TestimonialCarousel from "@/components/testimonial-carousel";
 
 export default function Home() {
   const title = "The transparent software development company.";
@@ -40,14 +36,6 @@ export default function Home() {
           </div>
         </Header>
 
-        <TestimonialSection
-          quote="We had worked with other IT providers and found budgets and timelines stretching. Not so with Hivekind"
-          name="Dr Lindy Ledohowski"
-          title="CEO, Malaysia Green Building Council"
-          image={lindyLedohowski}
-          imageFallback={lindyLedohowskiFallback}
-        />
-
         <FeatureComparisonSection />
         <FeatureSection />
 
@@ -73,13 +61,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <TestimonialSection
-          quote="They acted not simply as a vendor, but as a true partner in the strategic development and delivery of our project."
-          name="Mitch Gelber"
-          title="CEO, Malaysia Green Building Council"
-          image={mitchGelber}
-          imageFallback={mitchGelberFallback}
-        />
+        <TestimonialCarousel />
 
         <ContactUsSection />
       </main>
