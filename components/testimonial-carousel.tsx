@@ -29,7 +29,7 @@ interface CarouselItem {
 }
 
 const TestimonialCarousel: React.FC = () => {
-  const [items, setItems] = useState<CarouselItem[]>([
+  const items = [
     {
       id: 1,
       quote:
@@ -75,7 +75,7 @@ const TestimonialCarousel: React.FC = () => {
       image: mitchGelber,
       imageFallback: mitchGelberFallback,
     },
-  ]);
+  ];
 
   const [activeIndex, setActiveIndex] = useState(0);
 
