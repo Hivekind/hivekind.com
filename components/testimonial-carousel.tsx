@@ -9,6 +9,9 @@ import mitchGelberFallback from "@/public/images/mitch-gelber.jpg";
 import lindyLedohowski from "@/public/images/lindy-ledohowski.webp";
 import lindyLedohowskiFallback from "@/public/images/lindy-ledohowski.jpg";
 
+import charlesLynam from "@/public/images/charles-lynam.webp";
+import charlesLynamFallback from "@/public/images/charles-lynam.jpg";
+
 import jayasimhanMasilamani from "@/public/images/jayasimhan-masilamani.webp";
 import jayasimhanMasilamaniFallback from "@/public/images/jayasimhan-masilamani.jpg";
 
@@ -50,8 +53,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
         "The team is technically very capable, and has an effective process to undertake research and make recommendations. Their style responded very effectively to our idiosyncratic culture and needs. This was one of the better consulting engagements I've been associated with in many years.",
       name: "Charles Lynam",
       title: "Commercial Director, HosPortal",
-      image: lindyLedohowski,
-      imageFallback: lindyLedohowskiFallback,
+      image: charlesLynam,
+      imageFallback: charlesLynamFallback,
     },
     {
       id: 4,
