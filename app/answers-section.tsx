@@ -1,4 +1,5 @@
 import ContactButton from "@/components/contact-button";
+import "@/styles/answers.css";
 
 export default function AnswersSection() {
   return (

@@ -1,8 +1,6 @@
 import "@/styles/globals.css";
 import "@/styles/site.css";
 
-import "@/styles/answers.css";
-
 import Script from "next/script";
 import NavBar from "@/components/nav-bar";
 import Footer from "@/components/footer";
