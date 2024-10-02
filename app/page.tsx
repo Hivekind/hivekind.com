@@ -10,6 +10,7 @@ import TestimonialCarousel from "@/components/testimonial-carousel";
 import FeatureComparisonSection from "./feature-comparison-section";
 import FeatureSection from "./feature-section";
 import AdvantagesSection from "./advantages-section";
+import CasestudiesSection from "./casestudies-section";
 
 export default function Home() {
   const title = "Malaysia's premier software development company";
