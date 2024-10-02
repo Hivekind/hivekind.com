@@ -7,10 +7,10 @@ import softwareDevelopmentCompanyPhotomontage from "@/public/images/software-dev
 import softwareDevelopmentCompanyPhotomontageFallback from "@/public/images/software-development-company-photomontage.jpeg";
 
 import TestimonialCarousel from "@/components/testimonial-carousel";
-import FeatureComparisonSection from "./feature-comparison-section";
-import FeatureSection from "./feature-section";
 import AdvantagesSection from "./advantages-section";
 import CasestudiesSection from "./casestudies-section";
+import AnswersSection from "./answers-section";
+import BlogSection from "./blog-section";
 
 export default function Home() {
   const title = "Malaysia's premier software development company";
@@ -38,34 +38,15 @@ export default function Home() {
           </div>
         </Header>
 
-        <FeatureComparisonSection />
-        <FeatureSection />
+        <AnswersSection />
+
+        <TestimonialCarousel />
 
         <AdvantagesSection />
 
-        <section className="work-section">
-          <div className="padding-global">
-            <div className="container-large">
-              <div className="margin-top margin-xxlarge">
-                <div className="container-small">
-                  <div className="text-align-center">
-                    <div className="margin-bottom">
-                      <div className="margin-large">
-                        <h2>We deliver results.</h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="padding-section-medium">
-                <div className="container-medium">
-                  <FeaturedWork />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <TestimonialCarousel />
+        <CasestudiesSection />
+
+        <BlogSection />
 
         <ContactUsSection
           heading="Need help building your product?"
