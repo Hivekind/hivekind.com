@@ -1,3 +1,4 @@
+import TestimonialCarousel from "@/components/testimonial-carousel";
 import AIFlowSection from "./ai-flow-section";
 import BlogSection from "./blog-section";
 import HeaderSection from "./header-section";
@@ -10,6 +11,7 @@ export default function AiProductDevelopment() {
       <HeaderSection />
       <WhySection />
       <AIFlowSection />
+      <TestimonialCarousel />
       <StepsSection />
       <BlogSection />
     </>
