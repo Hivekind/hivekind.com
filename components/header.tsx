@@ -6,10 +6,11 @@ interface HeaderProps {
   description: string;
   paddingStyle?: string;
   showContactButton?: boolean;
+  cta?: string;
   children?: React.ReactNode;
 }
 
-const Header = ({ title, description, paddingStyle, showContactButton = true, children }: HeaderProps) => {
+const Header = ({ title, description, paddingStyle, showContactButton = true, cta, children }: HeaderProps) => {
   return (
     <header className="header-section">
       <div className="padding-global">
@@ -18,12 +19,12 @@ const Header = ({ title, description, paddingStyle, showContactButton = true, ch
             <div className="header_component">
               <div className="margin-bottom margin-xxlarge">
                 <div className="text-align-center">
-                  <div className="max-width-large">
+                  <div className="max-width-xlarge">
                     <div className="margin-bottom margin-small">
                       <h1>{title}</h1>
                     </div>
                     <p className="text-size-medium">{description}</p>
-                    {showContactButton && <ContactButton />}
+                    {showContactButton && <ContactButton cta={cta} />}
                   </div>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import "@/styles/site.css";
+
 import Script from "next/script";
 import NavBar from "@/components/nav-bar";
 import Footer from "@/components/footer";
@@ -8,7 +9,7 @@ import { lato, merriweather } from "@/fonts";
 import { getPathnameFromState } from "@/lib/utils";
 import type { Metadata, ResolvingMetadata } from "next";
 import { fieldsType, getByField } from "@/lib/contentfulApi";
-import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager } from "@next/third-parties/google";
 
 type Props = {
   params: { id: string };
