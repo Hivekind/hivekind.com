@@ -34,7 +34,7 @@ export default function AnswersSection() {
                     <div className="answers_image-wrapper">
                       <img
                         sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 44vw"
-                        srcset="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack.jpg 1250w"
+                        srcSet="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack.jpg 1250w"
                         alt="Yuri shifting through his tech stack"
                         src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack.jpg"
                         loading="lazy"
@@ -55,9 +55,9 @@ export default function AnswersSection() {
                   <p>
                     It depends on a few key things, like your team’s skills and
                     the type of product you’re building. The right tech stack
-                    should match your project’s needs and your team's expertise
-                    to ensure everything runs smoothly. Don’t get easily swayed
-                    by the shiniest new toy in town.
+                    should match your project&rsquo;s needs and your
+                    team&rsquo;s expertise to ensure everything runs smoothly.
+                    Don’t get easily swayed by the shiniest new toy in town.
                   </p>
                 </div>
                 <div className="answer_item">
@@ -65,7 +65,7 @@ export default function AnswersSection() {
                     <div className="answers_image-wrapper">
                       <img
                         sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 44vw"
-                        srcset="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines.jpg 1250w"
+                        srcSet="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines.jpg 1250w"
                         alt="Jose in the meeting room"
                         src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines.jpg"
                         loading="lazy"
@@ -96,7 +96,7 @@ export default function AnswersSection() {
                     <div className="answers_image-wrapper">
                       <img
                         sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 44vw"
-                        srcset="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working.jpg 1250w"
+                        srcSet="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working.jpg 1250w"
                         alt="Calum working on a project"
                         src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working.jpg"
                         loading="lazy"
@@ -127,7 +127,7 @@ export default function AnswersSection() {
                     <div className="answers_image-wrapper">
                       <img
                         sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 44vw"
-                        srcset="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office.jpg 1250w"
+                        srcSet="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office.jpg 1250w"
                         alt="Hivekind office"
                         src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office.jpg"
                         loading="lazy"
