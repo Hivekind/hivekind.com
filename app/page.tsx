@@ -11,7 +11,6 @@ import AdvantagesSection from "./advantages-section";
 import CasestudiesSection from "./casestudies-section";
 import AnswersSection from "./answers-section";
 import BlogSection from "./blog-section";
-import AiProcessAccordion from "@/components/ai-process-accordion";
 
 export default function Home() {
   const title = "Malaysia's premier software development company";
@@ -38,7 +37,6 @@ export default function Home() {
             />
           </div>
         </Header>
-        <AiProcessAccordion />
 
         <AnswersSection />
 
