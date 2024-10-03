@@ -36,7 +36,7 @@ import jayasimhanMasilamaniFallback from "@/public/images/jayasimhan-masilamani.
 import TestimonialSection from "@/components/testimonial-section";
 
 export default function ServicesPage() {
-  const title = "Build software with confidence.";
+  const title = "Build software with confidence";
   const description =
     "Whether you're a startup or an established enterprise, Hivekind is here to help you through the tricky parts of making software. We turn problems into opportunities and your ideas into market-ready products.";
 
@@ -63,15 +63,14 @@ export default function ServicesPage() {
                 <div className="margin-bottom margin-xxlarge">
                   <div className="max-width-large">
                     <div className="margin-bottom margin-small">
-                      <h2>First, we discover.</h2>
+                      <h2>Get your foundation right</h2>
                     </div>
                     <p className="text-size-medium">
-                      It’s tempting to jump right into building a product.
-                      However, creating a product without proper research is
-                      like trying to solve a complex puzzle without all the
-                      pieces. You only realize some pieces are missing when it’s
-                      too late. This is why we start our projects with
-                      discovery.
+                      Jumping straight into building your product is exciting,
+                      but skipping the research is like trying to put together a
+                      puzzle with missing pieces. You won’t see what’s missing
+                      until it’s too late. That’s why our discovery services are
+                      here to make sure you’re fully prepared before you begin.
                     </p>
                   </div>
                 </div>
@@ -163,7 +162,7 @@ export default function ServicesPage() {
                   <div className="text-align-center">
                     <div className="max-width-large">
                       <div className="margin-bottom margin-small">
-                        <h2>Finally, we take care.</h2>
+                        <h2>Support, whenever you need it</h2>
                       </div>
                       <p className="text-size-medium">
                         We make sure your apps stay up-to-date and work

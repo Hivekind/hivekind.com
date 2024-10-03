@@ -5,7 +5,17 @@ import StaticImage from "@/components/static-image";
 import topSoftwareDevelopmentCompanyMalaysiaAwards from "@/public/images/top-software-development-company-malaysia-awards.webp";
 import topSoftwareDevelopmentCompanyMalaysiaAwardsFallback from "@/public/images/top-software-development-company-malaysia-awards.png";
 
-const ContactUsSection = ({ className, heading, body, cta }: { className?: string, heading?: string, body?: string, cta?: string }) => {
+const ContactUsSection = ({
+  className,
+  heading,
+  body,
+  cta,
+}: {
+  className?: string;
+  heading?: string;
+  body?: string;
+  cta?: string;
+}) => {
   return (
     <section className={`cta_section ${className}`}>
       <div
