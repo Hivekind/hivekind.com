@@ -1,21 +1,24 @@
 import StaticImage from "@/components/static-image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import "@/styles/testimonial-carousel.css";
 
 export default function TestimonialSection({
   quote,
   name,
   title,
+  bgColorClass = "",
   image,
   imageFallback,
 }: {
   quote: string;
   name: string;
   title: string;
+  bgColorClass?: string;
   image: StaticImport;
   imageFallback: StaticImport;
 }) {
   return (
-    <section className="testimonial-section">
+    <section className={`testimonial-section ${bgColorClass}`}>
       <div className="padding-global">
         <div className="container-large">
           <div className="padding-section-large">

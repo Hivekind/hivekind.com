@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TestimonialSection from "./testimonial-section";
 import "@/styles/testimonial-carousel.css";
 
@@ -9,26 +9,25 @@ import mitchGelberFallback from "@/public/images/mitch-gelber.jpg";
 import lindyLedohowski from "@/public/images/lindy-ledohowski.webp";
 import lindyLedohowskiFallback from "@/public/images/lindy-ledohowski.jpg";
 
+import charlesLynam from "@/public/images/charles-lynam.webp";
+import charlesLynamFallback from "@/public/images/charles-lynam.jpg";
+
 import jayasimhanMasilamani from "@/public/images/jayasimhan-masilamani.webp";
 import jayasimhanMasilamaniFallback from "@/public/images/jayasimhan-masilamani.jpg";
 
 import tonyJones from "@/public/images/tony-jones.webp";
 import tonyJonesFallback from "@/public/images/tony-jones.jpeg";
 
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import RightArrowSvg from "./svgs/right-arrow-svg";
 import LeftArrowSVG from "./svgs/left-arrow-svg";
 
-interface CarouselItem {
-  id: number;
-  quote: string;
-  name: string;
-  title: string;
-  image: StaticImport;
-  imageFallback: StaticImport;
+interface TestimonialCarouselProps {
+  bgColorClass: string;
 }
 
-const TestimonialCarousel: React.FC = () => {
+const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
+  bgColorClass,
+}) => {
   const items = [
     {
       id: 1,
@@ -54,8 +53,8 @@ const TestimonialCarousel: React.FC = () => {
         "The team is technically very capable, and has an effective process to undertake research and make recommendations. Their style responded very effectively to our idiosyncratic culture and needs. This was one of the better consulting engagements I've been associated with in many years.",
       name: "Charles Lynam",
       title: "Commercial Director, HosPortal",
-      image: lindyLedohowski,
-      imageFallback: lindyLedohowskiFallback,
+      image: charlesLynam,
+      imageFallback: charlesLynamFallback,
     },
     {
       id: 4,
@@ -78,6 +77,7 @@ const TestimonialCarousel: React.FC = () => {
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const carouselRef = React.useRef<HTMLDivElement>(null);
 
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
@@ -91,36 +91,50 @@ const TestimonialCarousel: React.FC = () => {
     );
   };
 
+  useEffect(() => {
+    updateCarousel();
+  }, [activeIndex]);
+
+  const updateCarousel = () => {
+    if (carouselRef.current) {
+      carouselRef.current.style.transform = `translateX(-${
+        activeIndex * 100
+      }%)`;
+    }
+  };
+
   return (
     <div className="testimonial-carousel">
       {/* Testimonials */}
-      <div className="testimonials">
+      <div className="testimonials" ref={carouselRef}>
         {items.map((item, index) => (
-          <div
-            key={index}
-            className={`testimonial-item ${
-              index === activeIndex ? "show-item" : "hide-item"
-            }`}
-          >
+          <div key={index} className="testimonial-item">
             <TestimonialSection
               quote={item.quote}
               name={item.name}
               title={item.title}
               image={item.image}
               imageFallback={item.imageFallback}
+              bgColorClass={bgColorClass}
             />
           </div>
         ))}
       </div>
       {/* Navigation Controls */}
       <div className="navigation-controls">
-        <button onClick={handlePrev} className="testimonials_arrow">
+        <button
+          onClick={handlePrev}
+          className={`testimonials_arrow ${bgColorClass}`}
+        >
           <div className="testimonials_arrow-icon">
             <LeftArrowSVG />
           </div>
         </button>
 
-        <button onClick={handleNext} className="testimonials_arrow">
+        <button
+          onClick={handleNext}
+          className={`testimonials_arrow ${bgColorClass}`}
+        >
           <div className="testimonials_arrow-icon">
             <RightArrowSvg />
           </div>
