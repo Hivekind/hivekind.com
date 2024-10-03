@@ -21,7 +21,7 @@ const ContactUsSection = ({
       <div
         className={`padding-global ${className || "background-color-white"}`}
       >
-        <div className="container-medium">
+        <div className="container-large">
           <div className="padding-section-large">
             <div className="w-layout-grid cta_component">
               <div className="cta_content">
