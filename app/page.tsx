@@ -1,7 +1,6 @@
 import ContactUsSection from "@/components/contact-us-section";
 import Header from "@/components/header";
 import StaticImage from "@/components/static-image";
-import FeaturedWork from "./featured-work";
 
 import softwareDevelopmentCompanyPhotomontage from "@/public/images/software-development-company-photomontage.webp";
 import softwareDevelopmentCompanyPhotomontageFallback from "@/public/images/software-development-company-photomontage.jpeg";

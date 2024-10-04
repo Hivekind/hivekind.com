@@ -2714,3 +2714,8 @@ strong {
   justify-content: flex-start;
   align-items: center;
 }
+
+.max-width-xlarge {
+  width: 100%;
+  max-width: 64rem;
+}
