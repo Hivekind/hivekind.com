@@ -30,7 +30,7 @@ export default function HeaderSection() {
                   src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development.png"
                   loading="eager"
                   sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 42vw"
-                  srcset="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development-p-500.png 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development-p-800.png 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development-p-1080.png 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development.png 1264w"
+                  srcSet="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development-p-500.png 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development-p-800.png 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development-p-1080.png 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development.png 1264w"
                   alt="AI product development"
                   className="header-image"
                   data-cmp-ab="2"
