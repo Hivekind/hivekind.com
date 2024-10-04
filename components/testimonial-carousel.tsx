@@ -22,7 +22,7 @@ import RightArrowSvg from "./svgs/right-arrow-svg";
 import LeftArrowSVG from "./svgs/left-arrow-svg";
 
 interface TestimonialCarouselProps {
-  bgColorClass: string;
+  bgColorClass?: string;
 }
 
 const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
