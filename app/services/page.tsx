@@ -34,6 +34,7 @@ import jayasimhanMasilamani from "@/public/images/jayasimhan-masilamani.webp";
 import jayasimhanMasilamaniFallback from "@/public/images/jayasimhan-masilamani.jpg";
 
 import TestimonialSection from "@/components/testimonial-section";
+import ProductDevelopmentSection from "./product-development-section";
 
 export default function ServicesPage() {
   const title = "Build software with confidence";
@@ -95,6 +96,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      <ProductDevelopmentSection />
       <section className="dev-section">
         <div className="padding-global">
           <div className="container-large">
