@@ -15,18 +15,6 @@ import hivekindProductDiscoveryFallback from "@/public/images/hivekind-product-d
 import hivekindTechnicalDiscovery from "@/public/images/hivekind-technical-discovery.webp";
 import hivekindTechnicalDiscoveryFallback from "@/public/images/hivekind-technical-discovery.png";
 
-import hivekindMinimumViableProduct from "@/public/images/hivekind-minimum-viable-product.webp";
-import hivekindMinimumViableProductFallback from "@/public/images/hivekind-minimum-viable-product.png";
-
-import hivekindProductMarketFit from "@/public/images/hivekind-product-market-fit.webp";
-import hivekindProductMarketFitFallback from "@/public/images/hivekind-product-market-fit.png";
-
-import hivekindCustomSoftwareDevelopment from "@/public/images/hivekind-custom-software-development.webp";
-import hivekindCustomSoftwareDevelopmentFallback from "@/public/images/hivekind-custom-software-development.png";
-
-import hivekindProductScaling from "@/public/images/hivekind-product-scaling.webp";
-import hivekindProductScalingFallback from "@/public/images/hivekind-product-scaling.png";
-
 import hivekindTechnicalSupport from "@/public/images/hivekind-technical-support.webp";
 import hivekindTechnicalSupportFallback from "@/public/images/hivekind-technical-support.png";
 
@@ -97,64 +85,6 @@ export default function ServicesPage() {
         </div>
       </section>
       <ProductDevelopmentSection />
-      <section className="dev-section">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="padding-section-large">
-              <div className="dev_component">
-                <div className="margin-bottom margin-xxlarge">
-                  <div className="w-layout-grid layout251_content">
-                    <div className="layout251_content-left">
-                      <h2>Next, we build and scale.</h2>
-                    </div>
-                    <div className="layout251_content-right">
-                      <p className="text-size-medium">
-                        Get in front of your customers faster by launching an
-                        MVP. Iterate based on customer feedback to find the
-                        perfect Product-Market fit. Build features and products
-                        using future-proof technologies to ensure long-term
-                        success. Scale your product to meet the needs of your
-                        expanding customer base.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-layout-grid dev_list">
-                  <ServiceItemCard
-                    image={hivekindMinimumViableProduct}
-                    imageFallback={hivekindMinimumViableProductFallback}
-                    alt="Minimum Viable Product"
-                    heading="Minimum Viable Product"
-                    body="Minimize risks by testing your idea with a Minimum Viable Product (MVP) application. We can help you quickly launch a basic version of your product, enabling you to gather feedback and iterate faster."
-                  />
-                  <ServiceItemCard
-                    image={hivekindProductMarketFit}
-                    imageFallback={hivekindProductMarketFitFallback}
-                    alt="Product-Market Fit"
-                    heading="Product-Market Fit"
-                    body="Ensure your product fits perfectly with market demands. By working together to fine-tune your product, we make sure it meets the needs of your target market, which makes your customers happier and your product more successful."
-                  />
-                  <ServiceItemCard
-                    image={hivekindCustomSoftwareDevelopment}
-                    imageFallback={hivekindCustomSoftwareDevelopmentFallback}
-                    alt="Custom Software Development"
-                    heading="Custom Software Development"
-                    body="We specialize in developing custom solutions tailored to meet your unique business requirements and goals. We achieve this by using trusted and tested technologies that will help you scale with your business."
-                    link="/services/custom-software-development"
-                  />
-                  <ServiceItemCard
-                    image={hivekindProductScaling}
-                    imageFallback={hivekindProductScalingFallback}
-                    alt="Product Scaling"
-                    heading="Product Scaling"
-                    body="Scale your product along with your business. We provide expert strategies and dedicated support to help you efficiently expand your product's capabilities and reach as your business continues to grow."
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="support-section">
         <div className="padding-global">
           <div className="container-large">
