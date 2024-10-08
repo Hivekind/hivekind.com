@@ -29,7 +29,7 @@ const Header = ({
             <div className="header_component">
               <div className="margin-bottom margin-xxlarge">
                 <div className="text-align-center">
-                  <div className="max-width-xlarge">
+                  <div className="max-width-large">
                     <div className="margin-bottom margin-small">
                       <h1>{title}</h1>
                     </div>

@@ -15,18 +15,6 @@ import hivekindProductDiscoveryFallback from "@/public/images/hivekind-product-d
 import hivekindTechnicalDiscovery from "@/public/images/hivekind-technical-discovery.webp";
 import hivekindTechnicalDiscoveryFallback from "@/public/images/hivekind-technical-discovery.png";
 
-import hivekindMinimumViableProduct from "@/public/images/hivekind-minimum-viable-product.webp";
-import hivekindMinimumViableProductFallback from "@/public/images/hivekind-minimum-viable-product.png";
-
-import hivekindProductMarketFit from "@/public/images/hivekind-product-market-fit.webp";
-import hivekindProductMarketFitFallback from "@/public/images/hivekind-product-market-fit.png";
-
-import hivekindCustomSoftwareDevelopment from "@/public/images/hivekind-custom-software-development.webp";
-import hivekindCustomSoftwareDevelopmentFallback from "@/public/images/hivekind-custom-software-development.png";
-
-import hivekindProductScaling from "@/public/images/hivekind-product-scaling.webp";
-import hivekindProductScalingFallback from "@/public/images/hivekind-product-scaling.png";
-
 import hivekindTechnicalSupport from "@/public/images/hivekind-technical-support.webp";
 import hivekindTechnicalSupportFallback from "@/public/images/hivekind-technical-support.png";
 
@@ -34,9 +22,10 @@ import jayasimhanMasilamani from "@/public/images/jayasimhan-masilamani.webp";
 import jayasimhanMasilamaniFallback from "@/public/images/jayasimhan-masilamani.jpg";
 
 import TestimonialSection from "@/components/testimonial-section";
+import ProductDevelopmentSection from "./product-development-section";
 
 export default function ServicesPage() {
-  const title = "Build software with confidence.";
+  const title = "Build software with confidence";
   const description =
     "Whether you're a startup or an established enterprise, Hivekind is here to help you through the tricky parts of making software. We turn problems into opportunities and your ideas into market-ready products.";
 
@@ -63,15 +52,14 @@ export default function ServicesPage() {
                 <div className="margin-bottom margin-xxlarge">
                   <div className="max-width-large">
                     <div className="margin-bottom margin-small">
-                      <h2>First, we discover.</h2>
+                      <h2>Get your foundation right</h2>
                     </div>
                     <p className="text-size-medium">
-                      It’s tempting to jump right into building a product.
-                      However, creating a product without proper research is
-                      like trying to solve a complex puzzle without all the
-                      pieces. You only realize some pieces are missing when it’s
-                      too late. This is why we start our projects with
-                      discovery.
+                      Jumping straight into building your product is exciting,
+                      but skipping the research is like trying to put together a
+                      puzzle with missing pieces. You won’t see what’s missing
+                      until it’s too late. That’s why our discovery services are
+                      here to make sure you’re fully prepared before you begin.
                     </p>
                   </div>
                 </div>
@@ -96,64 +84,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <section className="dev-section">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="padding-section-large">
-              <div className="dev_component">
-                <div className="margin-bottom margin-xxlarge">
-                  <div className="w-layout-grid layout251_content">
-                    <div className="layout251_content-left">
-                      <h2>Next, we build and scale.</h2>
-                    </div>
-                    <div className="layout251_content-right">
-                      <p className="text-size-medium">
-                        Get in front of your customers faster by launching an
-                        MVP. Iterate based on customer feedback to find the
-                        perfect Product-Market fit. Build features and products
-                        using future-proof technologies to ensure long-term
-                        success. Scale your product to meet the needs of your
-                        expanding customer base.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-layout-grid dev_list">
-                  <ServiceItemCard
-                    image={hivekindMinimumViableProduct}
-                    imageFallback={hivekindMinimumViableProductFallback}
-                    alt="Minimum Viable Product"
-                    heading="Minimum Viable Product"
-                    body="Minimize risks by testing your idea with a Minimum Viable Product (MVP) application. We can help you quickly launch a basic version of your product, enabling you to gather feedback and iterate faster."
-                  />
-                  <ServiceItemCard
-                    image={hivekindProductMarketFit}
-                    imageFallback={hivekindProductMarketFitFallback}
-                    alt="Product-Market Fit"
-                    heading="Product-Market Fit"
-                    body="Ensure your product fits perfectly with market demands. By working together to fine-tune your product, we make sure it meets the needs of your target market, which makes your customers happier and your product more successful."
-                  />
-                  <ServiceItemCard
-                    image={hivekindCustomSoftwareDevelopment}
-                    imageFallback={hivekindCustomSoftwareDevelopmentFallback}
-                    alt="Custom Software Development"
-                    heading="Custom Software Development"
-                    body="We specialize in developing custom solutions tailored to meet your unique business requirements and goals. We achieve this by using trusted and tested technologies that will help you scale with your business."
-                    link="/services/custom-software-development"
-                  />
-                  <ServiceItemCard
-                    image={hivekindProductScaling}
-                    imageFallback={hivekindProductScalingFallback}
-                    alt="Product Scaling"
-                    heading="Product Scaling"
-                    body="Scale your product along with your business. We provide expert strategies and dedicated support to help you efficiently expand your product's capabilities and reach as your business continues to grow."
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProductDevelopmentSection />
       <section className="support-section">
         <div className="padding-global">
           <div className="container-large">
@@ -163,7 +94,7 @@ export default function ServicesPage() {
                   <div className="text-align-center">
                     <div className="max-width-large">
                       <div className="margin-bottom margin-small">
-                        <h2>Finally, we take care.</h2>
+                        <h2>Support, whenever you need it</h2>
                       </div>
                       <p className="text-size-medium">
                         We make sure your apps stay up-to-date and work
@@ -386,7 +317,11 @@ export default function ServicesPage() {
         imageFallback={jayasimhanMasilamaniFallback}
       />
 
-      <ContactUsSection />
+      <ContactUsSection
+        heading="Need help building your product?"
+        body="Reach out to us by filling out the form on our contact page. If you need an NDA, just let us know, and we’ll gladly provide one!"
+        cta="Take me to the contact page"
+      />
     </main>
   );
 }
