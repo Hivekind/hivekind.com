@@ -3,7 +3,7 @@ import ContentfulImage from "../contentful-image";
 
 export type CardListItemProps = {
   url: string;
-  imageUrl: string;
+  imageUrl?: string;
   imageAltText?: string;
   imageInset?: boolean;
   topic: string;

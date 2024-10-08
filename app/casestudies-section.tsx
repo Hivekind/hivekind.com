@@ -1,7 +1,13 @@
 import { CardList } from "@/components/card-list/card-list";
 import "@/styles/casestudies.css";
+import { getAllPosts } from "@/lib/contentfulApi";
 
-export default function CasestudiesSection() {
+export default async function CasestudiesSection() {
+  const { posts } = await getAllPosts({
+    contentType: "work",
+    order: ["fields.order"],
+  });
+
   return (
     <section className="casestudies-section background-color-white">
       <div className="padding-global">
@@ -22,42 +28,14 @@ export default function CasestudiesSection() {
 
               <CardList
                 cols={3}
-                items={[
-                  {
-                    url: "/blog/solving-chatbot-woes-in-the-pre-llm-era",
-                    imageUrl:
-                      "https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a5d19948e182bf2575624_malaysia-carbon-score.png",
-                    imageAltText: "Chatbot woes in the pre-LLM era",
-                    imageInset: true,
-                    topic: "MGBC",
-                    title: "Solving chatbot woes in the pre-LLM era",
-                    summary:
-                      "Discover how a media company overcame early chatbot challenges in 2017, transforming customer service through innovative problem-solving.",
-                  },
-                  {
-                    url: "/blog/implementing-response-streaming-from-llm",
-                    imageUrl:
-                      "https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png",
-                    imageAltText: "Streaming responses from LLM",
-                    imageInset: true,
-                    topic: "EssayJack",
-                    title: "Implementing response streaming from LLMs",
-                    summary:
-                      "In this article, we look at how user experience on AI chat apps can be improved by implementing streaming responses from LLMs.",
-                  },
-                  {
-                    url: "/blog/test-coverage-with-istanbul-nyc-for-typescript-projects",
-                    imageUrl:
-                      "https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/65c43c75467b848333929060_zonejam.png",
-                    imageAltText: "Chatbot woes in the pre-LLM era",
-                    imageInset: true,
-                    topic: "ZoneJam",
-                    title:
-                      "Test Coverage with Istanbul (NYC) for TypeScript Projects",
-                    summary:
-                      "Learn how you can integrate Mocha with NYC to generate comprehensive test coverage reports for your TypeScript project.",
-                  },
-                ]}
+                items={posts.map(({ fields }) => ({
+                  title: fields.name || "Untitled",
+                  summary: fields.caseSummary || "No summary available",
+                  imageUrl: fields.mainImage?.fields.file.url || "",
+                  imageAlt: fields.mainImageAltText || "No image description",
+                  url: `/work/${fields.slug}`,
+                  topic: fields.client || "Unknown client",
+                }))}
               />
             </div>
           </div>
