@@ -1,4 +1,4 @@
-import FeaturedWork from "./featured-work";
+import { CardList } from "@/components/card-list/card-list";
 import "@/styles/casestudies.css";
 
 export default function CasestudiesSection() {
@@ -20,143 +20,45 @@ export default function CasestudiesSection() {
                 </div>
               </div>
 
-              <div className="casestudies_list-wrapper w-dyn-list">
-                <div role="list" className="casestudies_list w-dyn-items">
-                  <div role="listitem" className="w-dyn-item">
-                    <div className="casestudies_item">
-                      <a
-                        href="/work/mvp-development-for-environmental-impact"
-                        className="casestudies_item-link w-inline-block"
-                        data-cmp-ab="2"
-                      >
-                        <div className="margin-bottom margin-small">
-                          <div className="featured-work_image-wrapper">
-                            <img
-                              alt="CarbonScore: MVP Development for Environmental Impact"
-                              loading="lazy"
-                              src="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a5d19948e182bf2575624_malaysia-carbon-score.png"
-                              sizes="100vw"
-                              srcSet="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a5d19948e182bf2575624_malaysia-carbon-score-p-500.png 500w, https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a5d19948e182bf2575624_malaysia-carbon-score-p-800.png 800w, https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a5d19948e182bf2575624_malaysia-carbon-score-p-1080.png 1080w, https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a5d19948e182bf2575624_malaysia-carbon-score.png 1440w"
-                              className="featured-work_image"
-                              data-cmp-ab="2"
-                              data-cmp-info="10"
-                            />
-                          </div>
-                        </div>
-                        <div className="margin-bottom margin-xsmall">
-                          <div className="casestudies_meta-wrapper">
-                            <div className="work_client">
-                              <div>Malaysia Green Building Council</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="margin-bottom margin-xxsmall">
-                          <h3
-                            blocks-non-deletable="true"
-                            className="heading-style-h5"
-                          >
-                            CarbonScore: MVP Development for Environmental
-                            Impact
-                          </h3>
-                        </div>
-                        <div className="text-size-regular">
-                          Malaysia Green Building Council partnered with us to
-                          build and launch the first version of their
-                          CarbonScore application.
-                        </div>
-                        <div className="margin-top margin-small">
-                          <div className="featured-work_button-wrapper">
-                            <div className="button is-link is-icon">
-                              <div>Read more</div>
-                              <div className="icon-embed-xxsmall w-embed">
-                                <svg
-                                  width="16"
-                                  height="16"
-                                  viewBox="0 0 16 16"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M6 3L11 8L6 13"
-                                    stroke="CurrentColor"
-                                    stroke-width="1.5"
-                                  ></path>
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div role="listitem" className="w-dyn-item">
-                    <div className="casestudies_item">
-                      <a
-                        href="/work/essayjack-journey-from-prototype-to-acquisition"
-                        className="casestudies_item-link w-inline-block"
-                        data-cmp-ab="2"
-                      >
-                        <div className="margin-bottom margin-small">
-                          <div className="featured-work_image-wrapper">
-                            <img
-                              alt="EssayJack: Journey from Prototype to Acquisition"
-                              loading="lazy"
-                              src="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png"
-                              sizes="100vw"
-                              srcSet="https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-500.png 500w, https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-800.png 800w, https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack-p-1080.png 1080w, https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png 1440w"
-                              className="featured-work_image"
-                              data-cmp-ab="2"
-                              data-cmp-info="10"
-                            />
-                          </div>
-                        </div>
-                        <div className="margin-bottom margin-xsmall">
-                          <div className="casestudies_meta-wrapper">
-                            <div className="work_client">
-                              <div>EssayJack</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="margin-bottom margin-xxsmall">
-                          <h3
-                            blocks-non-deletable="true"
-                            className="heading-style-h5"
-                          >
-                            EssayJack: Journey from Prototype to Acquisition
-                          </h3>
-                        </div>
-                        <div className="text-size-regular">
-                          Hivekind provided product management, development and
-                          devops services to EssayJack until its eventual
-                          acquisition.
-                        </div>
-                        <div className="margin-top margin-small">
-                          <div className="featured-work_button-wrapper">
-                            <div className="button is-link is-icon">
-                              <div>Read more</div>
-                              <div className="icon-embed-xxsmall w-embed">
-                                <svg
-                                  width="16"
-                                  height="16"
-                                  viewBox="0 0 16 16"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M6 3L11 8L6 13"
-                                    stroke="CurrentColor"
-                                    stroke-width="1.5"
-                                  ></path>
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <CardList
+                cols={3}
+                items={[
+                  {
+                    url: "/blog/solving-chatbot-woes-in-the-pre-llm-era",
+                    imageUrl:
+                      "https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/666a5d19948e182bf2575624_malaysia-carbon-score.png",
+                    imageAltText: "Chatbot woes in the pre-LLM era",
+                    imageInset: true,
+                    topic: "MGBC",
+                    title: "Solving chatbot woes in the pre-LLM era",
+                    summary:
+                      "Discover how a media company overcame early chatbot challenges in 2017, transforming customer service through innovative problem-solving.",
+                  },
+                  {
+                    url: "/blog/implementing-response-streaming-from-llm",
+                    imageUrl:
+                      "https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/6388acbd65306f4c13b60071_essayjack.png",
+                    imageAltText: "Streaming responses from LLM",
+                    imageInset: true,
+                    topic: "EssayJack",
+                    title: "Implementing response streaming from LLMs",
+                    summary:
+                      "In this article, we look at how user experience on AI chat apps can be improved by implementing streaming responses from LLMs.",
+                  },
+                  {
+                    url: "/blog/test-coverage-with-istanbul-nyc-for-typescript-projects",
+                    imageUrl:
+                      "https://cdn.prod.website-files.com/634908b04a6db34c4c0a6620/65c43c75467b848333929060_zonejam.png",
+                    imageAltText: "Chatbot woes in the pre-LLM era",
+                    imageInset: true,
+                    topic: "ZoneJam",
+                    title:
+                      "Test Coverage with Istanbul (NYC) for TypeScript Projects",
+                    summary:
+                      "Learn how you can integrate Mocha with NYC to generate comprehensive test coverage reports for your TypeScript project.",
+                  },
+                ]}
+              />
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { ThreeCols } from "@/components/card-list/three-cols";
+import { CardList } from "@/components/card-list/card-list";
 import "@/styles/blog-section.css";
 
 export default function BlogSection() {
@@ -34,7 +34,7 @@ export default function BlogSection() {
                 </div>
               </div>
 
-              <ThreeCols
+              <CardList
                 items={[
                   {
                     url: "/blog/solving-chatbot-woes-in-the-pre-llm-era",
