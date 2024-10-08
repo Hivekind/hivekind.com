@@ -4,6 +4,14 @@ export type imageFieldType = {
   fields: { file: { url: string } };
 };
 
+export type authorType = {
+  name: string;
+  slug: string;
+  profilePicture: imageFieldType;
+  linkedInLink?: string;
+  githubLink?: string;
+};
+
 export type fieldsType = {
   slug: string;
 
@@ -22,13 +30,7 @@ export type fieldsType = {
   caseSummary: string;
 
   author: {
-    fields: {
-      name: string;
-      slug: string;
-      profilePicture: imageFieldType;
-      linkedInLink?: string;
-      githubLink?: string;
-    };
+    fields: authorType;
   };
 
   postBody: string;
