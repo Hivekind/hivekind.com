@@ -27,7 +27,7 @@ export default async function CasestudiesSection() {
               </div>
 
               <CardList
-                cols={3}
+                cols={posts.length}
                 items={posts.map(({ fields }) => ({
                   title: fields.name || "Untitled",
                   summary: fields.caseSummary || "No summary available",
@@ -35,6 +35,7 @@ export default async function CasestudiesSection() {
                   imageAlt: fields.mainImageAltText || "No image description",
                   url: `/work/${fields.slug}`,
                   topic: fields.client || "Unknown client",
+                  imageInset: true,
                 }))}
               />
             </div>

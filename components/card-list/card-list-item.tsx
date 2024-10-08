@@ -19,7 +19,7 @@ export function CardListItem({ item }: { item: CardListItemProps }) {
         <a href={item.url} className="featuredblog_item-link w-inline-block">
           <div className="bg-[#ffe5a5] rounded">
             <ContentfulImage
-              src={item.imageUrl}
+              src={item.imageUrl || ""}
               loading="lazy"
               sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 28vw"
               className={`${
