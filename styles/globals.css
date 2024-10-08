@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .visually-hidden {
   height: 1px;
   width: 1px;
