@@ -18,7 +18,7 @@ export default async function BlogIndexPage() {
                 <div className="text-align-center">
                   <div className="max-width-large align-center">
                     <div className="margin-bottom margin-small">
-                      <h1>Insights.</h1>
+                      <h1>Insights</h1>
                     </div>
                     <p className="text-size-medium">
                       Discover the Hivekind culture, our processes, findings,

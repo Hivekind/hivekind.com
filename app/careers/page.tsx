@@ -14,7 +14,7 @@ import teamDinnerFallback from "@/public/images/team-dinner.jpg";
 import TestimonialStaff from "./testimonial-staff";
 
 export default async function CareersPage() {
-  const title = "Help us build amazing products.";
+  const title = "Help us build amazing products";
   const description =
     "Hivekind is an engineering company at heart. Founded by software engineers with a strong focus on getting things done, the emphasis on delivery and technical excellence runs strong and has been there from day one, guiding everything else. We take great pride on the quality of our work.";
 
