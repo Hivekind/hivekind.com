@@ -148,3 +148,7 @@ input[type="file"]:focus-visible {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+ul {
+  @apply list-disc list-outside;
+}
