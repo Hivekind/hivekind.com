@@ -12,13 +12,13 @@ export default async function AboutPage() {
     order: ["fields.order"],
   });
 
-  const title = "Your software development partner.";
+  const title = "Your software development partner";
   const description =
     "We are on a mission to help companies build great products that customers love.";
 
   return (
     <main className="main-wrapper">
-      <Header title={title} description={description}>
+      <Header title={title} description={description} showContactButton={false}>
         <div className="image-wrapper">
           <StaticImage
             src={softwareDevelopmentPartner}
@@ -86,7 +86,7 @@ export default async function AboutPage() {
             <div className="padding-section-large">
               <div className="text-align-center">
                 <div className="margin-bottom margin-small">
-                  <h2>Join us.</h2>
+                  <h2>Join us</h2>
                 </div>
                 <p className="text-size-medium">
                   Develop a career with a team that&#x27;s passionate and

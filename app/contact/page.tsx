@@ -133,11 +133,12 @@ export default function ContactPage() {
               <div className="margin-bottom margin-large">
                 <div className="max-width-large">
                   <div className="margin-bottom margin-small">
-                    <h1>Let&#x27;s work together</h1>
+                    <h1>Need help building your product?</h1>
                   </div>
                   <p className="text-size-medium">
-                    Want to talk about your project? Send us your details and we
-                    will get back to you soon.
+                    Send us your details and we will get back to you soon. If
+                    you need an NDA, just let us know, and we’ll gladly provide
+                    one!
                   </p>
                 </div>
               </div>
