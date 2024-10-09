@@ -1,5 +1,14 @@
 import ContactButton from "@/components/contact-button";
 import "@/styles/answers.css";
+import StaticImage from "@/components/static-image";
+import techStack from "@/public/images/tech-stack.webp";
+import techStackFallback from "@/public/images/tech-stack.jpg";
+import meetingDeadlines from "@/public/images/meeting-deadlines.webp";
+import meetingDeadlinesFallback from "@/public/images/meeting-deadlines.jpg";
+import calumWorking from "@/public/images/calum-working.webp";
+import calumWorkingFallback from "@/public/images/calum-working.jpg";
+import hkOffice from "@/public/images/hk-office.webp";
+import hkOfficeFallback from "@/public/images/hk-office.jpg";
 
 export default function AnswersSection() {
   return (
@@ -32,15 +41,12 @@ export default function AnswersSection() {
                 <div className="answer_item">
                   <div className="margin-bottom margin-small">
                     <div className="answers_image-wrapper">
-                      <img
+                      <StaticImage
+                        src={techStack}
+                        srcfallback={techStackFallback}
                         sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 44vw"
-                        srcSet="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack.jpg 1250w"
                         alt="Yuri shifting through his tech stack"
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b33376b2a36e736c848a_tech-stack.jpg"
-                        loading="lazy"
                         className="answers_image"
-                        data-cmp-ab="2"
-                        data-cmp-info="10"
                       />
                     </div>
                   </div>
@@ -63,15 +69,12 @@ export default function AnswersSection() {
                 <div className="answer_item">
                   <div className="margin-bottom margin-small">
                     <div className="answers_image-wrapper">
-                      <img
+                      <StaticImage
+                        src={meetingDeadlines}
+                        srcfallback={meetingDeadlinesFallback}
                         sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 44vw"
-                        srcSet="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines.jpg 1250w"
                         alt="Jose in the meeting room"
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333daeb79ef048b400d_meeting-deadlines.jpg"
-                        loading="lazy"
                         className="answers_image"
-                        data-cmp-ab="2"
-                        data-cmp-info="10"
                       />
                     </div>
                   </div>
@@ -94,15 +97,12 @@ export default function AnswersSection() {
                 <div className="answer_item">
                   <div className="margin-bottom margin-small">
                     <div className="answers_image-wrapper">
-                      <img
+                      <StaticImage
+                        src={calumWorking}
+                        srcfallback={calumWorkingFallback}
                         sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 44vw"
-                        srcSet="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working.jpg 1250w"
                         alt="Calum working on a project"
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333d8b5dd51ed6a8cbe_calum-working.jpg"
-                        loading="lazy"
                         className="answers_image"
-                        data-cmp-ab="2"
-                        data-cmp-info="10"
                       />
                     </div>
                   </div>
@@ -125,15 +125,12 @@ export default function AnswersSection() {
                 <div className="answer_item">
                   <div className="margin-bottom margin-small">
                     <div className="answers_image-wrapper">
-                      <img
+                      <StaticImage
+                        src={hkOffice}
+                        srcfallback={hkOfficeFallback}
                         sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, 44vw"
-                        srcSet="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office-p-500.jpg 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office-p-800.jpg 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office.jpg 1250w"
                         alt="Hivekind office"
-                        src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e1b333f0af7866cfc09966_hk-office.jpg"
-                        loading="lazy"
                         className="answers_image"
-                        data-cmp-ab="2"
-                        data-cmp-info="10"
                       />
                     </div>
                   </div>

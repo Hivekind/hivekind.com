@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import TestimonialSection from "./testimonial-section";
 import "@/styles/testimonial-carousel.css";
 
@@ -91,17 +91,18 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
     );
   };
 
-  useEffect(() => {
-    updateCarousel();
-  }, [activeIndex]);
-
-  const updateCarousel = () => {
+  // Memoize the updateCarousel function
+  const updateCarousel = useCallback(() => {
     if (carouselRef.current) {
       carouselRef.current.style.transform = `translateX(-${
         activeIndex * 100
       }%)`;
     }
-  };
+  }, [activeIndex]);
+
+  useEffect(() => {
+    updateCarousel();
+  }, [updateCarousel]);
 
   return (
     <div className="testimonial-carousel">
