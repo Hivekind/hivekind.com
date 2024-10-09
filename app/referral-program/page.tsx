@@ -20,9 +20,9 @@ export default function ReferralProgramPage() {
                     </h1>
                   </div>
                   <p className="text-size-medium">
-                    Know someone who needs our
-                    <a href="/services">services</a>? Refer them to us and earn
-                    2%-5% of their monthly billings as a reward.
+                    Know someone who needs our <a href="/services">services</a>?
+                    Refer them to us and earn 2%-5% of their monthly billings as
+                    a reward.
                   </p>
                   <div className="margin-top margin-medium">
                     <div className="button-group">
@@ -77,9 +77,9 @@ export default function ReferralProgramPage() {
                       </h3>
                     </div>
                     <p>
-                      Refer us to someone who needs our
-                      <a href="/services">services</a>. Make introductions to
-                      <a href="mailto:hello@hivekind.com">hello@hivekind.com</a>
+                      Refer us to someone who needs our{" "}
+                      <a href="/services">services</a>. Make introductions to{" "}
+                      <a href="mailto:hello@hivekind.com">hello@hivekind.com</a>{" "}
                       and we&#x27;ll take it from there.
                     </p>
                   </div>
