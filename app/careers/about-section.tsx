@@ -31,15 +31,16 @@ const AboutSection = () => {
   const [activeTab, setActiveTab] = useState<number>(1);
   const [prevTab, setPrevTab] = useState<number>(1);
 
-  const imgRefs = [
-    useRef<HTMLDivElement>(null),
-    useRef<HTMLDivElement>(null),
-    useRef<HTMLDivElement>(null),
-  ];
+  // initialize imgRefs using useRef to ensure it persists across renders
+  const imgRefs = useRef<Array<React.RefObject<HTMLDivElement>>>([
+    React.createRef<HTMLDivElement>(),
+    React.createRef<HTMLDivElement>(),
+    React.createRef<HTMLDivElement>(),
+  ]);
 
   useEffect(() => {
-    const prevImgRef = imgRefs[prevTab].current;
-    const activeImgRef = imgRefs[activeTab].current;
+    const prevImgRef = imgRefs.current[prevTab].current;
+    const activeImgRef = imgRefs.current[activeTab].current;
 
     // initial state when page is loaded, activeTab = prevTab = 1, simply display the second image
     if (activeImgRef != null && prevImgRef === activeImgRef) {
@@ -78,7 +79,7 @@ const AboutSection = () => {
         });
       }, 400); // match with CSS time: transition: opacity 400ms ease, visibility 400ms ease;
     }
-  }, [activeTab, imgRefs, prevTab]);
+  }, [activeTab, prevTab]);
 
   const handleTabClick = (index: number) => {
     if (index === activeTab) return;
@@ -140,7 +141,7 @@ const AboutSection = () => {
               <div className={styles.w_tab_content}>
                 <ImageItem
                   index={0}
-                  myRef={imgRefs[0]}
+                  myRef={imgRefs.current[0]}
                   img={
                     <StaticImage
                       src={scrumTraining}
@@ -153,7 +154,7 @@ const AboutSection = () => {
                 />
                 <ImageItem
                   index={1}
-                  myRef={imgRefs[1]}
+                  myRef={imgRefs.current[1]}
                   img={
                     <StaticImage
                       src={hiveklimb}
@@ -166,7 +167,7 @@ const AboutSection = () => {
                 />
                 <ImageItem
                   index={2}
-                  myRef={imgRefs[2]}
+                  myRef={imgRefs.current[2]}
                   img={
                     <StaticImage
                       src={remoteTeam}

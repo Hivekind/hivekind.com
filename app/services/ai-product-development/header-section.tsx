@@ -1,3 +1,7 @@
+import StaticImage from "@/components/static-image";
+import aiProductDevelopment from "@/public/images/ai-product-development.webp";
+import aiProductDevelopmentFallback from "@/public/images/ai-product-development.png";
+
 export default function HeaderSection() {
   return (
     <header className="header-section">
@@ -26,15 +30,13 @@ export default function HeaderSection() {
                 </div>
               </div>
               <div className="header_image-wrapper">
-                <img
-                  src="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development.png"
-                  loading="eager"
+                <StaticImage
+                  src={aiProductDevelopment}
+                  srcfallback={aiProductDevelopmentFallback}
+                  priority={true}
                   sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 42vw"
-                  srcSet="https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development-p-500.png 500w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development-p-800.png 800w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development-p-1080.png 1080w, https://cdn.prod.website-files.com/6347cb105849aecae0fd4ed8/66e282ee35b4e832eeaae8ca_ai-product-development.png 1264w"
                   alt="AI product development"
                   className="header-image"
-                  data-cmp-ab="2"
-                  data-cmp-info="10"
                 />
               </div>
             </div>
