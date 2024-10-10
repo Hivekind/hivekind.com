@@ -31,14 +31,8 @@ const ProductDevelopmentSection: React.FC = () => {
                 </div>
               </div>
               <div className="w-layout-grid grid-list">
-                <div
-                  id="w-node-_7745fe3a-07a6-84d8-fbfa-6e5fbd89d21a-5ddf4216"
-                  className="w-layout-grid layout376_row"
-                >
-                  <div
-                    id="w-node-_7745fe3a-07a6-84d8-fbfa-6e5fbd89d21b-5ddf4216"
-                    className="card-large"
-                  >
+                <div className="w-layout-grid layout376_row">
+                  <div className="card-large">
                     <div className="card-large-content">
                       <div className="card-large-content-top">
                         <div className="margin-bottom margin-small">
@@ -82,10 +76,7 @@ const ProductDevelopmentSection: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <div
-                      id="w-node-_7745fe3a-07a6-84d8-fbfa-6e5fbd89d22e-5ddf4216"
-                      className="card-large-image-wrapper"
-                    >
+                    <div className="card-large-image-wrapper">
                       <StaticImage
                         src={hivekindCustomSoftwareDevelopment}
                         srcfallback={hivekindCustomSoftwareDevelopmentFallback}
