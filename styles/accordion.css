@@ -30,6 +30,7 @@
 .accordion-item.active {
     width: 100rem;
     justify-content: flex-start;
+    transition: width 0s ease-in-out;
 }
 
 .accordion-item.active .accordion-item-content {
@@ -44,6 +45,7 @@
     width: 5rem;
     height: 100%;
     cursor: pointer;
+    min-width: 5rem;
 }
 
 .accordion-content {
@@ -75,5 +77,48 @@
     border-bottom-left-radius: 10px;
     border: 1px solid #000;
     border-right: none;
+}
+
+@media screen and (max-width: 991px) {
+    .accordion {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .accordion-item {
+        display: block;
+        width: 100%;
+        min-height: 5rem;
+        border: 1px solid #000;
+        border-bottom: none;
+        padding-top: 1.4rem;
+        padding-bottom: 1.4rem;
+        transition: min-height 0.3s ease-in-out;
+    }
+
+    .accordion-item.active {
+        width: 100%;
+        min-height: 22rem;
+        transition: min-height 0s ease-in-out;
+    }
+
+    .accordion-content {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .last-item {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-bottom: 1px solid #000;
+    }
+    
+    .first-item {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    
 }
 
