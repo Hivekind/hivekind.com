@@ -26,7 +26,7 @@ interface TestimonialCarouselProps {
 }
 
 const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
-  bgColorClass,
+  bgColorClass = "",
 }) => {
   const items = [
     {
@@ -104,8 +104,51 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
     updateCarousel();
   }, [updateCarousel]);
 
+  useEffect(() => {
+    const element = carouselRef.current;
+    let startX = 0;
+    let startY = 0;
+    let endX = 0;
+    let endY = 0;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      endX = e.touches[0].clientX;
+      endY = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = () => {
+      const diffX = startX - endX;
+      const diffY = startY - endY;
+
+      if (Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX > 0) {
+          handleNext();
+        } else {
+          handlePrev();
+        }
+      }
+    };
+
+    if (element) {
+      element.addEventListener("touchstart", handleTouchStart);
+      element.addEventListener("touchmove", handleTouchMove);
+      element.addEventListener("touchend", handleTouchEnd);
+
+      return () => {
+        element.removeEventListener("touchstart", handleTouchStart);
+        element.removeEventListener("touchmove", handleTouchMove);
+        element.removeEventListener("touchend", handleTouchEnd);
+      };
+    }
+  }, []);
+
   return (
-    <div className="testimonial-carousel">
+    <div className={`testimonial-carousel ${bgColorClass}`}>
       {/* Testimonials */}
       <div className="testimonials" ref={carouselRef}>
         {items.map((item, index) => (
@@ -117,6 +160,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
               image={item.image}
               imageFallback={item.imageFallback}
               bgColorClass={bgColorClass}
+              isCarousel={true}
             />
           </div>
         ))}
