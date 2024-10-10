@@ -25,11 +25,13 @@ export default function Section({
           <div className="padding-section-large">
             <div className="featuredblog_component">
               <div className="margin-bottom margin-xxlarge align-left">
-                <div className="featuredblog_heading-wrapper">
-                  <div className="featuredblog_heading">
+                <div className="items-end flex-1 grid lg:auto-cols-fr grid-cols-[1fr_max-content] lg:gap-x-20">
+                  <div className="">
                     <div className="max-width-large">
                       <div className="margin-bottom margin-xsmall">
-                        <h2>{title}</h2>
+                        <h2 className="leading-tight font-bold text-4xl md:text-[2.75rem] lg:text-5xl">
+                          {title}
+                        </h2>
                       </div>
                       <p className="text-size-medium">{description}</p>
                     </div>
