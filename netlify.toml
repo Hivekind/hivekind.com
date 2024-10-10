@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/work"
-  to = "/"
-  status = 302
-  force = true
