@@ -30,6 +30,7 @@
 .accordion-item.active {
     width: 100rem;
     justify-content: flex-start;
+    transition: width 0s ease-in-out;
 }
 
 .accordion-item.active .accordion-item-content {
@@ -44,6 +45,7 @@
     width: 5rem;
     height: 100%;
     cursor: pointer;
+    min-width: 5rem;
 }
 
 .accordion-content {
@@ -86,14 +88,18 @@
     .accordion-item {
         display: block;
         width: 100%;
+        min-height: 5rem;
         border: 1px solid #000;
         border-bottom: none;
         padding-top: 1.4rem;
         padding-bottom: 1.4rem;
+        transition: min-height 0.3s ease-in-out;
     }
 
     .accordion-item.active {
         width: 100%;
+        min-height: 22rem;
+        transition: min-height 0s ease-in-out;
     }
 
     .accordion-content {
