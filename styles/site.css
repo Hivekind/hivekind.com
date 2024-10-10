@@ -164,12 +164,7 @@ p {
 figure {
   margin: 0 0 10px;
 }
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 10px;
-  padding-left: 40px;
-}
+
 .w-embed:before,
 .w-embed:after {
   content: " ";
@@ -376,16 +371,7 @@ a {
   border-color: #000;
   text-decoration: underline;
 }
-ul {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-left: 1.25rem;
-}
-li {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  padding-left: 0.5rem;
-}
+
 img {
   max-width: 100%;
   display: inline-block;
