@@ -9,6 +9,7 @@ export default function TestimonialSection({
   bgColorClass = "",
   image,
   imageFallback,
+  isCarousel = false,
 }: {
   quote: string;
   name: string;
@@ -16,6 +17,7 @@ export default function TestimonialSection({
   bgColorClass?: string;
   image: StaticImport;
   imageFallback: StaticImport;
+  isCarousel?: boolean;
 }) {
   return (
     <section className={`testimonial-section ${bgColorClass}`}>
@@ -23,7 +25,7 @@ export default function TestimonialSection({
         <div className="container-large">
           <div className="padding-section-large">
             <div className="margin-bottom">
-              <div className="margin-medium">
+              <div className={isCarousel ? "" : "margin-medium"}>
                 <div className="max-width-large align-center">
                   <div className="testimonial_component">
                     <div className="margin-vertical min-testimonial-height">
