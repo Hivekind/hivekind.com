@@ -149,6 +149,22 @@ input[type="file"]:focus-visible {
   display: none;
 }
 
+ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  @apply list-decimal list-outside;
+}
+
 ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
   @apply list-disc list-outside;
+}
+
+li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding-left: 0.5rem;
 }
