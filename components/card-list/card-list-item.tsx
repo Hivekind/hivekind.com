@@ -80,7 +80,7 @@ export function CardListItem({ item }: { item: CardListItemProps }) {
                       <path
                         d="M6 3L11 8L6 13"
                         stroke="CurrentColor"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                       ></path>
                     </svg>
                   </div>
