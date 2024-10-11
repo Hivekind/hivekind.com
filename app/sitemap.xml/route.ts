@@ -30,8 +30,8 @@ const getTopLevelUrls = () => {
   const urls: string[] = [];
 
   items.forEach((item) => {
-    // Exclude the sitemap.xml directory
-    if (item === "sitemap.xml") return;
+    // Exclude "sitemap.xml" and "work" from the sitemap generation
+    if (item === "sitemap.xml" || item === "work") return;
 
     const itemPath = path.join(appDir, item);
     const stat = fs.statSync(itemPath);
