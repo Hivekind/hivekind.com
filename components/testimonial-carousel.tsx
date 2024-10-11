@@ -79,17 +79,17 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselRef = React.useRef<HTMLDivElement>(null);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setActiveIndex((prevIndex) =>
       prevIndex === items.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [items.length]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? items.length - 1 : prevIndex - 1
     );
-  };
+  }, [items.length]);
 
   // Memoize the updateCarousel function
   const updateCarousel = useCallback(() => {
@@ -145,7 +145,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
         element.removeEventListener("touchend", handleTouchEnd);
       };
     }
-  }, []);
+  }, [handleNext, handlePrev]);
 
   return (
     <div className={`testimonial-carousel ${bgColorClass}`}>
