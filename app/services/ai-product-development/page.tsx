@@ -45,11 +45,7 @@ export default async function AiProductDevelopment() {
 
       <AIFlowSection />
       <TestimonialCarousel />
-      <ContactUsSection
-        heading="Need help building your product?"
-        body="Reach out to us by filling out the form on our contact page. If you need an NDA, just let us know, and we’ll gladly provide one!"
-        cta="Take me to the contact page"
-      />
+      <ContactUsSection />
     </>
   );
 }
