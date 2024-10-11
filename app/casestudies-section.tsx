@@ -3,7 +3,13 @@ import "@/styles/casestudies.css";
 import { getAllPosts } from "@/lib/contentfulApi";
 import Section from "@/components/section";
 
-export default async function CasestudiesSection() {
+export default async function CasestudiesSection({
+  description,
+  className,
+}: {
+  description?: string;
+  className?: string;
+}) {
   const { posts } = await getAllPosts({
     contentType: "work",
     order: ["fields.order"],
@@ -14,8 +20,11 @@ export default async function CasestudiesSection() {
   return (
     <Section
       title="Case studies"
-      description="Here’s a closer look at how we helped some of our clients achieve success."
-      className="bg-white"
+      description={
+        description ||
+        "Here’s a closer look at how we helped some of our clients achieve success."
+      }
+      className={className || "bg-white"}
     >
       <CardList
         cols={items.length}
