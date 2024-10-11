@@ -10,13 +10,14 @@
 .accordion-item {
     flex: 1 1 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 5rem;
     min-width: 5rem;
+    max-width: 5rem;
     border: 1px solid #000;
     border-right: none;
-    transition: width 0.3s ease-in-out;
+    transition: max-width 0.8s ease-in-out;
     overflow: hidden;
 }
 
@@ -29,8 +30,7 @@
 /* Accordion item active state */
 .accordion-item.active {
     width: 100rem;
-    justify-content: flex-start;
-    transition: width 0s ease-in-out;
+    max-width: 100rem;
 }
 
 .accordion-item.active .accordion-item-content {
@@ -88,18 +88,19 @@
     .accordion-item {
         display: block;
         width: 100%;
+        max-width: 100%;
         min-height: 5rem;
+        max-height: 5rem;
         border: 1px solid #000;
         border-bottom: none;
         padding-top: 1.4rem;
         padding-bottom: 1.4rem;
-        transition: min-height 0.3s ease-in-out;
+        transition: max-height 0.4s ease-in-out;
     }
 
     .accordion-item.active {
         width: 100%;
-        min-height: 22rem;
-        transition: min-height 0s ease-in-out;
+        max-height: 35rem;
     }
 
     .accordion-content {
