@@ -22,12 +22,10 @@ const AccordionItem = ({
     onClick={onClick}
   >
     <div className="accordion-title">{item.title}</div>
-    {isActive && (
-      <div className="accordion-content">
-        <div className="content-heading">{item.heading}</div>
-        <div className="content-description">{item.content}</div>
-      </div>
-    )}
+    <div className="accordion-content">
+      <div className="content-heading">{item.heading}</div>
+      <div className="content-description">{item.content}</div>
+    </div>
   </div>
 );
 
