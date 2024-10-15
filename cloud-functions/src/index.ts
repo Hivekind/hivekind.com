@@ -20,7 +20,7 @@ exports.sendEmail = functions
     ],
   })
   .https.onCall(async (data: { [index: string]: string }) => {
-    const { subject, message } = data;
+    const { subject, message, name, company } = data;
     const transporter = nodemailer.createTransport({
       host: process.env.MAILGUN_HOST,
       port: process.env.MAILGUN_PORT,
@@ -30,25 +30,19 @@ exports.sendEmail = functions
       },
     });
 
+    const emailData = {
+      from: `${name} ${company} <${process.env.CONTACT_FORM_RECEIVING_EMAIL}>`,
+      to: process.env.CONTACT_FORM_RECEIVING_EMAIL,
+      subject: subject,
+      html: message,
+    };
+
     try {
-      const emailData = {
-        from: `Hivekind Website <${process.env.CONTACT_FORM_RECEIVING_EMAIL}>`,
-        to: process.env.CONTACT_FORM_RECEIVING_EMAIL,
-        subject: subject,
-        html: message,
-      };
+      // Send email
+      const info = await transporter.sendMail(emailData);
+      console.log("Message sent: %s", info.messageId);
 
-      const result = await transporter.sendMail(
-        emailData,
-        (error: any, info: any) => {
-          if (error) {
-            return console.log(error);
-          }
-          console.log("Message sent: %s", info.messageId);
-        }
-      );
-
-      return { success: true, result };
+      return { success: true, messageId: info.messageId };
     } catch (error) {
       console.error("Error sending email:", error);
       return { success: false, error };
