@@ -1,3 +1,5 @@
-# from    to    status
-/work     /     302!
-/work     /     302
+# from            to                                status
+/work             /                                   302!
+/work             /                                   302
+
+/labs/hivechat/*  https://hivechat.pages.dev/:splat  200
