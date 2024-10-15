@@ -21,13 +21,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { seoTitle, seoDescription, ogImage } = post.fields;
   const images = [ogImage?.fields.file.url].filter(Boolean) as string[];
+  const url = `/blog/${params.slug}`;
 
   return {
+    metadataBase: new URL("https://hivekind.com"),
     title: seoTitle,
     description: seoDescription,
     openGraph: {
       images,
-      url: `/blog/${params.slug}`,
+      url,
+    },
+    alternates: {
+      canonical: url,
     },
   };
 }

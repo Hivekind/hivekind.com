@@ -118,7 +118,7 @@ export default function StepsSection() {
             </div>
             <div className="margin-top margin-medium">
               <div className="button-group is-center">
-                <a href="/contact" className="button w-button" data-cmp-ab="2">
+                <a href="/contact" className="button w-button">
                   Get in touch
                 </a>
               </div>

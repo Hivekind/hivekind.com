@@ -54,7 +54,6 @@ const ProductDevelopmentSection: React.FC = () => {
                           <a
                             href="/services/custom-software-development"
                             className="button is-link is-icon w-inline-block"
-                            data-cmp-ab="2"
                           >
                             <div>Learn more</div>
                             <div className="icon-embed-xxsmall w-embed">
@@ -169,7 +168,6 @@ const ProductDevelopmentSection: React.FC = () => {
                           <a
                             href="/services/ai-product-development"
                             className="button is-link is-icon w-inline-block"
-                            data-cmp-ab="2"
                           >
                             <div>Learn more</div>
                             <div className="icon-embed-xxsmall w-embed">

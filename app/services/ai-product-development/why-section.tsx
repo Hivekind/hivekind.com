@@ -10,10 +10,7 @@ export default function WhySection() {
         <div className="w-layout-grid discovery_list">
           <div className="discovery_item">
             <div className="margin-bottom margin-medium">
-              <div
-                data-w-id="c89f2773-f4a5-d785-b99a-99f838d911c1"
-                className="icon-embed-small w-embed"
-              >
+              <div className="icon-embed-small w-embed">
                 <svg
                   width="100%"
                   height="100%"
@@ -39,10 +36,7 @@ export default function WhySection() {
           </div>
           <div className="discovery_item">
             <div className="margin-bottom margin-medium">
-              <div
-                data-w-id="cd88069f-2b71-1eed-9d40-1f5eb3df2b5c"
-                className="icon-embed-small w-embed"
-              >
+              <div className="icon-embed-small w-embed">
                 <svg
                   width="100%"
                   height="100%"
@@ -70,10 +64,7 @@ export default function WhySection() {
             className="discovery_item"
           >
             <div className="margin-bottom margin-medium">
-              <div
-                data-w-id="93a85a0f-83a4-c187-c40a-e9d8506cdc03"
-                className="icon-embed-small w-embed"
-              >
+              <div className="icon-embed-small w-embed">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="100%"
@@ -109,10 +100,7 @@ export default function WhySection() {
             className="discovery_item"
           >
             <div className="margin-bottom margin-medium">
-              <div
-                data-w-id="32763b1e-f46a-9263-c610-3541b471ce3c"
-                className="icon-embed-small w-embed"
-              >
+              <div className="icon-embed-small w-embed">
                 <svg
                   width="100%"
                   height="100%"
