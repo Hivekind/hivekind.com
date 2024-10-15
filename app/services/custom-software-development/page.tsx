@@ -1,5 +1,4 @@
 import ContactUsSection from "@/components/contact-us-section";
-import ListItem from "@/components/list-item";
 import StaticImage from "@/components/static-image";
 
 import hivekindCustomSoftwareDevelopment from "@/public/images/hivekind-custom-software-development.webp";
