@@ -95,7 +95,7 @@ export default function ContactPage() {
     setDisableSubmitButton(true);
 
     const data = {
-      subject: `New form submission on Hivekind website`,
+      subject: `New form submission on Hivekind website: ${name}, ${company}`,
       message: `
         <html>
           <body>
@@ -109,6 +109,8 @@ export default function ContactPage() {
           </body>
         </html>
       `,
+      name,
+      company,
     };
 
     const sendEmail = httpsCallable(functions, "sendEmail");
