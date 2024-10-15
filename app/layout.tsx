@@ -42,6 +42,9 @@ export async function generateMetadata(
       images,
       url: pathname,
     },
+    alternates: {
+      canonical: pathname,
+    },
   };
 }
 
