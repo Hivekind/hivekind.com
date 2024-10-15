@@ -19,11 +19,7 @@ export default function HeaderSection() {
                 </p>
                 <div className="margin-top margin-medium">
                   <div className="button-group">
-                    <a
-                      href="/contact"
-                      className="button w-button"
-                      data-cmp-ab="2"
-                    >
+                    <a href="/contact" className="button w-button">
                       Schedule a call
                     </a>
                   </div>
