@@ -16,10 +16,6 @@
   Github: @almaz-hk
   From: Kuala Lumpur, Malaysia
 
-  Mohamed Aas
-  Github:
-  From:
-
 /* THANKS */
   Wai Yan Yoon
   Github: @yoonwaiyan
