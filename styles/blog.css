@@ -30,3 +30,32 @@ blockquote {
 .text-rich-text blockquote > p {
   margin-bottom: 0;
 }
+
+/* Apply general styling for all tables */
+table {
+  @apply min-w-full bg-white border border-gray-200;
+  border-collapse: collapse; /* Ensure borders are drawn between cells */
+}
+
+thead {
+  @apply bg-gray-100 border-b border-gray-200;
+}
+
+th {
+  @apply px-6 py-3 text-left text-sm font-medium text-gray-500;
+  border-right: 1px solid #e5e7eb; /* Add column line */
+}
+
+tbody tr {
+  @apply bg-white border-b hover:bg-gray-50;
+}
+
+td {
+  @apply px-6 py-4 text-sm text-gray-700;
+  border-right: 1px solid #e5e7eb; /* Add column line */
+}
+
+/* Remove the right border for the last column */
+th:last-child, td:last-child {
+  border-right: none;
+}
