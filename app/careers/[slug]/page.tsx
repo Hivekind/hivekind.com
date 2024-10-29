@@ -1,9 +1,27 @@
 import ShareWrapper from "@/components/share-wrapper";
 import { getAllPosts, getBySlug } from "@/lib/contentfulApi";
 import { markdownParser } from "@/lib/markdownParser";
+import { Metadata } from "next";
 import Mustache from "mustache";
 import "@/styles/careers.css";
 import ArrowSvg from "@/components/svgs/arrow-svg";
+
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { post } = await getBySlug({
+    contentType: "job",
+    slug: params.slug ?? "",
+  });
+
+  const { title } = post.fields;
+
+  return {
+    title: title + " | Careers at HiveKind",
+  };
+}
 
 export async function generateStaticParams() {
   const { posts } = await getAllPosts({ contentType: "job" });
