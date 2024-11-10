@@ -2,4 +2,6 @@
 /work             /                                   302!
 /work             /                                   302
 
+/blog/organizing-effective-remote-meetings  /blog/a-guide-to-running-effective-virtual-meetings  301
+
 /labs/hivechat/*  https://hivechat.pages.dev/:splat  200
