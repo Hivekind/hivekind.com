@@ -15,8 +15,8 @@ export default function AnswersSection() {
   return (
     <>
       <Section
-        title="We’ve got software development figured out for you"
-        description="Building a great web or mobile app isn’t easy, especially when you’re a founder. You’ve got a million things on your plate, and developing the app is just one of them. That’s where we step in. We make the process simple and are here to answer questions like these that you or your team might have:"
+        title="We Have Team Empowerment Figured Out for You"
+        description="Building a great software product isn’t easy, especially when you’re a technical leader. You’ve got a million things on your plate, and figuring out how to make your team effective is just one of them. That’s where we come in. We are here to answer questions like these that you or your team might have:"
       >
         <div className="w-layout-grid answers_list">
           <div className="answer_item">
@@ -33,15 +33,17 @@ export default function AnswersSection() {
             </div>
             <div className="margin-bottom margin-xsmall">
               <h3 blocks-non-deletable="true" className="heading-style-h5">
-                What tech stack should I use for my product?
+                How do I make sure my team is aligned and productive, not bogged
+                down by process?
               </h3>
             </div>
             <p>
-              It depends on a few key things, like your team’s skills and the
-              type of product you’re building. The right tech stack should match
-              your project&rsquo;s needs and your team&rsquo;s expertise to
-              ensure everything runs smoothly. Don’t get easily swayed by the
-              shiniest new toy in town.
+              We help cut through the clutter by refining workflows, introducing
+              best practices, and enabling clear communication. This keeps your
+              team focused on what truly matters—delivering results. Our
+              hands-on, flexible approach empowers your team to excel while
+              building the skills and independence they need to sustain that
+              success.
             </p>
           </div>
           <div className="answer_item">
@@ -58,14 +60,14 @@ export default function AnswersSection() {
             </div>
             <div className="margin-bottom margin-xsmall">
               <h3 blocks-non-deletable="true" className="heading-style-h5">
-                I want my app built within budget and on time
+                What should I prioritize to get a lagging project back on track?
               </h3>
             </div>
             <p>
-              That’s fantastic because we charge a fixed monthly price for all
-              our services. Right from the start, we streamline communication,
-              create a clear roadmap, and align on timelines and expectations to
-              ensure your project stays on track and within budget.
+              Through rapid discovery and agile planning, we’ll help you
+              identify critical blockers and focus on high-impact actions that
+              make an immediate difference. By targeting only the essentials, we
+              drive measurable progress right from the start.
             </p>
           </div>
           <div className="answer_item">
@@ -82,14 +84,15 @@ export default function AnswersSection() {
             </div>
             <div className="margin-bottom margin-xsmall">
               <h3 blocks-non-deletable="true" className="heading-style-h5">
-                I have an idea, but where do I even start?
+                How can I use AI to create real value in our product?
               </h3>
             </div>
             <p>
-              That’s exactly where we come in. Our discovery services help you
-              turn your idea into a clear plan. We’ll work with you to define
-              the product, understand your audience, and outline key features,
-              so you’ll know exactly where to start and how to move forward.
+              Our AI expertise takes the guesswork out of adopting this powerful
+              technology. We’ll guide you through building an AI strategy that
+              fits your product, from roadmap creation to developing proofs of
+              concept. By working side-by-side with your team, we make sure AI
+              adds value without disrupting your current processes.
             </p>
           </div>
           <div className="answer_item">
@@ -106,14 +109,15 @@ export default function AnswersSection() {
             </div>
             <div className="margin-bottom margin-xsmall">
               <h3 blocks-non-deletable="true" className="heading-style-h5">
-                How can I utilize AI to elevate my product?
+                Can we improve our deployment pipeline without causing major
+                disruptions?
               </h3>
             </div>
             <p>
-              AI development is progressing rapidly. We’ll help you understand
-              how AI can fit your business goals, whether it’s automating tasks,
-              enhancing user experiences, or adding smart features to make your
-              product more efficient and intelligent.
+              Absolutely. We specialize in gradual, low-risk improvements to
+              your CI/CD pipeline that enhance efficiency and stability. Whether
+              it’s reducing build times or improving visibility, our approach
+              makes releases smoother and boosts team morale.
             </p>
           </div>
         </div>

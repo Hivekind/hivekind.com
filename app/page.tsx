@@ -12,9 +12,9 @@ import AnswersSection from "./answers-section";
 import BlogSection from "./blog-section";
 
 export default function Home() {
-  const title = "Malaysia's premier software development company";
+  const title = "Empower Your Team to Deliver at Their Best";
   const description =
-    "We handle your software development, allowing you to focus on strategy, sales, and raising funds.";
+    "We provide focused, hands-on strategic support to tech and product teams. From optimizing technical processes to setting a clear direction for growth and getting complex projects over the line, we help your team become the best they can be.";
 
   return (
     <>
