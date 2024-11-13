@@ -36,6 +36,7 @@ export default async function CasestudiesSection({
           url: `/work/${fields.slug}`,
           topic: fields.client || "Unknown client",
           imageInset: true,
+          cta: "Read more",
         }))}
       />
     </Section>
