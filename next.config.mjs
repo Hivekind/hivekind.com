@@ -1,16 +1,6 @@
 import { withSentryConfig } from "@sentry/nextjs";
 /** @type {import('next').NextConfig} */
 
-const redirects = async () => {
-  return [
-    {
-      source: "/work",
-      destination: "/",
-      permanent: false,
-    },
-  ];
-};
-
 const nextConfig = {
   output: "export",
   images: {
@@ -26,10 +16,6 @@ const nextConfig = {
     ],
   },
 };
-
-if (process.env.NODE_ENV !== "production") {
-  nextConfig.redirects = redirects;
-}
 
 export default withSentryConfig(nextConfig, {
   // For all available options, see:

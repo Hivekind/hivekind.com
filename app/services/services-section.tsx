@@ -9,7 +9,6 @@ export default async function ServicesSection() {
   });
 
   const items = posts;
-  console.log(items);
   return (
     <Section
       title="Services"

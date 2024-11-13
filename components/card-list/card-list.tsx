@@ -6,10 +6,9 @@ export type CardListProps = {
 };
 
 const threeColsClass =
-  "grid grid-cols-1 gap-y-12 gap-x-8 md:grid-cols-2 md:gap-y-16 lg:grid-cols-3";
+  "grid grid-cols-1 gap-y-12 gap-x-8 md:grid-cols-2 lg:grid-cols-3";
 
-const twoColsClass =
-  "grid grid-cols-1 gap-y-12 gap-x-8 md:grid-cols-2 md:gap-y-16";
+const twoColsClass = "grid grid-cols-1 gap-y-12 gap-x-8 md:grid-cols-2";
 
 export function CardList({ cols = 3, items }: CardListProps) {
   return (

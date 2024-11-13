@@ -75,7 +75,7 @@ export function CardListItem({ item }: { item: CardListItemProps }) {
             ) : (
               item.cta && (
                 <div className="flex">
-                  <div className="button is-link is-icon">
+                  <div className="button is-link is-icon mt-12">
                     <div>{item.cta || "Read more"}</div>
                     <div className="icon-embed-xxsmall w-embed">
                       <svg
