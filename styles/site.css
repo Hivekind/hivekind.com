@@ -2437,7 +2437,7 @@ strong {
     grid-template-columns: 1fr;
   }
   .process_progress-bar-wrapper {
-    height: 70%;
+    height: 80%;
     left: 2rem;
   }
   .process_timeline-icon-wrapper {
@@ -2630,7 +2630,7 @@ strong {
     grid-template-columns: 1fr;
   }
   .process_progress-bar-wrapper {
-    height: 65%;
+    height: 80%;
   }
   .about_component,
   .values_list {
