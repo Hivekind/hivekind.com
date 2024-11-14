@@ -15,6 +15,8 @@ import jayasimhanMasilamaniFallback from "@/public/images/jayasimhan-masilamani.
 import TestimonialSection from "@/components/testimonial-section";
 import ServicesSection from "./services-section";
 import ProductDevelopmentSection from "./product-development-section";
+import MeasurableOutcomesSection from "./measurable-outcomes-section";
+import CustomSoftwareDevelopmentSection from "./custom-software-development-section";
 
 export default function ServicesPage() {
   const title = "Build software with confidence";
@@ -40,7 +42,9 @@ export default function ServicesPage() {
 
       <ApproachSection />
 
-      <ProductDevelopmentSection />
+      <MeasurableOutcomesSection />
+
+      <CustomSoftwareDevelopmentSection />
 
       <TestimonialSection
         quote="The Hivekind team built the Willmaker Online product from start to finish. The project had thousands of screens and on delivery there were no major issues. The business team was very happy with the quality at launch. The online version now enables our business team to apply different business models and pricing strategies. The conversion rate is up 70% since the launch."

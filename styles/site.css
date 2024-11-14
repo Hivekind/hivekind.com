@@ -2158,7 +2158,7 @@ strong {
     grid-row-gap: 2rem;
   }
   .process_progress-bar-wrapper {
-    height: 68%;
+    height: 80%;
   }
   .process_timeline-step {
     grid-column-gap: 24px;

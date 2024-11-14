@@ -8,7 +8,7 @@ export type CardListItemProps = {
   imageInset?: boolean;
   topic?: string;
   title: string;
-  summary: string;
+  summary: string | Promise<string>;
   author?: authorType;
   cta?: string;
 };
@@ -48,7 +48,12 @@ export function CardListItem({ item }: { item: CardListItemProps }) {
                   {item.title}
                 </h3>
               </div>
-              <div className="text-size-regular">{item.summary}</div>
+              <div
+                className="text-size-regular"
+                dangerouslySetInnerHTML={{
+                  __html: item.summary,
+                }}
+              ></div>
             </div>
 
             {item.author ? (
