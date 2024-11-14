@@ -1,4 +1,29 @@
 import CheckInCircleInvertedSvg from "@/components/svgs/check-in-circle-inverted";
+import TimelineStep from "@/components/timeline-step";
+
+const items = [
+  {
+    title: "Discovery",
+    body: "We begin by fully immersing ourselves in your goals, exploring your challenges, and defining clear objectives. This initial deep dive allows us to grasp both specific issues and broader pain points, setting a strong foundation.",
+  },
+  {
+    title: "Planning",
+    body: "With a shared understanding in place, we design a strategic roadmap that includes milestones and success metrics. Each step is tailored to align closely with your business goals, ensuring measurable outcomes along the way.",
+  },
+  {
+    title: "Implementation",
+    body: "In this phase, we work closely with your team, executing the plan with an agile, iterative approach. Constant feedback loops ensure adjustments are made as needed, blending our expertise with your team’s unique strengths.",
+  },
+  {
+    title: "Verification",
+    body: "As we near completion, we validate that our solutions meet the agreed objectives, reflecting the metrics established in planning. This step is a collaborative effort, ensuring the solutions are aligned with your vision and deliver true value.",
+  },
+
+  {
+    title: "Handoff & empowerment",
+    body: "Our goal is to leave your team well-equipped and independent. We complete a comprehensive knowledge transfer, covering documentation and guidance, so you’re prepared to continue on a clear path forward without us.",
+  },
+];
 
 export default function ApproachSection() {
   return (
@@ -9,13 +34,25 @@ export default function ApproachSection() {
             <div className="w-layout-grid process_component">
               <div className="process_content-left">
                 <div className="margin-bottom margin-small">
-                  <h2>Delivered by dedicated development teams.</h2>
+                  <h2>Approach</h2>
                 </div>
                 <p className="text-size-medium">
-                  Leverage the expertise of our dedicated development teams for
-                  your projects. They work closely with you to understand your
-                  needs and implement solutions that are both scalable and
-                  sustainable.
+                  At Hivekind, we partner with your team to enhance strengths
+                  and tackle challenges together. Our focus is on empowering
+                  your growth, leaving you stronger and ready to thrive on your
+                  own​​.
+                  <br />
+                  <br />
+                  Our approach is focused and flexible, built on delivering
+                  meaningful, measurable results without creating dependency.
+                  Each engagement is crafted to align with your specific goals
+                  and outcomes​​.
+                  <br />
+                  <br />
+                  With every project, we’re here to make a difference. From
+                  streamlining processes to introducing new efficiencies, we
+                  work to leave you equipped for lasting success and confident
+                  in the road ahead​​.
                 </p>
                 <div className="margin-top margin-medium">
                   <div className="button-group">
@@ -30,105 +67,10 @@ export default function ApproachSection() {
                   <div className="process_progress-bar-wrapper">
                     <div className="process_progress-bar"></div>
                   </div>
-                  <div className="w-layout-grid process_timeline-step">
-                    <div className="process_timeline-left">
-                      <div className="process_timeline-icon-wrapper">
-                        <div className="product-stage">
-                          <div className="icon-embed-xxsmall w-embed">
-                            <CheckInCircleInvertedSvg />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="process_timeline-right">
-                      <div className="process_text-wrapper">
-                        <div className="margin-bottom margin-xsmall">
-                          <h3 className="text-size-large">
-                            Fully Dedicated Staffing
-                          </h3>
-                        </div>
-                        <p>
-                          Each member of the dedicated team works exclusively on
-                          your project—there is no time split. This level of
-                          commitment leads to better project outcomes and
-                          increases your ROI.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-layout-grid process_timeline-step">
-                    <div className="process_timeline-left">
-                      <div className="process_timeline-icon-wrapper">
-                        <div className="product-stage">
-                          <div className="icon-embed-xxsmall w-embed">
-                            <CheckInCircleInvertedSvg />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="process_timeline-right">
-                      <div className="process_text-wrapper">
-                        <div className="margin-bottom margin-xsmall">
-                          <h3 className="text-size-large">Managed Teams</h3>
-                        </div>
-                        <p>
-                          We fully vet, hire, and manage our teams in-house.
-                          This oversight ensures that your project progresses
-                          smoothly and meets your expectations efficiently.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-layout-grid process_timeline-step">
-                    <div className="process_timeline-left">
-                      <div className="process_timeline-icon-wrapper">
-                        <div className="product-stage">
-                          <div className="icon-embed-xxsmall w-embed">
-                            <CheckInCircleInvertedSvg />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="process_timeline-right">
-                      <div className="process_text-wrapper">
-                        <div className="margin-bottom margin-xsmall">
-                          <h3 className="text-size-large">
-                            Highly Experienced
-                          </h3>
-                        </div>
-                        <p>
-                          Each team is highly experienced, with years of
-                          expertise that leads to faster problem-solving and
-                          more innovative solutions for your project.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-layout-grid process_timeline-step">
-                    <div className="process_timeline-left">
-                      <div className="process_timeline-icon-wrapper">
-                        <div className="product-stage">
-                          <div className="icon-embed-xxsmall w-embed">
-                            <CheckInCircleInvertedSvg />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="process_timeline-right">
-                      <div className="process_text-wrapper">
-                        <div className="margin-bottom margin-xsmall">
-                          <h3 className="text-size-large">Clear Objectives</h3>
-                        </div>
-                        <p>
-                          With a focus on clear objectives, we establish
-                          well-defined goals at the start of every project to
-                          ensure all efforts are directed towards achieving
-                          specific outcomes. This clarity drives our team’s
-                          efforts and enhances overall project success.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+
+                  {items.map(({ title, body }) => (
+                    <TimelineStep title={title} body={body} key={title} />
+                  ))}
                 </div>
               </div>
             </div>
