@@ -15,6 +15,10 @@ export type authorType = {
 export type fieldsType = {
   slug: string;
 
+  order: number;
+
+  heroEntry: boolean;
+
   mainImage: imageFieldType;
   profilePicture: imageFieldType;
 
