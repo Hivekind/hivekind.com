@@ -34,12 +34,13 @@ export default function ApproachSection() {
             <div className="w-layout-grid process_component">
               <div className="process_content-left">
                 <div className="margin-bottom margin-small">
-                  <h2>What's the next step?</h2>
+                  <h2>What&apos;s the next step?</h2>
                 </div>
                 <p className="text-size-medium">
                   Curious about working with us to implement AI integration for
-                  your product or business? Here's how we'll move from where you
-                  are now to kicking off an impactuful engagement together.
+                  your product or business? Here&apos;s how we&apos;ll move from
+                  where you are now to kicking off an impactuful engagement
+                  together.
                 </p>
                 <div className="margin-top margin-medium">
                   <div className="button-group">

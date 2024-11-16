@@ -54,7 +54,7 @@ export default function WhySection() {
               <h3 className="heading-style-h4">Empowering approach</h3>
             </div>
             <p>
-              Hivekind's collaborative style focuses on knowledge transfer,
+              Hivekind&apos;s collaborative style focuses on knowledge transfer,
               enabling your team to own and expand AI capabilities.
             </p>
           </div>
