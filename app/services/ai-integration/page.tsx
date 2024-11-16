@@ -1,13 +1,14 @@
-import BlogSection from "@/app/blog-section";
 import TestimonialCarousel from "@/components/testimonial-carousel";
-import AIFlowSection from "./ai-flow-section";
 import HeaderSection from "./header-section";
-import StepsSection from "./steps-section";
+import WhatCanAiDoForYouSection from "./what-can-ai-do-for-you-section";
 import WhySection from "./why-section";
 import ContactUsSection from "@/components/contact-us-section";
 import Section from "@/components/section";
 import { CardList } from "@/components/card-list/card-list";
 import { getAllPosts } from "@/lib/contentfulApi";
+import StepsSection from "./steps-section";
+import HowDoYouMeasureSection from "./how-do-you-measure-section";
+import WhatIsAiIntegrationSection from "./what-is-ai-integration-section";
 
 export default async function AiProductDevelopment() {
   const { posts } = await getAllPosts({
@@ -15,15 +16,21 @@ export default async function AiProductDevelopment() {
     order: ["-fields.publishedAt"],
   });
 
-  const items = posts.filter(
-    ({ fields }) => fields.blogPostTopic?.fields.name === "AI"
-  );
+  const items = posts
+    .filter(({ fields }) => fields.blogPostTopic?.fields.name === "AI")
+    .slice(0, 3);
 
   return (
     <>
       <HeaderSection />
+
+      <WhatIsAiIntegrationSection />
+
+      <WhatCanAiDoForYouSection />
+
+      <HowDoYouMeasureSection />
+
       <WhySection />
-      <StepsSection />
 
       <Section
         title="AI Explorations"
@@ -43,8 +50,10 @@ export default async function AiProductDevelopment() {
         />
       </Section>
 
-      <AIFlowSection />
+      <StepsSection />
+
       <TestimonialCarousel />
+
       <ContactUsSection />
     </>
   );

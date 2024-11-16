@@ -1,4 +1,4 @@
-export default function StepsSection() {
+export default function WhatCanAiDoForYouSection() {
   return (
     <section className="steps-section background-color-white">
       <div className="padding-global">
@@ -8,7 +8,7 @@ export default function StepsSection() {
               <div className="margin-bottom margin-xxlarge">
                 <div className="text-align-center">
                   <div className="max-width-large">
-                    <h2>AI product development and integration services</h2>
+                    <h2>What could AI integration achieve for you?</h2>
                   </div>
                 </div>
               </div>
@@ -34,12 +34,14 @@ export default function StepsSection() {
                     </div>
                   </div>
                   <div className="margin-bottom margin-small">
-                    <h3 className="heading-style-h5">AI integrations</h3>
+                    <h3 className="heading-style-h5">
+                      Customer support chatbot
+                    </h3>
                   </div>
                   <p>
-                    Seamlessly integrate AI into your existing systems to
-                    enhance efficiency, automate processes, and unlock new
-                    opportunities for growth.
+                    Imporve response times and free up resources with a
+                    fine-tuned chatbot that handles common queries, ensuring
+                    efficient and consistent customer service.
                   </p>
                 </div>
                 <div className="steps_item">
@@ -67,12 +69,15 @@ export default function StepsSection() {
                     </div>
                   </div>
                   <div className="margin-bottom margin-small">
-                    <h3 className="heading-style-h5">AI MVP development</h3>
+                    <h3 className="heading-style-h5">
+                      Product recommendation engine
+                    </h3>
                   </div>
                   <p>
-                    Quickly develop and launch an MVP with advanced AI features
-                    to validate your concept and drive early-stage market
-                    success.
+                    Engage users with a personalized experience through a
+                    recommendation engine that tailors suggestions based on
+                    behavioral data, boosting user satisfaction and conversion
+                    rates,
                   </p>
                 </div>
                 <div className="steps_item">
@@ -105,13 +110,14 @@ export default function StepsSection() {
                   </div>
                   <div className="margin-bottom margin-small">
                     <h3 className="heading-style-h5">
-                      AI software development
+                      Automated document processing for invoicing
                     </h3>
                   </div>
                   <p>
-                    Develop and build custom AI software solutions that meet
-                    your unique business needs and drive innovation across your
-                    operations.
+                    Streamline invoicing with an AI-driven system that
+                    automatically extracts, verifies, and organizes key data
+                    from invoices, reducing manual entry time and improving
+                    accuracy across financial operations.
                   </p>
                 </div>
               </div>

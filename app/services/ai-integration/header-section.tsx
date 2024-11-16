@@ -11,7 +11,7 @@ export default function HeaderSection() {
             <div className="w-layout-grid header-component">
               <div className="header-content">
                 <div className="margin-bottom margin-small">
-                  <h1>AI Product Development </h1>
+                  <h1>AI integration </h1>
                 </div>
                 <p className="text-size-medium">
                   Unlock the potential of AI with tailored solutions and expert

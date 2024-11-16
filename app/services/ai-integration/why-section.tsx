@@ -4,8 +4,8 @@ export default function WhySection() {
   return (
     <>
       <Section
-        title="Why choose us as your AI product development partner?"
-        description="We help you navigate the complexities of AI, building innovative solutions that drive customer value and transform your business. With our expertise, we turn your vision into impactful, future-ready products that lead the way in your industry."
+        title="Why Hivekind for AI integration?"
+        description="Hivekind is not just a service provider; we're a strategic partner committed to making AI integration seamless and impactful. Our expertise goes beyond technical implementation—we focus on empowering your team, ensuring that every project leaves you better equipped to drive AI innovations independently. Key benefits in working with us include:"
       >
         <div className="w-layout-grid discovery_list">
           <div className="discovery_item">
@@ -26,12 +26,11 @@ export default function WhySection() {
               </div>
             </div>
             <div className="margin-bottom margin-small">
-              <h3 className="heading-style-h4">Dedicated team</h3>
+              <h3 className="heading-style-h4">Tailored expertise</h3>
             </div>
             <p>
-              A dedicated team of software engineers, led by an expert product
-              manager, focused on delivering cutting-edge AI solutions from
-              concept to launch.
+              Customized AI solutions that align with your business goals and
+              technical requirements.
             </p>
           </div>
           <div className="discovery_item">
@@ -52,11 +51,11 @@ export default function WhySection() {
               </div>
             </div>
             <div className="margin-bottom margin-small">
-              <h3 className="heading-style-h4">Practical solutions</h3>
+              <h3 className="heading-style-h4">Empowering approach</h3>
             </div>
             <p>
-              Real-world AI solutions designed to address your unique business
-              needs and consistently drive impactful, tangible results.
+              Hivekind's collaborative style focuses on knowledge transfer,
+              enabling your team to own and expand AI capabilities.
             </p>
           </div>
           <div
@@ -87,12 +86,11 @@ export default function WhySection() {
               </div>
             </div>
             <div className="margin-bottom margin-small">
-              <h3 className="heading-style-h4">Industry experience</h3>
+              <h3 className="heading-style-h4">High-impact outcomes</h3>
             </div>
             <p>
-              We have experience building solutions for various industries,
-              including education, healthcare, finance, legal, advertising, and
-              sustainability.
+              We prioritize soutions that deliver measurable improvements to
+              both operations and user engagement.
             </p>
           </div>
           <div
@@ -116,11 +114,11 @@ export default function WhySection() {
               </div>
             </div>
             <div className="margin-bottom margin-small">
-              <h3 className="heading-style-h4">End-to-end support</h3>
+              <h3 className="heading-style-h4">Proven track record</h3>
             </div>
             <p>
-              We provide expert guidance from initial concept to final
-              deployment for seamless integration and long-term success.
+              Demonstrable success metrics and client testimonials validate our
+              commitment to high-quality, results-driven integration.
             </p>
           </div>
         </div>

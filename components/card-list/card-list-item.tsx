@@ -11,6 +11,7 @@ export type CardListItemProps = {
   summary: string | Promise<string>;
   author?: authorType;
   cta?: string;
+  icon?: string;
 };
 
 export function CardListItem({ item }: { item: CardListItemProps }) {
@@ -43,11 +44,23 @@ export function CardListItem({ item }: { item: CardListItemProps }) {
                 </div>
               )}
 
+              {item.icon && (
+                <div className="margin-bottom margin-xxsmall">
+                  <div
+                    className="heading-style-h5"
+                    dangerouslySetInnerHTML={{
+                      __html: item.icon,
+                    }}
+                  ></div>
+                </div>
+              )}
+
               <div className="margin-bottom margin-xxsmall">
                 <h3 blocks-non-deletable="true" className="heading-style-h5">
                   {item.title}
                 </h3>
               </div>
+
               <div
                 className="text-size-regular"
                 dangerouslySetInnerHTML={{

@@ -14,7 +14,6 @@ import jayasimhanMasilamaniFallback from "@/public/images/jayasimhan-masilamani.
 
 import TestimonialSection from "@/components/testimonial-section";
 import ServicesSection from "./services-section";
-import ProductDevelopmentSection from "./product-development-section";
 import MeasurableOutcomesSection from "./measurable-outcomes-section";
 import CustomSoftwareDevelopmentSection from "./custom-software-development-section";
 
