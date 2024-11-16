@@ -22,6 +22,8 @@ export type fieldsType = {
   mainImage: imageFieldType;
   profilePicture: imageFieldType;
 
+  svgIcon: string;
+
   mainImageAltText: string;
 
   blogPostTopic: { fields: { name: string } };
