@@ -20,7 +20,7 @@ import CustomSoftwareDevelopmentSection from "./custom-software-development-sect
 export default function ServicesPage() {
   const title = "Build software with confidence";
   const description =
-    "Whether you're a startup or an established enterprise, Hivekind is here to help you through the tricky parts of making software. We turn problems into opportunities and your ideas into market-ready products.";
+    "Whether you're a startup or an established enterprise, Hivekind is here to help you through the tricky parts of shipping software and cultivating software teams.";
 
   return (
     <main className="main-wrapper">
