@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 import "@/styles/blog-section.css";
 
 interface SectionProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   cta?: string;
   ctaUrl?: string;
   className?: string;

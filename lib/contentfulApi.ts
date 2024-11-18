@@ -15,8 +15,14 @@ export type authorType = {
 export type fieldsType = {
   slug: string;
 
+  order: number;
+
+  heroEntry: boolean;
+
   mainImage: imageFieldType;
   profilePicture: imageFieldType;
+
+  svgIcon: string;
 
   mainImageAltText: string;
 
@@ -33,8 +39,11 @@ export type fieldsType = {
     fields: authorType;
   };
 
+  body: string;
   postBody: string;
   caseBody: string;
+
+  url: string;
 
   jobTitle: string;
   linkedInLink?: string;
@@ -71,10 +80,17 @@ export type postType = {
   };
 };
 
-const contentfulClient = contentful.createClient({
-  space: process.env.CONTENTFUL_SPACE_ID ?? "",
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN ?? "",
-});
+const contentfulClient =
+  process.env.NODE_ENV !== "development"
+    ? contentful.createClient({
+        space: process.env.CONTENTFUL_SPACE_ID ?? "",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN ?? "",
+      })
+    : contentful.createClient({
+        space: process.env.CONTENTFUL_SPACE_ID ?? "",
+        accessToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN ?? "",
+        host: "preview.contentful.com",
+      });
 
 export async function getAllPosts({
   contentType,

@@ -4,4 +4,6 @@
 
 /blog/organizing-effective-remote-meetings  /blog/a-guide-to-running-effective-virtual-meetings  301
 
+/services/ai-product-development            /services/ai-integration
+
 /labs/hivechat/*  https://hivechat.pages.dev/:splat  200
