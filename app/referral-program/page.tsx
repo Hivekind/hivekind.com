@@ -112,7 +112,7 @@ export default function ReferralProgramPage() {
                       </h3>
                     </div>
                     <p>
-                      Once we sign a contract with the client you introduced and they make their first payment, you will receive 50% of their first month#x27;s billing, up to $10,000.
+                      Once we sign a contract with the client you introduced and they make their first payment, you will receive 50% of their first month&#x27;s billing, up to $10,000.
                     </p>
                   </div>
                 </div>
