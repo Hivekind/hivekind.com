@@ -101,7 +101,7 @@ const FaqSection = () => {
               <div className={styles.faq_list}>
                 <FaqItem
                   question="How much can I earn?"
-                  answer="If the monthly billing for the client you introduced to us is USD 30,000, then you will earn USD 1,500 per month for the first 12 months and USD 600 per month thereafter for the entire duration of our contract with them."
+                  answer="If the monthly billing for the client you referred to us is USD 20,000, you will earn a one-time payment of USD 10,000, which is 50% of their first month’s bill. If the client’s monthly billing is USD 30,000, you will still earn a one-time payment of USD 10,000. The maximum reward is capped at USD 10,000 per successful referral."
                 />
                 <FaqItem
                   question="How do I get paid?"
@@ -109,11 +109,11 @@ const FaqSection = () => {
                 />
                 <FaqItem
                   question="Who can join this program?"
-                  answer="Anyone above the age of 18. If you know somebody who needs a reliable dev team, then you’re already a good fit."
+                  answer="Anyone over the age of 18 can join this program. If you know someone who could benefit from unlocking the potential of their team or product, you’re already a great fit!"
                 />
                 <FaqItem
                   question="Who is a good referral?"
-                  answer="A promising startup or business looking to hire a development team to build their product."
+                  answer="A good referral for Hivekind is a business or founder who needs dedicated product development support. Ideal clients might be startups with a clear product vision or established companies looking to scale and improve their digital products. They may be interested in product management support, tailored project planning, or even exploring new technologies like AI to enhance their products."
                 />
                 <FaqItem
                   question="Why should I recommend Hivekind?"
@@ -129,6 +129,20 @@ const FaqSection = () => {
                         click here
                       </a>{" "}
                       to see why our clients recommend us.
+                    </>
+                  }
+                />
+                <FaqItem
+                  question="How can I learn more about Hivekind?"
+                  answer={
+                    <>
+                      Send an email to{" "}
+                      <a
+                        href="mailto:attraction@hivekind.com?subject=Referral%20enquiry"
+                      >
+                        attraction@hivekind.com
+                      </a>{" "}
+                      and we’ll get back to you. 
                     </>
                   }
                 />
