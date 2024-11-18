@@ -15,14 +15,12 @@ export default function ReferralProgramPage() {
                 <div className="header-content">
                   <div className="margin-bottom margin-small">
                     <h1>
-                      Software development <br />
-                      referral program
+                      Hivekind client referral program
                     </h1>
                   </div>
                   <p className="text-size-medium">
-                    Know someone who needs our <a href="/services">services</a>?
-                    Refer them to us and earn 2%-5% of their monthly billings as
-                    a reward.
+                    Know someone who could benefit from our <a href="/services">services</a>?
+                    Refer them to us and earn up to $10,000 as a reward!
                   </p>
                   <div className="margin-top margin-medium">
                     <div className="button-group">
@@ -93,13 +91,11 @@ export default function ReferralProgramPage() {
                     </div>
                     <div className="margin-bottom margin-small">
                       <h3 className="heading-style-h5">
-                        Get your first payment
+                        Stay in the loop
                       </h3>
                     </div>
                     <p>
-                      Once we sign a contract with the client you introduced and
-                      they make their first payment, you will receive 5% of
-                      their first month&#x27;s billing.
+                      We&#x27;ll keep you updated on how the conversation is progressing with the client you referred to us.
                     </p>
                   </div>
                   <div className="steps_item">
@@ -112,14 +108,11 @@ export default function ReferralProgramPage() {
                     </div>
                     <div className="margin-bottom margin-small">
                       <h3 className="heading-style-h5">
-                        Keep earning every month
+                        Get paid
                       </h3>
                     </div>
                     <p>
-                      You will receive 5% of the monthly billings from the
-                      client you referred to us for the first 12 months and 2%
-                      thereafter for the entire duration of our contract with
-                      them.
+                      Once we sign a contract with the client you introduced and they make their first payment, you will receive 50% of their first month's billing, up to $10,000.
                     </p>
                   </div>
                 </div>
