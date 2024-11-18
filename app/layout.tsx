@@ -10,6 +10,7 @@ import { getPathnameFromState } from "@/lib/utils";
 import type { Metadata, ResolvingMetadata } from "next";
 import { fieldsType, getByField } from "@/lib/contentfulApi";
 import { GoogleTagManager } from "@next/third-parties/google";
+import ExternalLinks from "./external-links";
 
 type Props = {
   params: { id: string };
@@ -141,6 +142,7 @@ export default function RootLayout({
         <div className="page-wrapper">
           <NavBar />
           {children}
+          <ExternalLinks />
         </div>
 
         <Footer />
