@@ -15,7 +15,7 @@ export default function AnswersSection() {
   return (
     <>
       <Section
-        title="We Have Team Empowerment Figured Out for You"
+        title="We have team advancement figured out for you"
         description="Building a great software product isn’t easy, especially when you’re a technical leader. You’ve got a million things on your plate, and figuring out how to make your team effective is just one of them. That’s where we come in. We are here to answer questions like these that you or your team might have:"
       >
         <div className="w-layout-grid answers_list">

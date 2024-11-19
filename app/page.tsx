@@ -14,7 +14,7 @@ import { getAllPosts } from "@/lib/contentfulApi";
 import { TestimonialCarouselProps } from "@/components/testimonial-carousel";
 
 export default async function Home() {
-  const title = "Empower Your Team to Deliver at Their Best";
+  const title = "Advance how your team delivers software";
   const description =
     "We provide focused, hands-on strategic support to tech and product teams. From optimizing technical processes to setting a clear direction for growth and getting complex projects over the line, we help your team become the best they can be.";
 
