@@ -1,4 +1,6 @@
-import TestimonialCarousel from "@/components/testimonial-carousel";
+import TestimonialCarousel, {
+  TestimonialCarouselProps,
+} from "@/components/testimonial-carousel";
 import HeaderSection from "./header-section";
 import WhatCanAiDoForYouSection from "./what-can-ai-do-for-you-section";
 import WhySection from "./why-section";
@@ -19,6 +21,19 @@ export default async function AiProductDevelopment() {
   const items = posts
     .filter(({ fields }) => fields.blogPostTopic?.fields.name === "AI")
     .slice(0, 3);
+
+  const testimonialPosts = await getAllPosts({
+    contentType: "testimonial",
+  });
+
+  const testimonialItems = testimonialPosts.posts
+    .filter((post) => post.fields.type === "client")
+    .map((post) => ({
+      quote: post.fields.quote,
+      name: post.fields.name,
+      title: post.fields.title,
+      image: post.fields.image?.fields?.file?.url,
+    })) as TestimonialCarouselProps["items"];
 
   return (
     <>
@@ -52,7 +67,7 @@ export default async function AiProductDevelopment() {
 
       <StepsSection />
 
-      <TestimonialCarousel />
+      <TestimonialCarousel items={testimonialItems} />
 
       <ContactUsSection />
     </>

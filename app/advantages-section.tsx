@@ -42,7 +42,7 @@ export default function AdvantagesSection() {
                         blocks-non-deletable="true"
                         className="heading-style-h5"
                       >
-                        Short-Term, Impactful Projects
+                        Short-term, impactful projects
                       </h3>
                     </div>
                     <p>
@@ -67,7 +67,7 @@ export default function AdvantagesSection() {
                         blocks-non-deletable="true"
                         className="heading-style-h5"
                       >
-                        Transparent, Outcome-Based Pricing
+                        Transparent, outcome-based pricing
                       </h3>
                     </div>
                     <p>
@@ -92,7 +92,7 @@ export default function AdvantagesSection() {
                         blocks-non-deletable="true"
                         className="heading-style-h5"
                       >
-                        Empowering Your Team
+                        Empowering your team
                       </h3>
                     </div>
                     <p>
@@ -117,7 +117,7 @@ export default function AdvantagesSection() {
                         blocks-non-deletable="true"
                         className="heading-style-h5"
                       >
-                        No Lock-In, Just Lasting Progress
+                        No lock-In, just lasting progress
                       </h3>
                     </div>
                     <p>

@@ -1,6 +1,15 @@
-import StaticImage from "@/components/static-image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import "@/styles/testimonial-carousel.css";
+import ContentfulImage from "./contentful-image";
+
+type TestimonialSectionProps = {
+  quote: string;
+  name: string;
+  title: string;
+  image: string;
+  isCarousel?: boolean;
+  bgColorClass?: string;
+};
 
 export default function TestimonialSection({
   quote,
@@ -8,17 +17,8 @@ export default function TestimonialSection({
   title,
   bgColorClass = "",
   image,
-  imageFallback,
   isCarousel = false,
-}: {
-  quote: string;
-  name: string;
-  title: string;
-  bgColorClass?: string;
-  image: StaticImport;
-  imageFallback: StaticImport;
-  isCarousel?: boolean;
-}) {
+}: TestimonialSectionProps) {
   return (
     <section className={`testimonial-section ${bgColorClass}`}>
       <div className="padding-global">
@@ -36,12 +36,13 @@ export default function TestimonialSection({
                       </div>
                     </div>
                     <div className="testimonial_client-image-wrapper">
-                      <StaticImage
+                      <ContentfulImage
                         src={image}
-                        srcfallback={imageFallback}
                         sizes="(max-width: 767px) 90vw, 43vw"
                         alt={name}
                         className="testimonial_client-image"
+                        width={400}
+                        height={400}
                       />
                     </div>
                     <div className="margin-bottom">
