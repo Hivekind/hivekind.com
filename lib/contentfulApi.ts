@@ -172,10 +172,20 @@ export async function getByField({
   contentType: string;
   fields: { [key: string]: string };
 }) {
+  return getAllByField({ contentType, fields }).then((items) => items[0]);
+}
+
+export async function getAllByField({
+  contentType,
+  fields,
+}: {
+  contentType: string;
+  fields: { [key: string]: string };
+}) {
   const response = await contentfulClient.getEntries({
     content_type: contentType,
     ...fields,
   });
 
-  return response.items[0];
+  return response.items;
 }

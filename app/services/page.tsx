@@ -9,18 +9,22 @@ import StaticImage from "@/components/static-image";
 import dedicatedTeamPlanning from "@/public/images/dedicated-team-planning.webp";
 import dedicatedTeamPlanningFallback from "@/public/images/dedicated-team-planning.jpg";
 
-import jayasimhanMasilamani from "@/public/images/jayasimhan-masilamani.webp";
-import jayasimhanMasilamaniFallback from "@/public/images/jayasimhan-masilamani.jpg";
-
 import TestimonialSection from "@/components/testimonial-section";
 import ServicesSection from "./services-section";
 import MeasurableOutcomesSection from "./measurable-outcomes-section";
 import CustomSoftwareDevelopmentSection from "./custom-software-development-section";
+import { getByField } from "@/lib/contentfulApi";
+import { FieldsType } from "contentful";
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
   const title = "Build software with confidence";
   const description =
     "Whether you're a startup or an established enterprise, Hivekind is here to help you through the tricky parts of shipping software and cultivating software teams.";
+
+  const testimonial = (await getByField({
+    contentType: "testimonial",
+    fields: { "fields.name[in]": "Jayasimhan Masilamani" },
+  })) as FieldsType;
 
   return (
     <main className="main-wrapper">
@@ -46,11 +50,10 @@ export default function ServicesPage() {
       <CustomSoftwareDevelopmentSection />
 
       <TestimonialSection
-        quote="The Hivekind team built the Willmaker Online product from start to finish. The project had thousands of screens and on delivery there were no major issues. The business team was very happy with the quality at launch. The online version now enables our business team to apply different business models and pricing strategies. The conversion rate is up 70% since the launch."
-        name="Jayasimhan Masilamani"
-        title="VP of Technology, Nolo"
-        image={jayasimhanMasilamani}
-        imageFallback={jayasimhanMasilamaniFallback}
+        quote={String(testimonial.fields.quote)}
+        name={String(testimonial.fields.name)}
+        title={String(testimonial.fields.title)}
+        image={testimonial.fields.image?.fields.file.url}
       />
 
       <ContactUsSection />
