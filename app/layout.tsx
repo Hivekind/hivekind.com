@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import "@/styles/globals.css";
 import "@/styles/site.css";
 
@@ -142,7 +143,9 @@ export default function RootLayout({
         <div className="page-wrapper">
           <NavBar />
           {children}
-          <ExternalLinks />
+          <Suspense fallback={<div>Loading...</div>}>
+            <ExternalLinks />
+          </Suspense>
         </div>
 
         <Footer />
