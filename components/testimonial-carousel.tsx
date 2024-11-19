@@ -15,7 +15,6 @@ export type TestimonialCarouselProps = {
       name: string;
       title: string;
       image: string;
-      imageFallback?: string;
     }
   ];
 };
@@ -106,7 +105,6 @@ export default function TestimonialCarousel({
               name={item.name}
               title={item.title}
               image={item.image}
-              imageFallback={item.imageFallback}
               bgColorClass={bgColorClass}
               isCarousel={true}
             />

@@ -6,8 +6,7 @@ type TestimonialSectionProps = {
   quote: string;
   name: string;
   title: string;
-  image: string | StaticImport;
-  imageFallback?: string | StaticImport;
+  image: string;
   isCarousel?: boolean;
   bgColorClass?: string;
 };
@@ -18,7 +17,6 @@ export default function TestimonialSection({
   title,
   bgColorClass = "",
   image,
-  imageFallback,
   isCarousel = false,
 }: TestimonialSectionProps) {
   return (
@@ -40,7 +38,6 @@ export default function TestimonialSection({
                     <div className="testimonial_client-image-wrapper">
                       <ContentfulImage
                         src={image}
-                        srcfallback={imageFallback}
                         sizes="(max-width: 767px) 90vw, 43vw"
                         alt={name}
                         className="testimonial_client-image"
