@@ -21,6 +21,7 @@ export type fieldsType = {
 
   mainImage: imageFieldType;
   profilePicture: imageFieldType;
+  image: imageFieldType;
 
   svgIcon: string;
 
@@ -42,6 +43,8 @@ export type fieldsType = {
   body: string;
   postBody: string;
   caseBody: string;
+  quote: string;
+  type: string;
 
   url: string;
 

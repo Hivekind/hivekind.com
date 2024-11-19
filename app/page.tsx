@@ -10,11 +10,26 @@ import AdvantagesSection from "./advantages-section";
 import CasestudiesSection from "./casestudies-section";
 import AnswersSection from "./answers-section";
 import BlogSection from "./blog-section";
+import { getAllPosts } from "@/lib/contentfulApi";
+import { TestimonialCarouselProps } from "@/components/testimonial-carousel";
 
-export default function Home() {
+export default async function Home() {
   const title = "Empower Your Team to Deliver at Their Best";
   const description =
     "We provide focused, hands-on strategic support to tech and product teams. From optimizing technical processes to setting a clear direction for growth and getting complex projects over the line, we help your team become the best they can be.";
+
+  const { posts } = await getAllPosts({
+    contentType: "testimonial",
+  });
+
+  const items = posts
+    .filter((post) => post.fields.type === "client")
+    .map((post) => ({
+      quote: post.fields.quote,
+      name: post.fields.name,
+      title: post.fields.title,
+      image: post.fields.image?.fields?.file?.url,
+    })) as TestimonialCarouselProps["items"];
 
   return (
     <>
@@ -39,7 +54,7 @@ export default function Home() {
 
         <AnswersSection />
 
-        <TestimonialCarousel bgColorClass="bg-white" />
+        <TestimonialCarousel items={items} bgColorClass="bg-white" />
 
         <AdvantagesSection />
 
