@@ -40,7 +40,7 @@ export default function WhatCanAiDoForYouSection() {
                     </h3>
                   </div>
                   <p>
-                    Imporve response times and free up resources with a
+                    Improve response times and free up resources with a
                     fine-tuned chatbot that handles common queries, ensuring
                     efficient and consistent customer service.
                   </p>
