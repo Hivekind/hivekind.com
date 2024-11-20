@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import "@/styles/globals.css";
 import "@/styles/site.css";
 
@@ -10,6 +11,7 @@ import { getPathnameFromState } from "@/lib/utils";
 import type { Metadata, ResolvingMetadata } from "next";
 import { fieldsType, getByField } from "@/lib/contentfulApi";
 import { GoogleTagManager } from "@next/third-parties/google";
+import ExternalLinks from "./external-links";
 
 type Props = {
   params: { id: string };
@@ -141,6 +143,9 @@ export default function RootLayout({
         <div className="page-wrapper">
           <NavBar />
           {children}
+          <Suspense fallback={<div>Loading...</div>}>
+            <ExternalLinks />
+          </Suspense>
         </div>
 
         <Footer />
