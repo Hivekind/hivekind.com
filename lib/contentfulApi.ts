@@ -83,17 +83,14 @@ export type postType = {
   };
 };
 
-const contentfulClient =
-  process.env.NODE_ENV !== "development"
-    ? contentful.createClient({
-        space: process.env.CONTENTFUL_SPACE_ID ?? "",
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN ?? "",
-      })
-    : contentful.createClient({
-        space: process.env.CONTENTFUL_SPACE_ID ?? "",
-        accessToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN ?? "",
-        host: "preview.contentful.com",
-      });
+const contentfulClient = contentful.createClient({
+  space: process.env.CONTENTFUL_SPACE_ID ?? "",
+  accessToken:
+    (process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN ||
+      process.env.CONTENTFUL_ACCESS_TOKEN) ??
+    "",
+  host: process.env.CONTENTFUL_PREVIEW_HOST ?? "cdn.contentful.com",
+});
 
 export async function getAllPosts({
   contentType,
