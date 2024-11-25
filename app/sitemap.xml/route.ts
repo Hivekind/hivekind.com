@@ -62,7 +62,18 @@ const getSitemap = async () => {
     contentfulType: "work",
   });
 
-  const servicesUrls = ["services/custom-software-development"];
+  const servicesUrls: string[] = [];
+  const servicesDir = path.join(process.cwd(), "app/services");
+  const serviceItems = fs.readdirSync(servicesDir);
+
+  serviceItems.forEach((item) => {
+    const itemPath = path.join(servicesDir, item);
+    const stat = fs.statSync(itemPath);
+
+    if (stat.isDirectory()) {
+      servicesUrls.push(`services/${item}`);
+    }
+  });
 
   const allUrls = [
     ...topLevelUrls,
