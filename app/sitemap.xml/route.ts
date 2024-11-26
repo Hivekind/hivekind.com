@@ -23,7 +23,7 @@ const getDynamicUrls = async ({
     .map((url) => `${topUrl}/${url}`);
 };
 
-const getTopLevelUrls = () => {
+const getTopAndSubLevelUrls = () => {
   const appDir = path.join(process.cwd(), "app");
   const items = fs.readdirSync(appDir);
 
@@ -38,6 +38,14 @@ const getTopLevelUrls = () => {
 
     if (stat.isDirectory()) {
       urls.push(item);
+      const subItems = fs.readdirSync(itemPath);
+      subItems.forEach((subItem) => {
+        const subItemPath = path.join(itemPath, subItem);
+        const subStat = fs.statSync(subItemPath);
+        if (subStat.isDirectory() && subItem !== "[slug]") {
+          urls.push(`${item}/${subItem}`);
+        }
+      });
     }
   });
 
@@ -45,7 +53,7 @@ const getTopLevelUrls = () => {
 };
 
 const getSitemap = async () => {
-  const topLevelUrls = getTopLevelUrls();
+  const topLevelUrls = getTopAndSubLevelUrls();
 
   const blogUrls = await getDynamicUrls({
     topUrl: "blog",
@@ -62,26 +70,7 @@ const getSitemap = async () => {
     contentfulType: "work",
   });
 
-  const servicesUrls: string[] = [];
-  const servicesDir = path.join(process.cwd(), "app/services");
-  const serviceItems = fs.readdirSync(servicesDir);
-
-  serviceItems.forEach((item) => {
-    const itemPath = path.join(servicesDir, item);
-    const stat = fs.statSync(itemPath);
-
-    if (stat.isDirectory()) {
-      servicesUrls.push(`services/${item}`);
-    }
-  });
-
-  const allUrls = [
-    ...topLevelUrls,
-    ...blogUrls,
-    ...careersUrls,
-    ...servicesUrls,
-    ...workUrls,
-  ];
+  const allUrls = [...topLevelUrls, ...blogUrls, ...careersUrls, ...workUrls];
 
   const fullUrls = allUrls.map((url) => `${baseUrl}/${url}`);
   fullUrls.unshift(baseUrl);
