@@ -72,7 +72,7 @@ export default function WhatCanAiDoForYouSection() {
                     Engage users with a personalized experience through a
                     recommendation engine that tailors suggestions based on
                     behavioral data, boosting user satisfaction and conversion
-                    rates,
+                    rates.
                   </p>
                 </div>
                 <div className="steps_item">
