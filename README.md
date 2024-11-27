@@ -112,6 +112,7 @@ CONTENTFUL_ACCESS_TOKEN=xxx
 ```
 shuwnyuan@Tees-MacBook-Pro:~/hivekind.com (main)$ cat .env.local
 CONTENTFUL_SPACE_ID=xxx
+CONTENTFUL_ACCESS_TOKEN=xxx
 CONTENTFUL_PREVIEW_HOST=preview.contentful.com
 CONTENTFUL_PREVIEW_ACCESS_TOKEN=xxx
 ```
