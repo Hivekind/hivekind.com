@@ -11,6 +11,13 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // Handle the special no-positions route
+  if (params.slug === 'no-positions-available') {
+    return {
+      title: "No Open Positions | Careers at HiveKind",
+    };
+  }
+
   const { post } = await getBySlug({
     contentType: "job",
     slug: params.slug ?? "",
@@ -25,6 +32,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   const { posts } = await getAllPosts({ contentType: "job" });
+
+  if (!posts || posts.length === 0) {
+    // Return a hardcoded path when no posts exist
+    return [{ slug: 'no-positions-available' }];
+  }
+
   const slugs = posts.map(({ fields }) => ({
     slug: fields.slug,
   }));
@@ -32,11 +45,34 @@ export async function generateStaticParams() {
   return slugs;
 }
 
+const NoPositionsMessage = () => (
+  <main className="main-wrapper">
+    <div className="section-job">
+      <div className="padding-global">
+        <div className="container-large">
+          <div className="padding-section-large">
+            <div className="padding-global">
+              <div className="container-small">
+                <p>There are no open positions available at the moment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+);
+
 export default async function PositionPage({
   params,
 }: {
   params: { slug: string };
 }) {
+  // If it's our hardcoded "no positions" route
+  if (params.slug === 'no-positions-available') {
+    return <NoPositionsMessage />;
+  }
+
   const { post } = await getBySlug({
     contentType: "job",
     slug: params.slug ?? "",
@@ -46,23 +82,7 @@ export default async function PositionPage({
   });
 
   if (!post) {
-    return (
-      <main className="main-wrapper">
-        <div className="section-job">
-          <div className="padding-global">
-            <div className="container-large">
-              <div className="padding-section-large">
-                <div className="padding-global">
-                  <div className="container-small">
-                    <p>There are no open positions available at the moment.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    );
+    return <NoPositionsMessage />;
   }
 
   const jsonLdData = {
