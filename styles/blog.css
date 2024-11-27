@@ -65,3 +65,7 @@ iframe {
   margin: 1rem auto;
   width: 100%;
 }
+
+li {
+  margin-left: 2rem;
+}
