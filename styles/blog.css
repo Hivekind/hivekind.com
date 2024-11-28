@@ -33,7 +33,7 @@ blockquote {
 
 /* Apply general styling for all tables */
 table {
-  @apply min-w-full bg-white border border-gray-200 block overflow-x-auto;
+  @apply min-w-full bg-white border border-gray-200 block overflow-x-auto my-4;
   border-collapse: collapse; /* Ensure borders are drawn between cells */
 }
 
@@ -56,6 +56,16 @@ td {
 }
 
 /* Remove the right border for the last column */
-th:last-child, td:last-child {
+th:last-child,
+td:last-child {
   border-right: none;
+}
+iframe {
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+li {
+  margin-left: 2rem;
 }
