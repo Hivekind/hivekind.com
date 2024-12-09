@@ -391,9 +391,13 @@ export default function ContactPage() {
                         <h2 className="text-size-large">Hivekind HQ</h2>
                       </div>
                       <div>
-                        Unit 25-02 Tower A, The Vertical Business Suites,
+                        Unit 3A-01A, Level 3A
                         <br />
-                        Kuala Lumpur, Malaysia
+                        Glo Damansara, No. 699
+                        <br />
+                        Jalan Damansara
+                        <br />
+                        60000 Kuala Lumpur
                       </div>
                       <div className="margin-top margin-small">
                         <div className="button-group">
