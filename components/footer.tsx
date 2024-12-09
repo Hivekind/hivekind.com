@@ -39,9 +39,15 @@ const Footer = () => {
                       </div>
                       <div className="margin-bottom margin-small">
                         <div className="text-size-small">
-                          Unit 25-02 Tower A, The Vertical Business Suites
+                          Unit 3A-01A, Level 3A
                           <br />
-                          No. 8 Jalan Kerinchi, 59200, Kuala Lumpur, Malaysia
+                          Glo Damansara, No. 699
+                          <br />
+                          Jalan Damansara
+                          <br />
+                          60000 Kuala Lumpur
+                          <br />
+                          WPKL Malaysia
                         </div>
                       </div>
                       <div className="margin-bottom margin-tiny">
