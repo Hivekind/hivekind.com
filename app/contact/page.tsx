@@ -361,7 +361,7 @@ export default function ContactPage() {
                         <div>You can call us on weekdays 10am-5pm MYT.</div>
                       </div>
                       <a href="tel:+60322423731" className="text-style-link">
-                        +603 2242 3731
+                        +603 3385 4561
                       </a>
                     </div>
                     <div className="contact_item">

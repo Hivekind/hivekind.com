@@ -57,7 +57,7 @@ const Footer = () => {
                       </div>
                       <div className="text-size-small">
                         <a href="tel:+60322423731" className="text-color-white">
-                          +603 2242 3731
+                          +603 3385 4561
                           <br />
                         </a>
                         <a
