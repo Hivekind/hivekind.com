@@ -14,9 +14,9 @@ import { getAllPosts } from "@/lib/contentfulApi";
 import { TestimonialCarouselProps } from "@/components/testimonial-carousel";
 
 export default async function Home() {
-  const title = "Advance how your team delivers software";
+  const title = "Rewire your organization using automation and AI";
   const description =
-    "We provide focused, hands-on strategic support to tech and product teams. From optimizing technical processes to setting a clear direction for growth and getting complex projects over the line, we help your team become the best they can be.";
+    "Don't grow your team, grow what your team can do. We help you automate internal workflows using AI so your people spend less time on grunt work and more time on creative, valuable, high-leverage tasks.";
 
   const { posts } = await getAllPosts({
     contentType: "testimonial",
