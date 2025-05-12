@@ -26,7 +26,7 @@ const items = [
 
 export default function ApproachSection() {
   return (
-    <section className="approach-section">
+    <section className="approach-section bg-white">
       <div className="padding-global">
         <div className="container-large">
           <div className="padding-section-large">
