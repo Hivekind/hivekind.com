@@ -12,7 +12,6 @@ import dedicatedTeamPlanningFallback from "@/public/images/dedicated-team-planni
 import TestimonialSection from "@/components/testimonial-section";
 import ServicesSection from "./services-section";
 import MeasurableOutcomesSection from "./measurable-outcomes-section";
-import CustomSoftwareDevelopmentSection from "./custom-software-development-section";
 import { getByField } from "@/lib/contentfulApi";
 import { FieldsType } from "contentful";
 
@@ -46,8 +45,6 @@ export default async function ServicesPage() {
       <ApproachSection />
 
       <MeasurableOutcomesSection />
-
-      <CustomSoftwareDevelopmentSection />
 
       <TestimonialSection
         quote={String(testimonial.fields.quote)}
