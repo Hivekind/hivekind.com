@@ -17,14 +17,14 @@ const ContactUsSection = ({ className }: { className?: string }) => {
               <div className="cta_content">
                 <div className="margin-bottom margin-small">
                   <h2 className="heading-style-h2">
-                    Need help building your product?
+                    Need help automating with AI?
                   </h2>
                 </div>
                 <div className="margin-bottom margin-small">
                   <p className="text-size-medium">
                     Reach out to us by filling out the form on our contact page.
                     If you need an NDA, just let us know, and we’ll gladly
-                    provide one!
+                    provide one.
                   </p>
                 </div>
 
