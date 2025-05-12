@@ -1,27 +1,19 @@
 import { CardList } from "@/components/card-list/card-list";
 import Section from "@/components/section";
-import { getAllPosts } from "@/lib/contentfulApi";
+import { servicesContent } from "@/app/data/services";
 
-export default async function ServicesSection() {
-  const { posts } = await getAllPosts({
-    contentType: "servicesComponent",
-    order: ["fields.order"],
-  });
-
-  // only render the items with an order associated with it
-  const items = posts.filter((post) => post.fields.order);
-
-  const hero = posts.find((post) => post.fields.heroEntry);
+export default function ServicesSection() {
+  const { hero, services } = servicesContent;
 
   return (
-    <Section title={hero?.fields.title} description={hero?.fields.body}>
+    <Section title={hero.title} description={hero.description}>
       <CardList
-        cols={items.length}
-        items={items.map(({ fields }) => ({
-          title: fields.title || "Untitled",
-          summary: fields.body || "No summary available",
-          url: fields.url,
-          cta: fields.url && "Learn more",
+        cols={services.length}
+        items={services.map((service) => ({
+          title: service.title,
+          summary: service.description,
+          url: service.url,
+          cta: service.url && "Learn more",
         }))}
       />
     </Section>
