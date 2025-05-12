@@ -16,9 +16,9 @@ import { getByField } from "@/lib/contentfulApi";
 import { FieldsType } from "contentful";
 
 export default async function ServicesPage() {
-  const title = "Build software with confidence";
+  const title = "Make use of AI in your business operations";
   const description =
-    "Whether you're a startup or an established enterprise, Hivekind is here to help you through the tricky parts of shipping software and cultivating software teams.";
+    "We help you identify, design, and implement AI-powered workflows that streamline operations, improve decision-making, and deliver measurable ROI—without disrupting your existing systems.";
 
   const testimonial = (await getByField({
     contentType: "testimonial",
