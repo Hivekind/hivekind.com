@@ -12,9 +12,9 @@ export default async function AboutPage() {
     order: ["fields.order"],
   });
 
-  const title = "Your software development partner";
+  const title = "Your automations and AI partner";
   const description =
-    "We are on a mission to help companies build great products that customers love.";
+    "We are on a mission to help companies streamline operations, reduce manual work, and unlock scale using practical, production-ready automation and AI solutions.";
 
   return (
     <main className="main-wrapper">
