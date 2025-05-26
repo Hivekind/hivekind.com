@@ -15,8 +15,8 @@ export default function AnswersSection() {
   return (
     <>
       <Section
-        title="We have team advancement figured out for you"
-        description="Building a great software product isn’t easy, especially when you’re a technical leader. You’ve got a million things on your plate, and figuring out how to make your team effective is just one of them. That’s where we come in. We are here to answer questions like these that you or your team might have:"
+        title="We&apos;ve got automation and AI figured out for you"
+        description="You&apos;ve built a capable team, strong processes, and a growing operation—but scaling is getting harder. Manual steps are piling up, coordination is slowing down, and hiring more people just to keep up doesn&apos;t feel like the right answer. You&apos;re not failing, but you know there&apos;s a smarter, more efficient way to run things."
       >
         <div className="w-layout-grid answers_list">
           <div className="answer_item">
@@ -33,17 +33,11 @@ export default function AnswersSection() {
             </div>
             <div className="margin-bottom margin-xsmall">
               <h3 blocks-non-deletable="true" className="heading-style-h5">
-                How do I make sure my team is aligned and productive, not bogged
-                down by process?
+                Is your operations team bogged down by manual, repetitive tasks?
               </h3>
             </div>
             <p>
-              We help cut through the clutter by refining workflows, introducing
-              best practices, and enabling clear communication. This keeps your
-              team focused on what truly matters—delivering results. Our
-              hands-on, flexible approach empowers your team to excel while
-              building the skills and independence they need to sustain that
-              success.
+              Many growing businesses still rely on spreadsheets, email chains, and people remembering what to do. We help replace that with streamlined, AI-enhanced systems that work quietly in the background—getting the job done without you needing to worry.
             </p>
           </div>
           <div className="answer_item">
@@ -60,14 +54,11 @@ export default function AnswersSection() {
             </div>
             <div className="margin-bottom margin-xsmall">
               <h3 blocks-non-deletable="true" className="heading-style-h5">
-                What should I prioritize to get a lagging project back on track?
+                Are your tools in place, but not really working together?
               </h3>
             </div>
             <p>
-              Through rapid discovery and agile planning, we’ll help you
-              identify critical blockers and focus on high-impact actions that
-              make an immediate difference. By targeting only the essentials, we
-              drive measurable progress right from the start.
+              Disconnected platforms mean double entry, lost data, and friction. We integrate your existing systems and design automations that keep everything in sync—so your tools finally act like a team.
             </p>
           </div>
           <div className="answer_item">
@@ -84,15 +75,11 @@ export default function AnswersSection() {
             </div>
             <div className="margin-bottom margin-xsmall">
               <h3 blocks-non-deletable="true" className="heading-style-h5">
-                How can I use AI to create real value in our product?
+                Do you want to scale operations without increasing headcount?
               </h3>
             </div>
             <p>
-              Our AI expertise takes the guesswork out of adopting this powerful
-              technology. We’ll guide you through building an AI strategy that
-              fits your product, from roadmap creation to developing proofs of
-              concept. By working side-by-side with your team, we make sure AI
-              adds value without disrupting your current processes.
+              When the only path to growth looks like hiring more people, it&apos;s time to think differently. We help you create leverage by codifying your processes and enhancing them with automation and AI.
             </p>
           </div>
           <div className="answer_item">
@@ -109,15 +96,11 @@ export default function AnswersSection() {
             </div>
             <div className="margin-bottom margin-xsmall">
               <h3 blocks-non-deletable="true" className="heading-style-h5">
-                Can we improve our deployment pipeline without causing major
-                disruptions?
+                Are you experimenting with AI, but unsure how to apply it at scale?
               </h3>
             </div>
             <p>
-              Absolutely. We specialize in gradual, low-risk improvements to
-              your CI/CD pipeline that enhance efficiency and stability. Whether
-              it’s reducing build times or improving visibility, our approach
-              makes releases smoother and boosts team morale.
+              Many teams have dabbled—maybe a chatbot here, a little automation there—but the impact feels scattered. We help you move from isolated tools to cohesive systems. By embedding AI into your core workflows, we turn small wins into sustained, compounding value across your operations.
             </p>
           </div>
         </div>
