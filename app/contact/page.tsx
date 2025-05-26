@@ -135,12 +135,12 @@ export default function ContactPage() {
               <div className="margin-bottom margin-large">
                 <div className="max-width-large">
                   <div className="margin-bottom margin-small">
-                    <h1>Need help building your product?</h1>
+                    <h1>Need help automating your operations?</h1>
                   </div>
                   <p className="text-size-medium">
                     Send us your details and we will get back to you soon. If
-                    you need an NDA, just let us know, and we’ll gladly provide
-                    one!
+                    you need an NDA, just let us know and we’ll gladly provide
+                    one.
                   </p>
                 </div>
               </div>
