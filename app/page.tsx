@@ -20,6 +20,7 @@ export default async function Home() {
 
   const { posts } = await getAllPosts({
     contentType: "testimonial",
+    order: ["fields.order"],
   });
 
   const items = posts
