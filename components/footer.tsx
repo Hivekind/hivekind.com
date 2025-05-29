@@ -159,7 +159,7 @@ const Footer = () => {
             <div className="padding-top padding-medium">
               <div className="footer1_bottom-wrapper">
                 <div className="footer1_credit-text">
-                  © 2024 Hivekind Sdn. Bhd.
+                  © 2025 Hivekind Sdn. Bhd.
                 </div>
                 <div className="w-layout-grid footer_legal-list">
                   <a
