@@ -87,9 +87,6 @@ const Footer = () => {
                     <a href="/careers" className="foot_link">
                       Careers
                     </a>
-                    <a href="/events" className="foot_link">
-                      Events
-                    </a>
                     <a href="/referral-program" className="foot_link">
                       Referral Program
                     </a>
