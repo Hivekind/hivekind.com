@@ -54,7 +54,7 @@ export default async function Home() {
 
         <AnswersSection />
 
-        <TestimonialCarousel items={items} bgColorClass="bg-white" />
+        <TestimonialCarousel items={items} />
 
         <AdvantagesSection />
 

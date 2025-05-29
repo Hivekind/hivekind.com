@@ -17,6 +17,7 @@ export default function AnswersSection() {
       <Section
         title="We&apos;ve got automation and AI figured out for you"
         description="You&apos;ve built a capable team, strong processes, and a growing operation—but scaling is getting harder. Manual steps are piling up, coordination is slowing down, and hiring more people just to keep up doesn&apos;t feel like the right answer. You&apos;re not failing, but you know there&apos;s a smarter, more efficient way to run things."
+        className="bg-white"
       >
         <div className="w-layout-grid answers_list">
           <div className="answer_item">

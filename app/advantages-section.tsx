@@ -3,7 +3,7 @@ import "@/styles/advantages.css";
 
 export default function AdvantagesSection() {
   return (
-    <section className="advantages-section">
+    <section className="advantages-section bg-white">
       <div className="padding-global">
         <div className="container-large">
           <div className="padding-section-large">
