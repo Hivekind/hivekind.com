@@ -21,7 +21,7 @@ export default async function ServicesPage() {
 
   const testimonial = (await getByField({
     contentType: "testimonial",
-    fields: { "fields.name[in]": "Jayasimhan Masilamani" },
+    fields: { "fields.name[in]": "Mitch Gelber" },
   })) as FieldsType;
 
   return (
