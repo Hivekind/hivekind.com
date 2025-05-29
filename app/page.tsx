@@ -7,7 +7,6 @@ import softwareDevelopmentCompanyPhotomontageFallback from "@/public/images/soft
 
 import TestimonialCarousel from "@/components/testimonial-carousel";
 import AdvantagesSection from "./advantages-section";
-import CasestudiesSection from "./casestudies-section";
 import AnswersSection from "./answers-section";
 import BlogSection from "./blog-section";
 import { getAllPosts } from "@/lib/contentfulApi";
@@ -58,8 +57,6 @@ export default async function Home() {
         <TestimonialCarousel items={items} bgColorClass="bg-white" />
 
         <AdvantagesSection />
-
-        <CasestudiesSection />
 
         <BlogSection />
 
