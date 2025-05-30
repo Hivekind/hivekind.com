@@ -1,6 +1,6 @@
 import { CardList } from "@/components/card-list/card-list";
 import Section from "@/components/section";
-import { servicesContent } from "@/app/data/services";
+import { servicesContent } from "./services-content";
 
 export default function ServicesSection() {
   const { hero, services } = servicesContent;
