@@ -1,9 +1,8 @@
-# from            to                                status
-/work             /                                   302!
-/work             /                                   302
-
-/blog/organizing-effective-remote-meetings  /blog/a-guide-to-running-effective-virtual-meetings  301
-
-/services/ai-product-development            /services/ai-integration
-
-/labs/hivechat/*  https://hivechat.pages.dev/:splat  200
+# from                                      to                                                      status
+/work                                       /                                                       302!
+/work                                       /                                                       302
+/blog/organizing-effective-remote-meetings  /blog/a-guide-to-running-effective-virtual-meetings     301
+/labs/hivechat/*                            https://hivechat.pages.dev/:splat                       200
+/services/ai-product-development            /services                                               302
+/services/custom-software-development       /services                                               302
+/services/ai-integration                    /services                                               302
