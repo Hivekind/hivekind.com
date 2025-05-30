@@ -113,7 +113,7 @@ const FaqSection = () => {
                 />
                 <FaqItem
                   question="Who is a good referral?"
-                  answer="A good referral for Hivekind is a business or founder who needs dedicated product development support. Ideal clients might be startups with a clear product vision or established companies looking to scale and improve their digital products. They may be interested in product management support, tailored project planning, or even exploring new technologies like AI to enhance their products."
+                  answer="A good referral for Hivekind is a business or operational leader who wants to improve how their company runs without growing headcount. Ideal clients are typically growth-stage tech companies or operationally complex businesses that have established internal processes, but now face bottlenecks, inefficiencies, or scaling challenges. They may be looking to streamline workflows, reduce reliance on tribal knowledge, or explore how AI and automation can enhance team productivity. These clients often suspect that smarter systems could help—but need structured, technically sound support to figure out what&apos;s worth automating and how to make it actually work."
                 />
                 <FaqItem
                   question="Why should I recommend Hivekind?"

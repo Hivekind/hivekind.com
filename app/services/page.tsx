@@ -11,19 +11,17 @@ import dedicatedTeamPlanningFallback from "@/public/images/dedicated-team-planni
 
 import TestimonialSection from "@/components/testimonial-section";
 import ServicesSection from "./services-section";
-import MeasurableOutcomesSection from "./measurable-outcomes-section";
-import CustomSoftwareDevelopmentSection from "./custom-software-development-section";
 import { getByField } from "@/lib/contentfulApi";
 import { FieldsType } from "contentful";
 
 export default async function ServicesPage() {
-  const title = "Build software with confidence";
+  const title = "Make use of AI in your business operations";
   const description =
-    "Whether you're a startup or an established enterprise, Hivekind is here to help you through the tricky parts of shipping software and cultivating software teams.";
+    "We help you identify, design, and implement AI-powered workflows that streamline operations, improve decision-making, and deliver measurable ROI—without disrupting your existing systems.";
 
   const testimonial = (await getByField({
     contentType: "testimonial",
-    fields: { "fields.name[in]": "Jayasimhan Masilamani" },
+    fields: { "fields.name[in]": "Mitch Gelber" },
   })) as FieldsType;
 
   return (
@@ -44,10 +42,6 @@ export default async function ServicesPage() {
       <ServicesSection />
 
       <ApproachSection />
-
-      <MeasurableOutcomesSection />
-
-      <CustomSoftwareDevelopmentSection />
 
       <TestimonialSection
         quote={String(testimonial.fields.quote)}

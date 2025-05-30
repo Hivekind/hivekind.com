@@ -3,31 +3,30 @@ import TimelineStep from "@/components/timeline-step";
 
 const items = [
   {
-    title: "Discovery",
-    body: "We begin by fully immersing ourselves in your goals, exploring your challenges, and defining clear objectives. This initial deep dive allows us to grasp both specific issues and broader pain points, setting a strong foundation.",
+    title: "AI discovery workshop",
+    body: "A 5-day sprint that explores your current workflows, identifies automation opportunities, and produces a roadmap with prototypes and a business case.",
   },
   {
-    title: "Planning",
-    body: "With a shared understanding in place, we design a strategic roadmap that includes milestones and success metrics. Each step is tailored to align closely with your business goals, ensuring measurable outcomes along the way.",
+    title: "Implementation planning",
+    body: "We define the scope of each workflow, clarify outcomes, and map out technical details before development begins.",
   },
   {
-    title: "Implementation",
-    body: "In this phase, we work closely with your team, executing the plan with an agile, iterative approach. Constant feedback loops ensure adjustments are made as needed, blending our expertise with your team’s unique strengths.",
+    title: "Workflow build & test",
+    body: "Our team builds low-code or custom AI workflows and refines them to meet performance, cost, and reliability goals.",
   },
   {
-    title: "Verification",
-    body: "As we near completion, we validate that our solutions meet the agreed objectives, reflecting the metrics established in planning. This step is a collaborative effort, ensuring the solutions are aligned with your vision and deliver true value.",
+    title: "Integration & training",
+    body: "We connect new workflows to your tools and processes, and ensure your team is equipped to use and maintain them.",
   },
-
   {
-    title: "Handoff & empowerment",
-    body: "Our goal is to leave your team well-equipped and independent. We complete a comprehensive knowledge transfer, covering documentation and guidance, so you’re prepared to continue on a clear path forward without us.",
+    title: "Support & maintenance",
+    body: "Ongoing monitoring, bug fixes, and upgrades—available whether the system is hosted by Hivekind or on your infrastructure.",
   },
 ];
 
 export default function ApproachSection() {
   return (
-    <section className="approach-section">
+    <section className="approach-section bg-white">
       <div className="padding-global">
         <div className="container-large">
           <div className="padding-section-large">
@@ -37,22 +36,13 @@ export default function ApproachSection() {
                   <h2>Approach</h2>
                 </div>
                 <p className="text-size-medium">
-                  At Hivekind, we partner with your team to enhance strengths
-                  and tackle challenges together. Our focus is on empowering
-                  your growth, leaving you stronger and ready to thrive on your
-                  own​​.
+                  Every engagement with Hivekind begins by understanding your operations and uncovering areas where AI and automation can deliver meaningful business improvements.
                   <br />
                   <br />
-                  Our approach is focused and flexible, built on delivering
-                  meaningful, measurable results without creating dependency.
-                  Each engagement is crafted to align with your specific goals
-                  and outcomes​​.
+                  We then design and build workflows that streamline your internal processes—reducing manual effort, increasing speed, and improving consistency across teams and tools.
                   <br />
                   <br />
-                  With every project, we’re here to make a difference. From
-                  streamlining processes to introducing new efficiencies, we
-                  work to leave you equipped for lasting success and confident
-                  in the road ahead​​.
+                  Once deployed, we provide support to keep your systems running smoothly and evolving with your business—so your team can focus on higher-leverage work.
                 </p>
                 <div className="margin-top margin-medium">
                   <div className="button-group">

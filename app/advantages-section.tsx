@@ -3,7 +3,7 @@ import "@/styles/advantages.css";
 
 export default function AdvantagesSection() {
   return (
-    <section className="advantages-section">
+    <section className="advantages-section bg-white">
       <div className="padding-global">
         <div className="container-large">
           <div className="padding-section-large">
@@ -20,10 +20,7 @@ export default function AdvantagesSection() {
                   </div>
                   <div className="advantages_content-right">
                     <p className="text-size-medium">
-                      Hivekind isn’t just another software agency. We’re here to
-                      empower your team and elevate your product. Our approach
-                      ensures that you get impactful results while keeping your
-                      team in the driver’s seat. Here’s how Hivekind stands out:
+                      Hivekind helps your team harness automation and AI without creating new complexity or dependencies. Our focus is on building practical systems that work, and leaving your team stronger than before. Here&apos;s what sets us apart:
                     </p>
                   </div>
                 </div>
@@ -42,15 +39,11 @@ export default function AdvantagesSection() {
                         blocks-non-deletable="true"
                         className="heading-style-h5"
                       >
-                        Short-term, impactful projects
+                        Fast-moving, high-leverage work
                       </h3>
                     </div>
                     <p>
-                      We specialize in time-bound projects that target your most
-                      pressing challenges. Our goal is to make a big difference
-                      quickly, leaving your team with a strong foundation to
-                      build on long after we’re gone. No lingering presence—just
-                      efficient, impactful work.
+                      We run focused engagements that deliver meaningful operational improvements in weeks, not months. Our goal is to make visible, measurable progress, then get out of your way.
                     </p>
                   </div>
                 </div>
@@ -67,15 +60,11 @@ export default function AdvantagesSection() {
                         blocks-non-deletable="true"
                         className="heading-style-h5"
                       >
-                        Transparent, outcome-based pricing
+                        Fixed-fee, value-aligned pricing
                       </h3>
                     </div>
                     <p>
-                      Our fixed-fee model means you know the exact cost upfront,
-                      so there are no surprises. Hivekind’s outcome-based
-                      pricing ensures you’re paying for real results, not hours,
-                      making it easy to focus on value and success without
-                      getting caught up in billing details.
+                      All our work is scoped and priced upfront. You get predictable costs tied to tangible outcomes, not open-ended time billing or ambiguous deliverables.
                     </p>
                   </div>
                 </div>
@@ -92,15 +81,11 @@ export default function AdvantagesSection() {
                         blocks-non-deletable="true"
                         className="heading-style-h5"
                       >
-                        Empowering your team
+                        Collaborative, not disruptive
                       </h3>
                     </div>
                     <p>
-                      Hivekind isn’t here to take over—we’re here to empower. We
-                      respect your team’s skills and culture and work alongside
-                      you to boost productivity, streamline processes, and build
-                      confidence. When we finish, your team is stronger and
-                      fully equipped to keep moving forward.
+                      We integrate with your existing tools and processes, working alongside your team to improve, not upend, how things get done. You stay in control.
                     </p>
                   </div>
                 </div>
@@ -117,16 +102,11 @@ export default function AdvantagesSection() {
                         blocks-non-deletable="true"
                         className="heading-style-h5"
                       >
-                        No lock-In, just lasting progress
+                        Built to last, not to tether
                       </h3>
                     </div>
                     <p>
-                      We’re committed to helping your team grow independently.
-                      Unlike agencies that keep you dependent on their services,
-                      Hivekind’s approach is designed to foster
-                      self-sufficiency. We’ll leave you with the tools, skills,
-                      and a clear roadmap, so your progress continues smoothly
-                      without needing extra support.
+                      We design solutions your team can own and evolve. With clear documentation, training, and flexible hosting options, you stay independent. No hidden dependencies or vendor lock-in.
                     </p>
                   </div>
                 </div>
