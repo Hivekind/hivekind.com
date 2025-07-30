@@ -58,21 +58,23 @@ export default async function AboutPage() {
               <div className="team_component">
                 <div className="w-dyn-list">
                   <div role="list" className="collection-list w-dyn-items">
-                    {posts.map(({ fields }) => {
-                      return (
-                        <People
-                          key={fields.slug}
-                          name={`${fields.name}`}
-                          position={`${fields.jobTitle}`}
-                          imgFileName={`${fields.profilePicture?.fields.file.url}`}
-                          linkedin={fields.linkedInLink}
-                          x={fields.twitterLink}
-                          instagram={fields.instagramLink}
-                          facebook={fields.facebookLink}
-                          github={fields.githubLink}
-                        />
-                      );
-                    })}
+                    {posts
+                      .filter(({ fields }) => fields.active)
+                      .map(({ fields }) => {
+                        return (
+                          <People
+                            key={fields.slug}
+                            name={`${fields.name}`}
+                            position={`${fields.jobTitle}`}
+                            imgFileName={`${fields.profilePicture?.fields.file.url}`}
+                            linkedin={fields.linkedInLink}
+                            x={fields.twitterLink}
+                            instagram={fields.instagramLink}
+                            facebook={fields.facebookLink}
+                            github={fields.githubLink}
+                          />
+                        );
+                      })}
                   </div>
                 </div>
               </div>
