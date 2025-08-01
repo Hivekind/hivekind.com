@@ -70,6 +70,7 @@ export type fieldsType = {
   jobDescription: string;
   datePosted: string;
   validThrough: string;
+  active: boolean;
 };
 
 export type postsType = {

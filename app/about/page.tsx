@@ -12,6 +12,8 @@ export default async function AboutPage() {
     order: ["fields.order"],
   });
 
+  const activePosts = posts.filter((post) => post.fields.active);
+
   const title = "Your automations and AI partner";
   const description =
     "We are on a mission to help companies streamline operations, reduce manual work, and unlock scale using practical, production-ready automation and AI solutions.";
@@ -33,7 +35,10 @@ export default async function AboutPage() {
           <div className="w-layout-grid hivekind-stats">
             <Stats value="2015" description="Founded" />
             <Stats value="100%" description="Remote" />
-            <Stats value={posts.length.toString()} description="Hivekinders" />
+            <Stats
+              value={activePosts.length.toString()}
+              description="Hivekinders"
+            />
           </div>
         </div>
       </Header>
@@ -58,7 +63,7 @@ export default async function AboutPage() {
               <div className="team_component">
                 <div className="w-dyn-list">
                   <div role="list" className="collection-list w-dyn-items">
-                    {posts.map(({ fields }) => {
+                    {activePosts.map(({ fields }) => {
                       return (
                         <People
                           key={fields.slug}
